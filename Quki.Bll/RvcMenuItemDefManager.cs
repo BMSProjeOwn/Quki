@@ -129,7 +129,9 @@ namespace Quki.Bll
                               mi_icon_path = s.RMD.DP.D.mi_icon_path,
                               rvc_mi_second_name = s.RMD.DP.D.rvc_mi_second_name,
                               rvc_mi_third_name = s.RMD.DP.D.rvc_mi_third_name,
+                              slu_type_slu_image = s.S.slu_type_slu_image,
                               slu_priority = (int)s.RMD.DP.D.slu_priority,
+                              
                               control_number = s.S.control_number
                           }).OrderBy(o => o.control_number).ThenBy(o => o.slu_priority).ToList();
 

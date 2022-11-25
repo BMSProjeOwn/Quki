@@ -50,7 +50,8 @@ namespace Quki.Controllers
         [HttpGet]
         public IActionResult GetMenuItem(long id)
         {
-
+            
+           
             if (id == 0)
             {
                 var getMenuItems = rvcMenuItemDefService.GetMenuItems();
@@ -63,7 +64,7 @@ namespace Quki.Controllers
                 var getMenuItems = rvcMenuItemDefService.GetMenuItemsWithId(id);
                 ViewBag.ProductItems = getMenuItems;
                 ViewBag.MenuItems = getMenuItems[0].slu_def_name;
-                ViewBag.Pic = "/icons/1tumu.png";
+                ViewBag.Pic = getMenuItems[0].slu_type_slu_image;
 
             }
 

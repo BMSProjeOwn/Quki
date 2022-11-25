@@ -21,6 +21,7 @@ namespace Quki.Models
         public string rvc_mi_second_name { get; set; }
         public string rvc_mi_third_name { get; set; }
         public int slu_priority { get; set; }
+        public string slu_type_slu_image { get; set; }
         public int? control_number { get; set; }
     }
 }
