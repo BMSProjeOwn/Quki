@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="2.11.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Rewrite" Version="2.2.0" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MultiLanguageOmni-master\MultiLanguageOmni\MultiLanguageOmni.csproj" />
+    <ProjectReference Include="..\Quki.Dal\Quki.Dal.csproj" />
+    <ProjectReference Include="..\Quki.Entity\Quki.Entity.csproj" />
+    <ProjectReference Include="..\Quki.Interface\Quki.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Tikutu\**" />
+    <EmbeddedResource Remove="Tikutu\**" />
+    <None Remove="Tikutu\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Quki.Common\Quki.Common.csproj" />
+    <ProjectReference Include="..\Quki.Dal\Quki.Dal.csproj" />
+    <ProjectReference Include="..\Quki.Entity\Quki.Entity.csproj" />
+    <ProjectReference Include="..\Quki.Interface\Quki.Interface.csproj" />
+  </ItemGroup>
+
+</Project>
