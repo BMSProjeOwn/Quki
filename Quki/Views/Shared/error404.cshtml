@@ -1,0 +1,46 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Sayfa Bulunamadı ";
+    ViewData["canonicalLink"] = "https://www.Quki.com/error/404";
+}
+
+
+<div id="col-md-12" style="background-image: url(https://Quki.com/web/img/404.png);
+background-repeat: no-repeat !important;background-size: 100%; height:100%; padding-top:26%; margin-bottom:20px; padding-bottom:40px;">
+    <div id="content-wrapper">
+        <div class="page-home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="text-center">
+                            <div class="info" style="font-size:1vw;">
+                                @ViewBag.ErrorMessage1
+                                <br />
+                                @ViewBag.ErrorMessage2
+                            </div>
+
+                            <div class="info" style="font-size:1vw;">
+                                Aşağıdaki sayfalardan biriyle yola devam etmeye ne dersiniz?
+                            </div>
+                           <div class="info" style="font-size:2vw;">
+                           <a style="font-size:2vw;" href="https://www.Quki.com">@MultiLanguageOmni.ReadResourceKey.GetString("HomePage", "MultiLanguageOmni.Index")</a>
+                           </div>
+                           <div class="info" style="font-size:2vw;">
+                           <a style="font-size:2vw;" href="/abonelik-turu">@MultiLanguageOmni.ReadResourceKey.GetString("Subscription", "MultiLanguageOmni.Index")</a>
+                           </div>
+                           <div class="info" style="font-size:2vw;">
+                          <a style="font-size:2vw;" href="/sesli-tiyatro">@MultiLanguageOmni.ReadResourceKey.GetString("AudioTheaters", "MultiLanguageOmni.Index")</a>
+                           </div>
+                           <div class="info" style="font-size:2vw;">
+                          <a style="font-size:2vw;" href="/sesli-tiyatro/ara"" >@MultiLanguageOmni.ReadResourceKey.GetString("SearchBox", "MultiLanguageOmni.Index")</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

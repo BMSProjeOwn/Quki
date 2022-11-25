@@ -1,0 +1,33 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@inject Microsoft.Extensions.Options.IOptions<Microsoft.AspNetCore.Builder.RequestLocalizationOptions> locOptions
+
+
+@{
+    var culture = Context.Features.Get<Microsoft.AspNetCore.Localization.IRequestCultureFeature>();
+    //var cultureList = locOptions.Value.SupportedUICultures.Select(s => new SelectListItem { Value = s.Name, Text = s.Name }).ToList();
+
+    var cultureList = new List<SelectListItem>();
+    cultureList.Add(new SelectListItem
+    {
+        Text = "TR - Türkiye",
+        Value = "tr-TR"
+    });
+    cultureList.Add(new SelectListItem
+    {
+        Text = "DE - Germany",
+        Value = "de-DE"
+    });
+    cultureList.Add(new SelectListItem
+    {
+        Text = "EN - England",
+        Value = "en-US"
+    });
+}
+
+
+<div>
+    <form asp-action="CultureManegmant" asp-controller="Home" method="post">
+        <select class="form-select" name="culture" asp-for="@culture.RequestCulture.UICulture.Name" asp-items="cultureList" onchange="this.form.submit();"></select>
+    </form>
+</div>
+

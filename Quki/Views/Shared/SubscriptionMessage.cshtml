@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewData["Title"] = "SubscriptionMessage";
+}
+
+<div class="page-title-breadcrumbs" style="background-image: url(https://Quki.com/web/img/hosgeldiniz-banner.jpg);
+        background-repeat: no-repeat !important;
+        background-size: 100%;">
+    <div class="breadcrumbs-container container">
+        <div class="breadcrumbs_wrapper">
+            <div class="page-title-container">
+                @*<h1 class="text-center">Hesap Sayfası</h1>*@
+            </div>
+
+            <div class="breadcrumbs-container text-center">
+                <ul class="breadcrumbs primary-font">
+                    @*<li>
+                            <a href="#">
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-sep">/</li>
+                        <li>
+                            <span>Login</span>
+                        </li>*@
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="wrapper-site">
+    <div id="content-wrapper">
+        <div class="page-home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="text-center">
+                            <h2 class="h4"> @ViewBag.ErrorTitle</h2>
+
+
+                            <div class="info">
+                                <p>
+                                    @ViewBag.ErrorMessage
+                                </p>
+                            </div>
+
+                            <div class="mg-bottom-20">
+                                <a class="btn view button-main" style="margin-bottom:20px; border-radius:40px;" asp-action="ProductByMovie" asp-controller="Product">Kitaplığı İnceleyin</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

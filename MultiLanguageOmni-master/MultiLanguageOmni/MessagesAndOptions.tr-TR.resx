@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="access_right_group***********************************" xml:space="preserve">
+    <value>access_right_group*********************************</value>
+  </data>
+  <data name="access_right_group_check_code01" xml:space="preserve">
+    <value>Begin check</value>
+  </data>
+  <data name="access_right_group_check_code02" xml:space="preserve">
+    <value>Pickup check</value>
+  </data>
+  <data name="access_right_group_check_code03" xml:space="preserve">
+    <value>Seperate check</value>
+  </data>
+  <data name="access_right_group_check_code04" xml:space="preserve">
+    <value>Closed check</value>
+  </data>
+  <data name="access_right_group_check_code05" xml:space="preserve">
+    <value>Fast transaction</value>
+  </data>
+  <data name="access_right_group_check_code06" xml:space="preserve">
+    <value>Assign table</value>
+  </data>
+  <data name="access_right_group_check_code07" xml:space="preserve">
+    <value>Table transaction</value>
+  </data>
+  <data name="access_right_group_check_code08" xml:space="preserve">
+    <value>Order table number</value>
+  </data>
+  <data name="access_right_group_check_code09" xml:space="preserve">
+    <value>Use begin check key</value>
+  </data>
+  <data name="access_right_group_check_code10" xml:space="preserve">
+    <value>Check transfer</value>
+  </data>
+  <data name="access_right_group_check_code11" xml:space="preserve">
+    <value>Adjust closed check</value>
+  </data>
+  <data name="access_right_group_check_code12" xml:space="preserve">
+    <value>Reopen closed check</value>
+  </data>
+  <data name="access_right_group_check_code13" xml:space="preserve">
+    <value>Çek İdli Giriş</value>
+  </data>
+  <data name="access_right_group_check_code14" xml:space="preserve">
+    <value>Begin check with id</value>
+  </data>
+  <data name="access_right_group_check_code15" xml:space="preserve">
+    <value>Koltuk Girişi</value>
+  </data>
+  <data name="access_right_group_check_code16" xml:space="preserve">
+    <value>Kuver Girişi</value>
+  </data>
+  <data name="access_right_group_check_code17" xml:space="preserve">
+    <value>Change cover count</value>
+  </data>
+  <data name="access_right_group_check_code18" xml:space="preserve">
+    <value>Close check if balance is 0</value>
+  </data>
+  <data name="access_right_group_check_code19" xml:space="preserve">
+    <value>Close check if balance is negative</value>
+  </data>
+  <data name="access_right_group_check_code20" xml:space="preserve">
+    <value>Begin check with negative balanced</value>
+  </data>
+  <data name="access_right_group_check_code21" xml:space="preserve">
+    <value>Çekleri Kilitle</value>
+  </data>
+  <data name="access_right_group_check_code22" xml:space="preserve">
+    <value>Change check id on open check</value>
+  </data>
+  <data name="access_right_group_check_code23" xml:space="preserve">
+    <value>Change check id on closed check</value>
+  </data>
+  <data name="access_right_group_check_code24" xml:space="preserve">
+    <value>Seperate check items</value>
+  </data>
+  <data name="access_right_group_check_code25" xml:space="preserve">
+    <value>Begin check belong to others</value>
+  </data>
+  <data name="access_right_group_check_code26" xml:space="preserve">
+    <value>Watch other's check</value>
+  </data>
+  <data name="access_right_group_check_code27" xml:space="preserve">
+    <value>Add menu items to other's check</value>
+  </data>
+  <data name="access_right_group_check_code28" xml:space="preserve">
+    <value>Apply discount to other's check</value>
+  </data>
+  <data name="access_right_group_check_code29" xml:space="preserve">
+    <value>Apply service charge to other's check</value>
+  </data>
+  <data name="access_right_group_check_code30" xml:space="preserve">
+    <value>Payment transaction to other's check</value>
+  </data>
+  <data name="access_right_group_check_code31" xml:space="preserve">
+    <value>Check transfer beetween revenue centers </value>
+  </data>
+  <data name="access_right_group_check_code32" xml:space="preserve">
+    <value>Begin check on other revenue centers</value>
+  </data>
+  <data name="access_right_group_check_code33" xml:space="preserve">
+    <value>Watch checks belongs to other revenue center  </value>
+  </data>
+  <data name="access_right_group_check_code34" xml:space="preserve">
+    <value>Aynı Gelir Merkezindeki Çekleri Aç</value>
+  </data>
+  <data name="access_right_group_check_code35" xml:space="preserve">
+    <value>Check transfer on same revenue center</value>
+  </data>
+  <data name="access_right_group_general_code01" xml:space="preserve">
+    <value>Entry pos application</value>
+  </data>
+  <data name="access_right_group_general_code02" xml:space="preserve">
+    <value>Changing revenue center</value>
+  </data>
+  <data name="access_right_group_general_code03" xml:space="preserve">
+    <value>Assign personnel to revenue center</value>
+  </data>
+  <data name="access_right_group_general_code04" xml:space="preserve">
+    <value>Using change revenue center key</value>
+  </data>
+  <data name="access_right_group_general_code05" xml:space="preserve">
+    <value>Return pos entry screen after each transaction</value>
+  </data>
+  <data name="access_right_group_general_code06" xml:space="preserve">
+    <value>Train mode</value>
+  </data>
+  <data name="access_right_group_general_code07" xml:space="preserve">
+    <value>Manuel entry credit card info</value>
+  </data>
+  <data name="access_right_group_general_code08" xml:space="preserve">
+    <value>Show credit card info</value>
+  </data>
+  <data name="access_right_group_general_code09" xml:space="preserve">
+    <value>Change main menu level</value>
+  </data>
+  <data name="access_right_group_general_code10" xml:space="preserve">
+    <value>Change sub menu level</value>
+  </data>
+  <data name="access_right_group_general_code11" xml:space="preserve">
+    <value>Redirection printers</value>
+  </data>
+  <data name="access_right_group_general_code12" xml:space="preserve">
+    <value>Void Transaction</value>
+  </data>
+  <data name="access_right_group_general_code13" xml:space="preserve">
+    <value>Use cash drawer key</value>
+  </data>
+  <data name="access_right_group_general_code14" xml:space="preserve">
+    <value>Change order type</value>
+  </data>
+  <data name="access_right_group_general_code15" xml:space="preserve">
+    <value>taken currency</value>
+  </data>
+  <data name="access_right_group_general_code16" xml:space="preserve">
+    <value>Show personnel code</value>
+  </data>
+  <data name="access_right_group_general_code17" xml:space="preserve">
+    <value>Change work time period</value>
+  </data>
+  <data name="access_right_group_general_code18" xml:space="preserve">
+    <value>Change personnel/group authorities</value>
+  </data>
+  <data name="access_right_group_general_code19" xml:space="preserve">
+    <value>Assign personnel to revenue center</value>
+  </data>
+  <data name="access_right_group_general_code20" xml:space="preserve">
+    <value>Changing personnel's revenue center</value>
+  </data>
+  <data name="access_right_group_general_code21" xml:space="preserve">
+    <value>Backup database</value>
+  </data>
+  <data name="access_right_group_general_code22" xml:space="preserve">
+    <value>Reload database</value>
+  </data>
+  <data name="access_right_group_general_code23" xml:space="preserve">
+    <value>Full authorized</value>
+  </data>
+  <data name="access_right_group_menu_item_code01" xml:space="preserve">
+    <value>Sales menu item</value>
+  </data>
+  <data name="access_right_group_menu_item_code02" xml:space="preserve">
+    <value>Sales kg menu items</value>
+  </data>
+  <data name="access_right_group_menu_item_code03" xml:space="preserve">
+    <value>Enter price to open price item</value>
+  </data>
+  <data name="access_right_group_menu_item_code04" xml:space="preserve">
+    <value>Change menu item group</value>
+  </data>
+  <data name="access_right_group_menu_item_code05" xml:space="preserve">
+    <value>Full authority</value>
+  </data>
+  <data name="access_right_group_print_code01" xml:space="preserve">
+    <value>Reprint closed check</value>
+  </data>
+  <data name="access_right_group_print_code02" xml:space="preserve">
+    <value>Reprint a check as unlimited</value>
+  </data>
+  <data name="access_right_group_print_code03" xml:space="preserve">
+    <value>Print personnel list</value>
+  </data>
+  <data name="access_right_group_print_code04" xml:space="preserve">
+    <value>Print menu item price list</value>
+  </data>
+  <data name="access_right_group_print_code05" xml:space="preserve">
+    <value>Print payment type</value>
+  </data>
+  <data name="access_right_group_print_code06" xml:space="preserve">
+    <value>Print VAT</value>
+  </data>
+  <data name="access_right_group_print_code07" xml:space="preserve">
+    <value>Reprint credit card info</value>
+  </data>
+  <data name="access_right_group_print_code08" xml:space="preserve">
+    <value>By Round</value>
+  </data>
+  <data name="access_right_group_print_code09" xml:space="preserve">
+    <value>On Demand</value>
+  </data>
+  <data name="access_right_group_report_code01" xml:space="preserve">
+    <value>Offline Reports</value>
+  </data>
+  <data name="access_right_group_report_code02" xml:space="preserve">
+    <value>All Reports</value>
+  </data>
+  <data name="access_right_group_report_code03" xml:space="preserve">
+    <value>Terminal Reports</value>
+  </data>
+  <data name="access_right_group_report_code04" xml:space="preserve">
+    <value>Other revenue center terminal reports</value>
+  </data>
+  <data name="access_right_group_service_charge_code01" xml:space="preserve">
+    <value>Oto service charge</value>
+  </data>
+  <data name="access_right_group_service_charge_code02" xml:space="preserve">
+    <value>Defined discount/service charge can exceed</value>
+  </data>
+  <data name="access_right_group_tender_media_code01" xml:space="preserve">
+    <value>Send payment to front office</value>
+  </data>
+  <data name="access_right_group_tender_media_code02" xml:space="preserve">
+    <value>Take check payment</value>
+  </data>
+  <data name="access_right_group_tender_media_code03" xml:space="preserve">
+    <value>manuel credit card entry</value>
+  </data>
+  <data name="access_right_group_tender_media_code04" xml:space="preserve">
+    <value>Tip application</value>
+  </data>
+  <data name="access_right_group_void_return_code01" xml:space="preserve">
+    <value>Return active check menu items</value>
+  </data>
+  <data name="access_right_group_void_return_code02" xml:space="preserve">
+    <value>Ara Toplam Alınmış Çekteki Menü Kalemlerini İade Et</value>
+  </data>
+  <data name="access_right_group_void_return_code03" xml:space="preserve">
+    <value>Sadece Son Eklenen Menü Kalemini İade Et</value>
+  </data>
+  <data name="access_right_group_void_return_code04" xml:space="preserve">
+    <value>Satışı Olmayan Menü Kalemini İade Et</value>
+  </data>
+  <data name="access_right_group_void_return_code05" xml:space="preserve">
+    <value>Kapalı Çekteki Menü Kalemini İade Et</value>
+  </data>
+  <data name="access_right_group_void_return_code06" xml:space="preserve">
+    <value>İşlem Geri Al Tuşunu Kullan</value>
+  </data>
+  <data name="access_right_group_void_return_code07" xml:space="preserve">
+    <value>Menü Kalemi İndirimi İptal Et</value>
+  </data>
+  <data name="access_right_group_void_return_code08" xml:space="preserve">
+    <value>Servis Ücretini İptal Et</value>
+  </data>
+  <data name="access_right_group_void_return_code09" xml:space="preserve">
+    <value>Void only sub totaled check menu item</value>
+  </data>
+  <data name="access_right_group_void_return_code10" xml:space="preserve">
+    <value>Void sub totaled check discount</value>
+  </data>
+  <data name="access_right_group_void_return_code11" xml:space="preserve">
+    <value>Void sub totaled check discount</value>
+  </data>
+  <data name="access_right_group_void_return_code12" xml:space="preserve">
+    <value>Void sub totaled check service charge</value>
+  </data>
+  <data name="access_right_group_void_return_code13" xml:space="preserve">
+    <value>Use cancel transaction key </value>
+  </data>
+  <data name="access_right_group_void_return_code14" xml:space="preserve">
+    <value>Aktif İşlemde İptal</value>
+  </data>
+  <data name="access_right_group_void_return_code15" xml:space="preserve">
+    <value>İşlem İptali Tuşunu Kullan</value>
+  </data>
+  <data name="access_right_group_void_return_code16" xml:space="preserve">
+    <value>Çek İptal Tuşunu Kullan</value>
+  </data>
+  <data name="access_right_group_void_return_code17" xml:space="preserve">
+    <value>Kapalı Çekte Menü Kalemini İptal Et</value>
+  </data>
+  <data name="access_right_group_void_return_code18" xml:space="preserve">
+    <value>Kapalı Çekte İndirimi İptal Et</value>
+  </data>
+  <data name="access_right_group_void_return_code19" xml:space="preserve">
+    <value>Kapalı Çekte Servis Ücretini İptal Et</value>
+  </data>
+  <data name="discount_opt01" xml:space="preserve">
+    <value>Tüm Çeke Yeniden Uygula</value>
+  </data>
+  <data name="discount_opt02" xml:space="preserve">
+    <value>Uygulandıktan Sonra Referans İste</value>
+  </data>
+  <data name="discount_opt03" xml:space="preserve">
+    <value>Uygulandıktan Sonra Ödeme İste</value>
+  </data>
+  <data name="discount_opt04" xml:space="preserve">
+    <value>Diğer İndirimlerle Birlikte Uygulanabilir</value>
+  </data>
+  <data name="discount_opt05" xml:space="preserve">
+    <value>Bu İndirim Birden Fazla Uygunabilir</value>
+  </data>
+  <data name="discount_opt06" xml:space="preserve">
+    <value>Bu Servis Ücretinde Kuveri Arttır</value>
+  </data>
+  <data name="discount_type_discount" xml:space="preserve">
+    <value>İndirim</value>
+  </data>
+  <data name="discount_type_servis_charge" xml:space="preserve">
+    <value>Servis Ücreti</value>
+  </data>
+  <data name="discount_type_tip" xml:space="preserve">
+    <value>Tip</value>
+  </data>
+  <data name="peripheral_type_cdrw1" xml:space="preserve">
+    <value>Para Kasası1</value>
+  </data>
+  <data name="peripheral_type_cdrw2" xml:space="preserve">
+    <value>Para Kasası2</value>
+  </data>
+  <data name="peripheral_type_def_code*****************" xml:space="preserve">
+    <value>peripheral_type_def_code****************</value>
+  </data>
+  <data name="peripheral_type_mcardreader" xml:space="preserve">
+    <value>Manyetik Kart Okuyucu</value>
+  </data>
+  <data name="peripheral_type_rear_display" xml:space="preserve">
+    <value>Müşteri Ekranı</value>
+  </data>
+  <data name="peripheral_type_scale" xml:space="preserve">
+    <value>Terazi</value>
+  </data>
+  <data name="peripheral_type_scanner" xml:space="preserve">
+    <value>Barkod Okuyucu</value>
+  </data>
+  <data name="Print_Output_Type_code*********" xml:space="preserve">
+    <value>Print_Output_Types******</value>
+  </data>
+  <data name="print_output_type_code_gc_screen" xml:space="preserve">
+    <value>GC Ekranı</value>
+  </data>
+  <data name="print_output_type_code_invoice" xml:space="preserve">
+    <value>Fatura</value>
+  </data>
+  <data name="print_output_type_code_jurnal" xml:space="preserve">
+    <value>Jurnal</value>
+  </data>
+  <data name="print_output_type_code_kds" xml:space="preserve">
+    <value>Sipariş Ekranı(KDS)</value>
+  </data>
+  <data name="print_output_type_code_order_receipt" xml:space="preserve">
+    <value>Sipariş Fişi</value>
+  </data>
+  <data name="print_output_type_code_pbr" xml:space="preserve">
+    <value>PBR</value>
+  </data>
+  <data name="print_output_type_code_report" xml:space="preserve">
+    <value>Rapor</value>
+  </data>
+  <data name="print_output_type_code_subtotal" xml:space="preserve">
+    <value>Ara Toplam</value>
+  </data>
+  <data name="rvc_opt_code01" xml:space="preserve">
+    <value>Masasz Giriş(Fast Transaction)</value>
+  </data>
+  <data name="rvc_opt_code02" xml:space="preserve">
+    <value>Çek Transferi İçin Personel Numarasn İste</value>
+  </data>
+  <data name="rvc_opt_code03" xml:space="preserve">
+    <value>Müşteri Sayısı Koltuk Sayısını Aşamaz</value>
+  </data>
+  <data name="rvc_opt_code04" xml:space="preserve">
+    <value>Servis Ücretini Kuvere Göre Belirle</value>
+  </data>
+  <data name="rvc_opt_code05" xml:space="preserve">
+    <value>Çeki Bölündükten Sonra Yazdırılsın mı Sorusu</value>
+  </data>
+  <data name="rvc_opt_code06" xml:space="preserve">
+    <value>İptal ve  İade İşlemlerinde Sebep Kodu İste</value>
+  </data>
+  <data name="rvc_opt_code07" xml:space="preserve">
+    <value>Her Masa İçin Sadece Bir Grup Açılabilir</value>
+  </data>
+  <data name="rvc_opt_code08" xml:space="preserve">
+    <value>Ara Toplam 0 İse Kasayı Açma</value>
+  </data>
+  <data name="rvc_opt_code09" xml:space="preserve">
+    <value>İlaveleri Ekranda Göster</value>
+  </data>
+  <data name="rvc_opt_code10" xml:space="preserve">
+    <value>Servis Ücretini ve İndirimi Yuvarla</value>
+  </data>
+  <data name="rvc_opt_code11" xml:space="preserve">
+    <value>Sfr veya Negatif Sonuçlu Çekteki Müşteri Sayısını Müşteri Sayısına Ekleme</value>
+  </data>
+  <data name="sort_group_type_check" xml:space="preserve">
+    <value>Check Sort Group</value>
+  </data>
+  <data name="sort_group_type_invoice" xml:space="preserve">
+    <value>Invoice Sort Group</value>
+  </data>
+  <data name="sort_group_type_report" xml:space="preserve">
+    <value>Report Sort Group</value>
+  </data>
+  <data name="tender_media_opt01" xml:space="preserve">
+    <value>Para Kasasını Aç</value>
+  </data>
+  <data name="tender_media_opt02" xml:space="preserve">
+    <value>Referans İste</value>
+  </data>
+  <data name="tender_media_opt03" xml:space="preserve">
+    <value>Parçalı Ödemeye İzin Ver</value>
+  </data>
+  <data name="tender_media_opt04" xml:space="preserve">
+    <value>Diğer Para Birimlerini Kullan</value>
+  </data>
+  <data name="tender_media_opt05" xml:space="preserve">
+    <value>Negatif Ödemeye İzin Ver</value>
+  </data>
+  <data name="tender_media_opt06" xml:space="preserve">
+    <value>Para Üstü Hesapla</value>
+  </data>
+  <data name="tender_media_opt07" xml:space="preserve">
+    <value>Max. Ödeme Çek Toplamı</value>
+  </data>
+  <data name="tender_media_opt08" xml:space="preserve">
+    <value>Kard Son Kullanma Tarihini Kontrol Et</value>
+  </data>
+  <data name="tender_media_type_subtotal" xml:space="preserve">
+    <value>Ara Toplam</value>
+  </data>
+  <data name="tender_media_type_tender" xml:space="preserve">
+    <value>Ödeme</value>
+  </data>
+  <data name="terminal_opt_code************" xml:space="preserve">
+    <value>terminal_opt_code***********</value>
+  </data>
+  <data name="terminal_opt_code01" xml:space="preserve">
+    <value>Klavyeye Basılınca Ses Çıkart</value>
+  </data>
+  <data name="terminal_opt_code02" xml:space="preserve">
+    <value>Personel Girişi Yoksa Müşteri Göstergesine Kapalı Yaz</value>
+  </data>
+  <data name="terminal_opt_code03" xml:space="preserve">
+    <value>Herhangi Bir Hata İle Karşılaşınca Ses Çıkart</value>
+  </data>
+  <data name="terminal_opt_code04" xml:space="preserve">
+    <value>Yeni İşlemden Önce Para Kasasını Kapatmasını İste</value>
+  </data>
+  <data name="terminal_opt_code05" xml:space="preserve">
+    <value>İşlemden Sonra Ekranı Temizleme</value>
+  </data>
+  <data name="terminal_opt_code06" xml:space="preserve">
+    <value>Müşteri Bilgi Ekranını Aktifleştir</value>
+  </data>
+  <data name="terminal_opt_code07" xml:space="preserve">
+    <value>Diğer Döviz Tip İçin İkinci Para Kasasını Kullan</value>
+  </data>
+  <data name="terminal_opt_code08" xml:space="preserve">
+    <value>Herhangi Bir Operatör Çalışırken Yeni Birinin Giriş Yapmasına İzin Ver</value>
+  </data>
+  <data name="terminal_opt_code09" xml:space="preserve">
+    <value>Kullanıcı Sisteme Girdiğinde Otomatik Çek Aç</value>
+  </data>
+  <data name="terminal_opt_code10" xml:space="preserve">
+    <value>Magnetik Kart İle Giriş Yap</value>
+  </data>
+  <data name="terminal_opt_code11" xml:space="preserve">
+    <value>Otomatik Çıkışı İptal Et</value>
+  </data>
+  <data name="terminal_opt_code12" xml:space="preserve">
+    <value>El Terminaline Bağlı Müşteri Çeki Yazıcısını Aktifleştir</value>
+  </data>
+  <data name="terminal_opt_code13" xml:space="preserve">
+    <value>Düzenli Yükleme Yap</value>
+  </data>
+</root>

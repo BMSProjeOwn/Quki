@@ -1,0 +1,133 @@
+﻿@using Quki.Common
+@using Quki.Entity.Models
+@model List<Products>
+
+
+    <div class="title-default custom-counter d-flex justify-content-between w-100 flex-wrap">
+
+        <div class="content-right d-flex align-items-center justify-content-end">
+            <div class="list-grid mg-lf-0">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#grid">
+                            <i class="fa fa-th-large" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#list">
+                            <i class="fa fa-list" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-products tab-content">
+        <!-- Grid -->
+        <div id="grid" class="tab-pane active">
+            <div class="product">
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12" style="width:50%">
+                            <div class="item item-hover-view-cart">
+                                <div class="product-thumb">
+                                    <div class="product-container item-img">
+                                        <div class="product-image-container">
+                                            <a class="product-img-link" href="/sesli-tiyatro/@Functions.ReplaceString(item.ProductName)" + title="">
+                                                <img class="img-fluid" src="@item.ImageThumbPath" alt="img">
+                                                <img class="img-fluid img-hover" src="@item.ImageThumbPath" alt="img" style="width:0px; height:0px;">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    @*<div class="product-cart-icon d-flex justify-content-around">
+                                        <div class="product-actions">
+                                            <a href="#">
+                                                <i class="cs-icon icon-cs-cart"></i>
+                                            </a>
+                                        </div>
+                                        <div class="product-actions">
+                                            <a href="#">
+                                                <i class="cs-icon icon-search"></i>
+                                            </a>
+                                        </div>
+                                        <div class="product-actions">
+                                            <a href="#">
+                                                <i class="cs-icon icon-heart"></i>
+                                            </a>
+                                        </div>
+                                    </div>*@
+                                </div>
+
+
+
+                                <div class="product-info text-center">
+                                    <h2 class="product-name">
+                                        <a href="/sesli-tiyatro/@Functions.ReplaceString(item.ProductName)">@item.ProductName</a>
+                                    </h2>
+                                    @*<div class="price">
+                                            <span>$23.00</span>
+                                            <del>$25.00</del>
+                                        </div>*@
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- List -->
+        <div id="list" class="tab-pane">
+            <div class="product">
+                @foreach (var item in Model)
+                {
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="product-thumb">
+                                    <div class="product-container item-img">
+                                        <div class="product-image-container">
+                                            <a class="product-img-link" href="/sesli-tiyatro/@Functions.ReplaceString(item.ProductName)" title="">
+                                                <img class="w-100" src="@item.ImageThumbPath" alt="img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="content-right">
+                                    <h2>
+                                        <a href="/sesli-tiyatro/@Functions.ReplaceString(item.ProductName)">@item.ProductName</a>
+                                    </h2>
+
+
+
+
+
+                                    <div class="des">
+                                        @Html.Raw(@item.Description)
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+            </div>
+        </div>
+    </div>
+

@@ -1,0 +1,33 @@
+﻿@using Quki.Entity.ViewModel
+@model List<ProductAttributeModel>
+
+<div class="product-share">
+
+    @if (Model.Any())
+    {
+        if (Model != null && Model.Count > 0)
+        {
+
+
+            @foreach (var item in Model)
+            {
+                if (item.isdinamic)
+                {
+                    <div class="share-item d-table">
+                        <div class="share-title" style="font-size: 14px; color: #282828; width: 200px; font-weight: 500; ">@item.ValueName : </div>
+                        <div class="share-info d-table-cell">@Html.Raw(@item.Value)</div>
+                    </div>
+                }
+                else
+                {
+                    <div class="share-item d-table">
+                        <div class="share-title" style="font-size: 14px; color: #282828; width: 200px; font-weight: 500; ">@item.ValueName : </div>
+                        <div class="share-info d-table-cell">@Html.Raw(@item.Remark)</div>
+                    </div>
+                }
+
+            }}
+    }
+
+
+</div>

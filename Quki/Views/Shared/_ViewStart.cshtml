@@ -1,0 +1,172 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Quki.Common
+@using Quki.Entity.Models
+<!DOCTYPE html>
+<html lang="en">
+@inject SignInManager<AppUser> signInManager;
+@*@{
+    var culture = Context.Features.Get<Microsoft.AspNetCore.Localization.IRequestCultureFeature>();
+    MultiLanguageOmni.ReadResourceKey.cultureName = culture.RequestCulture.UICulture.Name;
+}*@
+<head>
+
+    <title>@ViewData["Title"] - QR Menü</title>
+
+    @{
+        string keyw = (!string.IsNullOrEmpty(ViewBag.MetaKeywords) ? ViewBag.MetaKeywords : "");
+        string desc = (!string.IsNullOrEmpty(ViewBag.MetaDescription) ? ViewBag.MetaDescription : "");
+    }
+
+
+
+    <meta property="og:title" content="@ViewData["Title"] Quki">
+    <meta content="@ViewData["Title"] Quki" name="twitter:title">
+    <meta property="og:description" content="@desc">
+    <meta content="Quki" property="og:site_name">
+    <meta content="news" property="og:type">
+    <meta name="title" content="@ViewData["Title"] Quki" />
+    <meta name="twitter:description" content="@desc" />
+    <meta name="searchTitle" content="@ViewData["Title"] Quki" />
+    <meta name="keywords" content="@keyw">
+    <meta name="description" content="@desc" />
+    <meta name="image" content="" />
+    <meta content="index, follow" id="meta_robot" name="robots">
+    <meta name="google-site-verification" content="cGmFm7ge4PXGlUzj3EVux-b-F3wFSHo2OBDIONHFct4" />
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+    <link rel="canonical" href="@ViewData["canonicalLink"]" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Goggle Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="~/web/libs/boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/web/libs/flaticon/css/flaticon.css">
+    <link rel="stylesheet" href="~/web/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/web/libs/owl.carousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="~/web/libs/nivo-slider/css/nivo-slider.css">
+    <link rel="stylesheet" href="~/web/libs/nivo-slider/css/animate.css">
+    <link rel="stylesheet" href="~/web/libs/nivo-slider/css/style.css">
+    <link rel="stylesheet" href="~/web/libs/slider-range/css/jslider.css">
+    <link rel="stylesheet" href="~/web/libs/font-cs/cs.css">
+
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" type="text/css" href="~/web/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/web/css/responsive.css">
+    <link href="~/web/css/Custom.css" rel="stylesheet" />
+    <link href="~/web/css/BackgroundLogin.css" rel="stylesheet" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01H99243F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-F01H99243F');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NZ8LBMX');</script>
+    <!-- End Google Tag Manager -->
+    <!--Jquery-->
+    <script src="~/web/libs/jquery/jquery-1.11.3.min.js"></script>
+
+    <script type="application/ld+json">
+        {
+          "@@context": "https://schema.org/",
+          "@@type": "WebSite",
+          "name": "Quki",
+          "url": "https://Quki.com/"
+        }
+    </script>
+
+
+    <script type="application/ld+json">
+        {
+          "@@context": "https://schema.org",
+          "@@type": "Organization",
+          "name": "Quki",
+          "url": "https://Quki.com/",
+          "logo": "https://Quki.com/web/img/Quki_logo.png",
+          "sameAs": [
+            "https://www.facebook.com/Qukicom",
+            "https://twitter.com/Qukicom",
+            "https://www.instagram.com/Qukicom/",
+            "https://www.youtube.com/channel/UCQ1ErM-53hECcgHd6U-tGCw",
+            "https://tr.pinterest.com/Qukicom/"
+          ]
+        }
+    </script>
+
+</head>
+<body class="background-login">
+    <div class="container body-content">
+        @RenderBody()
+
+    </div>
+    <!-- Page Loader -->
+    <div class="background-login" id="page-preloader">
+        <div class="page-loading">
+            <img src="~/viewimage/chocolate logo.png" width="225" height="225" />
+        </div>
+    </div>
+    <!-- Libs JS -->
+
+    <script src="~/web/libs/owl.carousel/owl.carousel.js"></script>
+    <script src="~/web/libs/boostrap/js/bootstrap.min.js"></script>
+    <script src="~/web/libs/boostrap/js/popper.min.js"></script>
+    <script src="~/web/libs/nivo-slider/js/jquery.nivo.slider.js"></script>
+    <script src="~/web/libs/jquery.elevatezoom/jquery.elevatezoom.js"></script>
+    <script src="~/web/libs/slider-range/js/tmpl.js"></script>
+    <script src="~/web/libs/slider-range/js/jquery.dependClass-0.1.js"></script>
+    <script src="~/web/libs/slider-range/js/draggable-0.1.js"></script>
+    <script src="~/web/libs/slider-range/js/jquery.slider.js"></script>
+    <script src="~/web/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="~/web/libs/jquery.countdown/jquery.countdown.js"></script>
+    <script src='~/web/libs/imagesloaded/imagesloaded.pkgd.js'></script>
+    <!-- Template JS -->
+    <script src="~/web/js/custom.js"></script>
+    @RenderSection("JavaScript", false)
+    <script src="https://cdn.efilli.com/efl.js" data-key="rldWWa64M8wnthNG2wGYJmfCRgTWMMDPjX8CZiSY94BPvpg2ri81o0xSrETXxaf"></script>
+
+    <script>
+        function callCampaingTypeSeqfunc(val) {
+            document.getElementById(val).style.backgroundColor = "#E3A73D";
+            document.getElementById(val).style.color = "#F9FAFA";
+            window.location.href = "GetMenuItem?id=" + val;
+        }
+        function goSluDefController() {
+            window.location.href = "SluDef";
+        }
+        function goSluDefControllerclick() {
+            document.getElementById("menu").style.backgroundColor = "#E3A73D";
+            document.getElementById("menu").style.color = "#F9FAFA";
+            window.location.href = "SluDef";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,701 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>Über uns</value>
+  </data>
+  <data name="accept" xml:space="preserve">
+    <value>Akzeptieren</value>
+  </data>
+  <data name="AccountInformationError" xml:space="preserve">
+    <value>Bitte geben Sie Ihre Kontoinformationen ein</value>
+  </data>
+  <data name="AccountPage" xml:space="preserve">
+    <value>Anmelden</value>
+  </data>
+  <data name="AcoountPage" xml:space="preserve">
+    <value>Konto-Anmeldeseite</value>
+  </data>
+  <data name="ActivastionCode" xml:space="preserve">
+    <value>Aktivierungscode</value>
+  </data>
+  <data name="ActivastionMail" xml:space="preserve">
+    <value>Mail mit dem Aktivierungscode aktivieren</value>
+  </data>
+  <data name="Adress" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="AgainLogin" xml:space="preserve">
+    <value>Melden Sie sich an, um fortzufahren</value>
+  </data>
+  <data name="AgeRange" xml:space="preserve">
+    <value>Altersspanne</value>
+  </data>
+  <data name="AktiveMail" xml:space="preserve">
+    <value>Diese E-Mail wurde bereits aktiviert</value>
+  </data>
+  <data name="AllProducers" xml:space="preserve">
+    <value>Audiotheater-Künstler</value>
+  </data>
+  <data name="AlreadySubscribed" xml:space="preserve">
+    <value>Sie sind bereits abonniert</value>
+  </data>
+  <data name="AppleLogin" xml:space="preserve">
+    <value>Mit Apple anmelden</value>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="AudioTheaterAgeRange" xml:space="preserve">
+    <value>Hörspiel Altersgruppe</value>
+  </data>
+  <data name="AudioTheaterAgeRange2" xml:space="preserve">
+    <value>Audio Theater über @age Jahre alt</value>
+  </data>
+  <data name="AudioTheaterOver2YearsOld" xml:space="preserve">
+    <value>Hörspiel +2 Jahre</value>
+  </data>
+  <data name="AudioTheaterOver4YearsOld" xml:space="preserve">
+    <value>Hörspiel+4 Jahre</value>
+  </data>
+  <data name="AudioTheaterOver6YearsOld" xml:space="preserve">
+    <value>Hörspiel +6 Jahre</value>
+  </data>
+  <data name="AudioTheaterOver8YearsOld" xml:space="preserve">
+    <value>Hörspiel +8 Jahre</value>
+  </data>
+  <data name="AudioTheaters" xml:space="preserve">
+    <value>Hörspiele</value>
+  </data>
+  <data name="AudioTheatre" xml:space="preserve">
+    <value>Hörspiel</value>
+  </data>
+  <data name="BillAdress" xml:space="preserve">
+    <value>Rechnungsanschrift</value>
+  </data>
+  <data name="btnCancelReasonContinue" xml:space="preserve">
+    <value>Mit der Kündigung des Abonnements fortfahren</value>
+  </data>
+  <data name="BtnSubsription" xml:space="preserve">
+    <value>Abonnementtypen anzeigen</value>
+  </data>
+  <data name="BtnTrialDay" xml:space="preserve">
+    <value>1-Tag Probezeit starten</value>
+  </data>
+  <data name="BuyGiftCard" xml:space="preserve">
+    <value>Geschenkkarte kaufen</value>
+  </data>
+  <data name="campingCodeError" xml:space="preserve">
+    <value>Falscher Code eingegeben</value>
+  </data>
+  <data name="CancelReasonHeaderTitle" xml:space="preserve">
+    <value>"Es tut uns Leid, dass Sie Uhr Abonnement kündigen.
+Ihre Kommentare ermöglichen es uns, unsere Dienstleistungen zu verbessern.
+Warum möchten Sie diese Plattform verlassen?"</value>
+  </data>
+  <data name="CancelSubscriber" xml:space="preserve">
+    <value>Ihr Abonnement wurde erfolgreich gekündigt.</value>
+  </data>
+  <data name="CancelSubsribtion" xml:space="preserve">
+    <value>Ihr Abonnement kündigen</value>
+  </data>
+  <data name="Cancle" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="CardCvcError" xml:space="preserve">
+    <value>Bitte CVC-Nummer eingeben</value>
+  </data>
+  <data name="CardCvcError2" xml:space="preserve">
+    <value>Ungültige CVC-Nummer</value>
+  </data>
+  <data name="CardDateError" xml:space="preserve">
+    <value>Bitte überprüfen Sie das Gültigkeitsdatum der Karte.</value>
+  </data>
+  <data name="CardHolder" xml:space="preserve">
+    <value>Vor- und Nachname des Karteninhabers</value>
+  </data>
+  <data name="CardInformation" xml:space="preserve">
+    <value>Karteninformationen</value>
+  </data>
+  <data name="CardInformationError" xml:space="preserve">
+    <value>Bitte geben Sie Ihre Karteninformationen ein.</value>
+  </data>
+  <data name="CardInformationError2" xml:space="preserve">
+    <value>Bitte geben Sie die vollständigen Karteninformationen ein.</value>
+  </data>
+  <data name="CardNoError" xml:space="preserve">
+    <value>Ungültige Kartennummber</value>
+  </data>
+  <data name="CardNumber" xml:space="preserve">
+    <value>Kartennummer</value>
+  </data>
+  <data name="CardOwnInformationError" xml:space="preserve">
+    <value>Bitte geben Sie die Informationen des Karteninhabers ein.</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Passwort ändern</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>Auswählen</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Stadt</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="CommentSendUsTitle" xml:space="preserve">
+    <value>Ihr Kommentar wurde uns übermittelt.</value>
+  </data>
+  <data name="ConfirmMail" xml:space="preserve">
+    <value>Bitte bestätigen Sie Ihre E-Mail-Adresse, bevor Sie sich anmelden</value>
+  </data>
+  <data name="ConfirmMailTitle" xml:space="preserve">
+    <value>Sie sollten die an Ihre Adresse gesendete E-Mail bestätigen, bevor Sie sich anmelden.</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="ContactConditions" xml:space="preserve">
+    <value>Das Formular mit den Allgemeinen Geschäftsbedingungen sollte ausgefüllt werden.</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Kontaktieren Sie uns</value>
+  </data>
+  <data name="ContinueListening" xml:space="preserve">
+    <value>Weiter zuhören</value>
+  </data>
+  <data name="Corporate" xml:space="preserve">
+    <value>Gesellschaft</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Land</value>
+  </data>
+  <data name="CreateAccount" xml:space="preserve">
+    <value>Konto anlegen</value>
+  </data>
+  <data name="DateOfBirth" xml:space="preserve">
+    <value>Geburtsdatum</value>
+  </data>
+  <data name="DontMatchPassword" xml:space="preserve">
+    <value>Passwörter stimmen nicht überein.</value>
+  </data>
+  <data name="DuplicateUserName" xml:space="preserve">
+    <value>Es existiert bereits ein Konto mit der E-Mail-Adresse xxx@xxxx</value>
+  </data>
+  <data name="EffectiveDate" xml:space="preserve">
+    <value>Datum des Inkrafttretens</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailRecordNotFound" xml:space="preserve">
+    <value>Für diesen Benutzer wurde kein E-Mail-Datensatz gefunden</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>Endtermin</value>
+  </data>
+  <data name="enter" xml:space="preserve">
+    <value>Betreten</value>
+  </data>
+  <data name="ErrorAdress" xml:space="preserve">
+    <value>Bitte lassen Sie die Adresszeile nicht leer</value>
+  </data>
+  <data name="ErrorCity" xml:space="preserve">
+    <value>Bitte lassen Sie die Stadtzeile nicht leer</value>
+  </data>
+  <data name="ErrorCountry" xml:space="preserve">
+    <value>Bitte lassen Sie die Länderzeile nicht leer</value>
+  </data>
+  <data name="ErrorPhone" xml:space="preserve">
+    <value>Bitte lassen Sie die Telefonzeile nicht leer</value>
+  </data>
+  <data name="ErrorPostaCode" xml:space="preserve">
+    <value>Bitte lassen Sie die Postleitzahlzeile nicht leer</value>
+  </data>
+  <data name="EvluationMessage" xml:space="preserve">
+    <value>Vielen Dank für Ihre Bewertung.</value>
+  </data>
+  <data name="ExpertCommentary" xml:space="preserve">
+    <value>Kommentar des Spezialisten</value>
+  </data>
+  <data name="ExpirationDate" xml:space="preserve">
+    <value>Datum der letzten Verwendung</value>
+  </data>
+  <data name="FacebookLogin" xml:space="preserve">
+    <value>Mit Facebook anmelden</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Weiblich</value>
+  </data>
+  <data name="FialedChangePasswordTitle" xml:space="preserve">
+    <value>Passwortänderungsversuch fehlgeschlagen</value>
+  </data>
+  <data name="Find" xml:space="preserve">
+    <value>Finden</value>
+  </data>
+  <data name="ForgetPassword" xml:space="preserve">
+    <value>entdecken Sie mit Ihrem entdecken Sie mit Ihrem Kind den Zauber des Hörspiele.</value>
+  </data>
+  <data name="ForgotPasswordAktivasyon" xml:space="preserve">
+    <value>Passwort mit Code zurücksetzen</value>
+  </data>
+  <data name="FrequentlyAskedQuestions" xml:space="preserve">
+    <value>Häufig gestellte Fragen</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Geschlecht</value>
+  </data>
+  <data name="gift" xml:space="preserve">
+    <value>Geschenkkarte</value>
+  </data>
+  <data name="GiftCard" xml:space="preserve">
+    <value>Wählen Sie eine Geschenkkarte</value>
+  </data>
+  <data name="GiftTitle" xml:space="preserve">
+    <value>Bringen Sie die einzigartige Märchenwelt von Quki mit Ihren Liebsten zusammen</value>
+  </data>
+  <data name="GiftTitle2" xml:space="preserve">
+    <value>Viel Spaß beim Teilen mit der Audio-Theater-Anwendung von Quki, genießen Sie schöne Geschichten und Märchen mit Ihren Lieben.</value>
+  </data>
+  <data name="GoogleLogin" xml:space="preserve">
+    <value>Mit Google anmelden</value>
+  </data>
+  <data name="GoToAppleStore" xml:space="preserve">
+    <value>https://apps.apple.com/ge/app/Quki/id1575201785?l=ge</value>
+  </data>
+  <data name="GoToAppStoreMessage" xml:space="preserve">
+    <value>Das gesamte Werk kann in der App angehört werden</value>
+  </data>
+  <data name="GoToPlayStore" xml:space="preserve">
+    <value>In den Playstore gehen</value>
+  </data>
+  <data name="HaveActiveSubribtion" xml:space="preserve">
+    <value>Sie haben kein aktives Abonnement bei Quki.</value>
+  </data>
+  <data name="HelpfulLinks" xml:space="preserve">
+    <value>Nützliche Links</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Hauptseite</value>
+  </data>
+  <data name="HowcanIStartUsingToQuki" xml:space="preserve">
+    <value>Wie kann ich anfangen, Quki zu verwenden?</value>
+  </data>
+  <data name="InActiveMail" xml:space="preserve">
+    <value>Bevor Sie sich anmelden, sollten Sie den an Ihre E-Mail gesendeten Link aktivieren.</value>
+  </data>
+  <data name="InvalidUserName" xml:space="preserve">
+    <value>Sie haben eine ungültige E-Mail-Adresse verwendet. Bitte erneut versuchen.</value>
+  </data>
+  <data name="MainPageEmailTitle" xml:space="preserve">
+    <value>Um von den neuen Inhalten und Kampagnen zu erfahren, teilen Sie uns bitte Ihre E-Mail-Adresse mit</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>männlich</value>
+  </data>
+  <data name="month" xml:space="preserve">
+    <value>Monat</value>
+  </data>
+  <data name="MostListenedAudioTheaters" xml:space="preserve">
+    <value>Meistengehörte Hörspiele</value>
+  </data>
+  <data name="MostListenedMusic" xml:space="preserve">
+    <value>Meistengehörte Musik</value>
+  </data>
+  <data name="Musics" xml:space="preserve">
+    <value>Musik</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name/Vorname</value>
+  </data>
+  <data name="NoMatchPassword" xml:space="preserve">
+    <value>Passwörter stimmen nicht überein.</value>
+  </data>
+  <data name="NotFoundProduct" xml:space="preserve">
+    <value>Kein Produkt gefunden, dass diesen Kriterien entspricht.</value>
+  </data>
+  <data name="NotFoundUser" xml:space="preserve">
+    <value>Benutzername nicht gefunden.</value>
+  </data>
+  <data name="NoUserPleaseRegister" xml:space="preserve">
+    <value>Es wurde kein solcher Benutzer gefunden. Bitte anmelden.</value>
+  </data>
+  <data name="OfferString" xml:space="preserve">
+    <value>Quki hat ein spezielles Angebot für Sie! Jetzt können Sie Ihr Abonnement zu den von uns angebotenen günstigen Preisen verlängern.</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>zustimmen</value>
+  </data>
+  <data name="OnlyCreditCard" xml:space="preserve">
+    <value>Hinweis: Nur Kreditkarten sind gültig.</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>oder</value>
+  </data>
+  <data name="OtherPolicies" xml:space="preserve">
+    <value>Andere Bestimmungen</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Passwort</value>
+  </data>
+  <data name="PasswordAgain" xml:space="preserve">
+    <value>Passwort (erneut)</value>
+  </data>
+  <data name="PasswordChangeFailedTryAgain" xml:space="preserve">
+    <value>Passwortänderung gescheitert. Bitte erneut versuchen.</value>
+  </data>
+  <data name="PasswordChangeTitle" xml:space="preserve">
+    <value>Anfrage zur Passwortänderung erhalten.</value>
+  </data>
+  <data name="PasswordRequiresDigit" xml:space="preserve">
+    <value>Das Passwort sollte mindestens eine Ziffer enthalten.</value>
+  </data>
+  <data name="PasswordRequiresNonAlphanumeric" xml:space="preserve">
+    <value>Das Passwort muss eine Zahl, einen Buchstaben und Sonderzeichen (# ^ * etc.) enthalten.</value>
+  </data>
+  <data name="PasswordTooShort" xml:space="preserve">
+    <value>Das Passwort muss mindestens 8 Zeichen lang sein.</value>
+  </data>
+  <data name="PaymentPlan" xml:space="preserve">
+    <value>Zahlungsmethode</value>
+  </data>
+  <data name="PerformedbytheArtist" xml:space="preserve">
+    <value>Gesprochen von demselben Künstler</value>
+  </data>
+  <data name="Performers" xml:space="preserve">
+    <value>Sprecher</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="Policies" xml:space="preserve">
+    <value>Bestimmungen</value>
+  </data>
+  <data name="PostCode" xml:space="preserve">
+    <value>Postleitzahl</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Preis</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Datenschutz-Bestimmungen</value>
+  </data>
+  <data name="Producer" xml:space="preserve">
+    <value>Sprecher</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="RecentlyAddedAudioTheaters" xml:space="preserve">
+    <value>kürzlich hinzugefügte Hörspiele</value>
+  </data>
+  <data name="regiredArea" xml:space="preserve">
+    <value>Dieser Bereich muss ausgefüllt werden</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Registrierung</value>
+  </data>
+  <data name="Register2" xml:space="preserve">
+    <value>Jetzt registrieren</value>
+  </data>
+  <data name="Register3" xml:space="preserve">
+    <value>Jetzt registrieren</value>
+  </data>
+  <data name="RegisterLink" xml:space="preserve">
+    <value>Registrierung erfolgreich</value>
+  </data>
+  <data name="RegistrationSuccessful" xml:space="preserve">
+    <value>Erinnern</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Fehler melden</value>
+  </data>
+  <data name="ReportError" xml:space="preserve">
+    <value>Fehler melden</value>
+  </data>
+  <data name="required" xml:space="preserve">
+    <value>Erforderlich</value>
+  </data>
+  <data name="requiredEmail" xml:space="preserve">
+    <value>Bitte geben Sie eine gültige E-Mail-Adresse ein.</value>
+  </data>
+  <data name="requiredPassword" xml:space="preserve">
+    <value>Bitte geben Sie Ihr Passwort ein.</value>
+  </data>
+  <data name="ReSendAktivsyonMail" xml:space="preserve">
+    <value>Aktivierungsmail erneut senden</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>Passwort zurücksetzen</value>
+  </data>
+  <data name="ReviewTerms" xml:space="preserve">
+    <value>Geschäftsbedingungen einsehen</value>
+  </data>
+  <data name="RulePassword" xml:space="preserve">
+    <value>Ihr Passwort ist zu kurz. Ihr Passwort sollte mindestens 8 Zeichen lang sein, darunter eine Zahl, ein Buchstabe und ein Sonderzeichen (# ^ * etc.).</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="SearchAudioBook" xml:space="preserve">
+    <value>Welches Hörbuch suchen Sie? (Welches Hörspiel suchen Sie?)</value>
+  </data>
+  <data name="SearchBox" xml:space="preserve">
+    <value>Suchbox</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Schicken</value>
+  </data>
+  <data name="SendActivationMail" xml:space="preserve">
+    <value>Registrierung erfolgreich. Der Aktivierungslink wurde an Ihre E-Mail-Adresse gesendet.</value>
+  </data>
+  <data name="SendPasswordChangeTite" xml:space="preserve">
+    <value>Ein Link zur Passwortänderung wurde an Ihre E-Mail-Adresse gesendet</value>
+  </data>
+  <data name="ShareGiftCard" xml:space="preserve">
+    <value>Teilen Sie den Geschenkcode mit einem Freund</value>
+  </data>
+  <data name="ShareGiftCode" xml:space="preserve">
+    <value>Geschenkcode teilen</value>
+  </data>
+  <data name="ShortPassword" xml:space="preserve">
+    <value>Das Passwort ist zu kurz.</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>Anmeldung</value>
+  </data>
+  <data name="SignIn2" xml:space="preserve">
+    <value>Anmelden</value>
+  </data>
+  <data name="SignInLink" xml:space="preserve">
+    <value>Anmeldung</value>
+  </data>
+  <data name="SignMailTitle" xml:space="preserve">
+    <value>Sie sollten die an Ihre Adresse gesendete E-Mail bestätigen, bevor Sie sich anmelden</value>
+  </data>
+  <data name="SignOut" xml:space="preserve">
+    <value>Abmelden</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>Registrieren</value>
+  </data>
+  <data name="Slider2Title" xml:space="preserve">
+    <value>Eine Hörspielplattform für Kinder. Laden Sie Quki jetzt herunter, um Stücke zu hören, die von vielen Künstlern angereichert wurden.</value>
+  </data>
+  <data name="Slider2Title1" xml:space="preserve">
+    <value>Eine Hörspielplattform für Kinder. </value>
+  </data>
+  <data name="Slider2Title2" xml:space="preserve">
+    <value>Laden Sie Quki jetzt herunter, um Stücke zu hören, die von vielen Künstlern angereichert wurden.</value>
+  </data>
+  <data name="SosialNetworkTitle" xml:space="preserve">
+    <value>Folgen Sie uns auf Social Media</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Startdatum</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Zustand</value>
+  </data>
+  <data name="SubscriberName" xml:space="preserve">
+    <value>Name des Abonnenten</value>
+  </data>
+  <data name="SubscribtionInformetion" xml:space="preserve">
+    <value>Abonnementinformationen</value>
+  </data>
+  <data name="Subscription" xml:space="preserve">
+    <value>Abonnement</value>
+  </data>
+  <data name="SubscritionwithCode" xml:space="preserve">
+    <value>Mitgliedschaft mit Code identifizieren</value>
+  </data>
+  <data name="SuccessActivation" xml:space="preserve">
+    <value>Aktivierung erfolgreich</value>
+  </data>
+  <data name="SuccessActivationTitle" xml:space="preserve">
+    <value>Sie benötigen ein Abonnement, um die Hörspiele zu hören. Sie können sich erneut anmelden, um unsere Abonnementpakete durchzugehen und Ihr Probeabonnement zu starten.</value>
+  </data>
+  <data name="SuccessRecord" xml:space="preserve">
+    <value>Registrierung erfolgreich</value>
+  </data>
+  <data name="SuccessSendActivationMail" xml:space="preserve">
+    <value>Die Aktivierungs-E-Mail wurde gesendet, bitte überprüfen Sie Ihr E-Mail-Konto.</value>
+  </data>
+  <data name="SuccessSendActivationMail1" xml:space="preserve">
+    <value>Aktivasyon maili gönderildi, lütfen mail hesabınızı kontrol edin.</value>
+  </data>
+  <data name="SuccessSubscription" xml:space="preserve">
+    <value>Ihr Abonnement wurde erfolgreich abgeschlossen</value>
+  </data>
+  <data name="SuccessUpdatePassword" xml:space="preserve">
+    <value>Passwortaktualisierung erfolgreich</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Nachname</value>
+  </data>
+  <data name="TermsofUse" xml:space="preserve">
+    <value>Nutzungsbedingungen</value>
+  </data>
+  <data name="TheatersbyAge" xml:space="preserve">
+    <value>Hörspiele nach Alter</value>
+  </data>
+  <data name="ThePeriodOfValidity" xml:space="preserve">
+    <value>Die Gültigkeitsdauer</value>
+  </data>
+  <data name="ToActiveUser" xml:space="preserve">
+    <value>Um den Benutzer zu aktivieren, klicken Sie bitte auf den Link in der E-Mail, die an die E-Mail-Adresse @email  gesendet wird</value>
+  </data>
+  <data name="TryQuki" xml:space="preserve">
+    <value>Testen Sie Quki 7 Tage kostenlos</value>
+  </data>
+  <data name="TryQukiSubTitle" xml:space="preserve">
+    <value>Entdecken Sie mit Ihrem Kind den Zauber des Hörspiele.</value>
+  </data>
+  <data name="UbableCancelSubscription" xml:space="preserve">
+    <value>Das Abonnement konnte nicht gekündigt werden</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Aktualisieren</value>
+  </data>
+  <data name="UpdatePassword" xml:space="preserve">
+    <value>Passwort aktualisieren</value>
+  </data>
+  <data name="Usernotfound" xml:space="preserve">
+    <value>Benutzerdaten konnten nicht gefunden werden</value>
+  </data>
+  <data name="UserRegistered" xml:space="preserve">
+    <value>Benutzerdaten für @user erfasst</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warnung</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Wilkommen bei Quki</value>
+  </data>
+  <data name="WhatisTheQuki" xml:space="preserve">
+    <value>Was ist Quki?</value>
+  </data>
+  <data name="WrongUserInfromatin" xml:space="preserve">
+    <value>Falsche Anmeldedaten. Bitte erneut versuchen.</value>
+  </data>
+  <data name="year" xml:space="preserve">
+    <value>Jahr</value>
+  </data>
+</root>
