@@ -1,0 +1,96 @@
+﻿body {
+    background-color: darkorange;
+    background-image: url('../../viewimage/choc-2-1-bg-acik.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.background-login {
+    background-color: darkorange;
+    background-image: url('../../viewimage/choc-2-1-bg-acik.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.box {
+    height: 50px;
+    width: 75px;
+    background: #F9FAFA;
+    border-style: solid;
+    border-color: #E3A73D;
+    border-radius: 10px;
+    color: #4A2F00;
+    text-align: center;
+    border-width: 2px;
+    padding: 7px;
+    margin: 5px;
+   
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    
+}
+
+
+.box2 {
+    height: 140px;
+    width: 80px;
+    background: #F9FAFA;
+    border-style: solid;
+    border-color: #E3A73D;
+    border-radius: 10px;
+    color: #4A2F00;
+    text-align: center;
+    border-width: 2px;
+    padding: 7px;
+    margin: 5px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    
+}
+
+.box3 {
+    height: 80px;
+    width: 100px;
+    background: #E3A73D;
+    border-style: solid;
+    border-color: #E3A73D;
+    border-radius: 10px;
+    color: #F9FAFA;
+    text-align: center;
+    border-width: 2px;
+    padding: 7px;
+    margin: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.box4 {
+    height: 80px;
+    width: 100px;
+    background: #F9FAFA;
+    border-style: solid;
+    border-color: #E3A73D;
+    border-radius: 10px;
+    color: #4A2F00;
+    text-align: center;
+    border-width: 2px;
+    padding: 7px;
+    margin: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.margin-top-logo {
+    margin-top: 15%;
+}
+.margin-top-menu {
+    margin-top: 3%;
+}
+.margin-left {
+    margin-left: 20px;
+    
+}
+.padding-text {
+    padding: 16px;
+    margin-left: -20px;
+}
