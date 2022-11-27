@@ -1,0 +1,16 @@
+﻿@using Quki.Entity.Models
+@model Document
+
+@if (@Model != null)
+{
+    <div class="page-title color">
+        @*<h3 class="title-main">@Model.Header</h3>*@
+        <div class="title title-icon">
+            <h2 class="title-h2">@Model.Header2</h2>
+            <p class="description">
+                @Html.Raw(@Model.Contents)
+            </p>
+        </div>
+    </div>
+}
+

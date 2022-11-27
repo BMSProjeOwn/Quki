@@ -1,0 +1,53 @@
+﻿@using Quki.Entity.ViewModel
+
+@model List<VisitorCommentsModel>
+<section>
+    <div class="section testimonials">
+        <div class="container">
+            <div class="title text-center">
+                <div class="page-title color">
+                    <h3 class="title-main">Quki</h3>
+                    <div class="title title-icon">
+                        <h2 class="title-h2">
+                            Quki için ne dediler?
+                        </h2>
+                        <p class="description">
+                            @*Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel
+                                scelerisque nisl consectetur et.*@
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row m-top">
+                @if (Model != null && Model.Count > 0)
+                {
+                    foreach (var item in Model)
+                    {
+                        <div class="col-sm-6">
+                            <div class="item clearfix d-flex align-items-center" style="min-height:180px;">
+                                <div class="item-img hover-change">
+                                    <img class="w-100" src="~/web/img/iconVizitorComment.png" alt="Quki-image" />
+
+                                </div>
+                                <div class="item-content SectionPedagogueCommentTitleLocation">
+                                    <p>
+                                        @item.Comment
+                                    </p>
+                                    <div class="user-info">
+                                        <h4 class="user-name title-black">
+                                            @item.Name
+                                        </h4>
+                                        <span class="job">@item.ProductName</span>
+                                    </div>
+                                    <p>@item.CreatedDate</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+
+    </div>
+</section>

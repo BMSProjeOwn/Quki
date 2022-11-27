@@ -1,0 +1,69 @@
+﻿@using Quki.Common
+@using Quki.Entity.Models
+@model List<Products>
+<div class="product-tab">
+    <div class="tab-content m-top">
+        <div class="tab-pane active">
+            <div class="product">
+                <div class="row">
+                    @if (Model != null && Model.Count > 0)
+                    {
+                        foreach (var item in Model)
+                        {
+
+
+                            <div class="col-lg-3 col-md-6 col-sm-12" style="width:50%">
+                                <div class="item item-hover-view-cart">
+                                    <div class="product-thumb">
+                                        <div class="product-container item-img">
+                                            <div class="product-image-container">
+                                                <a href="/sesli-tiyatro/@Functions.ReplaceString(item.ProductName)" class="product-img-link"  title="">
+                                                    <img class="img-fluid" src="@item.ImageThumbPath" alt="img">
+                                                    <img class="img-fluid img-hover" src="@item.ImageThumbPath" alt="img" style="width:0px; height:0px;">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        @*<div class="product-cart-icon d-flex justify-content-around">
+                                            <div class="product-actions">
+                                                <a href="#">
+                                                    <i class="cs-icon icon-cs-cart"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-actions">
+                                                <a href="#">
+                                                    <i class="cs-icon icon-search"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-actions">
+                                                <a href="#">
+                                                    <i class="cs-icon icon-heart"></i>
+                                                </a>
+                                            </div>
+                                        </div>*@
+                                    </div>
+
+                                    <div class="product-label">
+                                        @*<span class="product-flash">Hot</span>
+                                            <span class="product-flash sale">Sale</span>*@
+                                    </div>
+
+                                    <div class="product-info text-center">
+                                        <h4 class="product-name">
+                                            <a href="/sesli-tiyatro/@Functions.ReplaceString(item.ProductName)" title="">
+                                                @item.ProductName
+                                            </a>
+                                        </h4>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
