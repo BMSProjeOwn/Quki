@@ -26,10 +26,18 @@ namespace Quki.Controllers
 
             return View();
         }
+        [Route("westchocolate-menu")]
+        public IActionResult Index2()
+        {
+
+
+            return View("index");
+        }
 
 
 
         [HttpGet]
+        [Route("westchocolate-menu-kategori")]
         public IActionResult SluDef()
         {
             //https://localhost:44377/product/sludef
@@ -48,6 +56,7 @@ namespace Quki.Controllers
 
 
         [HttpGet]
+        [Route("westchocolate-urun/{id?}")]
         public IActionResult GetMenuItem(long id)
         {
             
