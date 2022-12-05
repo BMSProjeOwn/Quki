@@ -39,7 +39,7 @@ namespace Quki.Bll
                           {
                               D = D,
                               P = P
-                          }).Where(w => w.P.rvc_seq == 10 && w.D.slu_type=="MI")
+                          }).Where(w => w.P.rvc_seq == 10 && w.D.slu_type=="MI").OrderBy(x=>x.D.control_number.Value)
                           .Select(s => new SluDefModel
                           {
                               slu_def_name=s.D.slu_def_name,

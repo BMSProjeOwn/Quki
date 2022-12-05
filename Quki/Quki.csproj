@@ -51,11 +51,6 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Repostories\" />
-    <Folder Include="wwwroot\AdminImage\CategoryImage\" />
-    <Folder Include="wwwroot\AdminImage\EmailTamplateImg\" />
-    <Folder Include="wwwroot\AdminImage\FrequentlyAskedQuestionImg\" />
-    <Folder Include="wwwroot\AdminImage\ProfileImage\" />
-    <Folder Include="wwwroot\AdminImage\ProducerImg\" />
     <Folder Include="wwwroot\dist\img\" />
     <Folder Include="wwwroot\iyzico\" />
     <Folder Include="wwwroot\web\css\css\" />
