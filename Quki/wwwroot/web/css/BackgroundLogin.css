@@ -65,3 +65,13 @@
 .margin-top-menu {
     margin-top: 5%;
 }
+@media screen and (min-width: 900px) {
+    .article {
+        background-image: url('../../viewimage/web-quki.png');
+    }
+}
+
+.article {
+    background-image: url('../../viewimage/dikey.jpg');
+}
+

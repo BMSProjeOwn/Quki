@@ -20,20 +20,15 @@ namespace Quki.Controllers
             this.slu_Rvc_RelationService = slu_Rvc_RelationService;
 
         }
-        [Route("westchocolate-AnaSayfa")]
-        public IActionResult AnaSayfa()
-        {
 
 
-            return View();
-        }
 
-
+       
         public IActionResult Index()
         {
 
 
-            return View();
+            return View("AnaSayfa");
         }
         [Route("westchocolate-menu")]
         public IActionResult Index2()

@@ -1,12 +1,30 @@
 ﻿
 @{
     ViewData["Title"] = "AnaSayfa";
-    Layout = "~/Views/Shared/_LayoutMobil.cshtml";
+    Layout = "~/Views/Shared/_ClosedView.cshtml";
 }
-
-<div class="background-login" id="page-preloader">
-    <div class="page-loading">
-        <img src="~/viewimage/web-quki.png" />
-    </div>
+<style>
+    @@media screen and (max-width: 600px) {
+    .imgresponsivestyle{
+            background-color: darkorange;
+            background-image: url('viewimage\web-quki.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+}
+}
+   @@media screen and (min-width: 600px) {
+        .imgresponsivestyle {
+            background-image: url('viewimage\dikey.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+}
+}
+						</style>
+<div class="imgresponsivestyle">
+   
 </div>
 

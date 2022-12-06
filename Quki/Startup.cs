@@ -483,6 +483,7 @@ namespace Quki
             {
                 endpoints.MapControllerRoute(name: "default", pattern: "{Controller=Product}/{Action=Index}/{id?}");
                 endpoints.MapControllerRoute("dMenu", "mobile-menu", new { controller = "Product", action = "Index" });
+               
 
 
             });
