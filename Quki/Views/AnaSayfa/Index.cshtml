@@ -1,0 +1,522 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+
+
+@await Component.InvokeAsync("HomeSlider")
+
+<section id="banner6" class="banner banner-1 text-center pb-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                <div class="heading heading-1 text--center mb-50">
+                    <p class="heading--subtitle">Yeni Nesil Meyhane</p>
+                    <h2 class="heading--title">QUKİ MEYHANE</h2>
+                    <div class="divider--shape-4"></div>
+                    <p class="heading--desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </div>
+                <!-- .heading end -->
+            </div>
+            <!-- .col-md-6 end -->
+        </div>
+        <!-- .row end -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="banner-panel">
+                    <div class="banner--img">
+                        <img src="~/webQuki/images/banners/1.jpg" alt="banner img" class="img-responsive">
+                    </div>
+                    <div class="banner--content">
+                        <h4>Görsel 1</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <!-- .banner-panel end -->
+            </div>
+            <!-- .col-md-4 end -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="banner-panel">
+                    <div class="banner--img">
+                        <img src="~/webQuki/images/banners/2.jpg" alt="banner img" class="img-responsive">
+                    </div>
+                    <div class="banner--content">
+                        <h4>Görsel 2</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <!-- .banner-panel end -->
+            </div>
+            <!-- .col-md-4 end -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="banner-panel">
+                    <div class="banner--img">
+                        <img src="~/webQuki/images/banners/3.jpg" alt="banner img" class="img-responsive">
+                    </div>
+                    <div class="banner--content">
+                        <h4>Görsel 3</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <!-- .banner-panel end -->
+            </div>
+            <!-- .col-md-4 end -->
+
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+<!-- #banner6 end -->
+
+
+@await Component.InvokeAsync("GetVisitorComments")
+
+<section id="menuGrid">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                <div class="heading heading-1 mb-50 text--center">
+                    <p class="heading--subtitle">@MultiLanguageOmni.ReadResourceKey.GetString("New Generation Tavern", "MultiLanguageOmni.Index")</p>
+                    <h2 class="heading--title mb-0">@MultiLanguageOmni.ReadResourceKey.GetString("Explore Our Menu", "MultiLanguageOmni.Index")</h2>
+                    <div class="divider--shape-4"></div>
+                    <p class="heading--desc">@MultiLanguageOmni.ReadResourceKey.GetString("HomeMenuText", "MultiLanguageOmni.Index")</p>
+                </div>
+            </div>
+            <!-- .col-md-8 end -->
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+    <!-- .container end -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <a class="btn btn--primary btn--bordered btn--rounded btn--lg mt-50" href="menu-classic.html">@MultiLanguageOmni.ReadResourceKey.GetString("View Menu", "MultiLanguageOmni.Index")</a>
+            </div>
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+
+@await Component.InvokeAsync("News")
+
+
+
+
+
+
+
+@*
+
+
+
+
+
+
+
+
+<section id="banner6" class="banner banner-1 text-center pb-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                <div class="heading heading-1 text--center mb-50">
+                    <p class="heading--subtitle">Yeni Nesil Meyhane</p>
+                    <h2 class="heading--title">QUKİ MEYHANE</h2>
+                    <div class="divider--shape-4"></div>
+                    <p class="heading--desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </div>
+                <!-- .heading end -->
+            </div>
+            <!-- .col-md-6 end -->
+        </div>
+        <!-- .row end -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="banner-panel">
+                    <div class="banner--img">
+                        <img src="~/webQuki/images/banners/1.jpg" alt="banner img" class="img-responsive">
+                    </div>
+                    <div class="banner--content">
+                        <h4>Görsel 1</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <!-- .banner-panel end -->
+            </div>
+            <!-- .col-md-4 end -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="banner-panel">
+                    <div class="banner--img">
+                        <img src="~/webQuki/images/banners/2.jpg" alt="banner img" class="img-responsive">
+                    </div>
+                    <div class="banner--content">
+                        <h4>Görsel 2</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <!-- .banner-panel end -->
+            </div>
+            <!-- .col-md-4 end -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="banner-panel">
+                    <div class="banner--img">
+                        <img src="~/webQuki/images/banners/3.jpg" alt="banner img" class="img-responsive">
+                    </div>
+                    <div class="banner--content">
+                        <h4>Görsel 3</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <!-- .banner-panel end -->
+            </div>
+            <!-- .col-md-4 end -->
+
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+<!-- #banner6 end -->
+<!-- Testimonial #1
+============================================= -->
+<section id="testimonial1" class="testimonial testimonial-1 bg-overlay bg-parallax bg-overlay-dark">
+    <div class="bg-section">
+        <img src="~/webQuki/images/background/1.jpg" alt="Background" />
+    </div>
+
+    <div class="container">
+        <div class="divider--shape-1up"></div>
+        <div class="row clearfix">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                <div class="heading heading-1 mb-50 text--center">
+                    <p class="heading--subtitle">Müşteri Yorumları</p>
+                    <h2 class="heading--title color-white">QUKİ MEYHANE</h2>
+                    <div class="divider--shape-13"></div>
+                </div>
+            </div>
+            <!-- .col-md-8 end -->
+        </div>
+        <!-- .row end -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div id="testimonial-carousel" class="carousel carousel-dots carousel-white" data-slide="3" data-slide-rs="1" data-autoplay="false" data-nav="false" data-dots="true" data-space="30" data-loop="true" data-speed="800">
+                    <!-- Testimonial #1 -->
+                    <div class="testimonial-container">
+
+                        <div class="testimonial-panel">
+                            <div class="testimonial-bordered">
+                                <div class="testimonial--rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <!-- .testimonial-rating end -->
+                                <div class="testimonial--body">
+                                    <p>“ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ”</p>
+                                </div>
+                                <!-- .testimonial-body end -->
+                                <div class="testimonial--meta">
+                                    <div class="testimonial--img">
+                                        <img src="~/webQuki/images/testimonial/1.png" alt="Testimonial Author">
+                                    </div>
+                                    <div class="testimonial--author">
+                                        <h4>Ad Soyad</h4>
+                                    </div>
+                                </div>
+                                <!-- .testimonial-meta end -->
+                            </div>
+                        </div>
+                        <!-- .testimonial-panel end -->
+                        <div class="divider--shape-1up"></div>
+                    </div>
+                    <!-- Testimonial #2 -->
+                    <div class="testimonial-container">
+
+                        <div class="testimonial-panel">
+                            <div class="testimonial-bordered">
+                                <div class="testimonial--rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <!-- .testimonial-rating end -->
+                                <div class="testimonial--body">
+                                    <p>“ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”</p>
+                                </div>
+                                <!-- .testimonial-body end -->
+                                <div class="testimonial--meta">
+                                    <div class="testimonial--img">
+                                        <img src="~/webQuki/images/testimonial/2.png" alt="Testimonial Author">
+                                    </div>
+                                    <div class="testimonial--author">
+                                        <h4>Ad Soyad</h4>
+                                    </div>
+                                </div>
+                                <!-- .testimonial-meta end -->
+                            </div>
+
+                        </div>
+                        <!-- .testimonial-panel end -->
+                        <div class="divider--shape-1up"></div>
+                    </div>
+                    <!-- Testimonial #3 -->
+                    <div class="testimonial-container">
+
+                        <div class="testimonial-panel">
+                            <div class="testimonial-bordered">
+                                <div class="testimonial--rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <!-- .testimonial-rating end -->
+                                <div class="testimonial--body">
+                                    <p>“ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ”</p>
+                                </div>
+                                <!-- .testimonial-body end -->
+                                <div class="testimonial--meta">
+                                    <div class="testimonial--img">
+                                        <img src="~/webQuki/images/testimonial/3.png" alt="Testimonial Author">
+                                    </div>
+                                    <div class="testimonial--author">
+                                        <h4>Ad Soyad</h4>
+                                    </div>
+                                </div>
+                                <!-- .testimonial-meta end -->
+                            </div>
+
+                        </div>
+                        <!-- .testimonial-panel end -->
+                        <div class="divider--shape-1up"></div>
+                    </div>
+                    <!-- Testimonial #4 -->
+                    <div class="testimonial-container">
+
+                        <div class="testimonial-panel">
+                            <div class="testimonial-bordered">
+                                <div class="testimonial--rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <!-- .testimonial-rating end -->
+                                <div class="testimonial--body">
+                                    <p>“ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ”</p>
+                                </div>
+                                <!-- .testimonial-body end -->
+                                <div class="testimonial--meta">
+                                    <div class="testimonial--img">
+                                        <img src="~/webQuki/images/testimonial/4.png" alt="Testimonial Author">
+                                    </div>
+                                    <div class="testimonial--author">
+                                        <h4>Ad Soyad</h4>
+                                    </div>
+                                </div>
+                                <!-- .testimonial-meta end -->
+                            </div>
+                        </div>
+                        <!-- .testimonial-panel end -->
+                        <div class="divider--shape-1up"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- .col-md-12 end -->
+        </div>
+        <!-- .row end -->
+        <div class="divider--shape-1down"></div>
+    </div>
+    <!-- .container end -->
+</section>
+<!-- #testimonial1 end -->
+
+<!-- Menu Grid
+============================================= -->
+<section id="menuGrid">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                <div class="heading heading-1 mb-50 text--center">
+                    <p class="heading--subtitle">Yeni Nesil Meyhane</p>
+                    <h2 class="heading--title mb-0">Menümüzü Keşfedin</h2>
+                    <div class="divider--shape-4"></div>
+                    <p class="heading--desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <!-- .col-md-8 end -->
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+
+    <!-- .container end -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <a class="btn btn--primary btn--bordered btn--rounded btn--lg mt-50" href="menu-classic.html">Menüyü İncele</a>
+            </div>
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+<!-- #menuGrid end -->
+<!-- Reservation #1
+============================================= -->
+<!-- #reservation1 end -->
+<!-- Blog Carousel
+============================================= -->
+<section id="blog" class="blog blog-carousel pb-100">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                <div class="heading heading-1 mb-50 text--center">
+                    <p class="heading--subtitle">Etkinliklerimiz</p>
+                    <h2 class="heading--title mb-0">Quki Meyhane</h2>
+                    <div class="divider--shape-4"></div>
+                </div>
+            </div>
+            <!-- .col-md-8 end -->
+        </div>
+        <!-- .row end -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="carousel" data-slide="3" data-slide-rs="2" data-autoplay="true" data-nav="false" data-dots="false" data-space="0" data-loop="true" data-speed="800">
+
+                    <!-- Blog Entry #1 -->
+                    <div class="blog-entry">
+
+                        <div class="entry--content">
+                            <div class="entry--meta">
+                                <span class="entry--date">Feb 22, 2017</span> / <span><a href="#">Fall</a> , <a href="#">Side Dish</a></span>
+                            </div>
+                            <div class="entry--title">
+                                <h4><a href="#">Etkinlik 1</a></h4>
+                            </div>
+                            <div class="entry--img">
+                                <a href="#">
+                                    <img src="~/webQuki/images/blog/grid/1.jpg" alt="entry image" />
+                                </a>
+                            </div>
+                            <div class="entry--bio">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                        </div>
+                        <!-- .entry-content end -->
+                    </div>
+                    <!-- .blog-entry end -->
+                    <!-- Blog Entry #2 -->
+                    <div class="blog-entry">
+                        <div class="entry--content" style="background-color:black">
+                            <div class="entry--meta">
+                                <span class="entry--date">Feb 22, 2017</span> / <span><a href="#">Apple</a> , <a href="#">Stuffing And Dressing</a></span>
+                            </div>
+                            <div class="entry--title">
+                                <h4><a href="#">Etkinlik 2</a></h4>
+                            </div>
+                            <div class="entry--img">
+                                <a href="#">
+                                    <img src="~/webQuki/images/blog/grid/2.jpg" alt="entry image" />
+                                </a>
+                            </div>
+                            <div class="entry--bio">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..
+                            </div>
+                        </div>
+                        <!-- .entry-content end -->
+                    </div>
+                    <!-- .blog-entry end -->
+                    <!-- Blog Entry #3 -->
+                    <div class="blog-entry">
+                        <div class="entry--content">
+                            <div class="entry--meta">
+                                <span class="entry--date">Feb 22, 2017</span> / <span><a href="#">Food</a> , <a href="#">Cheese</a></span>
+                            </div>
+                            <div class="entry--title">
+                                <h4><a href="#">Etkinlik 3</a></h4>
+                            </div>
+                            <div class="entry--img">
+                                <a href="#">
+                                    <img src="~/webQuki/images/blog/grid/3.jpg" alt="entry image" />
+                                </a>
+                            </div>
+                            <div class="entry--bio">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                        </div>
+                        <!-- .entry-content end -->
+                    </div>
+                    <!-- .blog-entry end -->
+                    <!-- Blog Entry #4 -->
+                    <div class="blog-entry">
+
+                        <div class="entry--content">
+                            <div class="entry--meta">
+                                <span class="entry--date">Feb 22, 2017</span> / <span><a href="#">Green</a> , <a href="#">Casserole</a></span>
+                            </div>
+                            <div class="entry--title">
+                                <h4><a href="#">Etkinlik 4</a></h4>
+                            </div>
+                            <div class="entry--img">
+                                <a href="#">
+                                    <img src="~/webQuki/images/blog/grid/4.jpg" alt="entry image" />
+                                </a>
+                            </div>
+                            <div class="entry--bio">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..
+                            </div>
+                        </div>
+                        <!-- .entry-content end -->
+                    </div>
+                    <!-- .blog-entry end -->
+                    <!-- Blog Entry #5 -->
+                    <div class="blog-entry">
+
+                        <div class="entry--content">
+                            <div class="entry--meta">
+                                <span class="entry--date">Feb 22, 2017</span> / <span><a href="#">.</a></span>
+                            </div>
+                            <div class="entry--title">
+                                <h4><a href="#">Etkinlik 5</a></h4>
+                            </div>
+                            <div class="entry--img">
+                                <a href="#">
+                                    <img src="~/webQuki/images/blog/grid/5.jpg" alt="entry image" />
+                                </a>
+                            </div>
+                            <div class="entry--bio">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                        </div>
+                        <!-- .entry-content end -->
+                    </div>
+                    <!-- .blog-entry end -->
+
+                </div>
+                <!-- .carousel end -->
+            </div>
+            <!-- .col-md-6 end -->
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+<!-- #blog end -->*@

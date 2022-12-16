@@ -1494,7 +1494,7 @@ FixedColumns.defaults = /** @lends FixedColumns.defaults */{
 	"iRightColumns": 0,
 
 	/**
-	 * Draw callback function which is called when FixedColumns has redrawn the fixed assets
+	 * Draw callback function which is called when FixedColumns has redrawn the fixed ~/webQuki
 	 *  @type     function(object, object):void
 	 *  @default  null
 	 *  @static

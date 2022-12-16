@@ -1,0 +1,127 @@
+﻿@using Quki.Entity.DtoModels
+@model ProductMergeModel
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card card-info card-tabs" style="width:100%;">
+
+
+
+
+
+    <form asp-action="Update" asp-controller="Departments" asp-area="Admin" method="post" class="form-horizontal" enctype="multipart/form-data">
+
+        <div class="card-body">
+            <div class="tab-content" id="custom-tabs-one-tabContent">
+
+
+                <input type="hidden" asp-for="@Model.ProductUpdateModel.ProductSeqID" class="form-control">
+
+                <div class="form-group row">
+                    <label asp-for="@Model.ProductUpdateModel.MediaType" class="col-sm-2 col-form-label">Medya Tipi</label>
+                    <div class="col-sm-10">
+                        <div class="form-group">
+                            @Html.DropDownListFor(a => a.ProductUpdateModel.MediaType, (List<SelectListItem>)ViewBag.Media, new { @class = "form-control select2" })
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label asp-for="@Model.ProductUpdateModel.ProductName" class="col-sm-2 col-form-label">Medya Adı</label>
+                    <div class="col-sm-10">
+                        <span asp-validation-for="@Model.ProductUpdateModel.ProductName" class="text-danger"></span>
+                        <input type="text" asp-for="@Model.ProductUpdateModel.ProductName" class="form-control" placeholder="Medya Adı">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="@Model.ProductUpdateModel.SecondName" class="col-sm-2 col-form-label">Medya ikinci adı</label>
+                    <div class="col-sm-10">
+                        <span asp-validation-for="@Model.ProductUpdateModel.SecondName" class="text-danger"></span>
+                        <input type="text" asp-for="@Model.ProductUpdateModel.SecondName" class="form-control" placeholder="Medya ikinci adı">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label asp-for="@Model.ProductUpdateModel.Description" class="col-sm-2 col-form-label"> Medya Açıklama</label>
+                    <div class="col-sm-10">
+                        <span asp-validation-for="@Model.ProductUpdateModel.Description" class="text-danger"></span>
+                        <textarea type="text" asp-for="@Model.ProductUpdateModel.Description" id="editor" placeholder="@Model.ProductUpdateModel.Description"></textarea>
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label asp-for="@Model.ProductUpdateModel.ImagePath" class="col-sm-2 col-form-label">Medya Resmi</label>
+                    <div class="col-sm-10">
+                        <span asp-validation-for="@Model.ProductUpdateModel.ImagePath" class="text-danger"></span>
+                        <input type="file" asp-for="@Model.ProductUpdateModel.ImagePath" class="form-control-file" placeholder="Medya açıklaması">
+
+                        <label asp-for="@Model.ProductUpdateModel.ImagePathName" class="col-sm-2 col-form-label">@Model.ProductUpdateModel.ImagePathName</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="@Model.ProductUpdateModel.ProductSEOData" class="col-sm-2 col-form-label">Medya Meta Keyleri</label>
+                    <div class="col-sm-10">
+
+                        <input type="text" asp-for="@Model.ProductUpdateModel.ProductSEOData" class="form-control" placeholder="Medya Meta Keyleri">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="@Model.ProductUpdateModel.ProductSEOMetaDescription" class="col-sm-2 col-form-label">Medya Meta Description</label>
+                    <div class="col-sm-10">
+
+                        <input type="text" asp-for="@Model.ProductUpdateModel.ProductSEOMetaDescription" class="form-control" placeholder="Medya Meta Description">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="@Model.ProductUpdateModel.DisplayOrderNumber" class="col-sm-2 col-form-label">Sıralaması</label>
+                    <div class="col-sm-10">
+
+                        <input type="text" asp-for="@Model.ProductUpdateModel.DisplayOrderNumber" class="form-control" placeholder="Sıralaması">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="offset-sm-2 col-sm-10">
+                        <div class="form-check">
+                            <input type="checkbox" asp-for="@Model.ProductUpdateModel.ShowOnHomePage" class="form-check-input">
+                            <label class="form-check-label" asp-for="@Model.ProductUpdateModel.ShowOnHomePage">Ana sayfada göster</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="offset-sm-2 col-sm-10">
+                        <div class="form-check">
+                            <input type="checkbox" asp-for="@Model.ProductUpdateModel.Status" class="form-check-input">
+                            <label class="form-check-label" asp-for="@Model.ProductUpdateModel.Status">Aktiflik Durumu</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+            <button type="submit" asp-action="Update" asp-controller="Medya" asp-area="Admin" onclick="return confirm('Güncellemek istediğinzden emin misiniz?')" asp-route-id="@Model.ProductUpdateModel.ProductSeqID" class="btn btn-info">Güncelle</button>
+            <button type="submit" asp-action="Index" asp-controller="Medya" asp-area="Admin" class="btn btn-default float-right">Vazgeç</button>
+        </div>
+        <!-- /.card-footer -->
+    </form>
+
+    <!-- /.card -->
+</div>
+<script src="~/ckeditor/ckeditor.js"></script>
+<script src="~/web/js/ckconfig.js"></script>
+<script src="~/web/js/ckconfig2.js"></script>
+
+
+
+<script>
+    function callChangefunc(val) {
+        window.location.href = "/Admin/Medya/Update?id=" + val.toString() + "-" + @Model.ProductUpdateModel.ProductSeqID;
+    }
+</script>
+
+

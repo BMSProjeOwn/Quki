@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Quki.Entity.DtoModels.ApiModels;
 using Quki.Entity.Models;
 using Quki.Entity.DtoModels;
+using Quki.Entity.DtoModels;
 
 namespace Quki.Entity.Mapper
 {
@@ -18,6 +19,9 @@ namespace Quki.Entity.Mapper
             CreateMap<Counrty, CountryApiModel>().ReverseMap();
 
             CreateMap<RvcMenuItemDef, RvcMenuItemDefModel>().ReverseMap();
+            CreateMap<Slider, SliderModel>().ReverseMap();
+            CreateMap<NewsAndAnnouncement, NewsAndAnnouncementModel>().ReverseMap();
+            CreateMap<VisitorComment, VisitorCommentsModel>().ReverseMap();
         }
     }
 }

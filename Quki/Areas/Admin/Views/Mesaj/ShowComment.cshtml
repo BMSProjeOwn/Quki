@@ -1,0 +1,106 @@
+﻿@using Quki.Entity.Models
+@model VisitorComment
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card card-info card-tabs" style="width:100%;">
+
+
+
+
+
+    <form asp-action="Update" asp-controller="Departments" asp-area="Admin" method="post" class="form-horizontal" enctype="multipart/form-data">
+
+        <div class="card-body">
+            <div class="tab-content" id="custom-tabs-one-tabContent">
+
+
+                <input type="hidden" asp-for="@Model.VisitorCommentsSeqId" class="form-control">
+
+
+                <div class="form-group row">
+                    <label asp-for="@Model.Name" class="col-sm-2 col-form-label">Kullanıcı Adı</label>
+                    <div class="col-sm-10">
+                        <span asp-validation-for="@Model.Name" class="text-danger"></span>
+                        <input type="text" asp-for="@Model.Name" class="form-control" placeholder="Kullanıcı Adı" readonly>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="@Model.Surname" class="col-sm-2 col-form-label">Soyadı</label>
+                    <div class="col-sm-10">
+                        <span asp-validation-for="@Model.Surname" class="text-danger"></span>
+                        <input type="text" asp-for="@Model.Surname" class="form-control" placeholder="Soyadı" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label asp-for="@Model.Phone" class="col-sm-2 col-form-label">Soyadı</label>
+                    <div class="col-sm-10">
+                        <span asp-validation-for="@Model.Phone" class="text-danger"></span>
+                        <input type="text" asp-for="@Model.Phone" class="form-control" placeholder="Soyadı" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label asp-for="@Model.VisitorEmail" class="col-sm-2 col-form-label">Soyadı</label>
+                    <div class="col-sm-10">
+                        <span asp-validation-for="@Model.VisitorEmail" class="text-danger"></span>
+                        <input type="text" asp-for="@Model.VisitorEmail" class="form-control" placeholder="Soyadı" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label asp-for="@Model.Comment" class="col-sm-2 col-form-label"> Kullanıcı Yorumu</label>
+                    <div class="col-sm-10">
+                        <span asp-validation-for="@Model.Comment" class="text-danger"></span>
+                        <textarea type="text" asp-for="@Model.Comment" id="editor" placeholder="@Model.Comment" readonly></textarea>
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="offset-sm-2 col-sm-10">
+                        <div class="form-check">
+                            @if (Model.ShowOnHomePage == true)
+                            {
+                                <p>
+                                    Kullanıcı yorumu suan yayında
+                                </p>
+                            }
+                            else
+                            {
+                                <p>
+                                    Kullanıcı yorumu yayında değil
+                                </p>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+            <button type="submit" asp-action="Publish" asp-controller="Mesaj" asp-area="Admin" onclick="return confirm('Güncellemek istediğinzden emin misiniz?')" asp-route-id="@Model.VisitorCommentsSeqId" class="btn btn-info">Yayınla</button>
+            <button type="submit" asp-action="NotPublish" asp-controller="Mesaj" asp-area="Admin" class="btn btn-danger float-right">Yayından Kaldır</button>
+        </div>
+        <!-- /.card-footer -->
+    </form>
+
+    <!-- /.card -->
+</div>
+<script src="~/ckeditor/ckeditor.js"></script>
+<script src="~/web/js/ckconfig.js"></script>
+<script src="~/web/js/ckconfig2.js"></script>
+
+
+
+<script>
+    function callChangefunc(val) {
+        window.location.href = "/Admin/Medya/Update?id=" + val.toString() + "-" + @Model.VisitorCommentsSeqId;
+    }
+</script>
+
+

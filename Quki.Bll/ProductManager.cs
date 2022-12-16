@@ -52,7 +52,7 @@ namespace Quki.Bll
         }
         public List<Products> GetProductList()
         {
-            var items = TGetList(x => x.Status == true).OrderByDescending(u => u.ProductSeqID);
+            var items = TGetList().OrderByDescending(u => u.ProductSeqID);
             return items.ToList();
         }
         public List<AttributeStaticValue> GetAttributeStaticValueByProductID(int productID)// ürüne ait kategorileri getiriyor.
@@ -199,26 +199,13 @@ namespace Quki.Bll
         public void ProductUpdate(ProductMergeModel model, int productID)
         {
 
-            List<CategoryAtaModel> CategoriList = model.catagoriAtaListModel;
-
-            var ProductControl = TgetItemByID(productID);
-            var p = TGetList()
-                .Where(w => w.LanguageID == model.ProductUpdateModel.LanguageID && w.ProductID == ProductControl.ProductID)
-                .FirstOrDefault();
-            if (p == null)
-            {
-                int newID = ProductAddForAnotherLanguage(model, productID);
-                productID = newID;
-            }
-            else
-            {
-                productID = p.ProductSeqID;
-            }
+         
             var Product = TgetItemByID(productID);
             if (Product.Description == null)
             {
                 Product.Description = " ";
             }
+
             else
             {
                 var test = new HtmlString(model.ProductUpdateModel.Description);
@@ -230,6 +217,7 @@ namespace Quki.Bll
             Product.SecondName = model.ProductUpdateModel.SecondName;
             Product.ShowOnHomePage = model.ProductUpdateModel.ShowOnHomePage;
             Product.Status = model.ProductUpdateModel.Status;
+            Product.ProductTypeSeqID = model.ProductUpdateModel.MediaType;
             Product.AllowCustomerRating = model.ProductUpdateModel.AllowCustomerRating;
             Product.AllowCustomerReviews = model.ProductUpdateModel.AllowCustomerReviews;
             Product.LanguageID = model.ProductUpdateModel.LanguageID;
@@ -243,83 +231,34 @@ namespace Quki.Bll
 
             if (model.ProductUpdateModel.ImagePath != null)
             {
-                var path = Path.GetExtension(model.ProductUpdateModel.ImagePath.FileName);
-                var newPath = Guid.NewGuid() + path;
-                var ImagePath = Directory.GetCurrentDirectory() + "/wwwroot/AdminImage/ProductImg/" + newPath;
-                var ThumbImagePath = Directory.GetCurrentDirectory() + "/wwwroot/AdminImage/ProductImg/Thump" + newPath;
-                var steem = new FileStream(ImagePath, FileMode.Create);
-                model.ProductUpdateModel.ImagePath.CopyTo(steem);
-                Utility.ResizeImage(model.ProductUpdateModel.ImagePath, ProductImageSize.Height, ProductImageSize.Width, ThumbImagePath);
-                Product.ImagePath = "/AdminImage/ProductImg/" + newPath;
-                Product.ImageThumbPath = "/AdminImage/ProductImg/Thump" + newPath; ;
+    
+                if (model.ProductUpdateModel.MediaType.Equals(0))
+                {
+                    var path = Path.GetExtension(model.ProductUpdateModel.ImagePath.FileName);
+                    var newPath = Guid.NewGuid() + path;
+                    var ImagePath = Directory.GetCurrentDirectory() + "/wwwroot/AdminImage/ProductImg/" + newPath;
+                    var ThumbImagePath = Directory.GetCurrentDirectory() + "/wwwroot/AdminImage/ProductImg/Thump" + newPath;
+                    var steem = new FileStream(ImagePath, FileMode.Create);
+                    model.ProductUpdateModel.ImagePath.CopyTo(steem);
+                    Utility.ResizeImage(model.ProductUpdateModel.ImagePath, ProductImageSize.Height, ProductImageSize.Width, ThumbImagePath);
+                    Product.ImagePath = "/AdminImage/ProductImg/" + newPath;
+                    Product.ImageThumbPath = "/AdminImage/ProductImg/Thump" + newPath;
+                }
+                else
+                {
+                    var path = Path.GetExtension(model.ProductUpdateModel.ImagePath.FileName);
+                    var newPath = Guid.NewGuid() + path;
+                    var ImagePath = Directory.GetCurrentDirectory() + "/wwwroot/AdminMedia/AdminVideo/" + newPath;
+                    // var ThumbImagePath = Directory.GetCurrentDirectory() + "/wwwroot/AdminMedia/AdminVideo/Thump" + newPath;
+                    var steem = new FileStream(ImagePath, FileMode.Create);
+                    model.ProductUpdateModel.ImagePath.CopyTo(steem);
+                    //Utility.ResizeImage(Item.ImagePath, ProductImageSize.Height, ProductImageSize.Width, ThumbImagePath);
+                    Product.ImagePath = "/AdminMedia/AdminVideo/" + newPath;
+                    //p.ImageThumbPath = "/AdminMedia/AdminVideo/Thump" + newPath;
+                }
             }
             TUpdate(Product);
 
-
-            foreach (var item in CategoriList)
-            {
-                var category = categoryRepository.TgetItemByID(item.CategorySeqID);
-                if (item.isHas)
-                {
-
-                    AddCategory(new ProductWithCategory
-                    {
-                        CategorySeqID = item.CategorySeqID,
-                        ProductSeqID = productID
-                    });
-                }
-                else
-                {
-
-                    DeleteCategory(new ProductWithCategory
-                    {
-                        CategorySeqID = item.CategorySeqID,
-                        ProductSeqID = productID
-                        //Products = Product,
-                        //Category = category
-                    });
-                }
-            }
-            //StaticÖzellik Atama
-            List<ProductAttirubuteStaticValueAtaModel> ProductAttirubuteStaticValueList = model.productAttirubuteStaticValueAtaListModel;
-
-
-            foreach (var item in ProductAttirubuteStaticValueList)
-            {
-                var category = productWithAttributeStaticValueRepository.GetProductAttiributeStaticValue(productID, item.AttributeStaticValueSeqID);
-                if (item.isHas)
-                {
-                    if (category != null)
-                    {
-                        AddAttiributeStaticValue(new ProductWithAttributeStaticValue
-                        {
-                            ProductWithAttributeStaticValueSeqID = category.ProductWithAttributeStaticValueSeqID,
-                            AttributeStaticValueSeqID = item.AttributeStaticValueSeqID,
-                            ProductSeqID = productID,
-                            Value = item.Value
-                        });
-                    }
-                    else
-                    {
-                        AddAttiributeStaticValue(new ProductWithAttributeStaticValue
-                        {
-                            AttributeStaticValueSeqID = item.AttributeStaticValueSeqID,
-                            ProductSeqID = productID,
-                            Value = item.Value
-                        });
-                    }
-                }
-                else
-                {
-                    DeleteAttiributeStaticValue(new ProductWithAttributeStaticValue
-                    {
-                        AttributeStaticValueSeqID = item.AttributeStaticValueSeqID,
-                        ProductSeqID = productID
-                    });
-                }
-            }
-            // Resim Ekleme
-            List<ProductImageAddModel> ProductImageAddModelList = model.ProductImageAddListModel;
 
         }
         public void DeleteCategory(ProductWithCategory Item)
@@ -397,7 +336,7 @@ namespace Quki.Bll
         public ProductDetailModel GetProductDetail(int productID)// ürüne ait kategorileri getiriyor.
         {
             ProductDetailModel pd = new ProductDetailModel();
-            var poroduct = TGetList(i => i.ProductSeqID == productID && i.Status == true).FirstOrDefault();
+            var poroduct = TGetList(i => i.ProductSeqID == productID ).FirstOrDefault();
             pd.SecondName = poroduct.SecondName;
             pd.ProductName = poroduct.ProductName;
             pd.ProductSeqID = productID;
@@ -461,6 +400,8 @@ namespace Quki.Bll
             Products p = new Products();
             if (Item.ImagePath != null)
             {
+                if (Item.MediaType.Equals(0))
+                {
                 var path = Path.GetExtension(Item.ImagePath.FileName);
                 var newPath = Guid.NewGuid() + path;
                 var ImagePath = Directory.GetCurrentDirectory() + "/wwwroot/AdminImage/ProductImg/" + newPath;
@@ -470,6 +411,20 @@ namespace Quki.Bll
                 Utility.ResizeImage(Item.ImagePath, ProductImageSize.Height, ProductImageSize.Width, ThumbImagePath);
                 p.ImagePath = "/AdminImage/ProductImg/" + newPath;
                 p.ImageThumbPath = "/AdminImage/ProductImg/Thump" + newPath;
+                }
+                else
+                {
+                    var path = Path.GetExtension(Item.ImagePath.FileName);
+                    var newPath = Guid.NewGuid() + path;
+                    var ImagePath = Directory.GetCurrentDirectory() + "/wwwroot/AdminMedia/AdminVideo/" + newPath;
+                   // var ThumbImagePath = Directory.GetCurrentDirectory() + "/wwwroot/AdminMedia/AdminVideo/Thump" + newPath;
+                    var steem = new FileStream(ImagePath, FileMode.Create);
+                    Item.ImagePath.CopyTo(steem);
+                    //Utility.ResizeImage(Item.ImagePath, ProductImageSize.Height, ProductImageSize.Width, ThumbImagePath);
+                    p.ImagePath = "/AdminMedia/AdminVideo/" + newPath;
+                    //p.ImageThumbPath = "/AdminMedia/AdminVideo/Thump" + newPath;
+                }
+                
             }
 
 
@@ -478,6 +433,7 @@ namespace Quki.Bll
             p.LanguageID = Item.LanguageID;
             p.SecondName = Item.SecondName;
             p.ProductSEOData = Item.ProductSEOData;
+            p.ProductTypeSeqID = Item.MediaType;
             p.ProductSEOMetaDescription = Item.ProductSEOMetaDescription;
             p.AllowCustomerReviews = Item.AllowCustomerReviews;
             p.AllowCustomerRating = Item.AllowCustomerRating;
@@ -530,7 +486,8 @@ namespace Quki.Bll
                 ProductName = Item.ProductName,
                 SecondName = Item.SecondName,
                 //ImagePath = Item.ImagePath,
-
+                MediaType=(int)Item.ProductTypeSeqID,
+                
                 ProductSEOData = Item.ProductSEOData,
                 AllowCustomerReviews = Item.AllowCustomerReviews,
                 AllowCustomerRating = Item.AllowCustomerRating,

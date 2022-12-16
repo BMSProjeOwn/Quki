@@ -4,10 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Quki.Bll.Base;
-using Quki.Dal.Abstract;
+
 using Quki.Entity.Models;
 using Quki.Entity.ViewModel;
 using Quki.Interface;
+using Quki.Dal.Abstract;
 
 namespace Quki.Bll
 {
@@ -26,22 +27,54 @@ namespace Quki.Bll
             return items.ToList();
         }
 
-        public void AddVisitorCommandAndRaiting(ProductDetailModel model)
+      
+
+        public void AddVisitorCommand(VisitorComment model)
         {
 
-            if (model.VisitorComments != null)
+            if (model.Comment != null)
             {
-                VisitorComment comment = new VisitorComment();
-                comment.ComantSeqID = model.VisitorComments.ComantSeqID;
-                comment.Comment = model.VisitorComments.Comment;
+                VisitorComment comment = new VisitorComment();  
+                comment.Comment = model.Comment;
                 comment.CreatedDate = DateTime.Now;
                 comment.Status = true;
-                comment.VisitorEmail = model.VisitorComments.VisitorEmail;
-                comment.Name = model.VisitorComments.Name;
-                comment.CreatedBy = model.VisitorComments.CreatedBy;
+                comment.ShowOnHomePage = false;
+                comment.VisitorEmail = model.VisitorEmail;
+                comment.Name = model.Name;              
+                comment.Phone = model.Phone;
+                comment.Surname = model.Surname;
                 TAdd(comment);
             }
+            
         }
+
+        public void PublishComment(int id)
+        {
+
+            
+            var x = TGetList(x => x.VisitorCommentsSeqId == id).FirstOrDefault();
+            x.ShowOnHomePage = true;
+
+            TUpdate(x);
+            
+           
+
+        }
+        
+        public void NotPublishComment(int id)
+        {
+
+            
+            var x = TGetList(x => x.VisitorCommentsSeqId == id).FirstOrDefault();
+            x.ShowOnHomePage = false;
+
+            TUpdate(x);
+            
+           
+
+        }
+
+
 
         public List<SelectListItem> GetProductListForDropdown()
         {
@@ -55,6 +88,14 @@ namespace Quki.Bll
                 Text = I.Products.ProductName
 
             }).ToList();
+
+            return list;
+        }
+
+        public List<VisitorComment> GetUserComment()
+        {
+            var list = TGetList().ToList();
+            
 
             return list;
         }
@@ -142,7 +183,7 @@ namespace Quki.Bll
         public VisitorComment GetVisitorCommentsbyVisitorCommentsSeqId(int VisitorCommentsSeqId)
         {
             var Visitor = TGetList(I => I.VisitorCommentsSeqId == VisitorCommentsSeqId).FirstOrDefault();
-            return null;
+            return Visitor;
         }
 
     }

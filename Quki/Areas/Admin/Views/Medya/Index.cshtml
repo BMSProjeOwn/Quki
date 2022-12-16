@@ -1,0 +1,81 @@
+﻿@using Quki.Entity.Models
+@using X.PagedList;
+@using X.PagedList.Mvc.Core
+
+@model List<Products>
+
+<div class="col-12">
+    <div class="card  card-secondary">
+        <div class="card-header" style="height:65px">
+            <h3 class="card-title" style="color:white">Ürün Tanımlama</h3>
+
+            <a asp-action="NewItem" asp-controller="Medya" asp-area="Admin" class="btn btn-info float-right"> Yeni</a>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body table-responsive p-0">
+            <table id="datatable" class="table table-striped table-bordered" width="100%">
+                <thead>
+                    <tr>
+                        <th>Adı</th>
+                        <th>Medya Tipi</th>
+                        <th>Ürün Seo Bilgisi</th>
+                        <th>Durumu</th>
+                        <th>Sil</th>
+                        <th>Guncelle</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var Item in Model)
+                    {
+                        <tr>
+                            <td>@Item.ProductName</td>
+                            @if (Item.ProductTypeSeqID == 0)
+                            {
+                                <td>Resim</td>
+                            }
+                            @if (Item.ProductTypeSeqID == 1)
+                            {
+                                <td>Video</td>
+                            }    
+                            <td>@Item.ProductSEOData</td>
+                            <td>@Item.Status</td>
+
+                            <td> <a asp-action="Delete" asp-controller="Medya" onclick="return confirm('Silmek istediğinzden emin misiniz?')" asp-area="Admin" asp-route-id="@Item.ProductSeqID " class="btn btn-danger"> Sil</a></td>
+                            <td> <a asp-action="Update" asp-controller="Medya" asp-area="Admin" asp-route-id="@Item.ProductSeqID" class="btn btn-info"> Güncelle</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+
+        <div class="card-footer">
+            <ul class="pagination pagination-sm m-0 float-right">
+                @if (Model.Any())
+                {
+                    // @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+                }
+            </ul>
+            <a asp-action="NewItem" asp-controller="Medya" asp-area="Admin" class="btn btn btn-info"> Yeni </a>
+        </div>
+        <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+</div>
+
+
+@section head{
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+}
+@section scripts{
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+}
+
+@section scriptsready {
+    var datatableInstance = $('#datatable').DataTable();
+}

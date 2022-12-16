@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quki.Entity", "Quki.Entity\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quki.Interface", "Quki.Interface\Quki.Interface.csproj", "{1E59A80D-5390-4E20-89D8-0CC65FB90078}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Log", "..\..\..\source\repos\BMSProje\Tikutu\Log4Net\Log.csproj", "{9FDD2E8F-37DB-4AAB-B929-46389C1C72D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{1E59A80D-5390-4E20-89D8-0CC65FB90078}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E59A80D-5390-4E20-89D8-0CC65FB90078}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E59A80D-5390-4E20-89D8-0CC65FB90078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FDD2E8F-37DB-4AAB-B929-46389C1C72D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FDD2E8F-37DB-4AAB-B929-46389C1C72D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FDD2E8F-37DB-4AAB-B929-46389C1C72D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FDD2E8F-37DB-4AAB-B929-46389C1C72D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

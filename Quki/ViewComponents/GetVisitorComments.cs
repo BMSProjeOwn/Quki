@@ -15,8 +15,9 @@ namespace Quki.ViewComponents
         }
         public IViewComponentResult Invoke()
         {
-            Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
-            return View(visitorCommentService.GetVisitorCommentsWithProduct()); 
+            //Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
+            var model = visitorCommentService.GetUserComment();
+            return View(model); 
         }
     }
 }

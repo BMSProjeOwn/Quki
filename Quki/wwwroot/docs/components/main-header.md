@@ -64,7 +64,7 @@ The main header contains the navbar. Construction of the navbar differs slightly
         <a href="#" class="dropdown-item">
           <!-- Message Start -->
           <div class="media">
-            <img src="{{'assets/img/user1-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+            <img src="{{'~/webQuki/img/user1-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
             <div class="media-body">
               <h3 class="dropdown-item-title">
                 Brad Diesel
@@ -80,7 +80,7 @@ The main header contains the navbar. Construction of the navbar differs slightly
         <a href="#" class="dropdown-item">
           <!-- Message Start -->
           <div class="media">
-            <img src="{{'assets/img/user8-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <img src="{{'~/webQuki/img/user8-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
             <div class="media-body">
               <h3 class="dropdown-item-title">
                 John Pierce
@@ -96,7 +96,7 @@ The main header contains the navbar. Construction of the navbar differs slightly
         <a href="#" class="dropdown-item">
           <!-- Message Start -->
           <div class="media">
-            <img src="{{'assets/img/user3-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <img src="{{'~/webQuki/img/user3-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
             <div class="media-body">
               <h3 class="dropdown-item-title">
                 Nora Silvester
@@ -295,7 +295,7 @@ Top navbar example can be found in this [demo page](https://adminlte.io/themes/d
 <nav class="navbar navbar-expand navbar-light navbar-white">
   <div class="container">
     <a href="index3.html" class="navbar-brand">
-      <img src="{{'assets/img/AdminLTELogo.png' | relative_url}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="{{'~/webQuki/img/AdminLTELogo.png' | relative_url}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
@@ -344,7 +344,7 @@ Top navbar example can be found in this [demo page](https://adminlte.io/themes/d
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="{{'assets/img/user1-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="{{'~/webQuki/img/user1-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
@@ -360,7 +360,7 @@ Top navbar example can be found in this [demo page](https://adminlte.io/themes/d
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="{{'assets/img/user8-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="{{'~/webQuki/img/user8-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
@@ -376,7 +376,7 @@ Top navbar example can be found in this [demo page](https://adminlte.io/themes/d
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="{{'assets/img/user3-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="{{'~/webQuki/img/user3-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester

@@ -26,6 +26,9 @@ namespace Quki.Entity.DtoModels
         public DateTime ReleaseDate { get; set; }
         public string ProductSEOMetaDescription { get; set; }
 
+        public int MediaType { get; set; }
+
+
 
         public bool Status { get; set; }
         public Int16 DisplayOrderNumber { get; set; }

@@ -21,6 +21,10 @@ namespace Quki.Bll
         public List<Menu> GetUserMenus()
         {
             return TGetList(I => I.ContentTypeID == MenuContentType.User && I.Status == true && I.PositionID == 1).OrderBy(I => I.DisplayOrderNumber).ToList();
+        } 
+        public List<Menu> GetUpMenu(int id)
+        {
+            return TGetList(I=>I.LanguageID==id && I.Status == true && I.PositionID == 1).OrderBy(I => I.DisplayOrderNumber).ToList();
         }
 
         public List<Menu> GetUserMenusForDocument()

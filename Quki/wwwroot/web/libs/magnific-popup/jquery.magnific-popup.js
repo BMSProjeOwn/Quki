@@ -1681,7 +1681,7 @@ $.magnificPopup.registerModule('gallery', {
 		tNext: 'Next (Right arrow key)',
 		tCounter: '%curr% of %total%'
 	},
-
+	//burasiii
 	proto: {
 		initGallery: function() {
 
@@ -1801,14 +1801,24 @@ $.magnificPopup.registerModule('gallery', {
 
 			_mfpTrigger('LazyLoad', item);
 
-			if(item.type === 'image') {
-				item.img = $('<img class="mfp-img" />').on('load.mfploader', function() {
+			if (item.type === 'image') {
+				item.img = $('<img class="mfp-img" />').on('load.mfploader', function () {
 					item.hasSize = true;
-				}).on('error.mfploader', function() {
+				}).on('error.mfploader', function () {
 					item.hasSize = true;
 					item.loadError = true;
 					_mfpTrigger('LazyLoadError', item);
 				}).attr('src', item.src);
+			} else {
+				console.log(item.img);
+				item.img = $('<img class="mfp-img" />').on('load.mfploader', function () {
+					item.hasSize = true;
+				}).on('error.mfploader', function () {
+					item.hasSize = true;
+					item.loadError = true;
+					_mfpTrigger('LazyLoadError', item);
+				}).attr('src', item.src);
+
 			}
 
 

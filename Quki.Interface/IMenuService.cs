@@ -10,6 +10,9 @@ namespace Quki.Interface
         public List<Menu> GetUserMenus();
         public List<Menu> GetUserMenusForDocument();
         public List<Menu> GetMenus();
-        
+
+        public List<Menu> GetUpMenu(int id);
+
+
     }
 }

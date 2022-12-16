@@ -1,0 +1,138 @@
+﻿
+<nav class="mt-2">
+    <ul class="nav nav-pills nav-sidebar flex-column nav-flat nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+    with font-awesome or any other icon font library -->
+
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                    KULLANICI TANIMLARI
+                    <i class="fas fa-angle-left right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a asp-action="GetRoleList" asp-controller="Administration" asp-area="Admin" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Rol Tanımlama</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a asp-action="GetUserList" asp-controller="Administration" asp-area="Admin" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Kullanıcı Tanımlama</p>
+                    </a>
+                </li>
+
+
+
+            </ul>
+        </li>
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                    WEB SİTE TANIMLARI
+                    <i class="fas fa-angle-left right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a asp-action="Index" asp-controller="Document" asp-area="Admin" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Döküman Sayfası</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a asp-action="Index" asp-controller="VisitorComments" asp-area="Admin" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Müşteri Yorumları</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a asp-action="Index" asp-controller="FrequentlyAskedQuestions" asp-area="Admin" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Sıkça Sorulan Sorular</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                    TANIMLAR
+                    <i class="fas fa-angle-left right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a asp-action="Index" asp-controller="Medya" asp-area="Admin" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Medya Tanımlama</p>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a asp-action="Index" asp-controller="Slider" asp-area="Admin" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Slider Tanımlama</p>
+                    </a>
+                </li>
+            </ul> 
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a asp-action="Index" asp-controller="Etkinlik" asp-area="Admin" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Etkinlik Tanımlama</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+
+
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                    GERİ BİLDİRİMLER
+                    <i class="fas fa-angle-left right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a asp-action="Index" asp-controller="Mesaj" asp-area="Admin" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Kullanıcı Yorumları</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                    Raporlar
+                    <i class="fas fa-angle-left right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a asp-action="Index" asp-controller="Report" asp-area="Admin" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Rapor Görüntüle</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+
+    </ul>
+</nav>

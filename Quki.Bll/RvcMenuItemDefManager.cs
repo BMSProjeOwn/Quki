@@ -41,6 +41,7 @@ namespace Quki.Bll
         {
             
             var allMenuItems = repo.GetAll().ToList();
+            
 
             return allMenuItems;
         } 

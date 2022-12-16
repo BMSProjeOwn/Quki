@@ -1,0 +1,142 @@
+﻿@using Quki.Entity.Models
+@model VisitorComment
+@{
+    ViewData["Title"] = "AboutUs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var message = ViewBag.MyDiv;
+}
+<section id="contact1" class="contact contact-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                            <div class="contact--desc">
+                                <p>
+                                    @MultiLanguageOmni.ReadResourceKey.GetString("ContactRemark", "MultiLanguageOmni.Index")
+                                </p>
+                            </div>
+                            <div class="row mb-30">
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="contact--info">
+                                        <h3>
+                                            @MultiLanguageOmni.ReadResourceKey.GetString("Our Address", "MultiLanguageOmni.Index")
+                                        </h3>
+                                        <p>Alnahas Building, 2 AlBahr St, Tanta</p>
+                                        <p>AlGharbia, Egypt.</p>
+                                        <a class="link--styled" href="#">@MultiLanguageOmni.ReadResourceKey.GetString("GET DIRECTIONS", "MultiLanguageOmni.Index")</a>
+                                    </div>
+                                </div>
+                                <!-- .col-md-6 end -->
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="contact--info">
+                                        <h3>
+                                            @MultiLanguageOmni.ReadResourceKey.GetString("Our Phone", "MultiLanguageOmni.Index")
+                                        </h3>
+                                        <p>Office Telephone : 002 01065370701</p>
+                                        <p>Mobile : 002 01065370701</p>
+                                        <a class="link--styled" href="#">@MultiLanguageOmni.ReadResourceKey.GetString("CALL US", "MultiLanguageOmni.Index")</a>
+                                    </div>
+                                </div>
+                                <!-- .col-md-6 end -->
+                            </div>
+                            <!-- .row end -->
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="contact--info">
+                                        <h3>
+                                            @MultiLanguageOmni.ReadResourceKey.GetString("Our Email", "MultiLanguageOmni.Index")
+                                        </h3>
+                                        <p>Main Email : 7oroof@7oroof.com</p>
+                                        <p>Inquiries : Info@7oroof.com</p>
+                                        <a class="link--styled" href="#">@MultiLanguageOmni.ReadResourceKey.GetString("Send a Message", "MultiLanguageOmni.Index")</a>
+                                    </div>
+                                </div>
+                                <!-- .col-md-6 end -->
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="contact--info">
+                                        <h3>
+                                            @MultiLanguageOmni.ReadResourceKey.GetString("Follow Us", "MultiLanguageOmni.Index")
+                                        </h3>
+                                        <div class="social-icons">
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                            <a href="#"><i class="fa fa-tripadvisor"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- .col-md-6 end -->
+                            </div>
+                            <!-- .row end -->
+                        </div>
+                        <!-- .col-md-3 end -->
+
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                            <div class="contact-form">
+
+                                <form id="VisiterCommentForm" asp-action="SendComment" asp-controller="Contact" method="post" class="contactForm mb-0" novalidate="novalidate">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input asp-for="@Model.Name" type="text" class="form-control" name="Name" id="firstName" placeholder="@MultiLanguageOmni.ReadResourceKey.GetString("First Name", "MultiLanguageOmni.Index"):" required="" aria-required="true">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input asp-for="@Model.Surname" type="text" class="form-control" name="Surname" id="lastName" placeholder="@MultiLanguageOmni.ReadResourceKey.GetString("Last Name", "MultiLanguageOmni.Index"):" required="" aria-required="true">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input asp-for="@Model.VisitorEmail" type="email" class="form-control" name="VisitorEmail" id="email" placeholder="@MultiLanguageOmni.ReadResourceKey.GetString("Email", "MultiLanguageOmni.Index"):" required="" aria-required="true">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input asp-for="@Model.Phone" type="text" class="form-control" name="Phone" id="phone" placeholder="@MultiLanguageOmni.ReadResourceKey.GetString("Phone", "MultiLanguageOmni.Index"):" required="" aria-required="true">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <textarea asp-for="@Model.Comment" class="form-control" name="Comment" id="message" rows="2" placeholder="@MultiLanguageOmni.ReadResourceKey.GetString("Message", "MultiLanguageOmni.Index"):" required="" aria-required="true"></textarea>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <input type="submit" value="@MultiLanguageOmni.ReadResourceKey.GetString("Send Message", "MultiLanguageOmni.Index")" asp-action="SendComment" asp-controller="Contact" name="submit" class="btn btn--secondary btn--block mt-10">
+
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-12">
+                                            <div class="contact-result"></div>
+                                        </div>
+
+                                    </div>
+                                </form>
+                                @if (message != null)
+                                {
+                                    @Html.Raw(message)
+                                }
+                            </div>
+                        </div>
+                        <!-- .col-md-6 end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*<script type="text/javascript">
+    function submitStudent() {
+        var data = $("#VisiterCommentForm").serialize();
+        var div = "<div class=\"alert alert-success\" role=\"alert\"><strong>Thank you. We will contact you shortly.</strong></div>";
+        console.log(data);
+        alert(data);
+        $.ajax({
+            type: 'POST',
+            url: "/Contact/SendComment",
+            contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+            data: data, div,
+            success: function (result) {
+                alert('Successfully received Data ');
+                console.log(result);
+            },
+            error: function () {
+                alert('Failed to receive the Data');
+                console.log('Failed ');
+            }
+        })
+    }
+
+</script>*@

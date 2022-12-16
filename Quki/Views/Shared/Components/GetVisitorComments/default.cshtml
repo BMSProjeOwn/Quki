@@ -1,50 +1,85 @@
-﻿@using Quki.Entity.ViewModel
-@model List<VisitorCommentsModel>
-<section>
-    <div class="section testimonials">
-        <div class="container">
-            <div class="title text-center">
-                <div class="page-title color">
-                    <h3 class="title-main">Quki Ebeveynler Yorumları</h3>
-                    <div class="title title-icon">
-                        <h2 class="title-h2">Ebeveynler Quki hakkında ne düşünüyor!
-                        </h2>
-                        <p class="description">
-                            @*Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel
-                                scelerisque nisl consectetur et.*@
-                        </p>
-                    </div>
+﻿@using Quki.Entity.Models
+@model List<VisitorComment>
+
+
+<section id="testimonial1" class="testimonial testimonial-1 bg-overlay bg-parallax bg-overlay-dark">
+    <div class="bg-section">
+        <img src="~/webQuki/images/background/1.jpg" alt="Background" />
+    </div>
+
+    <div class="container">
+        <div class="divider--shape-1up"></div>
+        <div class="row clearfix">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                <div class="heading heading-1 mb-50 text--center">
+                    <p class="heading--subtitle">
+                        @MultiLanguageOmni.ReadResourceKey.GetString("Customer comments", "MultiLanguageOmni.Index")
+                    </p>
+                    <h2 class="heading--title color-white">QUKİ MEYHANE</h2>
+                    <div class="divider--shape-13"></div>
                 </div>
             </div>
-
-            <div class="row m-top">
-                @if (Model != null && Model.Count > 0)
-                {
-                    foreach (var item in Model)
-                    {
-                        <div class="col-sm-6">
-                            <div class="item clearfix d-flex align-items-center">
-                                <div class="item-img hover-change">
-                                    <img class="w-100" src="~/web/img/iconVizitorComment.png" alt="Quki-image" />
-
-                                </div>
-                                <div class="item-content">
-                                    <p>
-                                        @item.Comment
-                                    </p>
-                                    <div class="user-info">
-                                        <h4 class="user-name title-black">
-                                            @item.Name
-                                        </h4>
-                                        <span class="job">@item.CreatedDate</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    }
-                }
-            </div>
+            <!-- .col-md-8 end -->
         </div>
+        <!-- .row end -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div id="testimonial-carousel" class="carousel carousel-dots carousel-white" data-slide="3" data-slide-rs="1" data-autoplay="false" data-nav="false" data-dots="true" data-space="30" data-loop="true" data-speed="800">
+                    <!-- Testimonial #1 -->
+                    @if (Model != null && Model.Count > 0)
+                    {
 
+                        foreach (var item in Model)
+                        {
+
+                            <div class="testimonial-container">
+
+                                <div class="testimonial-panel">
+
+
+                                    <div class="testimonial-bordered">
+                                        <div class="testimonial--rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <!-- .testimonial-rating end -->
+                                        <div class="testimonial--body">
+                                            <p>“ @item.Comment ”</p>
+                                        </div>
+                                        <!-- .testimonial-body end -->
+                                        <div class="testimonial--meta">
+                                            <div class="testimonial--img">
+                                                <img src="~/webQuki/images/testimonial/1.png" alt="Testimonial Author">
+                                            </div>
+                                            <div class="testimonial--author">
+                                                <h4>@item.Name @item.Surname</h4>
+                                            </div>
+                                        </div>
+                                        <!-- .testimonial-meta end -->
+                                    </div>
+
+
+                                </div>
+                                <!-- .testimonial-panel end -->
+                                <div class="divider--shape-1up"></div>
+
+
+
+                            </div>
+                            <!-- Testimonial #2 -->
+                        }
+                    }
+
+                </div>
+            </div>
+            <!-- .col-md-12 end -->
+        </div>
+        <!-- .row end -->
+        <div class="divider--shape-1down"></div>
     </div>
+    <!-- .container end -->
 </section>
+<!-- #testimonial1 end -->

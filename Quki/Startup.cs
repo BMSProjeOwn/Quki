@@ -44,16 +44,24 @@ namespace Quki
         public IConfiguration Configuration { get; }
 
 
+
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+
+
+            //services.AddDbContext<ProjeDBContext>(options =>
+            //    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            //services.AddDbContext<ProjeDBZuposDBContext>(options =>
+            //    options.UseSqlServer(Configuration.GetConnectionString("ConnectionZuposDB")));
+            //services.AddControllersWithViews();
 
             services.AddDbContext<ProjeDBContext>();
-            services.AddDbContext<ProjeDBZuposDBContext>();
+           //services.AddDbContext<ProjeDBZuposDBContext>();
             //services.AddAuthentication();
 
             services.AddScoped<DbContext, ProjeDBContext>();
-            services.AddScoped<DbContext, ProjeDBZuposDBContext>();
+           // services.AddScoped<DbContext, ProjeDBZuposDBContext>();
             //services.AddScoped(typeof(IGenericService<,>), typeof(BllBase<,>));
             //services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
@@ -131,13 +139,19 @@ namespace Quki
             services.AddScoped<ICampaignDefWithCampaignPropertiesDefService, CampaignDefWithCampaignPropertiesDefManager>();
             services.AddScoped<IMemberShipTypeWithCustomersPaymentChanelService, MemberShipTypeWithCustomersPaymentChanelManager>();
 
-           services.AddScoped<IRvcMenuItemDefService, RvcMenuItemDefManager>();
-           services.AddScoped<IRvcOptionsRightService, RvcOptionsRightManager>();
-           services.AddScoped<IRvcMenuItemPriceService, RvcMenuItemPriceManager>();
-           services.AddScoped<IMenuItemBarcodeDefService, MenuItemBarcodeDefManager>();
-           services.AddScoped<ISluDefService, SluDefManager>();
-           services.AddScoped<Islu_Rvc_RelationService, slu_Rvc_RelationManager>();
-           
+
+
+            services.AddScoped<ISliderService, SliderManager>();
+            services.AddScoped<INewsAndAnnouncementService, NewsAndAnnouncementManager>();
+
+
+            services.AddScoped<IRvcMenuItemDefService, RvcMenuItemDefManager>();
+            services.AddScoped<IRvcOptionsRightService, RvcOptionsRightManager>();
+            services.AddScoped<IRvcMenuItemPriceService, RvcMenuItemPriceManager>();
+            services.AddScoped<IMenuItemBarcodeDefService, MenuItemBarcodeDefManager>();
+            services.AddScoped<ISluDefService, SluDefManager>();
+            services.AddScoped<Islu_Rvc_RelationService, slu_Rvc_RelationManager>();
+
             #endregion
 
             #region Repository section
@@ -211,6 +225,9 @@ namespace Quki
             services.AddScoped<IMemberShipTypesWithPaymentChanelsRepository, MemberShipTypesWithPaymentChanelsRepository>();
             services.AddScoped<IMemberShipTypeWithCustomersPaymentChanelRepository, MemberShipTypeWithCustomersPaymentChanelRepository>();
 
+            services.AddScoped<ISliderRepository, SliderRepository>();
+            services.AddScoped<INewsAndAnnouncementRepository, NewsAndAnnouncementRepository>();
+
 
             services.AddScoped<IRvcMenuItemDefRepository, RvcMenuItemsDefRepository>();
             services.AddScoped<IRvcOptionsRightRepository, RvcOptionRightRepository>();
@@ -233,7 +250,7 @@ namespace Quki
             #region CORS Settings
 
             #endregion
-            
+
 
 
 
@@ -311,7 +328,7 @@ namespace Quki
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager)
         {
-          
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -321,15 +338,15 @@ namespace Quki
             //    app.UseStatusCodePagesWithReExecute("/error/{0}");
             //}
             app.UseExceptionHandler("/error");
-            
+
             app.UseXMLSitemap(env.ContentRootPath);
-            
+
             var supportedCultures = new[]
            {
                 new CultureInfo("tr-TR"),
                 new CultureInfo("en-US"),
                 new CultureInfo("de-DE")
-                
+
             };
             app.UseRequestLocalization(new RequestLocalizationOptions
             {
@@ -477,21 +494,22 @@ namespace Quki
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(name: "areas", pattern: "{area}/{Controller=Home}/{Action=Index}/{id?}");
+                //endpoints.MapControllerRoute("Default5", "{controller=DocumentPage}/{action=GetDocument}/{name?}/{id?}");
             });
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(name: "default", pattern: "{Controller=Product}/{Action=Index}/{id?}");
                 endpoints.MapControllerRoute("dMenu", "mobile-menu", new { controller = "Product", action = "Index" });
-               
+
 
 
             });
 
 
-            
+
         }
 
-       
+
     }
 }

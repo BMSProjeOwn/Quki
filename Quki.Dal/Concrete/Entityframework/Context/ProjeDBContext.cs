@@ -297,6 +297,13 @@ namespace Quki.Dal.Concrete.Entityframework.Context
 
 
 
+        public DbSet<Slider> Slider { get; set; }
+        public DbSet<NewsAndAnnouncement> NewsAndAnnouncement { get; set; }
+
+
+
+
+
         
 
         

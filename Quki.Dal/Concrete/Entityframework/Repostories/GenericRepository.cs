@@ -14,7 +14,7 @@ namespace Quki.Dal.Concrete.Entityframework.Repostories
     {
         #region Variables
         protected DbContext context;
-        protected DbSet<T> dbset;
+        public DbSet<T> dbset;
         #endregion
 
         public GenericRepository(DbContext context)

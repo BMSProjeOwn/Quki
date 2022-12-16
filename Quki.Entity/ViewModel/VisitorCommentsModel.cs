@@ -10,7 +10,7 @@ namespace Quki.Entity.ViewModel
     {
 
         public int VisitorCommentsSeqId { get; set; }
-        public int ComantSeqID { get; set; }
+        public int? ComantSeqID { get; set; }
         public string Name { get; set; }
         public string ProductName { get; set; }
         public string CreatedBy { get; set; }
@@ -22,5 +22,7 @@ namespace Quki.Entity.ViewModel
         public DateTime CreatedDate { get; set; }
         public bool ShowOnHomePage { get; set; }
         public Int16 DisplayOrderID { get; set; }
+        public string Phone { get; set; }
+        public string Surname { get; set; }
     }
 }

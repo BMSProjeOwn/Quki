@@ -120,578 +120,91 @@
   <data name="AboutUs" xml:space="preserve">
     <value>Hakkımızda</value>
   </data>
-  <data name="accept" xml:space="preserve">
-    <value>Kabul Et</value>
+  <data name="All" xml:space="preserve">
+    <value>Hepsi</value>
   </data>
-  <data name="AccountInformationError" xml:space="preserve">
-    <value>Lütfen hesap bilgilerinizin girişini yapın.</value>
+  <data name="CALL US" xml:space="preserve">
+    <value>Bizi ara</value>
   </data>
-  <data name="AccountPage" xml:space="preserve">
-    <value>Hesap giriş sayfası</value>
+  <data name="ContactRemark" xml:space="preserve">
+    <value>Steak In, Mısır'da açılan ilk restorandı, restoran tarihi göz önünde bulundurarak tasarlandı, açık mutfak, kahve paket servisi barı ve tesis bünyesinde kahve manastırı ile birlikte yumuşak bir endüstriyel yemek odası yarattık.</value>
   </data>
-  <data name="AcoountPage" xml:space="preserve">
-    <value>Hesap Giriş Sayfası </value>
-  </data>
-  <data name="ActivastionCode" xml:space="preserve">
-    <value>Aktivasyon Kodu</value>
-  </data>
-  <data name="ActivastionMail" xml:space="preserve">
-    <value>Aktivasyon kodu ile maili aktif et</value>
-  </data>
-  <data name="Adress" xml:space="preserve">
-    <value>Adres</value>
-  </data>
-  <data name="AgainLogin" xml:space="preserve">
-    <value>İşlem yapmak için sisteme tekrar giriş yapınız.</value>
-  </data>
-  <data name="AgeRange" xml:space="preserve">
-    <value>Yaş Aralığı</value>
-  </data>
-  <data name="AktiveMail" xml:space="preserve">
-    <value>Bu Mail Daha Önce Aktif Edilmis</value>
-  </data>
-  <data name="AllProducers" xml:space="preserve">
-    <value>Sesli Tiyatro Sanatçıları</value>
-  </data>
-  <data name="AlreadySubscribed" xml:space="preserve">
-    <value>Zaten Abone Durumundasınız!</value>
-  </data>
-  <data name="AppleLogin" xml:space="preserve">
-    <value>Apple ile giriş yap</value>
-  </data>
-  <data name="Area" xml:space="preserve">
-    <value>Bölge (?)</value>
-  </data>
-  <data name="AudioTheaterAgeRange" xml:space="preserve">
-    <value>Sesli Tiyatro Yaş Aralığı</value>
-  </data>
-  <data name="AudioTheaterOver2YearsOld" xml:space="preserve">
-    <value>2 Yaş Üstü Sesli Tiyatro</value>
-  </data>
-  <data name="AudioTheaterOver4YearsOld" xml:space="preserve">
-    <value>4 Yaş Üstü Sesli Tiyatro</value>
-  </data>
-  <data name="AudioTheaterOver6YearsOld" xml:space="preserve">
-    <value>6 Yaş Üstü Sesli Tiyatro</value>
-  </data>
-  <data name="AudioTheaterOver8YearsOld" xml:space="preserve">
-    <value>8 Yaş Üstü Sesli Tiyatro</value>
-  </data>
-  <data name="AudioTheaters" xml:space="preserve">
-    <value>Sesli Tiyatrolar</value>
-  </data>
-  <data name="AudioTheatre" xml:space="preserve">
-    <value>Sesli Tiyatro</value>
-  </data>
-  <data name="BillAdress" xml:space="preserve">
-    <value>Fatura Adresi</value>
-  </data>
-  <data name="btnCancelReasonContinue" xml:space="preserve">
-    <value>Abone İptaline Devam Et</value>
-  </data>
-  <data name="BtnSubsription" xml:space="preserve">
-    <value>Abonelik Türlerini Görün</value>
-  </data>
-  <data name="BtnTrialDay" xml:space="preserve">
-    <value>@TrailPeriodDay Günlük deneme sürecini başlatın</value>
-  </data>
-  <data name="BuyGiftCard" xml:space="preserve">
-    <value>Hediye Kartını Satın Al</value>
-  </data>
-  <data name="campingCodeError" xml:space="preserve">
-    <value>Girilen Kod Hatalıdır!</value>
-  </data>
-  <data name="CancelReasonHeaderTitle" xml:space="preserve">
-    <value>Abonelikten ayrılma kararınız bizi üzdü.
- 
-  Yorumlarınız daha iyisini yapabilmek adına bize fikir verecek.
- 
-  Hangi Sebeple bu platformdan ayrılmak istiyorsunuz?</value>
-  </data>
-  <data name="CancelSubscriber" xml:space="preserve">
-    <value>Aboneliğiniz başarıyla iptal edilmiştir</value>
-  </data>
-  <data name="CancelSubsribtion" xml:space="preserve">
-    <value>Aboneliğinizi iptal edin</value>
-  </data>
-  <data name="Cancle" xml:space="preserve">
-    <value>Vazgeç</value>
-  </data>
-  <data name="CardCvcError" xml:space="preserve">
-    <value>Lütfen CVC bilgisini girin</value>
-  </data>
-  <data name="CardCvcError2" xml:space="preserve">
-    <value>Geçersiz CVC numarası.</value>
-  </data>
-  <data name="CardDateError" xml:space="preserve">
-    <value>Lütfen kart geçerlilik tarihini kontrol edin.</value>
-  </data>
-  <data name="CardHolder" xml:space="preserve">
-    <value>Kart sahibinin adı ve soyadı:</value>
-  </data>
-  <data name="CardInformation" xml:space="preserve">
-    <value>Kart Bilgileri</value>
-  </data>
-  <data name="CardInformationError" xml:space="preserve">
-    <value>Lütfen kart bilgilerinizi girin.</value>
-  </data>
-  <data name="CardInformationError2" xml:space="preserve">
-    <value>Lütfen kart bilgisini eksiksiz girin.</value>
-  </data>
-  <data name="CardNoError" xml:space="preserve">
-    <value>Geçersiz kart numarası.</value>
-  </data>
-  <data name="CardNumber" xml:space="preserve">
-    <value>Kart Numarası</value>
-  </data>
-  <data name="CardOwnInformationError" xml:space="preserve">
-    <value>Lütfen kart sahibine ait bilgilerin girişini yapın.</value>
-  </data>
-  <data name="ChangePassword" xml:space="preserve">
-    <value>: Şifre Değişikliği :</value>
-  </data>
-  <data name="Choose" xml:space="preserve">
-    <value>Seçiniz</value>
-  </data>
-  <data name="City" xml:space="preserve">
-    <value>Şehir</value>
-  </data>
-  <data name="Code" xml:space="preserve">
-    <value>Kod</value>
-  </data>
-  <data name="CommentSendUsTitle" xml:space="preserve">
-    <value>Yorumunuz bize iletilmiştir.</value>
-  </data>
-  <data name="ConfirmMail" xml:space="preserve">
-    <value>Giriş yapmadan önce lütfen lütfen email onaylayınız. / Giriş yapmadan önce</value>
-  </data>
-  <data name="ConfirmMailTitle" xml:space="preserve">
-    <value>Giriş yapmadan mail adresinize gelen maili onaylamanız gerekmektedir.</value>
-  </data>
-  <data name="Contact" xml:space="preserve">
-    <value>İletişim</value>
-  </data>
-  <data name="ContactConditions" xml:space="preserve">
-    <value>Sözleşme koşulları formu doldurulmalıdır.</value>
-  </data>
-  <data name="ContactUs" xml:space="preserve">
-    <value>Bize Ulaşın</value>
-  </data>
-  <data name="ContinueListening" xml:space="preserve">
-    <value>Dinlemeye Devam Edin</value>
-  </data>
-  <data name="Corporate" xml:space="preserve">
-    <value>Kurumsal</value>
-  </data>
-  <data name="Country" xml:space="preserve">
-    <value>Ülke</value>
-  </data>
-  <data name="CreateAccount" xml:space="preserve">
-    <value>Hesap Oluştur</value>
-  </data>
-  <data name="DateOfBirth" xml:space="preserve">
-    <value>Doğum Tarihi</value>
-  </data>
-  <data name="DontMatchPassword" xml:space="preserve">
-    <value>Şifreler Uyuşmuyor.</value>
-  </data>
-  <data name="DuplicateUserName" xml:space="preserve">
-    <value>@email email ile daha önce kayıt yapılmış</value>
-  </data>
-  <data name="EffectiveDate" xml:space="preserve">
-    <value>Geçerlilik Tarihi</value>
+  <data name="Customer comments" xml:space="preserve">
+    <value>Müşteri Yorumları</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>E-Posta Adresi</value>
+    <value>Email</value>
   </data>
-  <data name="EmailRecordNotFound" xml:space="preserve">
-    <value>Bu kullanıcının email kaydı bulunamadı</value>
+  <data name="Explore Our Menu" xml:space="preserve">
+    <value>Menümüzü Keşfedin</value>
   </data>
-  <data name="EndDate" xml:space="preserve">
-    <value>Bitiş Tarihi</value>
+  <data name="First Name" xml:space="preserve">
+    <value>Ad</value>
   </data>
-  <data name="enter" xml:space="preserve">
-    <value>Giriş</value>
+  <data name="Follow Us" xml:space="preserve">
+    <value>Bizi Takip Edin</value>
   </data>
-  <data name="ErrorAdress" xml:space="preserve">
-    <value>Lütfen adres satırını boş bırakmayın.</value>
+  <data name="FooterRemark" xml:space="preserve">
+    <value>Steak In, rahat atmosferik bir ortamda kaliteli yemeklerin ve harika kokteyllerin mükemmel servisiyle tadını çıkarmak için mükemmel bir yere sahiptir. Açık mutfak, kahve paket servis barı ile birlikte yumuşak bir yemek salonumuz var.</value>
   </data>
-  <data name="ErrorCity" xml:space="preserve">
-    <value>Lütfen şehir satırını boş bırakmayın.</value>
+  <data name="GET DIRECTIONS" xml:space="preserve">
+    <value>Adrese git</value>
   </data>
-  <data name="ErrorCountry" xml:space="preserve">
-    <value>Lütfen ülke satırını boş bırakmayın.</value>
+  <data name="HomeMenuText" xml:space="preserve">
+    <value>yazııııııııııııııııı</value>
   </data>
-  <data name="ErrorPhone" xml:space="preserve">
-    <value>Lütfen telefon satırını boş bırakmayın.</value>
+  <data name="Images" xml:space="preserve">
+    <value>Resimler</value>
   </data>
-  <data name="ErrorPostaCode" xml:space="preserve">
-    <value>Lütfen posta kodu satırını boş bırakmayın.</value>
+  <data name="Last Name" xml:space="preserve">
+    <value>Soyad</value>
   </data>
-  <data name="EvluationMessage" xml:space="preserve">
-    <value>Değerlendirmeniz için teşekkürler.</value>
+  <data name="Message" xml:space="preserve">
+    <value>Mesajınız</value>
   </data>
-  <data name="ExpertCommentary" xml:space="preserve">
-    <value>Uzman Yorumu</value>
+  <data name="Neswletter" xml:space="preserve">
+    <value>Bülten</value>
   </data>
-  <data name="ExpirationDate" xml:space="preserve">
-    <value>Son Kullanım Tarihi</value>
+  <data name="New Generation Tavern" xml:space="preserve">
+    <value>Yeni Nesil Meyhane</value>
   </data>
-  <data name="FacebookLogin" xml:space="preserve">
-    <value>Facebook ile giriş yap</value>
+  <data name="Our Address" xml:space="preserve">
+    <value>Adresimiz</value>
   </data>
-  <data name="Female" xml:space="preserve">
-    <value>Kadın</value>
+  <data name="Our Email" xml:space="preserve">
+    <value>Email Adresimiz</value>
   </data>
-  <data name="FialedChangePasswordTitle" xml:space="preserve">
-    <value>Şifre değiştirme talebi başarısız</value>
+  <data name="Our events" xml:space="preserve">
+    <value>Etkinliklerimiz</value>
   </data>
-  <data name="Find" xml:space="preserve">
-    <value>Bul</value>
+  <data name="Our Phone" xml:space="preserve">
+    <value>Telefon Numaramız</value>
   </data>
-  <data name="ForgetPassword" xml:space="preserve">
-    <value>Şifremi Unuttum</value>
-  </data>
-  <data name="ForgotPasswordAktivasyon" xml:space="preserve">
-    <value>Code ile şifre yenile</value>
-  </data>
-  <data name="FrequentlyAskedQuestions" xml:space="preserve">
-    <value>Sıkça Sorulan Sorular</value>
-  </data>
-  <data name="Gender" xml:space="preserve">
-    <value>Cinsiyet</value>
-  </data>
-  <data name="gift" xml:space="preserve">
-    <value>Hediye Et</value>
-  </data>
-  <data name="GiftCard" xml:space="preserve">
-    <value>Hediye Kartı Seç</value>
-  </data>
-  <data name="GiftTitle" xml:space="preserve">
-    <value>Quki'nun eşsiz masal dünyasını sevdiklerinizle buluşturun</value>
-  </data>
-  <data name="GiftTitle2" xml:space="preserve">
-    <value>Paylaşmanın tadına Quki’nun sesli tiyatro uygulamasıyla varın, birbirinden güzel hikaye ve masalların tadını sevdiklerinizle birlikte çıkarın.</value>
-  </data>
-  <data name="GoogleLogin" xml:space="preserve">
-    <value>Google ile giriş yap</value>
-  </data>
-  <data name="GoToAppleStore" xml:space="preserve">
-    <value>https://apps.apple.com/tr/app/Quki/id1575201785?l=tr</value>
-  </data>
-  <data name="GoToAppStoreMessage" xml:space="preserve">
-    <value>Siz de eserin tamamını uygulama üzerinden dinleyebilirsiniz!</value>
-  </data>
-  <data name="GoToPlayStore" xml:space="preserve">
-    <value>https://play.google.com/store/apps/details?id=com.Quki.app&amp;hl=tr&amp;gl=US</value>
-  </data>
-  <data name="HaveActiveSubribtion" xml:space="preserve">
-    <value>Quki'da daha önce aktif bir aboneliğiniz bulunmaktadır.</value>
-  </data>
-  <data name="HelpfulLinks" xml:space="preserve">
-    <value>Yararlı Linkler</value>
-  </data>
-  <data name="HomePage" xml:space="preserve">
-    <value>Anasayfa</value>
-  </data>
-  <data name="HowcanIStartUsingToQuki" xml:space="preserve">
-    <value>Quki’yu kullanmaya nasıl başlayabilirim?</value>
-  </data>
-  <data name="InActiveMail" xml:space="preserve">
-    <value>Giriş yapmadan önce mailnize gelen akitvasyon linkiyle mailinizi aktif etmeniz gerekmektedir.</value>
-  </data>
-  <data name="InvalidUserName" xml:space="preserve">
-    <value>Geçersiz bir Email Adresi kullandınız. Tekrar Deneyin.</value>
-  </data>
-  <data name="MainPageEmailTitle" xml:space="preserve">
-    <value>Quki’nun yeni içerikleri ve kampanyalarından haberdar olmak için siz de e-postanızı bizimle paylaşabilirsiniz.</value>
-  </data>
-  <data name="Male" xml:space="preserve">
-    <value>Erkek</value>
-  </data>
-  <data name="month" xml:space="preserve">
-    <value>AY</value>
-  </data>
-  <data name="MostListenedAudioTheaters" xml:space="preserve">
-    <value>En çok dinlenen sesli tiyatrolar</value>
-  </data>
-  <data name="MostListenedMusic" xml:space="preserve">
-    <value>En çok dinlenen müzikler</value>
-  </data>
-  <data name="Musics" xml:space="preserve">
-    <value>Müzikler</value>
-  </data>
-  <data name="Name" xml:space="preserve">
-    <value>Adı</value>
-  </data>
-  <data name="NoMatchPassword" xml:space="preserve">
-    <value>Şifreler Uyuşmamaktadır</value>
-  </data>
-  <data name="NotFoundProduct" xml:space="preserve">
-    <value>Bu kriterlere uygun ürün bulunamamıştır.</value>
-  </data>
-  <data name="NotFoundUser" xml:space="preserve">
-    <value>Böyle bir kullanıcı bulunamadı</value>
-  </data>
-  <data name="NoUserPleaseRegister" xml:space="preserve">
-    <value>Böyle bir kullanıcı yok lütfen üye olunuz.</value>
-  </data>
-  <data name="OfferString" xml:space="preserve">
-    <value>Qukinun size özel bir teklifi var! Şimdi aboneliğinizi aşağıda sunduğumuz avantajlı fiyatla devam ettirebilirsiniz.</value>
-  </data>
-  <data name="Ok" xml:space="preserve">
-    <value>Tamam</value>
-  </data>
-  <data name="OnlyCreditCard" xml:space="preserve">
-    <value>Not:Sadece kredi kartları geçerlidir!</value>
-  </data>
-  <data name="Or" xml:space="preserve">
-    <value>ya da</value>
-  </data>
-  <data name="OtherPolicies" xml:space="preserve">
-    <value>Diğer Politikalar</value>
-  </data>
-  <data name="Password" xml:space="preserve">
-    <value>Şifre</value>
-  </data>
-  <data name="PasswordAgain" xml:space="preserve">
-    <value>Şifre (Tekrar)</value>
-  </data>
-  <data name="PasswordChangeFailedTryAgain" xml:space="preserve">
-    <value>Şifre değiştirme başarısız tekrar deneyiniz</value>
-  </data>
-  <data name="PasswordChangeTitle" xml:space="preserve">
-    <value>Şifre değiştirme talebi alındı</value>
-  </data>
-  <data name="PasswordRequiresDigit" xml:space="preserve">
-    <value>Şifre en az bir rakam içermelidir.</value>
-  </data>
-  <data name="PasswordRequiresNonAlphanumeric" xml:space="preserve">
-    <value>Şifrenin bir sayı, harf ve özel karakter (# ^ *vb.) içermesi gerekli.</value>
-  </data>
-  <data name="PasswordTooShort" xml:space="preserve">
-    <value>Şifre en 8 karakterden oluşmalı</value>
-  </data>
-  <data name="PaymentPlan" xml:space="preserve">
-    <value>Ödeme Planı</value>
-  </data>
-  <data name="PerformedbytheArtist" xml:space="preserve">
-    <value>Sanatçının Seslendirdikleri</value>
-  </data>
-  <data name="Performers" xml:space="preserve">
-    <value>Seslendirenler</value>
+  <data name="Our Story" xml:space="preserve">
+    <value>Hikayemiz</value>
   </data>
   <data name="Phone" xml:space="preserve">
     <value>Telefon</value>
   </data>
-  <data name="Policies" xml:space="preserve">
-    <value>Politikalar</value>
+  <data name="Send a Message" xml:space="preserve">
+    <value>Mesaj Gönder</value>
   </data>
-  <data name="PostCode" xml:space="preserve">
-    <value>Posta Kodu</value>
+  <data name="Send Message" xml:space="preserve">
+    <value>Mesajı Gönder</value>
   </data>
-  <data name="Price" xml:space="preserve">
-    <value>Fiyat</value>
+  <data name="Stay Updated" xml:space="preserve">
+    <value>Beklemede Kalın</value>
   </data>
-  <data name="PrivacyPolicy" xml:space="preserve">
-    <value>Gizlilik Politikası</value>
+  <data name="Videos" xml:space="preserve">
+    <value>Videolar</value>
   </data>
-  <data name="Producer" xml:space="preserve">
-    <value>Seslendirenler</value>
+  <data name="View Menu" xml:space="preserve">
+    <value>Menüyü İncele</value>
   </data>
-  <data name="Profile" xml:space="preserve">
-    <value>PROFİL</value>
+  <data name="We Are!" xml:space="preserve">
+    <value>Biz Kimiz?</value>
   </data>
-  <data name="RecentlyAddedAudioTheaters" xml:space="preserve">
-    <value>En son eklenen sesli tiyatrolar</value>
-  </data>
-  <data name="regiredArea" xml:space="preserve">
-    <value>Bu alan boş bırakılamaz.</value>
-  </data>
-  <data name="Register" xml:space="preserve">
-    <value>ÜYELİK</value>
-  </data>
-  <data name="Register2" xml:space="preserve">
-    <value>Üye Olun</value>
-  </data>
-  <data name="Register3" xml:space="preserve">
-    <value>Üyelik</value>
-  </data>
-  <data name="RegisterLink" xml:space="preserve">
-    <value>Üye Olun</value>
-  </data>
-  <data name="RegistrationSuccessful" xml:space="preserve">
-    <value>Kayıt Başarılı !</value>
-  </data>
-  <data name="RememberMe" xml:space="preserve">
-    <value>Beni Hatırla</value>
-  </data>
-  <data name="ReportError" xml:space="preserve">
-    <value>Hata Bildir</value>
-  </data>
-  <data name="required" xml:space="preserve">
-    <value>Zorunlu</value>
-  </data>
-  <data name="requiredEmail" xml:space="preserve">
-    <value>Lütfen geçerli bir email adresi giriniz.</value>
-  </data>
-  <data name="requiredPassword" xml:space="preserve">
-    <value>Lütfen şifrenizi giriniz.</value>
-  </data>
-  <data name="ReSendAktivsyonMail" xml:space="preserve">
-    <value>Aktivasyon mailini tekrar gönder</value>
-  </data>
-  <data name="ResetPassword" xml:space="preserve">
-    <value>Şifre Yenileme</value>
-  </data>
-  <data name="ReviewTerms" xml:space="preserve">
-    <value>Koşulları inceleyin</value>
-  </data>
-  <data name="RulePassword" xml:space="preserve">
-    <value>Şifre kısa. En az 8 karakter olmalı.Şifrenin bir sayı, harf ve özel karakter (# ^ *vb.) içermesi gerekli.</value>
-  </data>
-  <data name="Save" xml:space="preserve">
-    <value>Kaydet</value>
-  </data>
-  <data name="SearchAudioBook" xml:space="preserve">
-    <value>Hangi Sesli Tiyatroyu Arıyorsunuz?</value>
-  </data>
-  <data name="SearchBox" xml:space="preserve">
-    <value>Arama Kutusu</value>
-  </data>
-  <data name="Send" xml:space="preserve">
-    <value>Gönder</value>
-  </data>
-  <data name="SendActivationMail" xml:space="preserve">
-    <value>Kayıt başarılı aktivasyon linki mail adresinize gönderildi</value>
-  </data>
-  <data name="SendPasswordChangeTite" xml:space="preserve">
-    <value>Mail adresinize şifre değiştirme linki gönderilmiştir.</value>
-  </data>
-  <data name="ShareGiftCard" xml:space="preserve">
-    <value>Hediye Kodunu Arkadaşınla Paylaş</value>
-  </data>
-  <data name="ShareGiftCode" xml:space="preserve">
-    <value>Hediye Kodunu Paylaş</value>
-  </data>
-  <data name="ShortPassword" xml:space="preserve">
-    <value>Şifre çok kısa.</value>
-  </data>
-  <data name="SignIn" xml:space="preserve">
-    <value>GİRİŞ</value>
-  </data>
-  <data name="SignIn2" xml:space="preserve">
-    <value>Giriş Yapın</value>
-  </data>
-  <data name="SignInLink" xml:space="preserve">
-    <value>Giriş</value>
-  </data>
-  <data name="SignMailTitle" xml:space="preserve">
-    <value>Giriş yapmadan mail adresinize gelen maili onaylamanız gerekmektedir.</value>
-  </data>
-  <data name="SignOut" xml:space="preserve">
-    <value>ÇIKIŞ</value>
-  </data>
-  <data name="SignUp" xml:space="preserve">
-    <value>Kaydolun</value>
-  </data>
-  <data name="Slider2Title" xml:space="preserve">
-    <value>&lt;h1 class=Customh1Title"&gt;Çocuklar için &lt;/h1&gt; &lt;h1 class="Customh1Title"&gt;Sesli Tiyatro Platformu&lt;/h1&gt; &lt;p&gt; Birçok değerli tiyatro sanatçısının sesleriyle zenginleştirdiği öyküleri dinlemek için siz de hemen Quki’yu indirin.&lt;/p&gt;</value>
-  </data>
-  <data name="Slider2Title1" xml:space="preserve">
-    <value>Çocuklar için Sesli Tiyatro Platformu</value>
-  </data>
-  <data name="Slider2Title2" xml:space="preserve">
-    <value>Birçok değerli tiyatro sanatçısının sesleriyle zenginleştirdiği öyküleri dinlemek için siz de hemen Quki’yu indirin.</value>
-  </data>
-  <data name="SosialNetworkTitle" xml:space="preserve">
-    <value>Bizi sosyal medyadan takip edebilirsiniz.</value>
-  </data>
-  <data name="StartDate" xml:space="preserve">
-    <value>Başlangıç Tarihi</value>
-  </data>
-  <data name="State" xml:space="preserve">
-    <value>Durumu</value>
-  </data>
-  <data name="SubscriberName" xml:space="preserve">
-    <value>Abone Adı</value>
-  </data>
-  <data name="SubscribtionInformetion" xml:space="preserve">
-    <value>Abonelik Bilgileri</value>
-  </data>
-  <data name="Subscription" xml:space="preserve">
-    <value>Abonelik</value>
-  </data>
-  <data name="SubscritionwithCode" xml:space="preserve">
-    <value>Kod ile üyelik tanımlama</value>
-  </data>
-  <data name="SuccessActivation" xml:space="preserve">
-    <value>Aktivasyon işlemi başarılı</value>
-  </data>
-  <data name="SuccessActivationTitle" xml:space="preserve">
-    <value>Eserleri dinlemek için abone olmanız gerekiyor. Hesabınıza tekrar giriş yapıp, abonelik paketlerimizi inceleyebilir, ücretsiz deneme üyeliğinizi başlatabilirsiniz.</value>
-  </data>
-  <data name="SuccessRecord" xml:space="preserve">
-    <value>Kayıt Başarılı</value>
-  </data>
-  <data name="SuccessSendActivationMail" xml:space="preserve">
-    <value>Aktivasyon maili başarılı bir şekilde gönderilmiştir. Lütfen mailinizi kontrol edin.</value>
-  </data>
-  <data name="SuccessSubscription" xml:space="preserve">
-    <value>Abonelik işleminiz başarıyla tamamlanmıştır.</value>
-  </data>
-  <data name="SuccessUpdatePassword" xml:space="preserve">
-    <value>Şifre güncelleme başarılı</value>
-  </data>
-  <data name="Surname" xml:space="preserve">
-    <value>Soyadı</value>
-  </data>
-  <data name="TermsofUse" xml:space="preserve">
-    <value>Kullanım Koşulları</value>
-  </data>
-  <data name="TheatersbyAge" xml:space="preserve">
-    <value>Yaşlara Göre Sesli Tiyatrolar</value>
-  </data>
-  <data name="ThePeriodOfValidity" xml:space="preserve">
-    <value>Geçerlilik Süresi</value>
-  </data>
-  <data name="ToActiveUser" xml:space="preserve">
-    <value>Kullanıcıyı aktif etmek için @email adresine gelen linki tıklayın.</value>
-  </data>
-  <data name="TryQuki" xml:space="preserve">
-    <value>Quki'yu 7 gün ücretsiz deneyin!</value>
-  </data>
-  <data name="TryQukiSubTitle" xml:space="preserve">
-    <value>Sesli tiyatronun büyüsünü çocuğunuzla keşfedin.</value>
-  </data>
-  <data name="UbableCancelSubscription" xml:space="preserve">
-    <value>Abonelik iptal edilemedi</value>
-  </data>
-  <data name="Update" xml:space="preserve">
-    <value>Güncelle</value>
-  </data>
-  <data name="UpdatePassword" xml:space="preserve">
-    <value>Şifre Güncelleme</value>
-  </data>
-  <data name="Usernotfound" xml:space="preserve">
-    <value>Kullanıcı kaydı bulunamadı</value>
-  </data>
-  <data name="UserRegistered" xml:space="preserve">
-    <value>@user kullanıcı kaydı alındı.</value>
-  </data>
-  <data name="Warning" xml:space="preserve">
-    <value>Uyarı !</value>
-  </data>
-  <data name="Welcome" xml:space="preserve">
-    <value>Quki'ya hoşgeldiniz</value>
-  </data>
-  <data name="WhatisTheQuki" xml:space="preserve">
-    <value>Quki Nedir</value>
-  </data>
-  <data name="WrongUserInfromatin" xml:space="preserve">
-    <value>Giriş bilgileri hatalı tekrar deneyiniz.</value>
-  </data>
-  <data name="year" xml:space="preserve">
-    <value>YIL</value>
+  <data name="Welcome!" xml:space="preserve">
+    <value>Hoşgeldiniz!</value>
   </data>
 </root>

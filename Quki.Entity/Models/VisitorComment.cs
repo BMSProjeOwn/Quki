@@ -29,6 +29,8 @@ namespace Quki.Entity.Models
         public DateTime? IssueEndDate { get; set; }
         [MaxLength(450)]
         public string CreatedBy { get; set; }
+        public string Phone { get; set; }
+        public string Surname { get; set; }
         public DateTime CreatedDate { get; set; }
 
     }

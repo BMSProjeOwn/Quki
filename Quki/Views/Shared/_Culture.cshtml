@@ -26,7 +26,7 @@
 
 
 <div>
-    <form asp-action="CultureManegmant" asp-controller="Home" method="post">
+    <form asp-action="CultureManegmant" asp-controller="AnaSayfa" method="post">
         <select class="form-select" name="culture" asp-for="@culture.RequestCulture.UICulture.Name" asp-items="cultureList" onchange="this.form.submit();"></select>
     </form>
 </div>

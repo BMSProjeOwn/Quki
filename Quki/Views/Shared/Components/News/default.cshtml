@@ -1,0 +1,70 @@
+﻿@using Quki.Entity.DtoModels
+@model List<NewsAndAnnouncementModel>
+
+<section id="blog" class="blog blog-carousel pb-100">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                <div class="heading heading-1 mb-50 text--center">
+                    <p class="heading--subtitle">@MultiLanguageOmni.ReadResourceKey.GetString("Our events", "MultiLanguageOmni.Index")</p>
+                    <h2 class="heading--title mb-0">Quki Meyhane</h2>
+                    <div class="divider--shape-4"></div>
+                </div>
+            </div>
+            <!-- .col-md-8 end -->
+        </div>
+        <!-- .row end -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="carousel owl-carousel owl-theme owl-loaded" data-slide="3" data-slide-rs="2" data-autoplay="true" data-nav="false" data-dots="false" data-space="0" data-loop="true" data-speed="800">
+
+
+
+
+
+                    @if (Model != null && Model.Count > 0)
+                    {
+
+                        foreach (var item in Model)
+                        {
+
+
+                            <div class="owl-item cloned" style="width: 313.333px; margin-right: 0px;">
+                                <div class="blog-entry">
+
+                                    <div class="entry--content">
+                                        <div class="entry--meta">
+                                            <span class="entry--date">@item.CreatedDate</span>
+                                        </div>
+                                        <div class="entry--title">
+                                            <h4><a href="#">@item.Contents</a></h4>
+                                        </div>
+                                        <div class="entry--img">
+                                            <a href="#">
+                                                <img src="@item.ImagePath" alt="entry image" />
+                                            </a>
+                                        </div>
+                                        <div class="entry--bio">
+                                            @Html.Raw(@item.Remark)
+                                        </div>
+                                    </div>
+                                    <!-- .entry-content end -->
+                                </div>
+                            </div>
+
+                        }
+                    }
+
+
+
+
+                    <div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;">prev</div><div class="owl-next" style="display: none;">next</div></div><div class="owl-dots" style="display: none;"></div></div>
+                </div>
+                <!-- .carousel end -->
+            </div>
+            <!-- .col-md-6 end -->
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>

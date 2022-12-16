@@ -1,0 +1,93 @@
+﻿@using Quki.Entity.DtoModels
+@model NewsAndAnnouncementModel
+
+<div class="card card-info" style="width:100%;">
+    <div class="card-header">
+        <h3 class="card-title">Yeni Etkinlik Ekle</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form asp-action="NewItem" asp-controller="Etkinlik" asp-area="Admin" method="post" class="form-horizontal" enctype="multipart/form-data">
+        <div class="card-body">
+            <div class="form-group row">
+                <label asp-for="@Model.LanguageId" class="col-sm-2 col-form-label">Dil</label>
+                <div class="col-sm-10">
+
+                    <div class="form-group">
+                        @Html.DropDownListFor(a => a.LanguageId, (List<SelectListItem>)ViewBag.language, new { @class = "form-control select2" })
+                    </div>
+
+                </div>
+            </div> 
+            <div class="form-group row">
+                <label asp-for="@Model.NewsAndAnnouncementId" class="col-sm-2 col-form-label">Dil</label>
+                <div class="col-sm-10">
+
+                    <div class="form-group">
+                        @Html.DropDownListFor(a => a.NewsAndAnnouncementId, (List<SelectListItem>)ViewBag.Type, new { @class = "form-control select2" })
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="@Model.Contents" class="col-sm-2 col-form-label">Etkinlik Adı</label>
+                <div class="col-sm-10">
+                    <span asp-validation-for="@Model.Contents" class="text-danger"></span>
+                    <input type="text" asp-for="@Model.Contents" class="form-control" placeholder="Etkinlik Adı">
+                </div>
+            </div>
+        
+            <div class="form-group row">
+                <label asp-for="@Model.Remark" class="col-sm-2 col-form-label"> Etkinlik Açıklama</label>
+                <div class="col-sm-10">
+                    <span asp-validation-for="@Model.Remark" class="text-danger"></span>
+                    <textarea type="text" asp-for="@Model.Remark" id="editor" placeholder="@Model.Remark"></textarea>
+
+                </div>
+            </div>
+              <div class="form-group row">
+                <label asp-for="@Model.IssueStartDate" class="col-sm-2 col-form-label">Etkinlik Başlangıcı</label>
+              <div class="col-sm-10">
+
+                    <input type="datetime-local" asp-for="@Model.IssueStartDate" placeholder="Etkinlik Başlangıcı">
+                </div>
+            </div>
+              <div class="form-group row">
+                <label asp-for="@Model.IssueEndDate" class="col-sm-2 col-form-label">Etkinlik bitiş</label>
+              <div class="col-sm-10">
+
+                    <input type="datetime-local" asp-for="@Model.IssueEndDate" placeholder="Etkinlik bitişi">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="@Model.ImagePathName" class="col-sm-2 col-form-label">Etkinlik Medya </label>
+                <div class="col-sm-10">
+                    <span asp-validation-for="@Model.ImagePathName" class="text-danger"></span>
+                    <input type="file" asp-for="@Model.ImagePathName" class="form-control-file" placeholder="Etkinlik açıklaması">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="offset-sm-2 col-sm-10">
+                    <div class="form-check">
+                        <input type="checkbox" asp-for="@Model.Status" class="form-check-input">
+                        <label class="form-check-label" asp-for="@Model.Status">Aktiflik Durumu</label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+            <button type="submit" asp-action="NewItem" asp-controller="Etkinlik" asp-area="Admin" class="btn btn-info">Kaydet</button>
+            <button type="submit" asp-action="Index" asp-controller="AttributeStatic" asp-area="Admin" class="btn btn-default float-right">Vazgeç</button>
+        </div>
+        <!-- /.card-footer -->
+    </form>
+</div>
+<!-- /.card -->
+<!-- /.card -->
+<script src="~/ckeditor/ckeditor.js"></script>
+<script src="~/web/js/ckconfig.js"></script>

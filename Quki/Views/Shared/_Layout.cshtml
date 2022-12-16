@@ -11,114 +11,172 @@
 
 }*@
 <head>
-
-    <title>@ViewData["Title"] - TİKUTU</title>
-
-    @{
-        string keyw = (!string.IsNullOrEmpty(ViewBag.MetaKeywords) ? ViewBag.MetaKeywords : "");
-        string desc = (!string.IsNullOrEmpty(ViewBag.MetaDescription) ? ViewBag.MetaDescription : "");
-    }
-
-
-
-    <meta property="og:title" content="@ViewData["Title"] Quki">
-    <meta content="@ViewData["Title"] Quki" name="twitter:title">
-    <meta property="og:description" content="@desc">
-    <meta content="Quki" property="og:site_name">
-    <meta content="news" property="og:type">
-    <meta name="title" content="@ViewData["Title"] Quki" />
-    <meta name="twitter:description" content="@desc" />
-    <meta name="searchTitle" content="@ViewData["Title"] Quki" />
-    <meta name="keywords" content="@keyw">
-    <meta name="description" content="@desc" />
-    <meta name="image" content="" />
-    <meta content="index, follow" id="meta_robot" name="robots">
-    <meta name="google-site-verification" content="cGmFm7ge4PXGlUzj3EVux-b-F3wFSHo2OBDIONHFct4" />
-
-
+    <!-- Document Meta
+     ============================================= -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="/favicon.ico" type="image/png">
-    <link rel="canonical" href="@ViewData["canonicalLink"]" />
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <!--IE Compatibility Meta-->
+    <meta name="author" content="zytheme" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Elegant Restaurant & Cafe Html5 Template by zytheme">
+    <link href="~/webQuki/images/favicon/favicon.png" rel="icon">
 
-    <!-- Goggle Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <!-- Fonts
+    ============================================= -->
+    <link href='http://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,700,900%7CRuthie%7CAbril+Fatface' rel='stylesheet' type='text/css'>
 
-    <!-- Libs CSS -->
-    <link rel="stylesheet" href="~/web/libs/boostrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="~/web/libs/flaticon/css/flaticon.css">
-    <link rel="stylesheet" href="~/web/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="~/web/libs/owl.carousel/assets/owl.carousel.css">
-    <link rel="stylesheet" href="~/web/libs/nivo-slider/css/nivo-slider.css">
-    <link rel="stylesheet" href="~/web/libs/nivo-slider/css/animate.css">
-    <link rel="stylesheet" href="~/web/libs/nivo-slider/css/style.css">
-    <link rel="stylesheet" href="~/web/libs/slider-range/css/jslider.css">
-    <link rel="stylesheet" href="~/web/libs/font-cs/cs.css">
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="~/webQuki/css/external.css" rel="stylesheet">
+    <link href="~/webQuki/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/webQuki/css/style.css" rel="stylesheet">
 
+    <!-- RS5.0 Main Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="~/webQuki/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="~/webQuki/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="~/webQuki/revolution/css/navigation.css">
 
-    <!-- Template CSS -->
-    <link rel="stylesheet" type="text/css" href="~/web/css/style.css">
-    <link rel="stylesheet" type="text/css" href="~/web/css/responsive.css">
-    <link href="~/web/css/Custom.css" rel="stylesheet" />
-
-
-<script type="application/ld+json">
-{
-  "@@context": "https://schema.org",
-  "@@type": "Organization",
-  "name": "Quki",
-  "url": "https://Quki.com/",
-  "logo": "https://Quki.com/web/img/Quki_logo.png",
-  "sameAs": [
-    "https://www.facebook.com/Qukicom",
-    "https://twitter.com/Qukicom",
-    "https://www.instagram.com/Qukicom/",
-    "https://www.youtube.com/channel/UCQ1ErM-53hECcgHd6U-tGCw",
-    "https://tr.pinterest.com/Qukicom/"
-  ]
-}
-</script>
-
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="~/webQuki/js/html5shiv.js"></script>
+      <script src="~/webQuki/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- Document Title
+    ============================================= -->
+    <title>Steak In | Elegant Restaurant & Cafe Html5 Template</title>
 </head>
+
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
+    <div class="preloader">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
         </div>
     </div>
-    <div class="container body-content">
+    <!-- Document Wrapper
+    ============================================= -->
+    <div id="wrapper" class="wrapper clearfix">
+        <header id="navbar-spy" class="header header-10 header-2 header-transparent header-centered header-fixed">
+            <div id="logo-centered" class="logo-centered">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-12">
+                            <a class="logo" href="homepage-7.html">
+                                <img class=" center-block" src="~/webQuki/images/logo/logo-light.png" alt="Steakin Logo" draggable="false">
+                            </a>
+                        </div><!-- .col-md-6 end -->
+                    </div>
+                </div>
+            </div>
+            @await Component.InvokeAsync("UpMenu")
+        </header>
+        <!-- Hero Section
+        ====================================== -->
+
+
+
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+
+        <!-- footer#1
+        ============================================= -->
+        <footer id="footer" class="footer footer-1 text-center">
+            <div class="divider--shape-dark"></div>
+            <!-- Widget Section
+            ============================================= -->
+            <div class="footer--widget text--center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+                            <div class="footer--widget-content">
+                                <h3>
+                                    @MultiLanguageOmni.ReadResourceKey.GetString("Follow Us", "MultiLanguageOmni.Index")
+                                </h3>
+                                <div class="footer--social-icons">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                                    <a href="#"><i class="fa fa-tripadvisor"></i></a>
+                                </div>
+                                <!-- .social-icons end -->
+                            </div>
+                        </div>
+                        <!-- .col-md-4 end -->
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+                            <div class="footer--widget-content">
+                                <img class="mb-20" src="~/webQuki/images/logo/logo-light.png" alt="logo">
+                                <p>
+                                    @MultiLanguageOmni.ReadResourceKey.GetString("FooterRemark", "MultiLanguageOmni.Index")
+                                </p>
+                            </div>
+                        </div>
+                        <!-- .col-md-3 end -->
+
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+                            <div class="footer--widget-content">
+                                <h3>
+                                    @MultiLanguageOmni.ReadResourceKey.GetString("Neswletter", "MultiLanguageOmni.Index")
+                                </h3>
+                                <div class="widget--newsletter">
+                                    <form class="footer--social-newsletter mailchimp">
+                                        <input type="email" name="email" class="form-control" placeholder="Subscribe Our Newsletter">
+                                        <button type="submit">join</button>
+                                    </form>
+                                    <div class="subscribe-alert"></div>
+                                </div>
+                                <!-- .widget end -->
+                            </div>
+                        </div>
+                        <!-- .col-md-3 end -->
+                    </div>
+                </div>
+                <!-- .container end -->
+            </div>
+            <!-- .footer-widget end -->
+            <!-- Copyrights
+            ============================================= -->
+            <div class="footer--copyright text-center">
+                <div class="divider--shape-dark2"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="contact-info">
+                                <span>22 Alnahas Building, Tanta, Egypt</span> -
+                                <span>02 01065370701</span> -
+                                <span>7oroof@7oroof.com</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <span>&copy; 2022 Chad, With Love by </span> <a href="www.bmsproje.com">BmsProje.com</a>
+                        </div>
+                    </div>
+                </div>
+                <partial name="_Culture" />
+                <!-- .container end -->
+            </div>
+            <!-- .footer-copyright end -->
         </footer>
     </div>
+    <!-- #wrapper end -->
+    <!-- Footer Scripts
+    ============================================= -->
+    <script src="~/webQuki/js/jquery-2.2.4.min.js"></script>
+    <script src="~/webQuki/js/plugins.js"></script>
+    <script src="~/webQuki/js/functions.js"></script>
+    <!-- RS5.0 Core JS Files -->
+    <script src="~/webQuki/revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+    <script src="~/webQuki/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
+    <script src="~/webQuki/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="~/webQuki/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="~/webQuki/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="~/webQuki/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="~/webQuki/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="~/webQuki/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="~/webQuki/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="~/webQuki/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <!-- RS Configration JS Files -->
+    <script src="~/webQuki/js/rsconfig.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

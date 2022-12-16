@@ -1,0 +1,109 @@
+﻿@using Quki.Entity.DtoModels
+@model SliderModel
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card card-info card-tabs" style="width:100%;">
+
+
+
+
+
+    <form asp-action="Update" asp-controller="Departments" asp-area="Admin" method="post" class="form-horizontal" enctype="multipart/form-data">
+
+        <div class="card-body">
+            <div class="tab-content" id="custom-tabs-one-tabContent">
+
+
+                <input type="hidden" asp-for="@Model.SliderSeqId" class="form-control">
+                <input type="hidden" asp-for="@Model.ImagePath" class="form-control">
+
+                <div class="form-group row">
+                    <label asp-for="@Model.LanguageId" class="col-sm-2 col-form-label">Dil</label>
+                    <div class="col-sm-10">
+
+                        <div class="form-group">
+                            @Html.DropDownListFor(a => a.LanguageId, (List<SelectListItem>)ViewBag.language, new { @class = "form-control select2" })
+                        </div>
+
+                    </div>
+                </div>
+                
+             <div class="form-group row">
+                <label asp-for="@Model.GroupId" class="col-sm-2 col-form-label">Dil</label>
+                <div class="col-sm-10">
+
+                   <div class="form-group">
+                        @Html.DropDownListFor(a => a.GroupId, (List<SelectListItem>)ViewBag.Type, new { @class = "form-control select2" })
+                    </div>
+
+                </div>
+            </div>
+                <div class="form-group row">
+                    <label asp-for="@Model.SliderName" class="col-sm-2 col-form-label">Slider Adı</label>
+                    <div class="col-sm-10">
+                        <span asp-validation-for="@Model.SliderName" class="text-danger"></span>
+                        <input type="text" asp-for="@Model.SliderName" class="form-control" placeholder="Slider Adı">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="@Model.Header" class="col-sm-2 col-form-label">Slider Başlık</label>
+                    <div class="col-sm-10">
+                        <span asp-validation-for="@Model.Header" class="text-danger"></span>
+                        <input type="text" asp-for="@Model.Header" class="form-control" placeholder="Slider Başlık">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label asp-for="@Model.Remark" class="col-sm-2 col-form-label"> Slider Açıklama</label>
+                    <div class="col-sm-10">
+                        <span asp-validation-for="@Model.Remark" class="text-danger"></span>
+                        <textarea type="text" asp-for="@Model.Remark" id="editor" placeholder="@Model.Remark"></textarea>
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label asp-for="@Model.ImagePathName" class="col-sm-2 col-form-label">Slider Medya </label>
+                    <div class="col-sm-10">
+                        <span asp-validation-for="@Model.ImagePathName" class="text-danger"></span>
+                        <input type="file" asp-for="@Model.ImagePathName" class="form-control-file" placeholder="Slider açıklaması">
+
+                        <label asp-for="@Model.ImagePath" class="col-sm-2 col-form-label">@Model.ImagePath</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="offset-sm-2 col-sm-10">
+                        <div class="form-check">
+                            <input type="checkbox" asp-for="@Model.IsActive" class="form-check-input">
+                            <label class="form-check-label" asp-for="@Model.IsActive">Aktiflik Durumu</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+            <button type="submit" asp-action="Update" asp-controller="Slider" asp-area="Admin" onclick="return confirm('Güncellemek istediğinzden emin misiniz?')" asp-route-id="@Model.SliderSeqId" class="btn btn-info">Güncelle</button>
+            <button type="submit" asp-action="Index" asp-controller="Slider" asp-area="Admin" class="btn btn-default float-right">Vazgeç</button>
+        </div>
+        <!-- /.card-footer -->
+    </form>
+
+    <!-- /.card -->
+</div>
+<script src="~/ckeditor/ckeditor.js"></script>
+<script src="~/web/js/ckconfig.js"></script>
+<script src="~/web/js/ckconfig2.js"></script>
+
+
+
+<script>
+    function callChangefunc(val) {
+        window.location.href = "/Admin/Slider/Update?id=" + val.toString() + "-" + @Model.SliderSeqId;
+    }
+</script>
+

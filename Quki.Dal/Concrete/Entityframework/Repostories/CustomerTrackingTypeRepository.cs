@@ -13,6 +13,7 @@ namespace Quki.Dal.Concrete.Entityframework.Repostories
     {
         public CustomerTrackingTypeRepository(DbContext context):base(context)
         {
+
         }
         //public List<Product> GetCustomerTrackingTypeApi(int Count, string customer_def_no, int LanguageID)
         //{

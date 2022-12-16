@@ -1,0 +1,114 @@
+﻿@using Quki.Entity.DtoModels
+@model ProductAddModel
+
+<div class="card card-info" style="width:100%;">
+    <div class="card-header">
+        <h3 class="card-title">Yeni Medya Ekle</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form asp-action="NewItem" asp-controller="Medya" asp-area="Admin" method="post" class="form-horizontal" enctype="multipart/form-data">
+        <div class="card-body">         
+            <div class="form-group row">
+                <label asp-for="@Model.MediaType" class="col-sm-2 col-form-label">Medya Tipi</label>
+                <div class="col-sm-10">
+
+                    <div class="form-group">
+                        @Html.DropDownListFor(a => a.MediaType, (List<SelectListItem>)ViewBag.Media, new { @class = "form-control select2" })
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="@Model.ProductName" class="col-sm-2 col-form-label">Medya Adı</label>
+                <div class="col-sm-10">
+                    <span asp-validation-for="@Model.ProductName" class="text-danger"></span>
+                    <input type="text" asp-for="@Model.ProductName" class="form-control" placeholder="Medya Adı">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="@Model.SecondName" class="col-sm-2 col-form-label">Medya ikinci adı</label>
+                <div class="col-sm-10">
+                    <span asp-validation-for="@Model.SecondName" class="text-danger"></span>
+                    <input type="text" asp-for="@Model.SecondName" class="form-control" placeholder="Medya ikinci adı">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="@Model.Description" class="col-sm-2 col-form-label"> Medya Açıklama</label>
+                <div class="col-sm-10">
+                    <span asp-validation-for="@Model.Description" class="text-danger"></span>
+                    <textarea type="text" asp-for="@Model.Description" id="editor" placeholder="@Model.Description"></textarea>
+
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="@Model.ImagePath" class="col-sm-2 col-form-label">Medya </label>
+                <div class="col-sm-10">
+                    <span asp-validation-for="@Model.ImagePath" class="text-danger"></span>
+                    <input type="file" asp-for="@Model.ImagePath" class="form-control-file" placeholder="Medya açıklaması">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="@Model.ReleaseDate" class="col-sm-2 col-form-label">Yayın Tarihi</label>
+                <div class="col-sm-10">
+
+                    <input type="datetime-local" asp-for="@Model.ReleaseDate" placeholder="Yayın Tarihi">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="@Model.ProductSEOData" class="col-sm-2 col-form-label">Medya Meta Keyleri</label>
+                <div class="col-sm-10">
+
+                    <input type="text" asp-for="@Model.ProductSEOData" class="form-control" placeholder="Medya Meta Keyleri">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="@Model.ProductSEOMetaDescription" class="col-sm-2 col-form-label">Medya Meta Description</label>
+                <div class="col-sm-10">
+
+                    <input type="text" asp-for="@Model.ProductSEOMetaDescription" class="form-control" placeholder="Medya Meta Description">
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label asp-for="@Model.DisplayOrderNumber" class="col-sm-2 col-form-label">Sıralaması</label>
+                <div class="col-sm-10">
+
+                    <input type="text" asp-for="@Model.DisplayOrderNumber" class="form-control" placeholder="Sıralaması">
+                </div>
+            </div>
+             
+            <div class="form-group row">
+                <div class="offset-sm-2 col-sm-10">
+                    <div class="form-check">
+                        <input type="checkbox" asp-for="@Model.ShowOnHomePage" class="form-check-input">
+                        <label class="form-check-label" asp-for="@Model.ShowOnHomePage">Ana sayfada göster</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="offset-sm-2 col-sm-10">
+                    <div class="form-check">
+                        <input type="checkbox" asp-for="@Model.Status" checked="checked" class="form-check-input">
+                        <label class="form-check-label" asp-for="@Model.Status">Aktiflik Durumu</label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+            <button type="submit" asp-action="NewItem" asp-controller="Medya" asp-area="Admin" class="btn btn-info">Kaydet</button>
+            <button type="submit" asp-action="Index" asp-controller="AttributeStatic" asp-area="Admin" class="btn btn-default float-right">Vazgeç</button>
+        </div>
+        <!-- /.card-footer -->
+    </form>
+</div>
+<!-- /.card -->
+<!-- /.card -->
+<script src="~/ckeditor/ckeditor.js"></script>
+<script src="~/web/js/ckconfig.js"></script>
