@@ -18,7 +18,7 @@ namespace Quki.Dal.Concrete.Entityframework.Repostories
     {
         RvcOptionRightRepository rvcOptionRightRepository;
         
-        public RvcMenuItemsDefRepository(DbContext context) : base(context)
+        public RvcMenuItemsDefRepository(ProjeDBZuposDBContext context) : base(context)
         {
 
         }

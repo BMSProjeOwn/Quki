@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Quki.Dal.Abstract;
+using Quki.Dal.Concrete.Entityframework.Context;
 using Quki.Entity.Models;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace Quki.Dal.Concrete.Entityframework.Repostories
     public class SluDefRepository : GenericRepository<SluDef>, ISluDefRepository
     {
 
-        public SluDefRepository(DbContext context) : base(context)
+        public SluDefRepository(ProjeDBZuposDBContext context) : base(context)
         {
 
 

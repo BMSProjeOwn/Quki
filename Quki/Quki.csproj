@@ -50,6 +50,7 @@
 
   <ItemGroup>
     <Folder Include="Repostories\" />
+    <Folder Include="Views\Home\" />
     <Folder Include="wwwroot\AdminImage\BugImg\" />
     <Folder Include="wwwroot\AdminImage\CategoryImage\" />
     <Folder Include="wwwroot\AdminImage\EmailTamplateImg\" />
@@ -760,7 +761,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\source\repos\BMSProje\Tikutu\Log4Net\Log.csproj" />
+    <ProjectReference Include="..\Log4Net\Log.csproj" />
     <ProjectReference Include="..\MultiLanguageOmni-master\MultiLanguageOmni\MultiLanguageOmni.csproj" />
     <ProjectReference Include="..\Quki.Bll\Quki.Bll.csproj" />
     <ProjectReference Include="..\Quki.Dal\Quki.Dal.csproj" />

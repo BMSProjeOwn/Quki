@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Quki.Dal.Abstract;
+using Quki.Dal.Concrete.Entityframework.Context;
 using Quki.Entity.Models;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace Quki.Dal.Concrete.Entityframework.Repostories
 {
     public class RvcMenuItemPriceRepository : GenericRepository<RvcMenuItemPrice>,IRvcMenuItemPriceRepository
     {
-        public RvcMenuItemPriceRepository(DbContext context) : base(context)
+        public RvcMenuItemPriceRepository(ProjeDBZuposDBContext context) : base(context)
         {
 
         }

@@ -17,7 +17,6 @@ namespace Quki.Dal.Concrete.Entityframework.Context
                         .Build();
             optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
 
-
             //optionsBuilder.UseSqlServer("server=94.73.145.8; database=u0556292_Quki; user id=u0556292_Quki; password=ESwm40T1DNey93O;");
 
             base.OnConfiguring(optionsBuilder);

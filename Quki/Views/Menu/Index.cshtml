@@ -1,0 +1,121 @@
+﻿@using Quki.Entity.ViewModel;
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model MenuViewModel
+
+<section id="menuGallery" class="pb-60">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                <div class="heading heading-1 mb-50 text--center">
+                    <p class="heading--subtitle">Start Eating Better</p>
+                    <h2 class="heading--title mb-0">Daily New Fresh Meals</h2>
+                    <div class="divider--shape-4"></div>
+                    <p class="heading--desc">Steak In has the perfect place to enjoy fine food and great cocktails with excellent service, in comfortable atmospheric surroundings. We have a soft dining room, combined with an open kitchen, coffee take out bar and alovely awesome on site coffee roastery.</p>
+                </div>
+            </div>
+            <!-- .col-md-8 end -->
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+    <div class="container-fluid pr-0 pl-0 tabs">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                    @for (int k = 1; k < Model.sluDefModels.Count; k++)
+                    {
+                        <li><a href="#@Model.sluDefModels[k].slu_def_name.Replace(" ","").Replace("&","")" data-toggle="tab">@Model.sluDefModels[k].slu_def_name</a></li>
+                    }
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    
+                            @for (int i = 0; i < Model.sluDefModels.Count; i++)
+                            {
+                        <div class="tab-pane fade in active" id="@Model.sluDefModels[i].slu_def_name.Replace(" ","").Replace("&","")">
+                        <!-- Menu #2
+
+                        ============================================= -->
+                        @{
+                        var menuItemsfirst = Model.getMenuItems.Where(x => x.slu_def_seq_view == Model.sluDefModels[i].slu_def_seq).ToList();
+                        }
+                        <div class="menu menu-gallery">
+                            <div class="container">
+                                <div class="row">
+                                    <!-- Dish #1 -->
+                                    @foreach (var item in menuItemsfirst)
+                                    {
+                                        <div class="col-xs-12 col-sm-6 col-md-4">
+                                            <div class="dish-panel">
+                                                <div class="dish--img">
+                                                        <img src="@Model.sluDefModels[i].slu_type_slu_image" alt="@item.mi_master_def_name">
+                                                    <div class="dish--overlay">
+                                                        <a class="dish-popup" data-toggle="modal" data-target="#@item.mi_master_def_seq"><i class="fa fa-search-plus"></i></a>
+                                                            <div class="modal fade" tabindex="-1" role="dialog" id="@item.mi_master_def_seq">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-body">
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
+                                                                        <div class="row reservation">
+                                                                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                                                                <div class="popup--img">
+                                                                                        <img src="@Model.sluDefModels[i].slu_type_slu_image" alt="@item.mi_master_def_name">
+                                                                                    <div class="img-popup-overlay">
+                                                                                        <div class="popup--price">@item.mi_price</div>
+                                                                                        <h3 class="popup--title">@item.rvc_mi_third_name</h3>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- .col-md-12 end -->
+                                                                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                                                                <div class="content-popup">
+                                                                                    <p>@item.rvc_mi_third_name</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- .row end -->
+                                                                    </div>
+                                                                </div>
+                                                                <!-- /.modal-content -->
+                                                            </div>
+                                                            <!-- /.modal-dialog -->
+                                                        </div>
+                                                        <!-- /.modal -->
+                                                    </div>
+                                                </div>
+                                                <div class="dish--content">
+                                                    <h3 class="dish--title">@item.mi_master_def_name</h3>
+                                                    <div class="dish--price">@item.mi_price</div>
+                                                    <p class="dish--desc">@item.rvc_mi_third_name</p>
+                                                </div>
+                                            </div>
+                                            <!-- .dish end -->
+                                        </div>
+                                    }
+                                    <!-- .col-md-12 end -->
+                                </div>
+                                <!-- .row end -->
+                            </div>
+                            <!-- .container end -->
+                        </div>
+                        
+                        <!-- #menu2 end -->
+                    </div>
+                        }
+
+                   
+                    <!-- .tab-pane end -->
+                </div>
+                <!-- .tabs-content end -->
+            </div>
+            <!-- .col-md-12 end -->
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>

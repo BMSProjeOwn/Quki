@@ -57,11 +57,10 @@ namespace Quki
             //services.AddControllersWithViews();
 
             services.AddDbContext<ProjeDBContext>();
-           //services.AddDbContext<ProjeDBZuposDBContext>();
+            services.AddDbContext<ProjeDBZuposDBContext>();
             //services.AddAuthentication();
 
             services.AddScoped<DbContext, ProjeDBContext>();
-           // services.AddScoped<DbContext, ProjeDBZuposDBContext>();
             //services.AddScoped(typeof(IGenericService<,>), typeof(BllBase<,>));
             //services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
