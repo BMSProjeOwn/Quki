@@ -9,25 +9,48 @@
     var cultureList = new List<SelectListItem>();
     cultureList.Add(new SelectListItem
     {
-        Text = "TR - Türkiye",
+        Text = "TR",
         Value = "tr-TR"
     });
     cultureList.Add(new SelectListItem
     {
-        Text = "DE - Germany",
+        Text = "DE",
         Value = "de-DE"
     });
     cultureList.Add(new SelectListItem
     {
-        Text = "EN - England",
+        Text = "EN",
         Value = "en-US"
     });
 }
-
-
-<div>
-    <form asp-action="CultureManegmant" asp-controller="AnaSayfa" method="post">
-        <select class="form-select" name="culture" asp-for="@culture.RequestCulture.UICulture.Name" asp-items="cultureList" onchange="this.form.submit();"></select>
+<!-- Module Cart -->
+<div class="module module-cart pull-left">
+    <form id="CultureForm" asp-controller="AnaSayfa" asp-action="CultureManegmant" method="post">
+        @foreach (var item in cultureList)
+        {
+            <input class="dropdown-toggle  menu-item" style="border:unset; background-color:unset" type="submit" value="@item.Text" asp-action="CultureManegmant" asp-controller="AnaSayfa" asp-route-culture="@item.Value" name="submit">
+        }
     </form>
 </div>
+<script type="text/javascript">
+    function submitStudent() {
+        var data = $("#CultureForm").serialize();
+        console.log(data);
+        alert(data);
+        $.ajax({
+            type: 'POST',
+            url: "/AnaSayfa/CultureManegmant",
+            contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+            data: data
+            success: function (result) {
+                alert('Successfully received Data ');
+                console.log(result);
+            },
+            error: function () {
+                alert('Failed to receive the Data');
+                console.log('Failed ');
+            }
+        })
+    }
 
+</script>

@@ -12,6 +12,7 @@ namespace Quki.Interface
         public List<SelectListItem> GetProductListForDropdown();
         public List<VisitorCommentsModel> GetVisitorCommentsWithProduct();
         public List<VisitorComment> GetUserComment();
+        public List<VisitorComment> GetUserComment2();
         public List<VisitorCommentsModel> GetVisitorCommentsWithProduct(int count);
         public List<VisitorCommentsModel> GetProductComments(int productId);
         public List<VisitorCommentsModel> GetVisitorCommentsbyProductSeqID(int productID);

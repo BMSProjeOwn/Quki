@@ -1,22 +1,24 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using Quki.Common;
 using Quki.Interface;
 using System;
 
 namespace Quki.Controllers
 {
-    [Route("[controller]")]
-    public class GaleriController : Controller
+    public class DocumentController : Controller
     {
-
-        private readonly IProductService repo;
-        
-
-        public GaleriController(IProductService repo)
+        private readonly IDocumentsService documentsService;
+        public DocumentController(IDocumentsService documentsService)
         {
-            this.repo = repo;
+            this.documentsService = documentsService;
+        }
 
+
+        public IActionResult Index()
+        {
+            return View();
         }
 
         [HttpPost]
@@ -42,13 +44,14 @@ namespace Quki.Controllers
 
         }
 
-        public IActionResult Index()
+        // [Route("/{name?}/{id?}")]
+        public IActionResult GetDocument(int id)
         {
-            
-            var model = repo.GetProductList();
-            
-            return View(model);
-        }
+            int languageId = Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
+            var Value = documentsService.GetDocumentByMenuId(id, languageId);
 
+
+            return View(Value);
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace Quki.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            var items = service.GetUserComment().ToList();
+            var items = service.GetUserComment2().ToList();
             return View(items);
         }
 

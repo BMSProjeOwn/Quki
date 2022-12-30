@@ -123,40 +123,40 @@
   <data name="All" xml:space="preserve">
     <value>Hepsi</value>
   </data>
-  <data name="CALL US" xml:space="preserve">
+  <data name="CALLUS" xml:space="preserve">
     <value>Bizi ara</value>
   </data>
   <data name="ContactRemark" xml:space="preserve">
     <value>Steak In, Mısır'da açılan ilk restorandı, restoran tarihi göz önünde bulundurarak tasarlandı, açık mutfak, kahve paket servisi barı ve tesis bünyesinde kahve manastırı ile birlikte yumuşak bir endüstriyel yemek odası yarattık.</value>
   </data>
-  <data name="Customer comments" xml:space="preserve">
+  <data name="Customercomments" xml:space="preserve">
     <value>Müşteri Yorumları</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
-  <data name="Explore Our Menu" xml:space="preserve">
+  <data name="ExploreOurMenu" xml:space="preserve">
     <value>Menümüzü Keşfedin</value>
   </data>
-  <data name="First Name" xml:space="preserve">
+  <data name="FirstName" xml:space="preserve">
     <value>Ad</value>
   </data>
-  <data name="Follow Us" xml:space="preserve">
+  <data name="FollowUs" xml:space="preserve">
     <value>Bizi Takip Edin</value>
   </data>
   <data name="FooterRemark" xml:space="preserve">
     <value>Steak In, rahat atmosferik bir ortamda kaliteli yemeklerin ve harika kokteyllerin mükemmel servisiyle tadını çıkarmak için mükemmel bir yere sahiptir. Açık mutfak, kahve paket servis barı ile birlikte yumuşak bir yemek salonumuz var.</value>
   </data>
-  <data name="GET DIRECTIONS" xml:space="preserve">
+  <data name="GETDIRECTIONS" xml:space="preserve">
     <value>Adrese git</value>
   </data>
   <data name="HomeMenuText" xml:space="preserve">
-    <value>yazııııııııııııııııı</value>
+    <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</value>
   </data>
   <data name="Images" xml:space="preserve">
     <value>Resimler</value>
   </data>
-  <data name="Last Name" xml:space="preserve">
+  <data name="LastName" xml:space="preserve">
     <value>Soyad</value>
   </data>
   <data name="Message" xml:space="preserve">
@@ -165,43 +165,43 @@
   <data name="Neswletter" xml:space="preserve">
     <value>Bülten</value>
   </data>
-  <data name="New Generation Tavern" xml:space="preserve">
+  <data name="NewGenerationTavern" xml:space="preserve">
     <value>Yeni Nesil Meyhane</value>
   </data>
-  <data name="Our Address" xml:space="preserve">
+  <data name="OurAddress" xml:space="preserve">
     <value>Adresimiz</value>
   </data>
-  <data name="Our Email" xml:space="preserve">
+  <data name="OurEmail" xml:space="preserve">
     <value>Email Adresimiz</value>
   </data>
-  <data name="Our events" xml:space="preserve">
+  <data name="Ourevents" xml:space="preserve">
     <value>Etkinliklerimiz</value>
   </data>
-  <data name="Our Phone" xml:space="preserve">
+  <data name="OurPhone" xml:space="preserve">
     <value>Telefon Numaramız</value>
   </data>
-  <data name="Our Story" xml:space="preserve">
+  <data name="OurStory" xml:space="preserve">
     <value>Hikayemiz</value>
   </data>
   <data name="Phone" xml:space="preserve">
     <value>Telefon</value>
   </data>
-  <data name="Send a Message" xml:space="preserve">
+  <data name="SendaMessage" xml:space="preserve">
     <value>Mesaj Gönder</value>
   </data>
-  <data name="Send Message" xml:space="preserve">
+  <data name="SendMessage" xml:space="preserve">
     <value>Mesajı Gönder</value>
   </data>
-  <data name="Stay Updated" xml:space="preserve">
+  <data name="StayUpdated" xml:space="preserve">
     <value>Beklemede Kalın</value>
   </data>
   <data name="Videos" xml:space="preserve">
     <value>Videolar</value>
   </data>
-  <data name="View Menu" xml:space="preserve">
+  <data name="ViewMenu" xml:space="preserve">
     <value>Menüyü İncele</value>
   </data>
-  <data name="We Are!" xml:space="preserve">
+  <data name="WeAre!" xml:space="preserve">
     <value>Biz Kimiz?</value>
   </data>
   <data name="Welcome!" xml:space="preserve">

@@ -96,7 +96,7 @@ html {
 
 body {
 	background-color: #ffffff;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins';
 	font-size: 13px;
 	font-weight: 400;
 	color: #ffffff;
@@ -1983,7 +1983,7 @@ ul.dot-list li i {
 
 .tabs .tab--heading {
 	font-size: 40px;
-	font-family: 'Ruthie', cursive;
+	font-family: 'Ruthie' ;
 	color: #222222;
 	font-weight: 400;
 	line-height: 40px;
@@ -2729,12 +2729,12 @@ table tbody tr td {
 	font-weight: 400;
 	line-height: 50px;
 	margin-bottom: 0;
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Abril Fatface' ;
 }
 
 .page-title .title--subtitle {
 	color: #bb9356;
-	font-family: 'Ruthie', cursive;
+	font-family: 'Ruthie' ;
 	font-size: 45px;
 	font-weight: 400;
 	line-height: 1;
@@ -2831,7 +2831,7 @@ table tbody tr td {
 \*------------------------------------*/
 .heading .heading--subtitle {
 	color: #bb9356;
-	font-family: 'Ruthie', cursive;
+	font-family: 'Ruthie' ;
 	font-size: 45px;
 	font-weight: 400;
 	line-height: 1;
@@ -2840,7 +2840,7 @@ table tbody tr td {
 }
 
 .heading .heading--title {
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Abril Fatface' ;
 	color: #FFFFFF;
 	font-size: 50px;
 	font-weight: 400;
@@ -4209,8 +4209,8 @@ Header Customaztion
 }
 
 .header-centered.header-10 .navbar-collapse {
-	padding-right: 0;
-	padding-left: 175px;
+	padding-right: 150px;
+	padding-left: 0px;
 }
 
 .header-centered.header-10 .navbar {
@@ -5288,7 +5288,7 @@ li.dropdown-submenu > ul.dropdown-menu > li.has-dropdown > ul.dropdown-menu.left
 
 .slider .slide--subheadline {
 	color: #bb9356;
-	font-family: 'Ruthie', cursive;
+	font-family: 'Ruthie' ;
 	font-size: 45px;
 	font-weight: 400;
 	line-height: 45px;
@@ -5298,7 +5298,7 @@ li.dropdown-submenu > ul.dropdown-menu > li.has-dropdown > ul.dropdown-menu.left
 
 .slider .slide--headline {
 	color: #ffffff;
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Abril Fatface' ;
 	font-size: 85px;
 	font-weight: 400;
 	line-height: 100px;
@@ -5851,7 +5851,7 @@ li.dropdown-submenu > ul.dropdown-menu > li.has-dropdown > ul.dropdown-menu.left
 
 .testimonial-3 .testimonial-panel p {
 	font-size: 47px;
-	font-family: 'Ruthie', cursive;
+	font-family: 'Ruthie' ;
 	color: #333333;
 	line-height: 50px;
 }
@@ -5863,7 +5863,7 @@ li.dropdown-submenu > ul.dropdown-menu > li.has-dropdown > ul.dropdown-menu.left
 
 .testimonial-4 .testimonial-panel p {
 	font-size: 47px;
-	font-family: 'Ruthie', cursive;
+	font-family: 'Ruthie' ;
 	line-height: 50px;
 }
 
@@ -5889,7 +5889,7 @@ li.dropdown-submenu > ul.dropdown-menu > li.has-dropdown > ul.dropdown-menu.left
 
 .testimonial-5 .testimonial-panel p {
 	font-size: 44px;
-	font-family: 'Ruthie', cursive;
+	font-family: 'Ruthie' ;
 	font-weight: 400;
 	color: #ffffff;
 	line-height: 39px;
@@ -6135,7 +6135,7 @@ li.dropdown-submenu > ul.dropdown-menu > li.has-dropdown > ul.dropdown-menu.left
 .cta h3 {
 	color: #ffffff;
 	font-size: 44px;
-	font-family: 'Ruthie', cursive;
+	font-family: 'Ruthie' ;
 	font-weight: 400;
 	margin-bottom: 30px;
 }
@@ -6144,7 +6144,7 @@ li.dropdown-submenu > ul.dropdown-menu > li.has-dropdown > ul.dropdown-menu.left
     #Counters
 \*------------------------------------*/
 .counter .count-box .counting {
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Abril Fatface' ;
 	color: #ffffff;
 	font-size: 70px;
 	font-weight: 400;
@@ -7262,7 +7262,7 @@ td.cart-product-quantity {
 }
 
 .product-item .product--content .product--cat {
-	font-family: 'Ruthie', cursive;
+	font-family: 'Ruthie' ;
 	font-size: 13px;
 	font-style: italic;
 	line-height: 1;
@@ -8358,7 +8358,7 @@ td.cart-product-quantity {
 
 .widget-info .info--title {
 	color: #ffffff;
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Abril Fatface' ;
 	font-size: 25px;
 	font-weight: 400;
 	line-height: 1;
@@ -8848,7 +8848,7 @@ footer .footer--copyright {
 \*------------------------------------*/
 .page-404 h3 {
 	color: #ffffff;
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Abril Fatface' ;
 	font-size: 250px;
 	font-weight: 400;
 	line-height: 1.1;
@@ -8903,7 +8903,7 @@ footer .footer--copyright {
 }
 
 .page-soon h3 {
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Abril Fatface' ;
 	color: #222222;
 	font-size: 120px;
 	font-weight: 400;
@@ -8944,7 +8944,7 @@ footer .footer--copyright {
 }
 
 .countdown-amount {
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Abril Fatface' ;
 	color: #ffffff;
 	font-size: 70px;
 	font-weight: 400;
@@ -9030,7 +9030,7 @@ footer .footer--copyright {
 }
 
 .page-maintenance h3 {
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Abril Fatface' ;
 	color: #222222;
 	font-size: 120px;
 	font-weight: 400;
@@ -9227,7 +9227,7 @@ footer .footer--copyright {
 	#Video
 \*------------------------------------*/
 .video-button .heading--title {
-	font-family: 'Ruthie', cursive;
+	font-family: 'Ruthie' ;
 	font-size: 40px;
 	font-weight: 400;
 	line-height: 1;
@@ -9897,7 +9897,7 @@ footer .footer--copyright {
 
 .number-panel .number--content h6 {
 	color: #bb9356;
-	font-family: 'Ruthie', cursive;
+	font-family: 'Ruthie' ;
 	font-size: 13px;
 	font-style: italic;
 	line-height: 1;
@@ -10254,7 +10254,7 @@ footer .footer--copyright {
 
 .landing-hero h6 {
 	color: #bb9356;
-	font-family: 'Ruthie', cursive;
+	font-family: 'Ruthie' ;
 	font-size: 45px;
 	font-weight: 400;
 	letter-spacing: 0.54px;
@@ -10262,7 +10262,7 @@ footer .footer--copyright {
 }
 
 .landing-hero h1 {
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Abril Fatface' ;
 	font-size: 85px;
 	font-weight: 400;
 	line-height: 90px;
@@ -10359,7 +10359,7 @@ footer .footer--copyright {
 	font-weight: 400;
 	line-height: 95px;
 	letter-spacing: 1.35px;
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Abril Fatface' ;
 }
 
 .landing-action p {
@@ -11158,7 +11158,7 @@ footer .footer--copyright {
 }
 
 #dishPopup .modal-body .img-popup .img-popup-overlay h3 {
-	font-family: 'Ruthie', cursive;
+	font-family: 'Ruthie' ;
 	font-size: 34px;
 	font-weight: 400;
 	line-height: 1;
@@ -11317,13 +11317,13 @@ footer .footer--copyright {
 .banner .banner-panel .banner--content h3 {
 	color: #bb9356;
 	font-size: 30px;
-	font-family: 'Ruthie', cursive;
+	font-family: 'Ruthie' ;
 	font-weight: 400;
 	margin-bottom: 15px;
 }
 
 .banner .banner-panel .banner--content h4 {
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Abril Fatface' ;
 	font-size: 25px;
 	font-weight: 400;
 	margin-bottom: 20px;
@@ -11371,7 +11371,7 @@ footer .footer--copyright {
 /* Banner #5 */
 .banner-5 .banner--desc {
 	color: #333333;
-	font-family: 'Ruthie', cursive;
+	font-family: 'Ruthie' ;
 	font-size: 40px;
 	font-weight: 400;
 	line-height: 42px;
@@ -11381,7 +11381,7 @@ footer .footer--copyright {
 
 .history-panel h6 {
 	color: #bb9356;
-	font-family: 'Ruthie', cursive;
+	font-family: 'Ruthie' ;
 	font-size: 35px;
 	font-weight: 400;
 	line-height: 29px;
@@ -11415,7 +11415,7 @@ footer .footer--copyright {
 
 .banner-6 .panel--heading {
 	font-size: 47px;
-	font-family: 'Ruthie', cursive;
+	font-family: 'Ruthie' ;
 	color: #333333;
 	font-weight: 400;
 	line-height: 40px;

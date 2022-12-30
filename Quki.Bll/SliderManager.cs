@@ -28,19 +28,19 @@ namespace Quki.Bll
 
         public List<SliderModel> GetSliderList()
         {
-            var items = TGetList().OrderByDescending(u => u.SliderSeqId).ToList();
+            var items = TGetList(x=>x.IsActive==true).OrderByDescending(u => u.SliderSeqId).ToList();
             var model = ObjectMapper.Mapper.Map<List<SliderModel>>(items);
             return model;
         } 
         public List<SliderModel> GetSliderHomeListWithLanguage(int langeage)
         {
-            var items = TGetList(x=>x.LanguageId== langeage && x.GroupId==0).OrderByDescending(u => u.SliderSeqId).ToList();
+            var items = TGetList(x=>x.LanguageId== langeage && x.GroupId==0 && x.IsActive.Equals(true)).OrderByDescending(u => u.SliderSeqId).ToList();
             var model = ObjectMapper.Mapper.Map<List<SliderModel>>(items);
             return model;
         }
         public List<SliderModel> GetSliderAboutUsListWithLanguage(int langeage)
         {
-            var items = TGetList(x=>x.LanguageId== langeage && x.GroupId==1).OrderByDescending(u => u.SliderSeqId).ToList();
+            var items = TGetList(x=>x.LanguageId== langeage && x.GroupId==1 && x.IsActive==true).OrderByDescending(u => u.SliderSeqId).ToList();
             var model = ObjectMapper.Mapper.Map<List<SliderModel>>(items);
             return model;
         }

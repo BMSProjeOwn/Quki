@@ -3,40 +3,38 @@
 
 
 
-
-
+<!-- Testimonial #5
+============================================= -->
 <section id="testimonial5" class="testimonial testimonial-5 bg-overlay bg-parallax bg-overlay-dark text-center">
     <div class="bg-section">
-        <img src="~/webQuki/images/background/2.jpg" alt="Background" />
+        <img src="assets/images/background/2.jpg" alt="Background" />
     </div>
     <div class="container">
         <div class="divider--shape-1up"></div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
                 <div id="testimonial-wide" class="carousel carousel-white" data-slide="1" data-slide-rs="1" data-autoplay="false" data-nav="false" data-dots="false" data-space="0" data-loop="true" data-speed="800">
-
-                    @if (Model != null && Model.Count > 0)
+                    <!-- Testimonial #1 -->
+                    @if (Model != null)
                     {
-
-                        foreach (var item in Model)
+                        @foreach (var item in Model)
                         {
-                            <!-- Testimonial #1 -->
-                            <div class="testimonial-panel">
-                                <div class="testimonial--quote">
-                                    <img src="~/webQuki/images/testimonial/chef-hat.png" alt="hat">
-                                </div>
-                                <div class="testimonial--body">
-                                    <p class="color-white">@item.Header</p>
-                                </div>
-                                <!-- .testimonial-body end -->
-                                <div class="testimonial--meta">
-                                    <div class="testimonial--author">
-                                        <h4>@item.SliderName</h4>
-                                    </div>
-                                </div>
-                                <!-- .testimonial-meta end -->
+                          
+                    <div class="testimonial-panel">
+                        <div class="testimonial--quote">
+                        </div>
+                        <div class="testimonial--body">
+                            <p class="color-white">@Html.Raw(item.Remark)</p>
+                        </div>
+                        <!-- .testimonial-body end -->
+                        <div class="testimonial--meta">
+                            <div class="testimonial--author">
+                                <h4>Quki Meyhane</h4>
                             </div>
-                            <!-- .testimonial-panel end -->
+                        </div>
+                        <!-- .testimonial-meta end -->
+                    </div>
+
                         }
                     }
                 </div>

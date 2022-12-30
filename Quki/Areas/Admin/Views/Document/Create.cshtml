@@ -1,0 +1,75 @@
+﻿@using Quki.Entity.DtoModels
+@model DocumentModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card card-info" style="width:100%;">
+    <div class="card-header">
+        <h3 class="card-title">Döküman Ekle</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form asp-action="Create" asp-controller="Document" asp-area="Admin" method="post" class="form-horizontal">
+        <div class="card-body">
+            @if (Model != null)
+            {
+                <input type="hidden" asp-for="@Model.DocumentSeqID" class="form-control">
+                <input type="hidden" asp-for="@Model.MenuID" class="form-control">
+            }
+
+            <div class="form-group row">
+                <label asp-for="@Model.LanguageID" class="col-sm-2 col-form-label">Dil</label>
+                <div class="col-sm-10">
+
+                    <div class="form-group">
+                        @Html.DropDownListFor(a => a.LanguageID, (List<SelectListItem>)ViewBag.language, new { @class = "form-control select2" })
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="@Model.Header" class="col-sm-2 col-form-label">Başlık</label>
+                <div class="col-sm-10">
+                    <span asp-validation-for="@Model.Header" class="text-danger"></span>
+                    <input type="text" asp-for="@Model.Header" class="form-control" placeholder="Başlık">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="@Model.Header2" class="col-sm-2 col-form-label">Başlık2</label>
+                <div class="col-sm-10">
+                    <span asp-validation-for="@Model.Header2" class="text-danger"></span>
+                    <input type="text" asp-for="@Model.Header2" class="form-control" placeholder="Başlık 2">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="@Model.Contents" class="col-sm-2 col-form-label">Açıklama</label>
+                <div class="col-sm-10">
+                    <span asp-validation-for="@Model.Contents" class="text-danger"></span>
+                    <textarea type="text" asp-for="@Model.Contents" id="editor" placeholder="@Model.Contents"></textarea>
+
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="offset-sm-2 col-sm-10">
+                    <div class="form-check">
+                        <input type="checkbox" asp-for="@Model.Status" checked="checked" class="form-check-input">
+                        <label class="form-check-label" asp-for="@Model.Status">Aktiflik Durumu</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+            <button type="submit" asp-action="Create" asp-controller="Document" asp-area="Admin" class="btn btn-info">Kaydet</button>
+            <button type="submit" asp-action="Index" asp-controller="Document" asp-area="Admin" class="btn btn-default float-right">Vazgeç</button>
+        </div>
+        <!-- /.card-footer -->
+    </form>
+</div>
+<!-- /.card -->
+
+<script src="~/ckeditor/ckeditor.js"></script>
+<script src="~/web/js/ckconfig.js"></script>

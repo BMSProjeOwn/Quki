@@ -94,12 +94,18 @@ namespace Quki.Bll
 
         public List<VisitorComment> GetUserComment()
         {
-            var list = TGetList().ToList();
+            var list = TGetList(x=>x.ShowOnHomePage==true).ToList();
             
 
             return list;
         }
+        public List<VisitorComment> GetUserComment2()
+        {
+            var list = TGetList().ToList();
 
+
+            return list;
+        }
         public List<VisitorCommentsModel> GetVisitorCommentsWithProduct()
         {
             List<VisitorCommentsModel> list = TGetList().Join(productRepository.TGetList(), V => V.ComantSeqID, P => P.ProductSeqID, (visitorComments, product) => new
