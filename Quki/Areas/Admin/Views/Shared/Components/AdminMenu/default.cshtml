@@ -8,21 +8,21 @@
             <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-edit"></i>
                 <p>
-                    KULLANICI TANIMLARI
+                    Ürün Tanımlama
                     <i class="fas fa-angle-left right"></i>
                 </p>
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a asp-action="GetRoleList" asp-controller="Administration" asp-area="Admin" class="nav-link">
+                    <a asp-action="GetRoleList" asp-controller="Product" asp-area="Admin" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Rol Tanımlama</p>
+                        <p>Ürün Grubu Tanımlama</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a asp-action="GetUserList" asp-controller="Administration" asp-area="Admin" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Kullanıcı Tanımlama</p>
+                        <p>Ürün Tanımlama</p>
                     </a>
                 </li>
 
@@ -43,18 +43,6 @@
                     <a asp-action="Index" asp-controller="Document" asp-area="Admin" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Döküman Sayfası</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a asp-action="Index" asp-controller="VisitorComments" asp-area="Admin" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Müşteri Yorumları</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a asp-action="Index" asp-controller="FrequentlyAskedQuestions" asp-area="Admin" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Sıkça Sorulan Sorular</p>
                     </a>
                 </li>
             </ul>

@@ -24,14 +24,12 @@
     });
 }
 <!-- Module Cart -->
-<div class="module module-cart pull-left">
     <form id="CultureForm" asp-controller="AnaSayfa" asp-action="CultureManegmant" method="post">
         @foreach (var item in cultureList)
         {
             <input class="dropdown-toggle  menu-item" style="border:unset; background-color:unset" type="submit" value="@item.Text" asp-action="CultureManegmant" asp-controller="AnaSayfa" asp-route-culture="@item.Value" name="submit">
         }
     </form>
-</div>
 <script type="text/javascript">
     function submitStudent() {
         var data = $("#CultureForm").serialize();
