@@ -38,7 +38,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-2"></div>
                 <div class="col-xs-12 col-sm-12 col-md-8">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#FixMenu" data-toggle="tab">Fix Menü</a></li>
+                        <li class="active"><a href="#Tumu" data-toggle="tab">Tümü</a></li>
                         @foreach (var item in Model.sluDefModels)
                         {
                             <li><a href="#@item.slu_def_seq" data-toggle="tab">@item.slu_def_name</a></li>
@@ -51,128 +51,30 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
 
                 <div class="tab-content">
-                    <div class="tab-pane fade  in active" id="FixMenu">
+                    <div class="tab-pane fade  in active" id="Tumu">
                         <!-- Menu
                         ============================================= -->
                         <div class="menu-simple">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-3"></div>
-                                    <div class="col-md-6">
-                                        <!-- Dish #1 -->
-                                        <div class="col-xs-12 col-sm-12 col-md-12">
-                                            <div class="dish-panel">
-                                                <div class="dish--content">
-                                                    <div class="dish--content-bio">
-                                                        <h3 class="dish--title">8 Çeşit Meze</h3>
-                                                        <div class="dish--price">&nbsp;&nbsp;&nbsp;</div>
-                                                    </div>
-                                                    <p class="dish--desc">
-                                                        Köz Patlican
-                                                        <br />
-                                                        Börülce Salatasi
-                                                        <br />
-                                                        Şakşuka
-                                                        <br />
-                                                        Atom
-                                                        <br />
-                                                        Pembe Sultan
-                                                        <br />
-                                                        Yaprak Sarma
-                                                        <br />
-                                                        Girt Ezmesi
-                                                        <br />
-                                                        Beyaz Peynir
-                                                    </p>
-                                                </div>
-                                            </div><!-- .dish end -->
-                                        </div><!-- .dish-panel end -->
-                                        <div class="col-xs-12 col-sm-12 col-md-12">
-                                            <div class="dish-panel">
-                                                <div class="dish--content">
-                                                    <div class="dish--content-bio">
-                                                        <h3 class="dish--title">Salata Seçmeleri</h3>
-                                                        <div class="dish--price">&nbsp;&nbsp;&nbsp;</div>
-                                                    </div>
-                                                    <p class="dish--desc">
-                                                        Peynirli Kurma Roka Salata
-                                                        <br />
-                                                        Gavurdag Salata
-<br />
-                                                        Akdeniz Salata
-                                                    </p>
-                                                </div>
-                                            </div><!-- .dish end -->
-                                        </div><!-- .dish-panel end -->
 
-                                        <div class="col-xs-12 col-sm-12 col-md-12">
-                                            <div class="dish-panel">
-                                                <div class="dish--content">
-                                                    <div class="dish--content-bio">
-                                                        <h3 class="dish--title">Ara Sıcak</h3>
-                                                        <div class="dish--price">&nbsp;&nbsp;&nbsp;</div>
-                                                    </div>
-                                                    <p class="dish--desc">
-                                                        Sebzeli Çin Böreği
-                                                        <br />
-                                                        İstiridye Mantarı
-                                                        <br />
-                                                        Arnavut Ciğeri
-                                                    </p>
-                                                </div>
-                                            </div><!-- .dish end -->
-                                        </div><!-- .dish-panel end -->
-                                        <div class="col-xs-12 col-sm-12 col-md-12">
-                                            <div class="dish-panel">
-                                                <div class="dish--content">
-                                                    <div class="dish--content-bio">
-                                                        <h3 class="dish--title">Ana Yemek</h3>
-                                                        <div class="dish--price">&nbsp;&nbsp;&nbsp;</div>
-                                                    </div>
-                                                    <p class="dish--desc">
+                                    @foreach (var itemMenu in Model.getMenuItems)
+                                    {
 
-                                                        Izgara Köftei
-                                                        <br />
-                                                        Piliç Külbastı
-                                                    </p>
-                                                </div>
-                                            </div><!-- .dish end -->
-                                        </div><!-- .dish-panel end --> 
-                                        <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="col-xs-12 col-sm-12 col-md-6">
                                             <div class="dish-panel">
                                                 <div class="dish--content">
                                                     <div class="dish--content-bio">
-                                                        <h3 class="dish--title">Tatlı</h3>
+                                                        <h3 class="dish--title">@itemMenu.mi_master_def_name</h3>
                                                         <div class="dish--price">&nbsp;&nbsp;&nbsp;</div>
                                                     </div>
-                                                    <p class="dish--desc">
-                                                        Meyve Tabagi
-                                                    </p>
+                                                    <p class="dish--desc">@itemMenu.rvc_mi_third_name</p>
                                                 </div>
                                             </div><!-- .dish end -->
-                                        </div><!-- .dish-panel end --> 
-                                        <div class="col-xs-12 col-sm-12 col-md-12">
-                                            <div class="dish-panel">
-                                                <div class="dish--content">
-                                                    <div class="dish--content-bio">
-                                                        <h3 class="dish--title">icecekler</h3>
-                                                        <div class="dish--price">&nbsp;&nbsp;&nbsp;</div>
-                                                    </div>
-                                                    <p class="dish--desc">
-                                                        2 kisiye 35cl Raki
-                                                        <br />
-                                                        3 kisiye 50cl Raki
-                                                        <br />
-                                                        4 kisiye 70cl Raki
-                                                        <br />
-                                                        2 kisive 1 Sise Sarap
-                                                    </p>
-                                                </div>
-                                            </div><!-- .dish end -->
-                                        </div><!-- .dish-panel end -->
+                                        </div>
 
-                                        <div class="col-md-3"></div>
-                                    </div>
+                                        <!-- .dish-panel end -->
+                                    }
                                 </div> <!-- .row end -->
                             </div><!-- .container end -->
                         </div><!-- #menuSimple1 end -->
