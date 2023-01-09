@@ -52,7 +52,7 @@ namespace Quki.Bll
         }
         public List<Products> GetProductList()
         {
-            var items = TGetList().OrderByDescending(u => u.ProductSeqID);
+            var items = TGetList(x=>x.Status==true).OrderByDescending(u => u.ProductSeqID);
             return items.ToList();
         }
         public List<AttributeStaticValue> GetAttributeStaticValueByProductID(int productID)// ürüne ait kategorileri getiriyor.
@@ -414,7 +414,7 @@ namespace Quki.Bll
                 }
                 else
                 {
-                    var path = Path.GetExtension(Item.ImagePath.FileName);
+                    var path = ".mp4";
                     var newPath = Guid.NewGuid() + path;
                     var ImagePath = Directory.GetCurrentDirectory() + "/wwwroot/AdminMedia/AdminVideo/" + newPath;
                    // var ThumbImagePath = Directory.GetCurrentDirectory() + "/wwwroot/AdminMedia/AdminVideo/Thump" + newPath;

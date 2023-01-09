@@ -37,6 +37,8 @@ namespace Quki.Dal.Concrete.Entityframework.Context
         public DbSet<MenuItemBarcodeDef> MenuItemBarcodeDef { get; set; }
         public DbSet<SluDef> SluDef { get; set; }
         public DbSet<slu_Rvc_Relation> slu_Rvc_Relation { get; set; }
+        public DbSet<SluDefWithLanguage> SluDefWithLanguage { get; set; }
+        public DbSet<RvcMenuItemDefWithLanguage> RvcMenuItemDefWithLanguage { get; set; }
 
         public DbSet<TDepart> TDepart { get; set; }
         public DbSet<AppUser> AppUser { get; set; }

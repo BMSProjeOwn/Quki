@@ -150,6 +150,8 @@ namespace Quki
             services.AddScoped<IMenuItemBarcodeDefService, MenuItemBarcodeDefManager>();
             services.AddScoped<ISluDefService, SluDefManager>();
             services.AddScoped<Islu_Rvc_RelationService, slu_Rvc_RelationManager>();
+            services.AddScoped<ISluDefWithLanguageRepository, SluDefWithLanguageRepository>();
+            services.AddScoped<IRvcMenuItemDefWithLanguageRepository, RvcMenuItemDefWithLanguageRepository>();
 
             #endregion
 

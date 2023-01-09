@@ -241,7 +241,7 @@ h6 {
 }
 
 p {
-	color: #a5a5a5;
+	color: #ffffff;
 	font-size: 13px;
 	font-weight: 400;
 	line-height: 22px;
@@ -1929,7 +1929,7 @@ ul.dot-list li i {
 
 .tabs .nav-tabs > li > a {
 	font-family: 'Poppins', sans-serif;
-	color: #333333;
+	color: #ffffff;
 	font-size: 16px;
 	font-weight: 600;
 	text-transform: capitalize;
@@ -5928,7 +5928,7 @@ li.dropdown-submenu > ul.dropdown-menu > li.has-dropdown > ul.dropdown-menu.left
 }
 
 .portfolio-filter li a {
-	color: #333333;
+	color: #ffffff;
 	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
 	font-weight: 600;
@@ -10474,23 +10474,23 @@ footer .footer--copyright {
 	margin-bottom: 14px;
 }
 
-.menu-simple .dish-panel .dish--price {
-	font-family: 'Poppins', sans-serif;
-	font-size: 15px;
-	font-weight: 600;
-	line-height: 29px;
-	color: #bb9356;
-	text-align: right;
-}
+	.menu-simple .dish-panel .dish--price {
+		font-family: 'Poppins', sans-serif;
+		font-size: 15px;
+		font-weight: 600;
+		line-height: 29px;
+		color: #ffffff;
+		text-align: right;
+	}
 
-.menu-simple .dish-panel .dish--title {
-	font-size: 17px;
-	font-weight: 600;
-	line-height: 29px;
-	color: #333333;
-	margin-bottom: 0;
-	float: left;
-}
+	.menu-simple .dish-panel .dish--title {
+		font-size: 17px;
+		font-weight: 600;
+		line-height: 29px;
+		color: #bb9356;
+		margin-bottom: 0;
+		float: left;
+	}
 
 .menu-simple .dish-panel .dish--desc {
 	font-size: 13px;

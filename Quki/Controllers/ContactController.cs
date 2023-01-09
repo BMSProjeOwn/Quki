@@ -29,7 +29,7 @@ namespace Quki.Controllers
 
             service.AddVisitorCommand(visitorComment);
 
-            ViewBag.MyDiv="<div class=\"alert alert-success\" role=\"alert\"><strong>Thank you. We will contact you shortly.</strong></div>";
+            ViewBag.MyDiv= "<div class=\"alert alert-success\" role=\"alert\"><strong>Teşekkürler. Mesajınız iletildi.</strong></div>";
 
             return View("Index");
         }

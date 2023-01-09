@@ -20,10 +20,12 @@ namespace Quki.Bll
     {
         public readonly Islu_Rvc_RelationRepository repo;
         public readonly ISluDefRepository sluDef;
+        public readonly ISluDefWithLanguageRepository sluDefWithLanguageRepository;
         public slu_Rvc_RelationManager(IServiceProvider service) : base(service)
         {
             repo = service.GetService<Islu_Rvc_RelationRepository>();
             sluDef = service.GetService<ISluDefRepository>();
+            sluDefWithLanguageRepository = service.GetService<ISluDefWithLanguageRepository>();
 
         }
         public List<slu_Rvc_Relation> GetAllSluDefRelation()
@@ -32,7 +34,7 @@ namespace Quki.Bll
 
             return slurelation;
         } 
-        public List<SluDefModel> GetAllSluDefRelationWithSlu()
+        public List<SluDefModel> GetAllSluDefRelationWithSlu2()
         {
             var itemList = sluDef.TGetList()
                           .Join(repo.TGetList(), x => x.slu_def_seq, s => s.slu_seq, (D, P) => new
@@ -59,7 +61,40 @@ namespace Quki.Bll
             
             return itemList;
         }
+        public List<SluDefModel> GetAllSluDefRelationWithSlu()
+        {
+            var itemList = sluDef.TGetList()
+                          .Join(repo.TGetList(), x => x.slu_def_seq, s => s.slu_seq, (D, P) => new
+                          {
+                              D = D,
+                              P = P
+                          }).Join(sluDefWithLanguageRepository.TGetList(), x => x.D.slu_def_seq, s => s.SluDefSeq, (R, SwR) => new
+                          {
+                              R = R,
+                              SwR = SwR
+                          })
+
+                          .Where(w => w.R.P.rvc_seq == 10 && w.R.D.slu_type == "MI").OrderBy(x => x.R.D.control_number.Value)
+                          .Select(s => new SluDefModel
+                          {
+                              slu_def_name = s.R.D.slu_def_name,
+                              slu_def_seq = s.R.D.slu_def_seq,
+                              slu_type_slu_image = s.R.D.slu_type_slu_image
 
 
+                          }).ToList();
+
+            foreach (var item in itemList)
+            {
+                string text = item.slu_def_name;
+                string[] parca = text.Split("-");
+                item.slu_def_name = parca[0];
+            }
+
+
+            return itemList;
+            }
+
+
+        }
     }
-}

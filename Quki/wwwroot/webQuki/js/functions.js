@@ -257,6 +257,16 @@
         }
     });
 
+    var $imgPopup = $(".video-popup");
+    $imgPopup.magnificPopup({
+        type: "video"
+    });
+    $('.img-gallery-video').magnificPopup({
+        type: 'video',
+        gallery: {
+            enabled: true
+        }
+    });
     /* ------------------  MAGNIFIC POPUP VIDEO ------------------ */
 
     $('.popup-video,.popup-gmaps').magnificPopup({

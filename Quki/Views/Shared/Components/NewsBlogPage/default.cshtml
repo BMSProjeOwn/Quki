@@ -3,71 +3,60 @@
 
 
 
-<section id="blog" class="blog blog-grid pb-80">
+<!-- Blog Standard
+============================================= -->
+<section id="blog" class="blog blog-standard">
     <div class="container">
         <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-9">
+                <div class="row">
+                    <!-- Blog Entry #1 -->
+                    @if (Model != null && Model.Count > 0)
+                    {
 
+                        foreach (var item in Model)
+                        {
 
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="blog-entry">
 
-            <!-- Blog Entry #1 -->
-            @if (Model != null && Model.Count > 0)
-            {
-
-                foreach (var item in Model)
-                {
-
-
-
-
-
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="blog-entry">
-
-                            <div class="entry--content">
-                                <div class="entry--meta">
-                                    <span class="entry--date">@item.IssueStartDate</span>
+                                    <div class="entry--content">
+                                        <div class="entry--meta">
+                                            <span>@item.IssueStartDate</span>
+                                        </div>
+                                        <div class="entry--title">
+                                            <h4><a>@item.Contents</a></h4>
+                                        </div>
+                                        <div class="entry--img">
+                                            <a href="#">
+                                                <img src="@item.ImagePath" alt="entry image" />
+                                            </a>
+                                        </div>
+                                        <div class="entry--bio">
+                                            @Html.Raw(item.Remark)
+                                        </div>
+                                    </div>
+                                    <!-- .entry-content end -->
                                 </div>
-                                <div class="entry--title">
-                                    <h4><a href="#">@item.Contents</a></h4>
-                                </div>
-                                <div class="entry--img">
-                                    <a href="#">
-                                        <img src="@item.ImagePath" alt="entry image" />
-                                    </a>
-                                </div>
-                                <div class="entry--bio">
-                                    @Html.Raw(item.Remark)
-                                </div>
+                                <!-- .blog-entry end -->
                             </div>
-                            <!-- .entry-content end -->
-                        </div>
-                        <!-- .blog-entry end -->
-                    </div>
+                        }
+                    }
+                </div><!-- .row end -->
 
-
-
-                }
-            }
-
-            <!-- .col-md-4 end -->
-            <!-- Blog Entry #2 -->
-
-
-        </div>
-        <!-- .row end -->
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 clearfix text--center">
                 <ul class="pagination">
-                    
-                    
-                    @for (int i = 1; i <Model[0].PageCount;i++)
-                    {
-                        <li class="active">
-                            <a href="#">@i</a>
-                        </li>
 
 
-                    }
+                            @for (int i = 1; i < Model[0].PageCount; i++)
+                            {
+                            <li class="active">
+                                <a href="#">@i</a>
+                            </li>
+
+
+                            }
 
                     <li>
                         <a href="#" aria-label="Next">
@@ -78,8 +67,7 @@
             </div>
             <!-- .col-md-12 end -->
         </div>
-        <!-- .row end -->
-    </div>
-    <!-- .container end -->
-</section>
-<!-- #blog end -->
+            </div><!-- .col-md-9 end -->
+        </div><!-- .row end -->
+    </div><!-- .container end -->
+</section><!-- #blog end -->
