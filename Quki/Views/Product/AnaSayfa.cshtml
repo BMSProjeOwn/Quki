@@ -4,72 +4,44 @@
    // Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style>
+    .img1 {    
+        height: 900px;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 0, 100% 0);
+}
 
-.box {
-  /* we need this to position the pseudo-element */
-  position: relative;
-     position: relative;
-    padding: 60px;
-    background-image: url(viewimage\\web-acılıs.png);
-    background-position: center;
-    background-size: cover;
+.img2{
+    height: 900px;
+    bottom: 20%;
+    right: 0;
+    margin-top: -880px;
+    margin-left: 100px;
+} 
+
+    .box {
+        /* we need this to position the pseudo-element */
+        position: relative;
+        position: relative;
+        padding: 60px;
+        background-image: url(viewimage\\web-acılıs.png);
+        background-position: center;
+        background-size: cover;
         text-align: right;
         background-repeat: no-repeat;
-  text-align: right;
-  }
-    
-.box:before {
-  /* we need this to create the pseudo-element */
-  content: "";
-  display: block;
-
-  /* position the triangle in the top right corner */
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  right: 0;
-
-  /* create the triangle */
-  width: 0;
-  height: 0;
-  border: 3em solid transparent;
-  }
-    
-.content {
-  /* position the content above the triangle */
-  position: relative;
-  z-index: 1;
-  }
-  .left{
-        background-image: url(viewimage//Group50.png);
-        height: 900px;
-        background-size: contain;
-        background-origin: content-box;
-        margin-top: -700px;
-        background-repeat: no-repeat;
-  }
-  .right{
-        background-image: url(viewimage//Group49.png);
-        background-origin: content-box;
-        background-size: contain;
-        height: 700px;
-        background-repeat: no-repeat;
-  }
-						</style>
+        text-align: right;
+    }
+</style>
                        
 
 
 
 <div class="row box ">
-    <div class="col-md-6">
-        <a href="http://test.westchocolate.com/AnaSayfa">
-    <img src="~/ViewImage/Group49.png" />
-    </a>
-    </div>
-    <div class="col-md-6" style="margin-top:-55%">
-        <a href="http://test.qukimeyhane.com/AnaSayfa">
-    <img src="~/ViewImage/Group50.png" />
-    </a>
-    </div>
+
+    <div class='img1' style="    background-image: url(/ViewImage/Group49.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 60px;"> </div>
+    <div class='img2' style="background-image: url(/ViewImage/Group50.png);
+    background-size: contain;
+    background-repeat: no-repeat;"> </div>
 </div>
 
