@@ -1,43 +1,108 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "AnaSayfa";
-   // Layout = "~/Views/Shared/_Layout.cshtml";
+    // Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style>
-    .img1 {    
-        height: 900px;
-    -webkit-clip-path: polygon(0 0, 0 100%, 100% 0, 100% 0);
-        background-image: url(/ViewImage/Group49.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-left: 60px;
-        background-image: url(/ViewImage/Group50.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-}
 
-.img2{
-    height: 900px;
-    bottom: 20%;
-    right: 0;
-    margin-top: -880px;
-    margin-left: 100px;
-} 
+    @@media screen and (min-width: 1200px) {
+        .img1 {
+            height: 900px;
+            -webkit-clip-path: polygon(0 0, 0 100%, 100% 0, 100% 0);
+            background-image: url(/ViewImage/Group49.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
 
-    .box {
-        /* we need this to position the pseudo-element */
-        position: relative;
-        position: relative;
-        padding: 60px;
-        background-image: url(viewimage\\web-acılıs.png);
-        background-position: center;
-        background-size: cover;
-        text-align: right;
-        background-repeat: no-repeat;
-        text-align: right;
+        .img1:hover {
+                height: 920px;
+                cursor: pointer;
+        }
+    }
+
+    @@media screen and (max-width: 1000px) {
+        .img1 {
+            margin-left: 70px;
+            height: 1620px;
+            background-image: url(/ViewImage/Group4.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .img1:hover {
+                height: 1630px;
+                cursor: pointer;
+        }
+    }
+
+    @@media screen and (min-width: 1200px) {
+        .img2 {
+            margin-left: 60px;
+            background-image: url(/ViewImage/Group50.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 900px;
+            bottom: 20%;
+            right: 0;
+            margin-top: -880px;
+            margin-left: 100px;
+        }
+
+            .img2:hover {
+                height: 920px;
+                cursor: pointer;
+            }
+    }
+
+    @@media screen and (max-width: 1000px) {
+        .img2 {
+            background-image: url(/ViewImage/Group5.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 1620px;
+            bottom: 20%;
+            right: 0;
+            margin-top: -1620px;
+            margin-left: 100px;
+        }
+        .img2:hover{
+                height: 1720px;
+                cursor: pointer;
+        }
+    }
+
+    @@media screen and (min-width: 1200px) {
+        .box {
+            /* we need this to position the pseudo-element */
+            position: relative;
+            position: relative;
+            padding: 60px;
+            background-image: url(viewimage\\web-acilis.png);
+            background-position: center;
+            background-size: cover;
+            text-align: right;
+            background-repeat: no-repeat;
+            text-align: right;
+        }
+    }
+
+
+    @@media screen and (max-width: 1000px) {
+
+        .box {
+            /* we need this to position the pseudo-element */
+            position: relative;
+            position: relative;
+            padding: 60px;
+            background-image: url(viewimage\\web-acilis-mobil.png);
+            background-position: center;
+            background-size: cover;
+            text-align: right;
+            background-repeat: no-repeat;
+            text-align: right;
+        }
     }
 </style>
-                       
+
 
 
 
