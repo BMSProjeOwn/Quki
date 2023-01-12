@@ -55,6 +55,7 @@ namespace Quki.Bll
                     var newPath = Guid.NewGuid() + path;
                     var ImagePath = Directory.GetCurrentDirectory() + "/wwwroot/AdminImage/ProductImg/" + newPath;
                     var steem = new FileStream(ImagePath, FileMode.Create);
+                    sliderModel.ImagePathName.CopyTo(steem);
                     sliderModel.ImagePath = "/AdminImage/ProductImg/" + newPath;
 
                 }
@@ -100,7 +101,10 @@ namespace Quki.Bll
                 var newPath = Guid.NewGuid() + path;
                 var ImagePath = Directory.GetCurrentDirectory() + "/wwwroot/AdminImage/ProductImg/" + newPath;
                 var steem = new FileStream(ImagePath, FileMode.Create);
+                slider.ImagePathName.CopyTo(steem);
                 slider.ImagePath = "/AdminImage/ProductImg/" + newPath;
+                update.ImagePath=slider.ImagePath;
+
             }
 
             TUpdate(update);
