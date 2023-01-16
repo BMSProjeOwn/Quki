@@ -123,6 +123,9 @@
   <data name="All" xml:space="preserve">
     <value>Hepsi</value>
   </data>
+  <data name="AllMenu" xml:space="preserve">
+    <value>Tümü</value>
+  </data>
   <data name="CALLUS" xml:space="preserve">
     <value>Bizi ara</value>
   </data>
@@ -131,6 +134,9 @@
   </data>
   <data name="Customer comments" xml:space="preserve">
     <value>Müşteri Yorumları</value>
+  </data>
+  <data name="CustomerSatisfaction" xml:space="preserve">
+    <value>Customer Satisfaction</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
@@ -158,6 +164,9 @@
   </data>
   <data name="LastName" xml:space="preserve">
     <value>Soyad</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
   </data>
   <data name="Message" xml:space="preserve">
     <value>Mesajınız</value>

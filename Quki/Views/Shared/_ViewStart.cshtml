@@ -4,10 +4,10 @@
 <!DOCTYPE html>
 <html lang="en">
 @inject SignInManager<AppUser> signInManager;
-@*@{
+@{
     var culture = Context.Features.Get<Microsoft.AspNetCore.Localization.IRequestCultureFeature>();
     MultiLanguageOmni.ReadResourceKey.cultureName = culture.RequestCulture.UICulture.Name;
-}*@
+}
 <head>
 
     <title>@ViewData["Title"] - QR Menü</title>

@@ -46,11 +46,11 @@ namespace Quki.Controllers
         public IActionResult Index()
         {
             List<SluDefModel> sluDefModels = new List<SluDefModel>();
-
-            var getMenuItems = rvcMenuItemDefService.GetMenuItems();
+            int languageId = Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
+            var getMenuItems = rvcMenuItemDefService.GetMenuItems(languageId);
             try
             {
-                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu();
+                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId);
             }
             catch
             {
