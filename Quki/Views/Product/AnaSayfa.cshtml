@@ -4,22 +4,22 @@
 }
 <style>
 
-    @@media screen and (min-width: 700px) {
+    @@media screen and (min-width: 1200px) {
         .img1 {
-            height: 900px;
+            height: 800px;
             -webkit-clip-path: polygon(0 0, 0 100%, 100% 0, 100% 0);
             background-image: url(/ViewImage/Group49.png);
             background-size: contain;
             background-repeat: no-repeat;
         }
 
-            .img1:hover {
-                height: 920px;
+        .img1:hover {
+                height: 840px;
                 cursor: pointer;
-            }
+        }
     }
 
-    @@media screen and (max-width: 699px) {
+    @@media screen and (max-width: 1000px) {
         .img1 {
             margin-left: 70px;
             height: 1620px;
@@ -28,32 +28,31 @@
             background-repeat: no-repeat;
         }
 
-            .img1:hover {
+        .img1:hover {
                 height: 1630px;
                 cursor: pointer;
-            }
+        }
     }
 
-    @@media screen and (min-width: 700px) {
+    @@media screen and (min-width: 1200px) {
         .img2 {
             margin-left: 60px;
             background-image: url(/ViewImage/Group50.png);
             background-size: contain;
             background-repeat: no-repeat;
-            height: 900px;
+            height: 800px;
             bottom: 20%;
             right: 0;
-            margin-top: -880px;
-            margin-left: 100px;
+            margin-top: -780px;
         }
 
             .img2:hover {
-                height: 920px;
+                height: 840px;
                 cursor: pointer;
             }
     }
 
-    @@media screen and (max-width: 699px) {
+    @@media screen and (max-width: 1000px) {
         .img2 {
             background-image: url(/ViewImage/Group5.png);
             background-size: contain;
@@ -64,11 +63,10 @@
             margin-top: -1620px;
             margin-left: 100px;
         }
-
-            .img2:hover {
+        .img2:hover{
                 height: 1720px;
                 cursor: pointer;
-            }
+        }
     }
 
     @@media screen and (min-width: 1200px) {
@@ -97,9 +95,8 @@
             background-image: url(viewimage\\web-acilis-mobil.png);
             background-position: center;
             background-size: cover;
-            text-align: right;
+            text-align: center;
             background-repeat: no-repeat;
-            text-align: right;
         }
     }
 </style>
@@ -108,11 +105,13 @@
 
 
 <div class="row box ">
+    <div style="margin-left: 10%;">
     <a href="http://test.westchocolate.com/anasayfa">
-        <div class='img1'> </div>
+    <div class='col-md-6 img1'> </div>
     </a>
     <a href="http://test.qukimeyhane.com/AnaSayfa">
-        <div class='img2'> </div>
+            <div class='col-md-6 img2'> </div>
     </a>
+    </div>
 </div>
 

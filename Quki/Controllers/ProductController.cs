@@ -50,9 +50,10 @@ namespace Quki.Controllers
             //https://localhost:44377/product/sludef
             List<SluDefModel> sluDefModels = new List<SluDefModel>();
 
+            int languageId=Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
             try
             {
-                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu();
+                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId);
             }
             catch
             {
@@ -69,7 +70,8 @@ namespace Quki.Controllers
             {
                 Response.Cookies.Append(CookieRequestCultureProvider.DefaultCookieName, CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
                     new CookieOptions { Expires = DateTimeOffset.Now.AddDays(30) });
-                return RedirectToAction(nameof(Index));
+                MultiLanguageOmni.ReadResourceKey.cultureName = culture;
+                return RedirectToAction(nameof(Index2));
 
             }
 
@@ -88,18 +90,18 @@ namespace Quki.Controllers
         [Route("westchocolate-urun/{id?}")]
         public IActionResult GetMenuItem(long id)
         {
-            
-           
+
+            int languageId = Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
             if (id == 0)
             {
-                var getMenuItems = rvcMenuItemDefService.GetMenuItems();
+                var getMenuItems = rvcMenuItemDefService.GetMenuItems(languageId);
                 ViewBag.ProductItems = getMenuItems;
-                ViewBag.MenuItems = "TÜMÜ";
+                ViewBag.MenuItems = MultiLanguageOmni.ReadResourceKey.GetString("All", "MultiLanguageOmni.Index");
                 ViewBag.Pic = "/icons/1tumu.png";
             }
             else
             {
-                var getMenuItems = rvcMenuItemDefService.GetMenuItemsWithId(id);
+                var getMenuItems = rvcMenuItemDefService.GetMenuItemsWithId(id,languageId);
                 ViewBag.ProductItems = getMenuItems;
                 ViewBag.MenuItems = getMenuItems[0].slu_def_name;
                 ViewBag.Pic = getMenuItems[0].slu_type_slu_image;

@@ -48,7 +48,7 @@ namespace Quki.Bll
             return allMenuItems;
         }
 
-        public List<GetMenuItems> GetMenuItems()
+        public List<GetMenuItems> GetMenuItems(int languageId)
         {
             List<GetMenuItems> itemList = new List<GetMenuItems>();
             var isOnline = RvcOptionsRight.TGetList(w => w.rvc_def_seq == 10 && w.rvc_options_def_code == "rvc_opt_code_Online_Order")
@@ -76,7 +76,7 @@ namespace Quki.Bll
                          {
                              RVCWL = RVCWL,
                              RS = RS
-                         }).Where(w => w.RVCWL.RMD.DP.D.mi_is_active == 1 && w.RVCWL.RMD.DP.D.rvc_def_seq == 10 && (w.RVCWL.RMD.DP.D.mi_master_def_type == "menuitem" || w.RVCWL.RMD.DP.D.mi_master_def_type == "condiment") && w.RVCWL.RMD.DP.P.mi_price_number == 1 && w.RVCWL.RMD.DP.P.rvc_def_seq == 10)
+                         }).Where(w => w.RVCWL.RMD.DP.D.mi_is_active == 1 && w.RVCWL.RMD.DP.D.rvc_def_seq == 2 && (w.RVCWL.RMD.DP.D.mi_master_def_type == "menuitem" || w.RVCWL.RMD.DP.D.mi_master_def_type == "condiment") && w.RVCWL.RMD.DP.P.mi_price_number == 1 && w.RVCWL.RMD.DP.P.rvc_def_seq == 2 && w.RS.LanguageId.Equals(languageId))
                          .Select(s => new GetMenuItems
                          {
                              slu_def_seq_view = s.RVCWL.S.slu_def_seq,
@@ -144,10 +144,10 @@ namespace Quki.Bll
             }
             return itemList;
         }
-        public List<GetMenuItems> GetMenuItemsWithId(long id)
+        public List<GetMenuItems> GetMenuItemsWithId(long id, int languageId)
         {
             List<GetMenuItems> itemList = new List<GetMenuItems>();
-            var isOnline = RvcOptionsRight.TGetList(w => w.rvc_def_seq == 10 && w.rvc_options_def_code == "rvc_opt_code_Online_Order")
+            var isOnline = RvcOptionsRight.TGetList(w => w.rvc_def_seq == 2 && w.rvc_options_def_code == "rvc_opt_code_Online_Order")
                .FirstOrDefault();
             if (isOnline != null)
             {
@@ -168,23 +168,27 @@ namespace Quki.Bll
                           {
                               RMD = RMD,
                               S = S
+                          }).Join(rvcMenuItemDefWithLanguageRepository.TGetList(), RVCWL => RVCWL.RMD.DP.P.mi_master_def_seq, RS => RS.RvcMenuItemDefSeq, (RVCWL, RS) => new
+                          {
+                              RVCWL = RVCWL,
+                              RS = RS
                           })
-                          .Where(w => w.RMD.DP.D.mi_is_active == 1 && w.RMD.DP.D.rvc_def_seq == 10 && (w.RMD.DP.D.mi_master_def_type == "menuitem" || w.RMD.DP.D.mi_master_def_type == "condiment") && w.RMD.DP.P.mi_price_number == 1 && w.RMD.DP.P.rvc_def_seq == 10&& w.RMD.DP.D.slu_seq==id)
+                          .Where(w => w.RVCWL.RMD.DP.D.mi_is_active == 1 && w.RVCWL.RMD.DP.D.rvc_def_seq == 2 && (w.RVCWL.RMD.DP.D.mi_master_def_type == "menuitem" || w.RVCWL.RMD.DP.D.mi_master_def_type == "condiment") && w.RVCWL.RMD.DP.P.mi_price_number == 1 && w.RVCWL.RMD.DP.P.rvc_def_seq == 10 && w.RVCWL.RMD.DP.D.slu_seq==id && w.RS.LanguageId.Equals(languageId))
                           .Select(s => new GetMenuItems
                           {
-                              slu_def_seq_view = s.S.slu_def_seq,
-                              mi_master_def_seq = (long)s.RMD.DP.D.mi_master_def_seq,
-                              mi_master_def_name = s.RMD.DP.D.mi_master_def_name,
-                              mi_barcode_id = s.RMD.B.mi_barcode_id,
-                              mi_price = (double)s.RMD.DP.P.mi_price,
-                              slu_def_name = s.S.slu_def_name,
-                              mi_icon_path = s.RMD.DP.D.mi_icon_path,
-                              rvc_mi_second_name = s.RMD.DP.D.rvc_mi_second_name,
-                              rvc_mi_third_name = s.RMD.DP.D.rvc_mi_third_name,
-                              slu_type_slu_image = s.S.slu_type_slu_image,
-                              slu_priority = (int)s.RMD.DP.D.slu_priority,
+                              slu_def_seq_view = s.RVCWL.S.slu_def_seq,
+                              mi_master_def_seq = (long)s.RVCWL.RMD.DP.D.mi_master_def_seq,
+                              mi_master_def_name = s.RVCWL.RMD.DP.D.mi_master_def_name,
+                              mi_barcode_id = s.RVCWL.RMD.B.mi_barcode_id,
+                              mi_price = (double)s.RVCWL.RMD.DP.P.mi_price,
+                              slu_def_name = s.RVCWL.S.slu_def_name,
+                              mi_icon_path = s.RVCWL.RMD.DP.D.mi_icon_path,
+                              rvc_mi_second_name = s.RVCWL.RMD.DP.D.rvc_mi_second_name,
+                              rvc_mi_third_name = s.RS.Remark,
+                              slu_type_slu_image = s.RVCWL.S.slu_type_slu_image,
+                              slu_priority = (int)s.RVCWL.RMD.DP.D.slu_priority,
                               
-                              control_number = s.S.control_number
+                              control_number = s.RVCWL.S.control_number
                           }).OrderBy(o => o.control_number).ThenBy(o => o.slu_priority).ToList();
 
                     foreach (var item in itemList)

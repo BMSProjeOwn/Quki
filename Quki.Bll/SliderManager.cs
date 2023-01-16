@@ -103,6 +103,8 @@ namespace Quki.Bll
                 var steem = new FileStream(ImagePath, FileMode.Create);
                 slider.ImagePathName.CopyTo(steem);
                 slider.ImagePath = "/AdminImage/ProductImg/" + newPath;
+                update.ImagePath=slider.ImagePath;
+
             }
 
             TUpdate(update);
