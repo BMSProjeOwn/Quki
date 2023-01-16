@@ -19,21 +19,21 @@
                     {
                         @foreach (var item in Model)
                         {
-                          
-                    <div class="testimonial-panel">
-                        <div class="testimonial--quote">
-                        </div>
-                        <div class="testimonial--body">
-                            <p class="color-white">@Html.Raw(item.Remark)</p>
-                        </div>
-                        <!-- .testimonial-body end -->
-                        <div class="testimonial--meta">
+
+                            <div class="testimonial-panel">
+                                <div class="testimonial--quote">
+                                </div>
+                                <div class="testimonial--body">
+                                    <p class="color-white">@Html.Raw(item.Remark)</p>
+                                </div>
+                                <!-- .testimonial-body end -->
+                                <div class="testimonial--meta">
                                     <div class="testimonial--author">
-                                                <h4>@MultiLanguageOmni.ReadResourceKey.GetString("QukiMeyhane", "MultiLanguageOmni.Index")</h4>
+                                        <h4>@MultiLanguageOmni.ReadResourceKey.GetString("QukiMeyhane", "MultiLanguageOmni.Index")</h4>
+                                    </div>
+                                </div>
+                                <!-- .testimonial-meta end -->
                             </div>
-                        </div>
-                        <!-- .testimonial-meta end -->
-                    </div>
 
                         }
                     }
