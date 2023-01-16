@@ -132,6 +132,9 @@
   <data name="Customercomments" xml:space="preserve">
     <value>Müşteri Yorumları</value>
   </data>
+  <data name="CustomerSatisfaction" xml:space="preserve">
+    <value>Müşteri Memnuniyeti</value>
+  </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
@@ -158,6 +161,9 @@
   </data>
   <data name="LastName" xml:space="preserve">
     <value>Soyad</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menü</value>
   </data>
   <data name="Message" xml:space="preserve">
     <value>Mesajınız</value>
