@@ -13,24 +13,37 @@
             background-repeat: no-repeat;
         }
 
-        .img1:hover {
+            .img1:hover {
                 height: 840px;
                 cursor: pointer;
-        }
+            }
     }
 
-    @@media screen and (max-width: 1000px) {
+    @@media screen and (max-width: 1190px) {
         .img1 {
             margin-left: 70px;
             height: 1620px;
             background-image: url(/ViewImage/Group4.png);
+            -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
             background-size: contain;
             background-repeat: no-repeat;
         }
 
-        .img1:hover {
+            .img1:hover {
                 height: 1630px;
                 cursor: pointer;
+            }
+    }
+
+    @@media screen and (max-width: 1190px) {
+        .div1 {
+            margin-left: 0%;
+        }
+    }
+
+    @@media screen and (min-width: 1200px) {
+        .div1 {
+            margin-left: 10%;
         }
     }
 
@@ -52,7 +65,7 @@
             }
     }
 
-    @@media screen and (max-width: 1000px) {
+    @@media screen and (max-width: 1190px) {
         .img2 {
             background-image: url(/ViewImage/Group5.png);
             background-size: contain;
@@ -63,10 +76,11 @@
             margin-top: -1620px;
             margin-left: 100px;
         }
-        .img2:hover{
+
+            .img2:hover {
                 height: 1720px;
                 cursor: pointer;
-        }
+            }
     }
 
     @@media screen and (min-width: 1200px) {
@@ -85,7 +99,7 @@
     }
 
 
-    @@media screen and (max-width: 1000px) {
+    @@media screen and (max-width: 1190px) {
 
         .box {
             /* we need this to position the pseudo-element */
@@ -105,13 +119,13 @@
 
 
 <div class="row box ">
-    <div style="margin-left: 10%;">
-    <a href="http://test.westchocolate.com/anasayfa">
-    <div class='col-md-6 img1'> </div>
-    </a>
-    <a href="http://test.qukimeyhane.com/AnaSayfa">
-            <div class='col-md-6 img2'> </div>
-    </a>
+    <div class="div1">
+        <a href="http://test.westchocolate.com/anasayfa">
+            <div class='col-md-12 img1'></div>
+        </a>
+        <a href="http://test.qukimeyhane.com/AnaSayfa">
+            <div class='col-md-12 img2'> </div>
+        </a>
     </div>
 </div>
 
