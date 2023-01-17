@@ -76,7 +76,8 @@ namespace Quki.Bll
                          {
                              RVCWL = RVCWL,
                              RS = RS
-                         }).Where(w => w.RVCWL.RMD.DP.D.mi_is_active == 1 && w.RVCWL.RMD.DP.D.rvc_def_seq == 2 && (w.RVCWL.RMD.DP.D.mi_master_def_type == "menuitem" || w.RVCWL.RMD.DP.D.mi_master_def_type == "condiment") && w.RVCWL.RMD.DP.P.mi_price_number == 1 && w.RVCWL.RMD.DP.P.rvc_def_seq == 2 && w.RS.LanguageId.Equals(languageId))
+                         }).
+                         Where(w => w.RVCWL.RMD.DP.D.mi_is_active == 1 && w.RVCWL.RMD.DP.D.rvc_def_seq == 10 && (w.RVCWL.RMD.DP.D.mi_master_def_type == "menuitem" || w.RVCWL.RMD.DP.D.mi_master_def_type == "condiment") && w.RVCWL.RMD.DP.P.mi_price_number == 1 && w.RVCWL.RMD.DP.P.rvc_def_seq == 10 && w.RS.LanguageId.Equals(languageId))
                          .Select(s => new GetMenuItems
                          {
                              slu_def_seq_view = s.RVCWL.S.slu_def_seq,
@@ -173,7 +174,7 @@ namespace Quki.Bll
                               RVCWL = RVCWL,
                               RS = RS
                           })
-                          .Where(w => w.RVCWL.RMD.DP.D.mi_is_active == 1 && w.RVCWL.RMD.DP.D.rvc_def_seq == 2 && (w.RVCWL.RMD.DP.D.mi_master_def_type == "menuitem" || w.RVCWL.RMD.DP.D.mi_master_def_type == "condiment") && w.RVCWL.RMD.DP.P.mi_price_number == 1 && w.RVCWL.RMD.DP.P.rvc_def_seq == 10 && w.RVCWL.RMD.DP.D.slu_seq==id && w.RS.LanguageId.Equals(languageId))
+                          .Where(w => w.RVCWL.RMD.DP.D.mi_is_active == 1 && w.RVCWL.RMD.DP.D.rvc_def_seq == 10 && (w.RVCWL.RMD.DP.D.mi_master_def_type == "menuitem" || w.RVCWL.RMD.DP.D.mi_master_def_type == "condiment") && w.RVCWL.RMD.DP.P.mi_price_number == 1 && w.RVCWL.RMD.DP.P.rvc_def_seq == 10 && w.RVCWL.RMD.DP.D.slu_seq==id && w.RS.LanguageId.Equals(languageId))
                           .Select(s => new GetMenuItems
                           {
                               slu_def_seq_view = s.RVCWL.S.slu_def_seq,
