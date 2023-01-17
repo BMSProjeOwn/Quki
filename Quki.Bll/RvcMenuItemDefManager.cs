@@ -81,7 +81,7 @@ namespace Quki.Bll
                          {
                              slu_def_seq_view = s.RVCWL.S.slu_def_seq,
                              mi_master_def_seq = (long)s.RVCWL.RMD.DP.D.mi_master_def_seq,
-                             mi_master_def_name = s.RVCWL.RMD.DP.D.mi_master_def_name,
+                             mi_master_def_name = s.RS.Name,
                              mi_barcode_id = s.RVCWL.RMD.B.mi_barcode_id,
                              mi_price = (double)s.RVCWL.RMD.DP.P.mi_price,
                              slu_def_name = s.RVCWL.S.slu_def_name,

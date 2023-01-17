@@ -37,7 +37,7 @@ namespace Quki.Controllers
         public IActionResult Index2()
         {
 
-
+            Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
             return View("index");
         }
 
@@ -96,7 +96,7 @@ namespace Quki.Controllers
             {
                 var getMenuItems = rvcMenuItemDefService.GetMenuItems(languageId);
                 ViewBag.ProductItems = getMenuItems;
-                ViewBag.MenuItems = MultiLanguageOmni.ReadResourceKey.GetString("All", "MultiLanguageOmni.Index");
+                ViewBag.MenuItems = MultiLanguageOmni.ReadResourceKey.GetString("AllMenu", "MultiLanguageOmni.Index");
                 ViewBag.Pic = "/icons/1tumu.png";
             }
             else
