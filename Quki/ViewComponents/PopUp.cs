@@ -23,7 +23,7 @@ namespace Quki.ViewComponents
         public IViewComponentResult Invoke()
         {
             var league = Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
-            var model = service.GetNewsAndAnnouncementListWithLangueage(league).OrderBy(x=>x.NewsAndAnnouncementSeqId).Take(1).FirstOrDefault();
+            var model = service.GetNewsAndAnnouncementListWithLangueage(league).OrderByDescending(x=>x.NewsAndAnnouncementSeqId).Take(1).FirstOrDefault();
 
 
             return View(model);
