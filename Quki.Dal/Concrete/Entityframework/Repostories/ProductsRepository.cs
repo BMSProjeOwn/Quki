@@ -1,13 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Quki.Common.Dal;
 using Quki.Dal.Abstract;
 using Quki.Entity.DtoModels;
 using Quki.Entity.DtoModels.ApiModels;
 using Quki.Entity.Models;
-using Quki.Entity.Parameters;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Quki.Dal.Concrete.Entityframework.Repostories
 {
@@ -363,7 +361,7 @@ namespace Quki.Dal.Concrete.Entityframework.Repostories
                             product.productId = item.productId;
                             product.productName = item.productName;
                             product.secondName = item.secondName;
-                            product.description = Functions.StripHTML(item.description);
+                            //product.description = Functions.StripHTML(item.description);
                             product.imageUrl = item.imageUrl;
                             product.previewUrl = item.previewUrl;
                             product.theaterId = item.theaterId;

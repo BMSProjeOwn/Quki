@@ -1,18 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <UserSecretsId>50420f1c-4c26-4b4d-a201-5d2667f9672c</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="Library\**" />
+    <Compile Remove="Repostories\**" />
     <Compile Remove="ViewModel\**" />
     <Content Remove="Library\**" />
+    <Content Remove="Repostories\**" />
     <Content Remove="ViewModel\**" />
     <EmbeddedResource Remove="Library\**" />
+    <EmbeddedResource Remove="Repostories\**" />
     <EmbeddedResource Remove="ViewModel\**" />
     <None Remove="Library\**" />
+    <None Remove="Repostories\**" />
     <None Remove="ViewModel\**" />
   </ItemGroup>
 
@@ -49,7 +53,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repostories\" />
     <Folder Include="Views\Home\" />
     <Folder Include="wwwroot\AdminImage\BugImg\" />
     <Folder Include="wwwroot\AdminImage\CategoryImage\" />
@@ -761,9 +764,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Log4Net\Log.csproj" />
+    <ProjectReference Include="..\Log4\Log4.csproj" />
     <ProjectReference Include="..\MultiLanguageOmni-master\MultiLanguageOmni\MultiLanguageOmni.csproj" />
+    <ProjectReference Include="..\MultiLanguageOmni\MultiLanguageOmni.csproj" />
     <ProjectReference Include="..\Quki.Bll\Quki.Bll.csproj" />
+    <ProjectReference Include="..\Quki.Common\Quki.Common.csproj" />
     <ProjectReference Include="..\Quki.Dal\Quki.Dal.csproj" />
     <ProjectReference Include="..\Quki.Entity\Quki.Entity.csproj" />
     <ProjectReference Include="..\Quki.Interface\Quki.Interface.csproj" />
