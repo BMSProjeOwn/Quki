@@ -124,7 +124,7 @@
     <value>Hepsi</value>
   </data>
   <data name="AllMenu" xml:space="preserve">
-    <value>الجميع</value>
+    <value>Tümü</value>
   </data>
   <data name="CALLUS" xml:space="preserve">
     <value>Bizi ara</value>
@@ -132,11 +132,11 @@
   <data name="ContactRemark" xml:space="preserve">
     <value>Steak In, Mısır'da açılan ilk restorandı, restoran tarihi göz önünde bulundurarak tasarlandı, açık mutfak, kahve paket servisi barı ve tesis bünyesinde kahve manastırı ile birlikte yumuşak bir endüstriyel yemek odası yarattık.</value>
   </data>
-  <data name="Customer comments" xml:space="preserve">
+  <data name="Customercomments" xml:space="preserve">
     <value>Müşteri Yorumları</value>
   </data>
   <data name="CustomerSatisfaction" xml:space="preserve">
-    <value>رضا العملاء</value>
+    <value>Müşteri Memnuniyeti</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
@@ -157,7 +157,7 @@
     <value>Adrese git</value>
   </data>
   <data name="HomeMenuText" xml:space="preserve">
-    <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</value>
+    <value>Beylikdüzü West Marina'nın yeni gözdesi yeni nesil meyhanemiz, Quki Meyhane'de sizleri aramızda görmekten büyük mutluluk duyarız.</value>
   </data>
   <data name="Images" xml:space="preserve">
     <value>Resimler</value>
@@ -166,7 +166,7 @@
     <value>Soyad</value>
   </data>
   <data name="Menu" xml:space="preserve">
-    <value>قائمة</value>
+    <value>Menü</value>
   </data>
   <data name="Message" xml:space="preserve">
     <value>Mesajınız</value>
@@ -203,6 +203,9 @@
   </data>
   <data name="QukiMeyhane" xml:space="preserve">
     <value>Quki Meyhane</value>
+  </data>
+  <data name="QukiMeyhaneTitle" xml:space="preserve">
+    <value>Yeni Nesil Meyhane</value>
   </data>
   <data name="SendaMessage" xml:space="preserve">
     <value>Mesaj Gönder</value>

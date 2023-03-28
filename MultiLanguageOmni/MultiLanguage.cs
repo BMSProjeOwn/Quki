@@ -1,17 +1,10 @@
-using System;
-using System.Windows.Forms;
-using System.Threading;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Text;
-using System.Resources;
 using System.Globalization;
 using System.Reflection;
+using System.Resources;
 
 namespace MultiLanguageOmni
 {
-  
+
     // ########################################################################
     // #  Class       :ReadResourceKey  
     // # Propose      :Open Resource file for reading and get names
@@ -126,66 +119,5 @@ namespace MultiLanguageOmni
 
     }
 
-    public class AddResourceKey
-    {
-        public static string ResourceName;
-
-        public static void AddStringResourceKey(string resourceKey, string resourceValue, string resourceBaseName)
-        {
-            if (resourceKey == "Close")
-            {
-                ResourceWriteSingleton.Instance.Generate();
-                ResourceWriteSingleton.Instance.Close();
-            }
-            else
-            {
-                ResourceName = resourceBaseName;
-                ResourceWriteSingleton.Instance.AddResource(resourceKey, resourceValue);
-            }
-            
-        }
-        public static void CloseResource()
-        {
-            ResourceWriteSingleton.Instance.Generate();
-            ResourceWriteSingleton.Instance.Close();
-        }
-
-        /*public static void AddStringResourceKey(string resourceId, object resourceValue, string baseName)
-        {
-            ResourceName = baseName;
-            ResourceWriteSingleton.Instance.AddResource(resourceId, resourceValue);
-            ResourceWriteSingleton.Instance.Generate();
-            ResourceWriteSingleton.Instance.Close();
-            
-        }*/
-        private class ResourceWriteSingleton
-        {
-            private ResourceWriteSingleton() { }
-
-            protected static ResXResourceWriter CreateInstance()
-            {
-                return new ResXResourceWriter(ResourceName);
-            }
-
-
-            private static ResXResourceWriter _instance;
-
-
-            public static ResXResourceWriter Instance
-            {
-                get
-                {
-                    // Allow access from multiple threads
-                    lock (typeof(ResourceWriteSingleton))
-                    {
-                        if (_instance == null)
-                            _instance = CreateInstance();
-                    }
-
-                    return _instance;
-                }
-            }
-        }
-    }
 
 }
