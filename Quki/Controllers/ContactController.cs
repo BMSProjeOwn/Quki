@@ -31,7 +31,7 @@ namespace Quki.Controllers
 
             ViewBag.MyDiv= "<div class=\"alert alert-success\" role=\"alert\"><strong>Teşekkürler. Mesajınız iletildi.</strong></div>";
 
-            return View("Index");
+            return RedirectToAction("Index","AnaSayfa",new VisitorComment());
         }
 
 

@@ -1,13 +1,11 @@
-﻿@{
+﻿@using Quki.Entity.Models;
+@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var message = ViewBag.MyDiv;
 }
 
-
-
-
-
-
+@model VisitorComment
 
 @await Component.InvokeAsync("HomeSlider")
 
@@ -93,6 +91,66 @@
     </div>
     <!-- .container end -->
 </section>
+<section id="menuGrid">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                <div class="heading heading-1 mb-50 text--center">
+                    <p class="heading--subtitle">@MultiLanguageOmni.ReadResourceKey.GetString("QukiMeyhaneTitle", "MultiLanguageOmni.Index")</p>
+                    <h2 class="heading--title mb-0">Fikirlerinizi Bizimle Paylaşın</h2>
+                    <div class="divider--shape-4"></div>
+                </div>
+            </div>
+            <!-- .col-md-8 end -->
+        </div>
+        <!-- .row end -->
+    </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+
+                    <div class="contact-form">
+
+                        <form id="VisiterCommentForm" asp-action="SendComment" asp-controller="Contact" method="post" class="contactForm mb-0" novalidate="novalidate">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input asp-for="@Model.Name" type="text" class="form-control" name="Name" id="firstName" placeholder="@MultiLanguageOmni.ReadResourceKey.GetString("FirstName", "MultiLanguageOmni.Index"):" required="" aria-required="true">
+                                </div>
+                                <div class="col-md-6">
+                                    <input asp-for="@Model.Surname" type="text" class="form-control" name="Surname" id="lastName" placeholder="@MultiLanguageOmni.ReadResourceKey.GetString("LastName", "MultiLanguageOmni.Index"):" required="" aria-required="true">
+                                </div>
+                                <div class="col-md-6">
+                                    <input asp-for="@Model.VisitorEmail" type="email" class="form-control" name="VisitorEmail" id="email" placeholder="@MultiLanguageOmni.ReadResourceKey.GetString("Email", "MultiLanguageOmni.Index"):" required="" aria-required="true">
+                                </div>
+                                <div class="col-md-6">
+                                    <input asp-for="@Model.Phone" type="text" class="form-control" name="Phone" id="phone" placeholder="@MultiLanguageOmni.ReadResourceKey.GetString("Phone", "MultiLanguageOmni.Index"):" required="" aria-required="true">
+                                </div>
+                                <div class="col-md-12">
+                                    <textarea asp-for="@Model.Comment" class="form-control" name="Comment" id="message" rows="2" placeholder="@MultiLanguageOmni.ReadResourceKey.GetString("Message", "MultiLanguageOmni.Index"):" required="" aria-required="true"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="submit" value="@MultiLanguageOmni.ReadResourceKey.GetString("SendMessage", "MultiLanguageOmni.Index")" asp-action="SendComment" asp-controller="Contact" name="submit" class="btn btn--secondary btn--block mt-10">
+
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="contact-result"></div>
+                                </div>
+
+                            </div>
+                        </form>
+                        @if (message != null)
+                        {
+                            @Html.Raw(message)
+                        }
+                    </div>
+                </div>
+            </div>
+            <!-- .row end -->
+        </div>
+    <!-- .container end -->
+</section>
+
 @*
 @await Component.InvokeAsync("News")*@
 
