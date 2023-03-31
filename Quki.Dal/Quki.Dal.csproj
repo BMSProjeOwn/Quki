@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MultiLanguageOmni-master\MultiLanguageOmni\MultiLanguageOmni.csproj" />
+    <ProjectReference Include="..\MultiLanguageOmni\MultiLanguageOmni.csproj" />
     <ProjectReference Include="..\Quki.Entity\Quki.Entity.csproj" />
     <ProjectReference Include="..\Quki.Interface\Quki.Interface.csproj" />
   </ItemGroup>

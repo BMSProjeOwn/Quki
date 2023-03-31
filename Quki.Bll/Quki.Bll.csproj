@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MultiLanguageOmni\MultiLanguageOmni.csproj" />
     <ProjectReference Include="..\Quki.Common\Quki.Common.csproj" />
     <ProjectReference Include="..\Quki.Dal\Quki.Dal.csproj" />
     <ProjectReference Include="..\Quki.Entity\Quki.Entity.csproj" />

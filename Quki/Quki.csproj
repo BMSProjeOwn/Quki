@@ -766,7 +766,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Log4\Log4.csproj" />
-    <ProjectReference Include="..\MultiLanguageOmni-master\MultiLanguageOmni\MultiLanguageOmni.csproj" />
     <ProjectReference Include="..\MultiLanguageOmni\MultiLanguageOmni.csproj" />
     <ProjectReference Include="..\Quki.Bll\Quki.Bll.csproj" />
     <ProjectReference Include="..\Quki.Common\Quki.Common.csproj" />
