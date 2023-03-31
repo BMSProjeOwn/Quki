@@ -315,8 +315,7 @@ namespace Quki
 
             //var mailOption = _config.GetSection("Email").Get<MailKitOptions>();
             //services.AddMailKit(config => config.UseMailKit(mailOption));
-            services.AddControllersWithViews()
-                .AddRazorRuntimeCompilation();// MVC eklemek Ýçin
+            services.AddControllersWithViews();// MVC eklemek Ýçin
             //services.AddCors
 
             services.AddLocalization(options => options.ResourcesPath = "Resources");

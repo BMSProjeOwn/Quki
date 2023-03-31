@@ -1,15 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.CodeAnalysis.Host;
-using Microsoft.EntityFrameworkCore;
-using Quki.Dal.Concrete.Entityframework.Context;
-using Quki.Dal.Concrete.Entityframework.Repostories;
 using Quki.Entity.DtoModels;
 using Quki.Interface;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using ILanguageService = Quki.Interface.ILanguageService;
 
