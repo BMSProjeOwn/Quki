@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Quki.Common;
 using Quki.Dal.Concrete.Entityframework.Repostories;
+using Quki.Entity.Models;
+using Quki.Entity.ViewModel;
 using Quki.Interface;
 
 namespace Quki.ViewComponents
@@ -17,7 +19,10 @@ namespace Quki.ViewComponents
         {
             //Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
             var model = visitorCommentService.GetUserComment();
-            return View(model); 
+            VisitorCommentViewModel visitorCommentViewModel = new VisitorCommentViewModel();
+            visitorCommentViewModel.VisitorComments = model;
+            visitorCommentViewModel.VisitorComment = new VisitorComment();
+            return View(visitorCommentViewModel);
         }
     }
 }
