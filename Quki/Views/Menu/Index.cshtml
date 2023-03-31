@@ -41,7 +41,7 @@
                         <li class="active"><a href="#Tumu" data-toggle="tab">Tümü</a></li>
                         @foreach (var item in Model.sluDefModels)
                         {
-                            <li><a href="#@item.slu_def_seq" data-toggle="tab">@item.slu_def_name</a></li>
+                            <li><a href="#@item.slu_def_seq" data-toggle="tab">@item.slu_def_name.ToUpper()</a></li>
                         }
                     </ul>
                 </div>
@@ -65,10 +65,14 @@
                                             <div class="dish-panel">
                                                 <div class="dish--content">
                                                     <div class="dish--content-bio">
-                                                        <h3 class="dish--title">@itemMenu.mi_master_def_name</h3>
+                                                        <h3 class="dish--title">@itemMenu.mi_master_def_name.ToUpper()</h3>
                                                         <div class="dish--price">&nbsp;&nbsp;&nbsp;</div>
                                                     </div>
-                                                    <p class="dish--desc">@itemMenu.rvc_mi_third_name</p>
+                                                    @if (itemMenu.rvc_mi_third_name != null)
+                                                    {
+
+                                                        <p class="dish--desc">@itemMenu.rvc_mi_third_name</p>
+                                                    }
                                                 </div>
                                             </div><!-- .dish end -->
                                         </div>
@@ -100,10 +104,14 @@
                                                 <div class="dish-panel">
                                                     <div class="dish--content">
                                                         <div class="dish--content-bio">
-                                                            <h3 class="dish--title">@itemSlu.mi_master_def_name</h3>
+                                                            <h3 class="dish--title">@itemSlu.mi_master_def_name.ToUpper()</h3>
                                                             <div class="dish--price">&nbsp;&nbsp;&nbsp;</div>
                                                         </div>
-                                                        <p class="dish--desc">@itemSlu.rvc_mi_third_name</p>
+                                                        @if (itemSlu.rvc_mi_third_name != null)
+                                                        {
+
+                                                            <p class="dish--desc">@itemSlu.rvc_mi_third_name</p>
+                                                        }
                                                     </div>
                                                 </div><!-- .dish end -->
                                             </div>
