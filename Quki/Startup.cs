@@ -385,108 +385,108 @@ namespace Quki
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.Use(async (context, next) =>
+            app.Use(async (context, next) =>
 
-            //{
+            {
 
-            //    //*check the website-content and all elements like images
-            //    string sHost = context.Request.Host.HasValue == true ? context.Request.Host.Value : "";  //domain without :80 port .ToString();
+                //*check the website-content and all elements like images
+                string sHost = context.Request.Host.HasValue == true ? context.Request.Host.Value : "";  //domain without :80 port .ToString();
 
-            //    sHost = sHost.ToLower();
+                sHost = sHost.ToLower();
 
-            //    string sPath = context.Request.Path.HasValue == true ? context.Request.Path.Value : "";
+                string sPath = context.Request.Path.HasValue == true ? context.Request.Path.Value : "";
 
-            //    string sQuerystring = context.Request.QueryString.HasValue == true ? context.Request.QueryString.Value : "";
-
-
-
-            //    //----< check https >----
-
-            //    // check if the request is *not* using the HTTPS scheme
-
-
-            //    if (!context.Request.IsHttps)
-
-            //    {
-
-            //        //--< is http >--
-
-            //        string new_https_Url = "https://" + sHost;
-
-            //        if (sPath != "")
-
-            //        {
-
-            //            new_https_Url = new_https_Url + sPath;
-
-            //        }
-
-            //        if (sQuerystring != "")
-
-            //        {
-
-            //            new_https_Url = new_https_Url + sQuerystring;
-
-            //        }
-            //    }
-
-            //    //--</ is http >--
+                string sQuerystring = context.Request.QueryString.HasValue == true ? context.Request.QueryString.Value : "";
 
 
 
-            //    //----</ check https >----
+                //----< check https >----
+
+                // check if the request is *not* using the HTTPS scheme
+
+
+                if (!context.Request.IsHttps)
+
+                {
+
+                    //--< is http >--
+
+                    string new_https_Url = "https://" + sHost;
+
+                    if (sPath != "")
+
+                    {
+
+                        new_https_Url = new_https_Url + sPath;
+
+                    }
+
+                    if (sQuerystring != "")
+
+                    {
+
+                        new_https_Url = new_https_Url + sQuerystring;
+
+                    }
+                }
+
+                //--</ is http >--
 
 
 
-            //    ////----< check www > ----
-            //    if (!sPath.Contains("api"))
-            //    {
-
-
-            //        if (!sHost.Contains("www."))
-
-            //        {
-
-            //            //--< is www. >--
-
-            //            string new_Url_without_www = "https://www." + sHost;
-
-            //            if (sPath != "")
-
-            //            {
-
-            //                new_Url_without_www = new_Url_without_www + sPath;
-
-            //            }
-
-            //            if (sQuerystring != "")
-
-            //            {
-
-            //                new_Url_without_www = new_Url_without_www + sQuerystring;
-
-            //            }
-
-            //            context.Response.Redirect(new_Url_without_www, true);
+                //----</ check https >----
 
 
 
-            //            return;
-
-            //            //--</ is http >--
-
-            //        }
-
-            //        //----</ check www >----
-
-            //    }
-
-            //    //also check images inside the content
-
-            //    await next();
+                ////----< check www > ----
+                if (!sPath.Contains("api"))
+                {
 
 
-            //});
+                    if (!sHost.Contains("www."))
+
+                    {
+
+                        //--< is www. >--
+
+                        string new_Url_without_www = "https://www." + sHost;
+
+                        if (sPath != "")
+
+                        {
+
+                            new_Url_without_www = new_Url_without_www + sPath;
+
+                        }
+
+                        if (sQuerystring != "")
+
+                        {
+
+                            new_Url_without_www = new_Url_without_www + sQuerystring;
+
+                        }
+
+                        context.Response.Redirect(new_Url_without_www, true);
+
+
+
+                        return;
+
+                        //--</ is http >--
+
+                    }
+
+                    //----</ check www >----
+
+                }
+
+                //also check images inside the content
+
+                await next();
+
+
+            });
 
             // ----< redirect http to https > ---
 
