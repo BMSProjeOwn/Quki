@@ -2729,7 +2729,7 @@ table tbody tr td {
 	font-weight: 400;
 	line-height: 50px;
 	margin-bottom: 0;
-	font-family: 'Abril Fatface' ;
+	font-family: "Josefin Sans",sans-serif ;
 }
 
 .page-title .title--subtitle {
@@ -2840,7 +2840,7 @@ table tbody tr td {
 }
 
 .heading .heading--title {
-	font-family: 'Abril Fatface' ;
+	font-family: "Josefin Sans",sans-serif ;
 	color: #333333;
 	font-size: 50px;
 	font-weight: 400;
@@ -5298,7 +5298,7 @@ li.dropdown-submenu > ul.dropdown-menu > li.has-dropdown > ul.dropdown-menu.left
 
 .slider .slide--headline {
 	color: #ffffff;
-	font-family: 'Abril Fatface' ;
+	font-family: "Josefin Sans",sans-serif ;
 	font-size: 85px;
 	font-weight: 400;
 	line-height: 100px;
@@ -6144,7 +6144,7 @@ li.dropdown-submenu > ul.dropdown-menu > li.has-dropdown > ul.dropdown-menu.left
     #Counters
 \*------------------------------------*/
 .counter .count-box .counting {
-	font-family: 'Abril Fatface' ;
+	font-family: "Josefin Sans",sans-serif ;
 	color: #ffffff;
 	font-size: 70px;
 	font-weight: 400;
@@ -8358,7 +8358,7 @@ td.cart-product-quantity {
 
 .widget-info .info--title {
 	color: #ffffff;
-	font-family: 'Abril Fatface' ;
+	font-family: "Josefin Sans",sans-serif ;
 	font-size: 25px;
 	font-weight: 400;
 	line-height: 1;
@@ -8848,7 +8848,7 @@ footer .footer--copyright {
 \*------------------------------------*/
 .page-404 h3 {
 	color: #ffffff;
-	font-family: 'Abril Fatface' ;
+	font-family: "Josefin Sans",sans-serif ;
 	font-size: 250px;
 	font-weight: 400;
 	line-height: 1.1;
@@ -8903,7 +8903,7 @@ footer .footer--copyright {
 }
 
 .page-soon h3 {
-	font-family: 'Abril Fatface' ;
+	font-family: "Josefin Sans",sans-serif ;
 	color: #222222;
 	font-size: 120px;
 	font-weight: 400;
@@ -8944,7 +8944,7 @@ footer .footer--copyright {
 }
 
 .countdown-amount {
-	font-family: 'Abril Fatface' ;
+	font-family: "Josefin Sans",sans-serif ;
 	color: #ffffff;
 	font-size: 70px;
 	font-weight: 400;
@@ -9030,7 +9030,7 @@ footer .footer--copyright {
 }
 
 .page-maintenance h3 {
-	font-family: 'Abril Fatface' ;
+	font-family: "Josefin Sans",sans-serif ;
 	color: #222222;
 	font-size: 120px;
 	font-weight: 400;
@@ -10262,7 +10262,7 @@ footer .footer--copyright {
 }
 
 .landing-hero h1 {
-	font-family: 'Abril Fatface' ;
+	font-family: "Josefin Sans",sans-serif ;
 	font-size: 85px;
 	font-weight: 400;
 	line-height: 90px;
@@ -10359,7 +10359,7 @@ footer .footer--copyright {
 	font-weight: 400;
 	line-height: 95px;
 	letter-spacing: 1.35px;
-	font-family: 'Abril Fatface' ;
+	font-family: "Josefin Sans",sans-serif ;
 }
 
 .landing-action p {
@@ -11323,7 +11323,7 @@ footer .footer--copyright {
 }
 
 .banner .banner-panel .banner--content h4 {
-	font-family: 'Abril Fatface' ;
+	font-family: "Josefin Sans",sans-serif ;
 	font-size: 25px;
 	font-weight: 400;
 	margin-bottom: 20px;

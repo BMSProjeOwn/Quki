@@ -2208,7 +2208,7 @@ table tbody tr td {
   font-weight: 400;
   line-height: 50px;
   margin-bottom: 0;
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Josefin Sans",sans-serif, cursive;
 }
 .page-title .title--subtitle {
   color: #bb9356;
@@ -2301,7 +2301,7 @@ table tbody tr td {
   text-transform: capitalize;
 }
 .heading .heading--title {
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Josefin Sans",sans-serif, cursive;
   color: #222222;
   font-size: 50px;
   font-weight: 400;
@@ -4366,7 +4366,7 @@ Header Customaztion
 }
 .slider .slide--headline {
   color: #ffffff;
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Josefin Sans",sans-serif, cursive;
   font-size: 85px;
   font-weight: 400;
   line-height: 100px;
@@ -5077,7 +5077,7 @@ Header Customaztion
     #Counters
 \*------------------------------------*/
 .counter .count-box .counting {
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Josefin Sans",sans-serif, cursive;
   color: #ffffff;
   font-size: 70px;
   font-weight: 400;
@@ -6957,7 +6957,7 @@ td.cart-product-quantity {
 }
 .widget-info .info--title {
   color: #ffffff;
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Josefin Sans",sans-serif, cursive;
   font-size: 25px;
   font-weight: 400;
   line-height: 1;
@@ -7371,7 +7371,7 @@ footer .widget-instagram .insta-hover i {
 \*------------------------------------*/
 .page-404 h3 {
   color: #ffffff;
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Josefin Sans",sans-serif, cursive;
   font-size: 250px;
   font-weight: 400;
   line-height: 1.1;
@@ -7415,7 +7415,7 @@ footer .widget-instagram .insta-hover i {
   padding-bottom: 120px;
 }
 .page-soon h3 {
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Josefin Sans",sans-serif, cursive;
   color: #222222;
   font-size: 120px;
   font-weight: 400;
@@ -7450,7 +7450,7 @@ footer .widget-instagram .insta-hover i {
   margin-right: 0;
 }
 .countdown-amount {
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Josefin Sans",sans-serif, cursive;
   color: #ffffff;
   font-size: 70px;
   font-weight: 400;
@@ -7520,7 +7520,7 @@ footer .widget-instagram .insta-hover i {
   padding-bottom: 150px;
 }
 .page-maintenance h3 {
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Josefin Sans",sans-serif, cursive;
   color: #222222;
   font-size: 120px;
   font-weight: 400;
@@ -8568,7 +8568,7 @@ footer .widget-instagram .insta-hover i {
   margin-bottom: 5px;
 }
 .landing-hero h1 {
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Josefin Sans",sans-serif, cursive;
   font-size: 85px;
   font-weight: 400;
   line-height: 90px;
@@ -8651,7 +8651,7 @@ footer .widget-instagram .insta-hover i {
   font-weight: 400;
   line-height: 95px;
   letter-spacing: 1.35px;
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Josefin Sans",sans-serif, cursive;
 }
 .landing-action p {
   color: #f9f9f9;
@@ -9441,7 +9441,7 @@ footer .widget-instagram .insta-hover i {
   margin-bottom: 15px;
 }
 .banner .banner-panel .banner--content h4 {
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Josefin Sans",sans-serif, cursive;
   font-size: 25px;
   font-weight: 400;
   margin-bottom: 20px;
