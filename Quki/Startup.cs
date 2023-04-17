@@ -443,13 +443,13 @@ namespace Quki
                 {
 
 
-                    if (!sHost.Contains("www."))
+                    if (sHost.Contains("www."))
 
                     {
 
                         //--< is www. >--
 
-                        string new_Url_without_www = "https://www." + sHost;
+                        string new_Url_without_www = "https://" + sHost;
 
                         if (sPath != "")
 
