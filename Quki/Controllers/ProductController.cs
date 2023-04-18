@@ -33,7 +33,7 @@ namespace Quki.Controllers
 
             return View("AnaSayfa");
         }
-        [Route("westchocolate-menu")]
+        [Route("westchocolate-menu2")]
         public IActionResult Index2()
         {
 
@@ -48,12 +48,13 @@ namespace Quki.Controllers
         public IActionResult SluDef()
         {
             //https://localhost:44377/product/sludef
+            
             List<SluDefModel> sluDefModels = new List<SluDefModel>();
 
             int languageId=Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
             try
             {
-                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId);
+                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu2();
             }
             catch
             {
@@ -94,14 +95,14 @@ namespace Quki.Controllers
             int languageId = Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
             if (id == 0)
             {
-                var getMenuItems = rvcMenuItemDefService.GetMenuItems(languageId);
+                var getMenuItems = rvcMenuItemDefService.GetMenuItems();
                 ViewBag.ProductItems = getMenuItems;
                 ViewBag.MenuItems = MultiLanguageOmni.ReadResourceKey.GetString("All", "MultiLanguageOmni.Index");
                 ViewBag.Pic = "/icons/1tumu.png";
             }
             else
             {
-                var getMenuItems = rvcMenuItemDefService.GetMenuItemsWithId(id,languageId);
+                var getMenuItems = rvcMenuItemDefService.GetMenuItemsWithId(id);
                 ViewBag.ProductItems = getMenuItems;
                 ViewBag.MenuItems = getMenuItems[0].slu_def_name;
                 ViewBag.Pic = getMenuItems[0].slu_type_slu_image;

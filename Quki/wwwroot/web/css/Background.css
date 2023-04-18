@@ -1,5 +1,4 @@
 ﻿body {
-    background-color: darkorange;
     background-image: url('../../viewimage/choc-2-1-bg-acik.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -7,7 +6,6 @@
     background-attachment: fixed;
 }
 .background-login {
-    background-color: darkorange;
     background-image: url('../../viewimage/choc-2-1-bg-acik.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -33,27 +31,26 @@
 
 
 .box2 {
-    height: 140px;
-    width: 80px;
+    height: 147px;
+    width: 382px;
     background: #F9FAFA;
     border-style: solid;
-    border-color: #E3A73D;
+    border-color: #000000;
     border-radius: 10px;
     color: #4A2F00;
     text-align: center;
-    border-width: 2px;
+    border-width: 1px;
     padding: 7px;
     margin: 5px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    
 }
 
 .box3 {
     height: 80px;
     width: 100px;
-    background: #E3A73D;
+    background: black;
     border-style: solid;
-    border-color: #E3A73D;
+    border-color: white;
     border-radius: 10px;
     color: #F9FAFA;
     text-align: center;
@@ -65,7 +62,7 @@
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 .box4 {
-    height: 80px;
+    height: 120px;
     width: 100px;
     background: #F9FAFA;
     border-style: solid;
@@ -92,7 +89,6 @@
 }
 .padding-text {
     padding: 16px;
-    margin-left: -30px;
 }
 @media screen and (min-width: 900px) {
     .article {

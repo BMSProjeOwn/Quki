@@ -12,5 +12,6 @@ namespace Quki.Interface
     {
         public List<slu_Rvc_Relation> GetAllSluDefRelation();
         public List<SluDefModel> GetAllSluDefRelationWithSlu(int languageId);
+        public List<SluDefModel> GetAllSluDefRelationWithSlu2();
     }
 }

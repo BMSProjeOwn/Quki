@@ -13,7 +13,9 @@ namespace Quki.Interface
     {
         public List<RvcMenuItemDef> GetAllRvcMenuItems();
         public List<GetMenuItems> GetMenuItems(int languageId);
+        public List<GetMenuItems> GetMenuItems();
         public List<GetMenuItems> GetMenuItemsWithId(long id,int languageId);
+        public List<GetMenuItems> GetMenuItemsWithId(long id);
 
     }
 }

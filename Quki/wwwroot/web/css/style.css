@@ -106,10 +106,13 @@ body {
     font-family: 'Pacifico';
     src: url("../libs/font/Pacifico-Regular.ttf");
 }
+@font-face {
+    font-family: 'arimamadurai';
+    src: url('arimamadurai.ttf') format('truetype');
+}
 
 @font-face {
     font-family: 'Pacifico-Regular';
-    src: url('file:///C:\NecmettinProje\Quki\Quki\wwwroot\web\libs\font\Pacifico-Regular.ttf') format('truetype');
 }
 
 a {

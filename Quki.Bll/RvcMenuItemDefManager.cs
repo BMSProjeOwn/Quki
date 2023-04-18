@@ -98,10 +98,10 @@ namespace Quki.Bll
             }
             return itemList;
         }
-        public List<GetMenuItems> GetMenuItems2()
+        public List<GetMenuItems> GetMenuItems()
         {
             List<GetMenuItems> itemList = new List<GetMenuItems>();
-            var isOnline = RvcOptionsRight.TGetList(w => w.rvc_def_seq == 10 && w.rvc_options_def_code == "rvc_opt_code_Online_Order")
+            var isOnline = RvcOptionsRight.TGetList(w => w.rvc_def_seq == 2 && w.rvc_options_def_code == "rvc_opt_code_Online_Order")
                .FirstOrDefault();
             if (isOnline != null)
             {
@@ -122,7 +122,7 @@ namespace Quki.Bll
                           {
                               RMD = RMD,
                               S = S
-                          }).Where(w => w.RMD.DP.D.mi_is_active == 1 && w.RMD.DP.D.rvc_def_seq == 10 && (w.RMD.DP.D.mi_master_def_type == "menuitem" || w.RMD.DP.D.mi_master_def_type == "condiment") && w.RMD.DP.P.mi_price_number == 1 && w.RMD.DP.P.rvc_def_seq == 10)
+                          }).Where(w => w.RMD.DP.D.mi_is_active == 1 && w.RMD.DP.D.rvc_def_seq == 2 && (w.RMD.DP.D.mi_master_def_type == "menuitem" || w.RMD.DP.D.mi_master_def_type == "condiment") && w.RMD.DP.P.mi_price_number == 1)
                           .Select(s => new GetMenuItems
                           {
                               slu_def_seq_view = s.S.slu_def_seq,
@@ -204,5 +204,61 @@ namespace Quki.Bll
             }
             return itemList;
         }
+        public List<GetMenuItems> GetMenuItemsWithId(long id)
+        {
+            List<GetMenuItems> itemList = new List<GetMenuItems>();
+            var isOnline = RvcOptionsRight.TGetList(w => w.rvc_def_seq == 2 && w.rvc_options_def_code == "rvc_opt_code_Online_Order")
+               .FirstOrDefault();
+            if (isOnline != null)
+            {
+                if (isOnline.rvc_options_def_status == 1)
+                {
+                     itemList = repo.TGetList()
+                          .Join(RvcMenuItemPrice.TGetList(), RMD => RMD.mi_master_def_seq, RMP => RMP.mi_master_def_seq, (D, P) => new
+                          {
+                              D = D,
+                              P = P
+                          })
+                          .Join(MenuItemBarcodeDef.TGetList(), DP => DP.D.mi_master_def_seq, B => B.mi_master_def_seq, (DP, B) => new
+                          {
+                              DP = DP,
+                              B = B
+                          })
+                          .Join(SluDef.TGetList(), RMD => RMD.DP.D.slu_seq, SL => SL.slu_def_seq, (RMD, S) => new
+                          {
+                              RMD = RMD,
+                              S = S
+                          }).Where(w => w.RMD.DP.D.mi_is_active == 1 && w.RMD.DP.D.rvc_def_seq == 2 && (w.RMD.DP.D.mi_master_def_type == "menuitem" || w.RMD.DP.D.mi_master_def_type == "condiment") && w.RMD.DP.P.mi_price_number == 1 && w.RMD.DP.D.slu_seq==id)
+                          .Select(s => new GetMenuItems
+                          {
+                              slu_def_seq_view = s.S.slu_def_seq,
+                              mi_master_def_seq = (long)s.RMD.DP.D.mi_master_def_seq,
+                              mi_master_def_name = s.RMD.DP.D.mi_master_def_name,
+                              mi_barcode_id = s.RMD.B.mi_barcode_id,
+                              mi_price = (double)s.RMD.DP.P.mi_price,
+                              slu_def_name = s.S.slu_def_name,
+                              mi_icon_path = s.RMD.DP.D.mi_icon_path,
+                              rvc_mi_second_name = s.RMD.DP.D.rvc_mi_second_name,
+                              //rvc_mi_third_name = s.Remark,
+                              slu_type_slu_image = s.S.slu_type_slu_image,
+                              slu_priority = (int)s.RMD.DP.D.slu_priority,
+                              
+                              control_number = s.S.control_number
+                          }).OrderBy(o => o.control_number).ThenBy(o => o.slu_priority).ToList();
+
+                    foreach (var item in itemList)
+                    {
+                        string text = item.slu_def_name;
+                        string[] parca = text.Split("-");
+                        item.slu_def_name = parca[0];
+                    }
+
+                    
+
+                }
+            }
+            return itemList;
+        }
+
     }
 }
