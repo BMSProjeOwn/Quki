@@ -8,6 +8,7 @@ using Quki.Interface;
 using Quki.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Quki.Controllers
 {
@@ -16,11 +17,13 @@ namespace Quki.Controllers
     {
         private readonly IRvcMenuItemDefService rvcMenuItemDefService;
         private readonly Islu_Rvc_RelationService slu_Rvc_RelationService;
+        private readonly ISluDefService slu_DefService;
 
-        public ProductController(IRvcMenuItemDefService rvcMenuItemDefService, Islu_Rvc_RelationService slu_Rvc_RelationService)
+        public ProductController(IRvcMenuItemDefService rvcMenuItemDefService, Islu_Rvc_RelationService slu_Rvc_RelationService,ISluDefService sluDefService)
         {
             this.rvcMenuItemDefService = rvcMenuItemDefService;
             this.slu_Rvc_RelationService = slu_Rvc_RelationService;
+            this.slu_DefService = sluDefService;
 
         }
 
@@ -31,20 +34,20 @@ namespace Quki.Controllers
         {
 
 
-            return View("AnaSayfa");
+            return RedirectToAction("SluDef");
         }
-        [Route("westchocolate-menu2")]
+        [Route("siyahinci-menu2")]
         public IActionResult Index2()
         {
 
 
-            return View("index");
+            return View("SluDef");
         }
 
 
 
         [HttpGet]
-        [Route("westchocolate-menu-kategori")]
+        [Route("siyahinci-menu-kategori")]
         public IActionResult SluDef()
         {
             //https://localhost:44377/product/sludef
@@ -88,7 +91,7 @@ namespace Quki.Controllers
 
         }
         [HttpGet]
-        [Route("westchocolate-urun/{id?}")]
+        [Route("siyahinci-urun/{id?}")]
         public IActionResult GetMenuItem(long id)
         {
 
@@ -104,8 +107,16 @@ namespace Quki.Controllers
             {
                 var getMenuItems = rvcMenuItemDefService.GetMenuItemsWithId(id);
                 ViewBag.ProductItems = getMenuItems;
-                ViewBag.MenuItems = getMenuItems[0].slu_def_name;
-                ViewBag.Pic = getMenuItems[0].slu_type_slu_image;
+                try
+                {
+
+                    ViewBag.MenuItems = getMenuItems[0].slu_def_name;
+                    ViewBag.Pic = getMenuItems[0].slu_type_slu_image;
+                }
+                catch (Exception)
+                {
+                    ViewBag.MenuItems = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu2().Where(x=>x.slu_def_seq==id).FirstOrDefault().slu_def_name;
+                }
 
             }
 
