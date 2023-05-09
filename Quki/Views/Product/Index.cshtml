@@ -4,14 +4,20 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_ViewStart.cshtml";
 }
+<style>
+    @@font-face {
+        font-family: AnotherShabby;
+        src: url("~/Fonts/Anothershabby_pro_light_v2 trial.ttf");
+    }
+</style>
 <div style="float:right; margin-top:-70px; margin-right: 20px;">
     <partial name="_CultureForQr" />
 </div>
 <div class="row margin-top-logo">
     <div class="col-2"></div>
-    <div class="col-8 h-25 d-inline-block" align="center" valign="center" style="padding:0px">
+    <div class="col-8 h-25 d-inline-block" align="center" valign="center" style="padding: 0px; margin-top: 60%; ">
         <div>
-          <img class="center" src="~/viewimage/chocolate logo.png" width="200" height="200" />
+            <img class="center" src="~/viewimage/chocolate logo.png" width="200" height="200" />
         </div>
 
     </div>
@@ -19,19 +25,13 @@
 </div>
 
 <div class="row margin-top-login-menu">
-    <div class="col-1"></div>
-    <div id="menu" class="box col-10" style="font-size:20px" onclick="goSluDefControllerclick()">
-        @MultiLanguageOmni.ReadResourceKey.GetString("Menu", "MultiLanguageOmni.Index")
+
+    <div id="menu" class="box col-6" style="font-size: 20px; font-family: AnotherShabby; margin-left: 25.3%; " onclick="goSluDefControllerclick()">
+        @MultiLanguageOmni.ReadResourceKey.GetString("QRMenu", "MultiLanguageOmni.Index")
     </div>
-    <div class="col-1"></div>
+
 </div>
 
-<div class="row">
-    <div class="col-1"></div>
-    <div class="box col-10" style="font-size:20px" >
-        @MultiLanguageOmni.ReadResourceKey.GetString("CustomerSatisfaction", "MultiLanguageOmni.Index")
-    </div>
-    <div class="col-1"></div>
 </div>
 
 

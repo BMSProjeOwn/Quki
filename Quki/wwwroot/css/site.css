@@ -25,7 +25,12 @@
 #qrCode {
     margin: 15px;
 }
-
+.languageChoseStyle {
+    height: 40px;
+    border: #E3A73D 2px solid;
+    border-radius: 8px;
+    width: 100%;
+}
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
     /* Hide captions */

@@ -4,51 +4,56 @@
     ViewData["Title"] = "SluDef";
     Layout = "~/Views/Shared/_LayoutMobil.cshtml";
 }
+<link href='https://fonts.googleapis.com/css?family=Arima Madurai' rel='stylesheet'>
 <style>
-        /*.box {
-            height: 40px;
-            width: 75px;
-            background: #F9FAFA;
-            border-style: solid;
-            border-color: #E3A73D;
-            border-radius: 4px;
-            color:#000000;
-            text-align: center;
-            border-width: 1px;
-            padding: 5px;
-            margin:5px;
-        }*/
-      /*  .section-1{
-        heighth: 20px;
-        width: 20px;
-        background-color: darkorange;
-        background-image: url('../../viewimage/choc_0 – 1.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }*/
+    .imagecirculate {
+        /*display: inline-block;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;*/
 
+        display: inline-block;
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 100%;
+        margin-top: -13%;
+    }
 
+        .imagecirculate img {
+            width: inherit;
+            object-fit: cover;
+            margin-top: 0px;
+        }
 
+    body {
+        font-family: 'Arima Madurai';
+    }
 </style>
 <div>
-    <div class="row margin-top-menu">
-        <div class="col-3"></div>
-        <div class="col-6 h-25 d-inline-block" align="center" valign="center" onclick="goToIndex() ">
-            <img src="~/viewimage/chocolate logo.png" width="125"
-                 height="125" />
+    <div class="row margin-top-menu" style="margin-top:10%;">
+        <div class="col-1"></div>
+        <div class="col-10 h-25 d-inline-block" style="font-family: Arima Madurai; font-size: 25px;color:white;" align="center" valign="center" onclick="goToIndex() ">
+            West İstanbul Chocolate
+            Menü
         </div>
-        <div class="col-3"></div>
+        <div class="col-1"></div>
     </div>
-    
+
     <div class="row">
         <div class="col-1"></div>
         <div id="0" class="box4 col-10" value="0" onclick="callCampaingTypeSeqfunc(0)" style="font-size:20px font-weight:bold">
             <div class="row">
-                <div class="margin-left col-3"><img src="~/icons/1tumu.png" width="60" height="60" /> </div>
-                <div class="padding-text col-9" style="text-align:center">@MultiLanguageOmni.ReadResourceKey.GetString("AllMenu", "MultiLanguageOmni.Index")</div>
+
+                <div class="imagecirculate"> <img src="~/icons/1tumu.png" /> </div>
+                <div class="margin-left col-3"> </div>
+
+                <div class="padding-text col-9" style="text-align:center">@MultiLanguageOmni.ReadResourceKey.GetString("All", "MultiLanguageOmni.Index")</div>
             </div>
-            
+
         </div>
         <div class="col-1"></div>
     </div>
@@ -59,8 +64,9 @@
             <div class="col-1"></div>
             <div id="@item.slu_def_seq" class="box4 col-10 " value="@item.slu_def_seq" onclick="callCampaingTypeSeqfunc(@item.slu_def_seq)" style="font-size:20px font-weight:bold">
                 <div class="row">
-                    <div class="margin-left col-3"><img src="@item.slu_type_slu_image" width="60" height="60" /> </div>
-                    <div class="padding-text col-9" style="text-align:center">@item.slu_def_name</div>
+                    <div class="imagecirculate"><img src="@item.slu_type_slu_image" /> </div>
+                    <div class="margin-left col-5"> </div>
+                    <div class="padding-text col-7" style="text-align:center">@item.slu_def_name</div>
                 </div>
             </div>
             <div class="col-1"></div>

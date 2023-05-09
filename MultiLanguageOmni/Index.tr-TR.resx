@@ -121,7 +121,7 @@
     <value>Hakkımızda</value>
   </data>
   <data name="All" xml:space="preserve">
-    <value>Hepsi</value>
+    <value>Tümü</value>
   </data>
   <data name="AllMenu" xml:space="preserve">
     <value>Tümü</value>
@@ -200,6 +200,9 @@
   </data>
   <data name="Phone" xml:space="preserve">
     <value>Telefon</value>
+  </data>
+  <data name="QRMenu" xml:space="preserve">
+    <value>MENÜ</value>
   </data>
   <data name="QukiMeyhane" xml:space="preserve">
     <value>WEST CHOCOLATE</value>

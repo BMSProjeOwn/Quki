@@ -44,7 +44,7 @@ namespace Quki.Bll
                           }).Where(w => w.P.rvc_seq == 10 && w.D.slu_type=="MI").OrderBy(x=>x.D.control_number.Value)
                           .Select(s => new SluDefModel
                           {
-                              slu_def_name=s.D.slu_def_name,
+                              slu_def_name=s.D.slu_def_name.ToUpper(),
                               slu_def_seq=s.D.slu_def_seq,
                               slu_type_slu_image=s.D.slu_type_slu_image
 
