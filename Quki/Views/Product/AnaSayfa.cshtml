@@ -4,128 +4,71 @@
 }
 <style>
 
+.div1 {
+        padding: 40px;
+}
     @@media screen and (min-width: 1200px) {
         .img1 {
-            height: 800px;
-            -webkit-clip-path: polygon(0 0, 0 100%, 100% 0, 100% 0);
-            background-image: url(/ViewImage/Group49.png);
-            background-size: contain;
-            background-repeat: no-repeat;
+            width: 100%;
+            content: url(/ViewImage/Group49.png);
         }
 
             .img1:hover {
-                height: 840px;
+                transform: scale(1.1);
                 cursor: pointer;
             }
     }
 
     @@media screen and (max-width: 1190px) {
         .img1 {
-            margin-left: 70px;
-            height: 1620px;
-            background-image: url(/ViewImage/Group4.png);
-            -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 0% 0);
-            background-size: contain;
-            background-repeat: no-repeat;
+            width:100%;
+            content: url(/ViewImage/Group1.png);
         }
 
             .img1:hover {
-                height: 1630px;
+                transform: scale(1.1);
                 cursor: pointer;
             }
-    }
-
-    @@media screen and (max-width: 1190px) {
-        .div1 {
-            margin-left: 0%;
-        }
-    }
-
-    @@media screen and (min-width: 1200px) {
-        .div1 {
-            margin-left: 10%;
-        }
     }
 
     @@media screen and (min-width: 1200px) {
         .img2 {
-            margin-left: 60px;
-            background-image: url(/ViewImage/Group50.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            height: 800px;
-            bottom: 20%;
-            right: 0;
-            margin-top: -780px;
+            width: 100%;
+            content: url(/ViewImage/Group50.png);
         }
 
             .img2:hover {
-                height: 840px;
+                transform: scale(1.05);
                 cursor: pointer;
             }
     }
-
     @@media screen and (max-width: 1190px) {
         .img2 {
-            background-image: url(/ViewImage/Group5.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            height: 1620px;
-            bottom: 20%;
-            right: 0;
-            margin-top: -1620px;
-            margin-left: 100px;
+            width: 100%;
+            content: url(/ViewImage/Group2.png);
         }
 
             .img2:hover {
-                height: 1720px;
+                transform: scale(1.1);
                 cursor: pointer;
             }
     }
 
-    @@media screen and (min-width: 1200px) {
-        .box {
-            /* we need this to position the pseudo-element */
-            position: relative;
-            position: relative;
-            padding: 60px;
-            background-image: url(viewimage\\web-acilis.png);
-            background-position: center;
-            background-size: cover;
-            text-align: right;
-            background-repeat: no-repeat;
-            text-align: right;
-        }
-    }
-
-
-    @@media screen and (max-width: 1190px) {
-
-        .box {
-            /* we need this to position the pseudo-element */
-            position: relative;
-            position: relative;
-            padding: 60px;
-            background-image: url(viewimage\\web-acilis-mobil.png);
-            background-position: center;
-            background-size: cover;
-            text-align: center;
-            background-repeat: no-repeat;
-        }
-    }
 </style>
 
 
 
 
-<div class="row box ">
     <div class="div1">
         <a href="https://westchocolate.com/anasayfa">
-            <div class='col-md-12 img1'></div>
+            <div class='col-md-12'>
+                <img class="img1"/>
+            </div>
         </a>
         <a href="https://qukimeyhane.com/AnaSayfa">
-            <div class='col-md-12 img2'> </div>
+        <div class='col-md-12'>
+            <img class="img2" />
+        </div>
         </a>
     </div>
-</div>
 
