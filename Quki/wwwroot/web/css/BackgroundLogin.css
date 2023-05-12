@@ -1,12 +1,12 @@
 ﻿body {
-    background-image: url('../../viewimage/2w.png');
+    background-image: url('../../viewimage/serra.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment:fixed;
 }
 .background-login {
-    background-image: url('../../viewimage/4w.png');
+    background-image: url('../../viewimage/serraicbackground.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,11 +15,11 @@
 .box {
     height: 50px;
     width: 180px;
-    background: #000000;
+    background: #CCE2F0;
     border-style: solid;
-    border-color: #E19819;
+    border-color: #CCE2F0;
     border-radius: 50px;
-    color: #E19819;
+    color: #005BC7;
     text-align: center;
     border-width: 2px;
     padding: 7px;

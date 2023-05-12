@@ -36,7 +36,7 @@ namespace Quki.Controllers
 
             return View("AnaSayfa");
         }
-        [Route("citirocakbasi-menu")]
+        [Route("serradurum-menu")]
         public IActionResult Index2()
         {
 
@@ -47,7 +47,7 @@ namespace Quki.Controllers
 
 
         [HttpGet]
-        [Route("siyahinci-menu-kategori")]
+        [Route("serradurum-menu-kategori")]
         public IActionResult SluDef()
         {
             //https://localhost:44377/product/sludef
@@ -91,7 +91,7 @@ namespace Quki.Controllers
 
         }
         [HttpGet]
-        [Route("siyahinci-urun/{id?}")]
+        [Route("serradurum-urun/{id?}")]
         public IActionResult GetMenuItem(long id)
         {
 

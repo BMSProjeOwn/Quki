@@ -11,7 +11,7 @@
 
 <head>
 
-    <title>Siyah İnci - QR Menü</title>
+    <title>Serra Dürüm - QR Menü</title>
 
     @{
         string keyw = (!string.IsNullOrEmpty(ViewBag.MetaKeywords) ? ViewBag.MetaKeywords : "");
@@ -20,14 +20,14 @@
 
 
 
-    <meta property="og:title" content="Siyah İnci">
-    <meta content="Siyah İnci" name="twitter:title">
+    <meta property="og:title" content="Serra Dürüm">
+    <meta content="Serra Dürüm" name="twitter:title">
     <meta property="og:description" content="@desc">
     <meta content="Quki" property="og:site_name">
     <meta content="news" property="og:type">
-    <meta name="title" content="Siyah İnci" />
+    <meta name="title" content="Serra Dürüm" />
     <meta name="twitter:description" content="@desc" />
-    <meta name="searchTitle" content="Siyah İnci" />
+    <meta name="searchTitle" content="Serra Dürüm" />
     <meta name="keywords" content="@keyw">
     <meta name="description" content="@desc" />
     <meta name="image" content="" />
@@ -152,18 +152,18 @@
         function callCampaingTypeSeqfunc(val) {
             document.getElementById(val).style.backgroundColor = "#E3A73D";
             document.getElementById(val).style.color = "#F9FAFA";     
-            window.location.href = "siyahinci-urun?id=" + val;
+            window.location.href = "serradurum-urun?id=" + val;
         } 
         function goSluDefController() {         
-            window.location.href = "siyahinci-menu-kategori";
+            window.location.href = "serradurum-menu-kategori";
         }
         function goToIndex() {
-            window.location.href = "siyahinci-menu-kategori";
+            window.location.href = "serradurum-menu-kategori";
         }
         function goSluDefControllerclick() {
             document.getElementById("menu").style.backgroundColor = "#E3A73D";
             document.getElementById("menu").style.color = "#F9FAFA";
-            window.location.href = "siyahinci-menu-kategori";
+            window.location.href = "serradurum-menu-kategori";
         }
     </script>
     
