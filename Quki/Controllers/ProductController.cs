@@ -29,19 +29,19 @@ namespace Quki.Controllers
 
 
 
-       
+
         public IActionResult Index()
         {
 
 
-            return RedirectToAction("SluDef");
+            return View("AnaSayfa");
         }
-        [Route("siyahinci-menu2")]
+        [Route("citirocakbasi-menu")]
         public IActionResult Index2()
         {
 
-
-            return View("SluDef");
+            Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
+            return View("index");
         }
 
 

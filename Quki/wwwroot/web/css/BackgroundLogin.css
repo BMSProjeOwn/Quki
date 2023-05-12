@@ -1,12 +1,12 @@
 ﻿body {
-    background-image: url('../../viewimage/choc_0 – 1.png');
+    background-image: url('../../viewimage/2w.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment:fixed;
 }
 .background-login {
-    background-image: url('../../viewimage/choc_0 – 1.png');
+    background-image: url('../../viewimage/4w.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,17 +14,17 @@
 }
 .box {
     height: 50px;
-    width: 75px;
-    background: #F9FAFA;
+    width: 180px;
+    background: #000000;
     border-style: solid;
-    border-color: #E3A73D;
-    border-radius: 10px;
-    color: #4A2F00;
+    border-color: #E19819;
+    border-radius: 50px;
+    color: #E19819;
     text-align: center;
     border-width: 2px;
     padding: 7px;
     margin: 5px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: "Arima Madurai", sans-serif;
 }
 
 .box2 {
@@ -58,7 +58,7 @@
 .margin-top-logo {
     margin-top: 15%;
 }.margin-top-login-menu {
-    margin-top: 15%;
+    margin-top: 9%;
 }
 .margin-top-menu {
     margin-top: 5%;

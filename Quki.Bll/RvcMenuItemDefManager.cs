@@ -127,7 +127,7 @@ namespace Quki.Bll
                           {
                               slu_def_seq_view = s.S.slu_def_seq,
                               mi_master_def_seq = (long)s.RMD.DP.D.mi_master_def_seq,
-                              mi_master_def_name = s.RMD.DP.D.mi_master_def_name,
+                              mi_master_def_name = s.RMD.DP.D.mi_master_def_name.ToUpper(),
                               mi_barcode_id = s.RMD.B.mi_barcode_id,
                               mi_price = (double)s.RMD.DP.P.mi_price,
                               slu_def_name = s.S.slu_def_name,
@@ -233,7 +233,7 @@ namespace Quki.Bll
                           {
                               slu_def_seq_view = s.S.slu_def_seq,
                               mi_master_def_seq = (long)s.RMD.DP.D.mi_master_def_seq,
-                              mi_master_def_name = s.RMD.DP.D.mi_master_def_name,
+                              mi_master_def_name = s.RMD.DP.D.mi_master_def_name.ToUpper(),
                               mi_barcode_id = s.RMD.B.mi_barcode_id,
                               mi_price = (double)s.RMD.DP.P.mi_price,
                               slu_def_name = s.S.slu_def_name,

@@ -2,7 +2,7 @@
 @model List<SluDefModel>
 @{
     ViewData["Title"] = "SluDef";
-    Layout = "~/Views/Shared/_ViewStart.cshtml";
+     Layout = "~/Views/Shared/_LayoutMobil.cshtml";
 }
 <style>
         /*.box {
@@ -32,9 +32,9 @@
 
 </style>
 <div>
-    <div class="row margin-top-menu" style="margin-bottom:20px;     margin-top: 48px;">
+    <div class="row margin-top-menu" style="margin-bottom:20px;     margin-top: 21px; margin-left: -28px">
         <div class="col-6 h-25 d-inline-block" align="center" valign="center" onclick="goToIndex() ">
-            <img src="~/viewimage/chocolate logo.png" style="width:100%;" />
+            <img src="~/viewimage/citirlogo.png" style="width:90%;" />
         </div>
         <div class="col-6">
             <div class="padding-text col-9" style="text-align:center; padding: 15px; color: black; font-size: 35px; font-weight:bold; margin-top:15px; font-family:arimamadurai">
@@ -45,7 +45,7 @@
     
     <div class="row">
         <div class="col-1"></div>
-        <div id="0" class="box4 col-10" value="0" onclick="callCampaingTypeSeqfunc(0)" style="font-size:20px; font-weight:bold">
+        <div id="0" class=" col-10" value="0" onclick="callCampaingTypeSeqfunc(0)" style="font-size:20px; font-weight:bold">
             <div class="row" style="font-weight: bold;
     border: 2px #707070 solid;
     border-radius: 7px;
@@ -68,7 +68,7 @@
 
         <div class="row margin-top-menu" style="margin-bottom:10px;">
             <div class="col-1"></div>
-            <div id="@item.slu_def_seq" class="box4 col-10 " value="@item.slu_def_seq" onclick="callCampaingTypeSeqfunc(@item.slu_def_seq)" style="font-size:20px; font-weight:bold;">
+            <div id="@item.slu_def_seq" class=" col-10 " value="@item.slu_def_seq" onclick="callCampaingTypeSeqfunc(@item.slu_def_seq)" style="font-size:20px; font-weight:bold;">
                 <div class="row" style="font-weight: bold;
     border: 2px #707070 solid;
     border-radius: 7px;
