@@ -1,0 +1,41 @@
+﻿/* Code By Webdevtrick ( https://webdevtrick.com ) */
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Squada One', cursive;
+    text-align: center;
+    font-weight: 100;
+    color: #666;
+    font-size: 52px;
+    margin: 100px 0 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin: 100px auto;
+    box-shadow: 0 0 50px #333;
+}
+
+.gallery-item {
+    width: 50%;
+}
+
+    .gallery-item > img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+
+img {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+    img[data-src] {
+        opacity: 0;
+    }

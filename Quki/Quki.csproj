@@ -746,6 +746,11 @@
     <None Include="wwwroot\webQuki\revolution\revolution-addons\whiteboard\js\index.php" />
     <None Include="wwwroot\webQuki\revolution\revolution-addons\whiteboard\js\revolution.addon.whiteboard.min.js" />
     <None Include="wwwroot\webQuki\revolution\revolution-addons\whiteboard\js\source\revolution.addon.whiteboard.js" />
+    <None Include="wwwroot\web\js\lazyload-2.x\.travis.yml" />
+    <None Include="wwwroot\web\js\lazyload-2.x\lazyload.js" />
+    <None Include="wwwroot\web\js\lazyload-2.x\lazyload.min.js" />
+    <None Include="wwwroot\web\js\lazyload-2.x\lazyload.min.js.map" />
+    <None Include="wwwroot\web\js\lazyload-2.x\LICENSE.md" />
   </ItemGroup>
 
   <ItemGroup>

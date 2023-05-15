@@ -33,7 +33,7 @@
         font-family: 'Arima Madurai';
     }
 </style>
-<div>
+<div id="container">
     <div class="row margin-top-menu" style="margin-top:10%;">
         <div class="col-1"></div>
         <div class="col-10 h-25 d-inline-block" style="font-family: Arima Madurai; font-size: 25px;color:white;" align="center" valign="center" onclick="goToIndex() ">
@@ -43,12 +43,12 @@
         <div class="col-1"></div>
     </div>
 
-    <div class="row">
+   @* <div class="row">
         <div class="col-1"></div>
         <div id="0" class="box4 col-10" value="0" onclick="callCampaingTypeSeqfunc(0)" style="font-size:20px font-weight:bold">
             <div class="row">
 
-                <div class="imagecirculate"> <img src="~/icons/1tumu.png" /> </div>
+                <div class="imagecirculate"> <img class="lazy" src="~/icons/1tumu.png" /> </div>
                 <div class="margin-left col-3"> </div>
 
                 <div class="padding-text col-9" style="text-align:center">@MultiLanguageOmni.ReadResourceKey.GetString("All", "MultiLanguageOmni.Index")</div>
@@ -56,17 +56,20 @@
 
         </div>
         <div class="col-1"></div>
-    </div>
+    </div>*@
+
     @foreach (var item in Model)
     {
 
         <div class="row margin-top-menu">
             <div class="col-1"></div>
-            <div id="@item.slu_def_seq" class="box4 col-10 " value="@item.slu_def_seq" onclick="callCampaingTypeSeqfunc(@item.slu_def_seq)" style="font-size:20px font-weight:bold">
+            <div class="box4 col-10 " onclick="callCampaingTypeSeqfunc(@item.slu_def_seq)" style="font-size:20px; font-weight:bold">
                 <div class="row">
-                    <div class="imagecirculate"><img src="@item.slu_type_slu_image" /> </div>
-                    <div class="margin-left col-5"> </div>
-                    <div class="padding-text col-7" style="text-align:center">@item.slu_def_name</div>
+                    <div class="imagecirculate gallery-item">
+                        <img class="lazyload" data-src="@item.slu_type_slu_image" loading="lazy" />
+                    </div>
+                    <div class="col-4"> </div>
+                    <div class="col-8" style="text-align:center">@item.slu_def_name</div>
                 </div>
             </div>
             <div class="col-1"></div>
@@ -81,6 +84,8 @@
     </div>
     <a href="https://github.com/twbs/bootstrap/archive/v5.0.2.zip" class="btn btn-lg btn-outline-secondary mt-3 mt-sm-0 ms-sm-3" >Download source code</a>
    *@
+
+
 
 
 

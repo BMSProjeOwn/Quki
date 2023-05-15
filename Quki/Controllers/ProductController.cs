@@ -8,6 +8,7 @@ using Quki.Interface;
 using Quki.Models;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Quki.Controllers
 {
@@ -88,7 +89,7 @@ namespace Quki.Controllers
         }
         [HttpGet]
         [Route("westchocolate-urun/{id?}")]
-        public IActionResult GetMenuItem(long id)
+        public Task<IActionResult> GetMenuItem(long id)
         {
 
             int languageId = Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
@@ -108,7 +109,7 @@ namespace Quki.Controllers
 
             }
 
-            return View();
+            return Task.FromResult<IActionResult>(View());
         }
     }
 }
