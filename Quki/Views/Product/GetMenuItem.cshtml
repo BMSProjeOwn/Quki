@@ -23,7 +23,11 @@
         <div class="col-1"></div>
         <div class="box2 col-10">
             <div class="row">
-            <div class="col-6"><img src="@item.mi_icon_path" width="141" height="129" style="border-radius:10px;" /> </div>
+                <div class="col-6">
+                    <img src="~/icons/@item.mi_icon_path" width="141" height="129" style="border-radius:10px;
+    object-fit: contain;
+    overflow: hidden;" />
+                </div>
                 <div class="padding-text col-6" style="text-align: center; color: #005BC7; font-weight: bold; font-family: arimamadurai">
                 <p class="text-center h5" style="font-size:20px; font-weight:bold" color>@item.mi_master_def_name</p>
                     <p class="text-center text-secondary h6" style="font-size:12px; font-weight:bold; font-family:arimamadurai" color>@item.rvc_mi_third_name</p>
