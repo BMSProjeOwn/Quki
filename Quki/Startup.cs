@@ -501,7 +501,7 @@ namespace Quki
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(name: "default", pattern: "{Controller=Product}/{Action=Index}/{id?}");
-                endpoints.MapControllerRoute("dMenu", "mobile-menu", new { controller = "Product", action = "SluDef" });
+                endpoints.MapControllerRoute("dMenu", "mobile-menu", new { controller = "Product", action = "Index" });
 
 
 

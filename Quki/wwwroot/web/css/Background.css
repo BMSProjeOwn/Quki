@@ -1,9 +1,19 @@
-﻿body {
+﻿
+body {
     background-image: url('../../viewimage/serraicbackground.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+.imagecirculate {
+    display: inline-block;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-top: -13%;
 }
 .background-login {
     background-image: url('../../viewimage/serraicbackground.png');
