@@ -57,7 +57,7 @@ namespace Quki.Controllers
             int languageId=Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
             try
             {
-                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu2();
+                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu();
             }
             catch
             {
