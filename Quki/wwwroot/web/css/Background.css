@@ -7,20 +7,25 @@ body {
     background-attachment: fixed;
 }
 .imagecirculate {
-    display: inline-block;
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    border-radius: 100%;
-    margin-top: -13%;
+        object-fit: cover;
+    margin-top: 0px;
+    width: 120px;
+    height: 100px;
 }
+
 .background-login {
     background-image: url('../../viewimage/serraicbackground.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+.imagecirculate img {
+    object-fit: cover;
+    margin-top: 0px;
+    width: 120px;
+    height: 100px;
+    margin-left: -14px;
 }
 .box {
     height: 50px;
@@ -41,7 +46,7 @@ body {
 
 
 .box2 {
-    height: 147px;
+    height: 120px;
     width: 382px;
     background: #F9FAFA;
     border-style: solid;

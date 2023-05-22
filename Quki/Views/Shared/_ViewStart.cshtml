@@ -10,7 +10,7 @@
 }
 <head>
 
-    <title>Siyah İnci - QR Menü</title>
+    <title>Serra Dürüm - QR Menü</title>
 
     @{
         string keyw = (!string.IsNullOrEmpty(ViewBag.MetaKeywords) ? ViewBag.MetaKeywords : "");
@@ -154,16 +154,12 @@
 
     <script>
         function callCampaingTypeSeqfunc(val) {
-            document.getElementById(val).style.backgroundColor = "#E3A73D";
-            document.getElementById(val).style.color = "#F9FAFA";
             window.location.href = "serradurum-urun?id=" + val;
         }
         function goSluDefController() {
             window.location.href = "serradurum-menu-kategori";
         }
         function goSluDefControllerclick() {
-            document.getElementById("menu").style.backgroundColor = "#E3A73D";
-            document.getElementById("menu").style.color = "#F9FAFA";
             window.location.href = "serradurum-menu-kategori";
         }
     </script>

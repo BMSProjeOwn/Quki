@@ -34,7 +34,7 @@ namespace Quki.Controllers
         {
 
 
-            return View("serradurum-menu", "menu");
+            return RedirectToAction("serradurum-menu", "menu");
         }
         [Route("menu/serradurum-menu")]
         public IActionResult Index2()
