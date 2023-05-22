@@ -1,5 +1,10 @@
 ﻿body {
     background-image: url('../../viewimage/2w.png');
+	
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .background-login {
     background-image: url('../../viewimage/4w.png');

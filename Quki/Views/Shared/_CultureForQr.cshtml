@@ -8,29 +8,23 @@
 
     var cultureList = new List<SelectListItem>();
     cultureList.Add(new SelectListItem
-            {
-                Text = "عربي",
-                Value = "de-DE"
-            });
+    {
+        Text = "Türkçe",
+        Value = "tr-TR"
+    });
     cultureList.Add(new SelectListItem
-            {
-                Text = "English",
-                Value = "en-US"
-            });
+    {
+        Text = "English",
+        Value = "en-US"
+    });
 
-    cultureList.Add(new SelectListItem
-            {
-                Text = "Türkçe",
-                Value = "tr-TR"
-            });
+
 }
 
 
 <div>
-    <form class="form-control" asp-action="CultureManegmant" asp-controller="Product" method="post" style="border:0px;">
-        <select class="form-select" name="culture" asp-for="@culture.RequestCulture.UICulture.Name" asp-items="cultureList" onchange="this.form.submit();" style="    height: 40px;
-    border: #E3A73D 2px solid;
-    border-radius: 8px;"></select>
+    <form class="form-control" asp-action="CultureManegmant" asp-controller="Product" method="post" style="border:0px;padding: 0px;border-radius: 8px; ">
+        <select class="form-select" name="culture" asp-for="@culture.RequestCulture.UICulture.Name" asp-items="cultureList" onchange="this.form.submit();" style=" height: 40px; border: #000000 2px solid; border-radius: 8px; "></select>
     </form>
 </div>
 
