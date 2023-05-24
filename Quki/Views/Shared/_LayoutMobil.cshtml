@@ -11,7 +11,7 @@
 
 <head>
 
-    <title>Serra Dürüm - QR Menü</title>
+    <title>Nossa Cafe - QR Menü</title>
 
     @{
         string keyw = (!string.IsNullOrEmpty(ViewBag.MetaKeywords) ? ViewBag.MetaKeywords : "");
@@ -20,14 +20,14 @@
 
 
 
-    <meta property="og:title" content="Serra Dürüm">
-    <meta content="Serra Dürüm" name="twitter:title">
+    <meta property="og:title" content="Nossa Cafe">
+    <meta content="Nossa Cafe" name="twitter:title">
     <meta property="og:description" content="@desc">
     <meta content="Quki" property="og:site_name">
     <meta content="news" property="og:type">
-    <meta name="title" content="Serra Dürüm" />
+    <meta name="title" content="Nossa Cafe" />
     <meta name="twitter:description" content="@desc" />
-    <meta name="searchTitle" content="Serra Dürüm" />
+    <meta name="searchTitle" content="Nossa Cafe" />
     <meta name="keywords" content="@keyw">
     <meta name="description" content="@desc" />
     <meta name="image" content="" />
@@ -59,7 +59,7 @@
     <link rel="stylesheet" href="~/web/libs/boostrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/web/libs/flaticon/css/flaticon.css">
     <link rel="stylesheet" href="~/web/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="~/web/libs/owl.carousel/~/webQuki/owl.carousel.css">
+    <link rel="stylesheet" href="~/web/libs/owl.carousel/webQuki/owl.carousel.css">
     <link rel="stylesheet" href="~/web/libs/nivo-slider/css/nivo-slider.css">
     <link rel="stylesheet" href="~/web/libs/nivo-slider/css/animate.css">
     <link rel="stylesheet" href="~/web/libs/nivo-slider/css/style.css">
@@ -74,53 +74,11 @@
     <link href="~/web/css/Background.css" rel="stylesheet" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01H99243F"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+   
+    
+   
 
-        gtag('config', 'G-F01H99243F');
-    </script>
-    <!-- Google Tag Manager -->
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-NZ8LBMX');</script>
-    <!-- End Google Tag Manager -->
-    <!--Jquery-->
-    <script src="~/web/libs/jquery/jquery-1.11.3.min.js"></script>
-
-    <script type="application/ld+json">
-        {
-          "@@context": "https://schema.org/",
-          "@@type": "WebSite",
-          "name": "Quki",
-          "url": "https://Quki.com/"
-        }
-    </script>
-
-
-    <script type="application/ld+json">
-        {
-          "@@context": "https://schema.org",
-          "@@type": "Organization",
-          "name": "Quki",
-          "url": "https://Quki.com/",
-          "logo": "https://Quki.com/web/img/Quki_logo.png",
-          "sameAs": [
-            "https://www.facebook.com/Qukicom",
-            "https://twitter.com/Qukicom",
-            "https://www.instagram.com/Qukicom/",
-            "https://www.youtube.com/channel/UCQ1ErM-53hECcgHd6U-tGCw",
-            "https://tr.pinterest.com/Qukicom/"
-          ]
-        }
-    </script>
+    
 
 </head>
 <body >
@@ -152,17 +110,17 @@
         function callCampaingTypeSeqfunc(val) {
             document.getElementById(val).style.backgroundColor = "#E3A73D";
             document.getElementById(val).style.color = "#F9FAFA";     
-            window.location.href = "serradurum-urun?id=" + val;
+            window.location.href = "nossa-urun?id=" + val;
         } 
         function goSluDefController() {         
-            window.location.href = "serradurum-menu-kategori";
+            window.location.href = "nossa-menu-kategori";
         }
         function goToIndex() {
-            window.location.href = "serradurum-menu";
+            window.location.href = "nossa-menu";
         }
         function goSluDefControllerclick() {
             
-            window.location.href = "serradurum-menu-kategori";
+            window.location.href = "nossa-menu-kategori";
         }
     </script>
     

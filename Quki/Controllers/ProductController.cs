@@ -34,9 +34,9 @@ namespace Quki.Controllers
         {
 
 
-            return RedirectToAction("serradurum-menu", "menu");
+            return RedirectToAction("nossa-menu", "menu");
         }
-        [Route("menu/serradurum-menu")]
+        [Route("menu/nossa-menu")]
         public IActionResult Index2()
         {
 
@@ -47,7 +47,7 @@ namespace Quki.Controllers
 
 
         [HttpGet]
-        [Route("menu/serradurum-menu-kategori")]
+        [Route("menu/nossa-menu-kategori")]
         public IActionResult SluDef()
         {
             //https://localhost:44377/product/sludef
@@ -57,9 +57,9 @@ namespace Quki.Controllers
             int languageId=Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
             try
             {
-                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId);
+                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu2();
             }
-            catch
+            catch (Exception ex)
             {
 
             }
@@ -91,21 +91,21 @@ namespace Quki.Controllers
 
         }
         [HttpGet]
-        [Route("menu/serradurum-urun/{id?}")]
+        [Route("menu/nossa-urun/{id?}")]
         public IActionResult GetMenuItem(long id)
         {
 
             int languageId = Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
             if (id == 0)
             {
-                var getMenuItems = rvcMenuItemDefService.GetMenuItems(languageId);
+                var getMenuItems = rvcMenuItemDefService.GetMenuItems();
                 ViewBag.ProductItems = getMenuItems;
                 ViewBag.MenuItems = MultiLanguageOmni.ReadResourceKey.GetString("All", "MultiLanguageOmni.Index");
                 ViewBag.Pic = "/icons/1tumu.png";
             }
             else
             {
-                var getMenuItems = rvcMenuItemDefService.GetMenuItemsWithId(id, languageId);
+                var getMenuItems = rvcMenuItemDefService.GetMenuItemsWithId(id);
                 ViewBag.ProductItems = getMenuItems;
                 try
                 {
@@ -115,7 +115,7 @@ namespace Quki.Controllers
                 }
                 catch (Exception)
                 {
-                    ViewBag.MenuItems = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId).Where(x=>x.slu_def_seq==id).FirstOrDefault().slu_def_name;
+                    ViewBag.MenuItems = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu2().Where(x=>x.slu_def_seq==id).FirstOrDefault().slu_def_name;
                 }
 
             }
