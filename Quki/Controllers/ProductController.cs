@@ -57,7 +57,7 @@ namespace Quki.Controllers
             int languageId=Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
             try
             {
-                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu2();
+                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId);
             }
             catch (Exception ex)
             {
@@ -98,14 +98,14 @@ namespace Quki.Controllers
             int languageId = Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
             if (id == 0)
             {
-                var getMenuItems = rvcMenuItemDefService.GetMenuItems();
+                var getMenuItems = rvcMenuItemDefService.GetMenuItems(languageId);
                 ViewBag.ProductItems = getMenuItems;
                 ViewBag.MenuItems = MultiLanguageOmni.ReadResourceKey.GetString("All", "MultiLanguageOmni.Index");
                 ViewBag.Pic = "/icons/1tumu.png";
             }
             else
             {
-                var getMenuItems = rvcMenuItemDefService.GetMenuItemsWithId(id);
+                var getMenuItems = rvcMenuItemDefService.GetMenuItemsWithId(id,languageId);
                 ViewBag.ProductItems = getMenuItems;
                 try
                 {
@@ -115,7 +115,7 @@ namespace Quki.Controllers
                 }
                 catch (Exception)
                 {
-                    ViewBag.MenuItems = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu2().Where(x=>x.slu_def_seq==id).FirstOrDefault().slu_def_name;
+                    ViewBag.MenuItems = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId).Where(x=>x.slu_def_seq==id).FirstOrDefault().slu_def_name;
                 }
 
             }
