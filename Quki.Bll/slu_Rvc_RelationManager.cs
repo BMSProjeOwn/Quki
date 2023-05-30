@@ -77,7 +77,7 @@ namespace Quki.Bll
                           .Where(w => w.R.P.rvc_seq == 2 && w.R.D.slu_type == "MI" && w.SwR.LanguageId.Equals(languageID)).OrderBy(x => x.R.D.control_number.Value)
                           .Select(s => new SluDefModel
                           {
-                              slu_def_name = s.R.D.slu_def_name.ToUpper(),
+                              slu_def_name = s.SwR.Name.ToUpper(),
                               slu_def_seq = s.R.D.slu_def_seq,
                               slu_type_slu_image = s.R.D.slu_type_slu_image
 
