@@ -110,7 +110,7 @@ namespace Quki.Controllers
                 try
                 {
 
-                    ViewBag.MenuItems = getMenuItems[0].slu_def_name;
+                    ViewBag.MenuItems = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId).Where(x => x.slu_def_seq == id).FirstOrDefault().slu_def_name;
                     ViewBag.Pic = getMenuItems[0].slu_type_slu_image;
                 }
                 catch (Exception)
