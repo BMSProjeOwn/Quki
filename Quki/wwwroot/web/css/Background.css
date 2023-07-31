@@ -1,8 +1,8 @@
 ﻿body {
-    background-image: url('../../viewimage/4w.png');
+    background-image: url('../../viewimage/gokselustabackground.png');
 }
 .background-login {
-    background-image: url('../../viewimage/4w.png');
+    background-image: url('../../viewimage/gokselustabackground.png');
 }
 .box {
     height: 50px;
@@ -27,9 +27,9 @@
     width: 382px;
     background: #F9FAFA;
     border-style: solid;
-    border-color: #000000;
+    border-color: #5F0000;
     border-radius: 10px;
-    color: #4A2F00;
+    color: #5F0000;
     text-align: center;
     border-width: 1px;
     padding: 7px;

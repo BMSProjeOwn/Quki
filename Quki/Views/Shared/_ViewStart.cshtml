@@ -10,7 +10,7 @@
 }
 <head>
 
-    <title>Çıtır Ocakbaşı - QR Menü</title>
+    <title>Göksel Usta - QR Menü</title>
 
     @{
         string keyw = (!string.IsNullOrEmpty(ViewBag.MetaKeywords) ? ViewBag.MetaKeywords : "");
@@ -19,14 +19,14 @@
 
 
 
-    <meta property="og:title" content="Siyah İnci Quki">
-    <meta content="Siyah İnci Quki" name="twitter:title">
+    <meta property="og:title" content="Göksel Usta">
+    <meta content="Göksel Usta" name="twitter:title">
     <meta property="og:description" content="@desc">
     <meta content="Quki" property="og:site_name">
     <meta content="news" property="og:type">
-    <meta name="title" content="Siyah İnci Quki" />
+    <meta name="title" content="Göksel Usta" />
     <meta name="twitter:description" content="@desc" />
-    <meta name="searchTitle" content="Siyah İnci Quki" />
+    <meta name="searchTitle" content="Göksel Usta" />
     <meta name="keywords" content="@keyw">
     <meta name="description" content="@desc" />
     <meta name="image" content="" />
@@ -81,45 +81,8 @@
         gtag('config', 'G-F01H99243F');
     </script>
     <!-- Google Tag Manager -->
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-NZ8LBMX');</script>
-    <!-- End Google Tag Manager -->
-    <!--Jquery-->
-    <script src="~/web/libs/jquery/jquery-1.11.3.min.js"></script>
-
-    <script type="application/ld+json">
-        {
-          "@@context": "https://schema.org/",
-          "@@type": "WebSite",
-          "name": "Quki",
-          "url": "https://Quki.com/"
-        }
-    </script>
 
 
-    <script type="application/ld+json">
-        {
-          "@@context": "https://schema.org",
-          "@@type": "Organization",
-          "name": "Quki",
-          "url": "https://Quki.com/",
-          "logo": "https://Quki.com/web/img/Quki_logo.png",
-          "sameAs": [
-            "https://www.facebook.com/Qukicom",
-            "https://twitter.com/Qukicom",
-            "https://www.instagram.com/Qukicom/",
-            "https://www.youtube.com/channel/UCQ1ErM-53hECcgHd6U-tGCw",
-            "https://tr.pinterest.com/Qukicom/"
-          ]
-        }
-    </script>
 
 </head>
 <body class="background">
@@ -156,15 +119,15 @@
         function callCampaingTypeSeqfunc(val) {
             document.getElementById(val).style.backgroundColor = "#E3A73D";
             document.getElementById(val).style.color = "#F9FAFA";
-            window.location.href = "citirocakbasi-urun?id=" + val;
+            window.location.href = "gokselusta-urun?id=" + val;
         }
         function goSluDefController() {
-            window.location.href = "citirocakbasi-menu-kategori";
+            window.location.href = "gokselusta-menu-kategori";
         }
         function goSluDefControllerclick() {
             document.getElementById("menu").style.backgroundColor = "#E3A73D";
             document.getElementById("menu").style.color = "#F9FAFA";
-            window.location.href = "citirocakbasi-menu-kategori";
+            window.location.href = "gokselusta-menu-kategori";
         }
     </script>
 

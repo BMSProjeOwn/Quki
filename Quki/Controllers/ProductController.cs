@@ -34,9 +34,9 @@ namespace Quki.Controllers
         {
 
 
-            return RedirectToAction("citirocakbasi-menu","menu");
+            return RedirectToAction("gokselusta-menu", "menu");
         }
-        [Route("menu/citirocakbasi-menu")]
+        [Route("menu/gokselusta-menu")]
         public IActionResult Index2()
         {
 
@@ -47,7 +47,7 @@ namespace Quki.Controllers
 
 
         [HttpGet]
-        [Route("menu/citirocakbasi-menu-kategori")]
+        [Route("menu/gokselusta-menu-kategori")]
         public IActionResult SluDef()
         {
             //https://localhost:44377/product/sludef
@@ -91,7 +91,7 @@ namespace Quki.Controllers
 
         }
         [HttpGet]
-        [Route("menu/citirocakbasi-urun/{id?}")]
+        [Route("menu/gokselusta-urun/{id?}")]
         public IActionResult GetMenuItem(long id)
         {
 
