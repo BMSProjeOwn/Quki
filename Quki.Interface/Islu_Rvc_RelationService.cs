@@ -11,6 +11,7 @@ namespace Quki.Interface
     public interface Islu_Rvc_RelationService :IGenericService<slu_Rvc_Relation,slu_Rvc_RelationModel>
     {
         public List<slu_Rvc_Relation> GetAllSluDefRelation();
+        public List<SluDefModel> GetAllSluDefRelationWithSlu(int languageId,int id);
         public List<SluDefModel> GetAllSluDefRelationWithSlu(int languageId);
         public List<SluDefModel> GetAllSluDefRelationWithSlu2();
     }

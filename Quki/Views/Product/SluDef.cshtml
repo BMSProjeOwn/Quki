@@ -42,9 +42,11 @@
     @foreach (var item in Model)
     {
 
-        <div class="row margin-top-menu" style="margin-bottom:10px;">
-            <div class="col-1"></div>
-            <div id="@item.slu_def_seq" class=" col-10 " value="@item.slu_def_seq" onclick="callCampaingTypeSeqfunc(@item.slu_def_seq)" style="font-size:20px; font-weight:bold;">
+        @if (item.parent_slu_def_no == 0 || item.parent_slu_def_no is null)
+        {
+            <div class="row margin-top-menu" style="margin-bottom:10px;">
+                <div class="col-1"></div>
+                <div id="@item.slu_def_seq" class=" col-10 " value="@item.slu_def_seq" onclick="callSluMiGroupSeqfunc(@item.slu_def_seq)" style="font-size:20px; font-weight:bold;">
                 <div class="row" style="font-weight: bold; border: 1px #005BC7 solid; border-radius: 7px; background-color: white; padding: 5px; font-family: arimamadurai ">
                     <div class="col-5 imagecirculate">
                         <img src="~/icons/@item.slu_type_slu_image" style="border-radius:10px; margin-left:-13px ;" />
@@ -53,8 +55,23 @@
                 </div>
             </div>
             <div class="col-1"></div>
-        </div>
-
+            </div>
+        }
+        else
+        {
+            <div class="row margin-top-menu" style="margin-bottom:10px;">
+                <div class="col-1"></div>
+                <div id="@item.slu_def_seq" class=" col-10 " value="@item.slu_def_seq" onclick="callCampaingTypeSeqfunc(@item.slu_def_seq)" style="font-size:20px; font-weight:bold;">
+                    <div class="row" style="font-weight: bold; border: 1px #005BC7 solid; border-radius: 7px; background-color: white; padding: 5px; font-family: arimamadurai ">
+                        <div class="col-5 imagecirculate">
+                            <img src="~/icons/@item.slu_type_slu_image" style="border-radius:10px; margin-left:-13px ;" />
+                        </div>
+                        <div class="col-7" style="text-align: center; padding: 5%; color: #005BC7; font-family: arimamadurai">@item.slu_def_name</div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        }
     }
 </div>
 

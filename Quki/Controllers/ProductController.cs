@@ -48,7 +48,7 @@ namespace Quki.Controllers
 
         [HttpGet]
         [Route("menu/nossa-menu-kategori")]
-        public IActionResult SluDef()
+        public IActionResult SluDef(int id=0)
         {
             //https://localhost:44377/product/sludef
             
@@ -57,7 +57,7 @@ namespace Quki.Controllers
             int languageId=Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
             try
             {
-                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId);
+                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId,id);
             }
             catch (Exception ex)
             {

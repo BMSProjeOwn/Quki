@@ -13,6 +13,7 @@ using System.Runtime.Intrinsics.Arm;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
+using static Quki.Entity.Statics.Enums;
 
 namespace Quki.Bll
 {
@@ -61,7 +62,77 @@ namespace Quki.Bll
             
             return itemList;
         }
-        public List<SluDefModel> GetAllSluDefRelationWithSlu(int languageID)
+        public List<SluDefModel> GetAllSluDefRelationWithSlu(int languageID,int id)
+        {
+            if (id==0)
+            {
+
+                var itemListMiGroup = sluDef.TGetList()
+                              .Join(repo.TGetList(), x => x.slu_def_seq, s => s.slu_seq, (D, P) => new
+                              {
+                                  D = D,
+                                  P = P
+                              }).Join(sluDefWithLanguageRepository.TGetList(), x => x.D.slu_def_seq, s => s.SluDefSeq, (R, SwR) => new
+                              {
+                                  R = R,
+                                  SwR = SwR
+                              })
+
+                              .Where(w => w.R.P.rvc_seq == 2 && w.R.D.slu_type== "MIGroup" && w.SwR.LanguageId.Equals(languageID)).OrderBy(x => x.R.D.control_number.Value)
+                              .Select(s => new SluDefModel
+                              {
+                                  slu_def_name = s.SwR.Name.ToUpper(),
+                                  slu_def_seq = s.R.D.slu_def_seq,
+                                  slu_type_slu_image = s.R.D.slu_type_slu_image,
+                                  parent_slu_def_no=s.R.D.parent_slu_def_no
+
+                              }).OrderBy(x => x.control_number).ToList();
+
+                foreach (var item in itemListMiGroup)
+                {
+                    string text = item.slu_def_name;
+                    string[] parca = text.Split("-");
+                    item.slu_def_name = parca[0];
+                }
+
+
+                return itemListMiGroup;
+            }
+
+            var itemList = sluDef.TGetList()
+                          .Join(repo.TGetList(), x => x.slu_def_seq, s => s.slu_seq, (D, P) => new
+                          {
+                              D = D,
+                              P = P
+                          }).Join(sluDefWithLanguageRepository.TGetList(), x => x.D.slu_def_seq, s => s.SluDefSeq, (R, SwR) => new
+                          {
+                              R = R,
+                              SwR = SwR
+                          })
+
+                          .Where(w => w.R.P.rvc_seq == 2 && w.R.D.slu_type == "MI" && w.R.D.parent_slu_def_no==id && w.SwR.LanguageId.Equals(languageID)).OrderBy(x => x.R.D.control_number.Value)
+                          .Select(s => new SluDefModel
+                          {
+                              slu_def_name = s.SwR.Name.ToUpper(),
+                              slu_def_seq = s.R.D.slu_def_seq,
+                              slu_type_slu_image = s.R.D.slu_type_slu_image,
+                              parent_slu_def_no = s.R.D.parent_slu_def_no
+
+
+                          }).OrderBy(x => x.control_number).ToList();
+
+            foreach (var item in itemList)
+            {
+                string text = item.slu_def_name;
+                string[] parca = text.Split("-");
+                item.slu_def_name = parca[0];
+            }
+
+
+            return itemList;
+        }
+
+        public List<SluDefModel> GetAllSluDefRelationWithSlu(int languageId)
         {
             var itemList = sluDef.TGetList()
                           .Join(repo.TGetList(), x => x.slu_def_seq, s => s.slu_seq, (D, P) => new
@@ -74,7 +145,7 @@ namespace Quki.Bll
                               SwR = SwR
                           })
 
-                          .Where(w => w.R.P.rvc_seq == 2 && w.R.D.slu_type == "MI" && w.SwR.LanguageId.Equals(languageID)).OrderBy(x => x.R.D.control_number.Value)
+                          .Where(w => w.R.P.rvc_seq == 2 && w.R.D.slu_type == "MI" && w.SwR.LanguageId.Equals(languageId)).OrderBy(x => x.R.D.control_number.Value)
                           .Select(s => new SluDefModel
                           {
                               slu_def_name = s.SwR.Name.ToUpper(),
@@ -82,7 +153,7 @@ namespace Quki.Bll
                               slu_type_slu_image = s.R.D.slu_type_slu_image
 
 
-                          }).ToList();
+                          }).OrderBy(x => x.control_number).ToList();
 
             foreach (var item in itemList)
             {
@@ -93,8 +164,6 @@ namespace Quki.Bll
 
 
             return itemList;
-            }
-
-
         }
+    }
     }
