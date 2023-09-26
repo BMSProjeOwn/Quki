@@ -12,9 +12,9 @@ namespace Quki.Interface
     public interface IRvcMenuItemDefService : IGenericService<RvcMenuItemDef, RvcMenuItemDefModel>
     {
         public List<RvcMenuItemDef> GetAllRvcMenuItems();
-        public List<GetMenuItems> GetMenuItems(int languageId);
+        public List<GetMenuItems> GetMenuItems(out List<Condiment> condimentRequired, out List<Condiment> condimentNonRequired,int languageId);
         public List<GetMenuItems> GetMenuItems();
-        public List<GetMenuItems> GetMenuItemsWithId(long id,int languageId);
+        public List<GetMenuItems> GetMenuItemsWithId(long id, out List<Condiment> condimentRequired, out List<Condiment> condimentNonRequired, int languageId);
         public List<GetMenuItems> GetMenuItemsWithId(long id);
 
     }

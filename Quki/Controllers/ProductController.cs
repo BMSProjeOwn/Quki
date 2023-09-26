@@ -98,19 +98,28 @@ namespace Quki.Controllers
             int languageId = Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
             if (id == 0)
             {
-                var getMenuItems = rvcMenuItemDefService.GetMenuItems(languageId);
+                List<Condiment> condimentRequired = new List<Condiment>();
+                List<Condiment> condimentNonRequired = new List<Condiment>();
+                var getMenuItems = rvcMenuItemDefService.GetMenuItems(out condimentRequired,out condimentNonRequired,languageId);
                 ViewBag.ProductItems = getMenuItems;
+                ViewBag.condimentRequired = condimentRequired;
+                ViewBag.condimentNonRequired = condimentNonRequired;
                 ViewBag.MenuItems = MultiLanguageOmni.ReadResourceKey.GetString("All", "MultiLanguageOmni.Index");
                 ViewBag.Pic = "/icons/1tumu.png";
             }
             else
             {
-                var getMenuItems = rvcMenuItemDefService.GetMenuItemsWithId(id,languageId);
+
+                List<Condiment> condimentRequired = new List<Condiment>();
+                List<Condiment> condimentNonRequired = new List<Condiment>();
+                var getMenuItems = rvcMenuItemDefService.GetMenuItemsWithId(id,out condimentRequired,out condimentNonRequired,languageId);
                 ViewBag.ProductItems = getMenuItems;
                 try
                 {
 
                     ViewBag.MenuItems = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId).Where(x => x.slu_def_seq == id).FirstOrDefault().slu_def_name;
+                    ViewBag.condimentRequired = condimentRequired;
+                    ViewBag.condimentNonRequired = condimentNonRequired;
                     ViewBag.Pic = getMenuItems[0].slu_type_slu_image;
                 }
                 catch (Exception)

@@ -1,4 +1,5 @@
-﻿using Quki.Entity.Models;
+﻿using Quki.Entity.DtoModels;
+using Quki.Entity.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,9 @@ namespace Quki.Models
         public int? slu_priority { get; set; }
         public string? slu_type_slu_image { get; set; }
         public int? control_number { get; set; }
+        public long? condiment_profile_def_seq { get; set; }
+        public long? condiment_main_group_def_seq { get; set; }
+        public List<Condiment> condiments { get; set; }=new List<Condiment>();
     }
 
 }

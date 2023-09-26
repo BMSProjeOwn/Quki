@@ -1,18 +1,13 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Quki.Bll.Base;
 using Quki.Dal.Abstract;
-using Quki.Dal.Concrete.Entityframework.Context;
-using Quki.Dal.Concrete.Entityframework.Repostories;
 using Quki.Entity.DtoModels;
-using Quki.Entity.DtoModels.ApiModels;
 using Quki.Entity.Models;
 using Quki.Interface;
 using Quki.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Quki.Bll
 {
@@ -24,6 +19,8 @@ namespace Quki.Bll
         public readonly IRvcMenuItemPriceRepository RvcMenuItemPrice;
         public readonly IMenuItemBarcodeDefRepository MenuItemBarcodeDef;
         public readonly IRvcMenuItemDefWithLanguageRepository rvcMenuItemDefWithLanguageRepository;
+        public readonly ICondimentMenuItemRelationRepository condimentMenuItemRelation;
+        public readonly ICondimentRelationRepository condimentRelation;
         
 
         
@@ -35,6 +32,8 @@ namespace Quki.Bll
             RvcMenuItemPrice = service.GetService<IRvcMenuItemPriceRepository>();
             MenuItemBarcodeDef = service.GetService<IMenuItemBarcodeDefRepository>();
             rvcMenuItemDefWithLanguageRepository = service.GetService<IRvcMenuItemDefWithLanguageRepository>();
+            condimentMenuItemRelation = service.GetService<ICondimentMenuItemRelationRepository>();
+            condimentRelation = service.GetService<ICondimentRelationRepository>();
            
 
         }
@@ -48,8 +47,10 @@ namespace Quki.Bll
             return allMenuItems;
         }
 
-        public List<GetMenuItems> GetMenuItems(int languageId)
+        public List<GetMenuItems> GetMenuItems(out List<Condiment> condimentRequired, out List<Condiment> condimentNonRequired, int languageId)
         {
+            condimentRequired = new List<Condiment>();
+            condimentNonRequired = new List<Condiment>();
             List<GetMenuItems> itemList = new List<GetMenuItems>();
             var isOnline = RvcOptionsRight.TGetList(w => w.rvc_def_seq == 10 && w.rvc_options_def_code == "rvc_opt_code_Online_Order")
                .FirstOrDefault();
@@ -92,7 +93,51 @@ namespace Quki.Bll
                              control_number = s.RVCWL.S.control_number == null ? 0 : s.RVCWL.S.control_number.Value,
                          }).OrderBy(o => o.control_number).ThenBy(o => o.slu_priority).ToList();
 
+                    var menuitemList = repo.TGetList();
 
+                    condimentNonRequired = menuitemList.Join(condimentRelation.TGetList(), MI => MI.condiment_main_group_def_seq, CR => CR.relation_seq, (MI, CR) => new
+                    {
+                        CR = CR,
+                        MI = MI
+                    }).Join(condimentMenuItemRelation.TGetList(), R => R.CR.condiment_sub_group_def_seq, CMR => CMR.condiment_sub_group_def_seq, (R, CMR) => new
+                    {
+                        R = R,
+                        CMR = CMR
+                    }).Join(repo.TGetList(), R => R.CMR.mi_master_def_seq, MI => MI.mi_master_def_seq, (R, MI) => new {
+                        R = R,
+                        MI = MI
+                    }).Join(RvcMenuItemPrice.TGetList(x => x.rvc_mi_price_no == 1), R => R.MI.mi_master_def_seq, RMIP => RMIP.mi_master_def_seq, (R, RMIP) => new
+                    {
+                        R = R,
+                        RMIP = RMIP
+                    }).Join(rvcMenuItemDefWithLanguageRepository.TGetList(x => x.LanguageId == languageId), R => R.RMIP.mi_master_def_seq, MIL => MIL.RvcMenuItemDefSeq, (R, MIL) => new Condiment
+                    {
+                        mi_master_def_name = MIL.Name,
+                        rvc_mi_price = R.RMIP.mi_price
+
+                    }).ToList();
+
+                    condimentRequired = menuitemList.Join(condimentRelation.TGetList(), MI => MI.condiment_profile_def_seq, CR => CR.relation_seq, (MI, CR) => new
+                    {
+                        CR = CR,
+                        MI = MI
+                    }).Join(condimentMenuItemRelation.TGetList(), R => R.CR.condiment_sub_group_def_seq, CMR => CMR.condiment_sub_group_def_seq, (R, CMR) => new
+                    {
+                        R = R,
+                        CMR = CMR
+                    }).Join(repo.TGetList(), R => R.CMR.mi_master_def_seq, MI => MI.mi_master_def_seq, (R, MI) => new {
+                        R = R,
+                        MI = MI
+                    }).Join(RvcMenuItemPrice.TGetList(x => x.rvc_mi_price_no == 1), R => R.MI.mi_master_def_seq, RMIP => RMIP.mi_master_def_seq, (R, RMIP) => new
+                    {
+                        R = R,
+                        RMIP = RMIP
+                    }).Join(rvcMenuItemDefWithLanguageRepository.TGetList(x => x.LanguageId == languageId), R => R.RMIP.mi_master_def_seq, MIL => MIL.RvcMenuItemDefSeq, (R, MIL) => new Condiment
+                    {
+                        mi_master_def_name = MIL.Name,
+                        rvc_mi_price = R.RMIP.mi_price
+
+                    }).ToList();
 
                 }
             }
@@ -144,8 +189,10 @@ namespace Quki.Bll
             }
             return itemList;
         }
-        public List<GetMenuItems> GetMenuItemsWithId(long id, int languageId)
+        public List<GetMenuItems> GetMenuItemsWithId(long id,out List<Condiment> condimentRequired, out List<Condiment> condimentNonRequired, int languageId)
         {
+            condimentRequired = new List<Condiment>();
+            condimentNonRequired= new List<Condiment>();
             List<GetMenuItems> itemList = new List<GetMenuItems>();
             var isOnline = RvcOptionsRight.TGetList(w => w.rvc_def_seq == 2 && w.rvc_options_def_code == "rvc_opt_code_Online_Order")
                .FirstOrDefault();
@@ -173,7 +220,7 @@ namespace Quki.Bll
                               RVCWL = RVCWL,
                               RS = RS
                           })
-                          .Where(w => w.RVCWL.RMD.DP.D.mi_is_active == 1 && w.RVCWL.RMD.DP.D.rvc_def_seq == 2 && (w.RVCWL.RMD.DP.D.mi_master_def_type == "menuitem" || w.RVCWL.RMD.DP.D.mi_master_def_type == "condiment") && w.RVCWL.RMD.DP.P.mi_price_number == 1 && w.RVCWL.RMD.DP.D.slu_seq==id && w.RS.LanguageId.Equals(languageId))
+                          .Where(w => w.RVCWL.RMD.DP.D.mi_is_active == 1 && w.RVCWL.RMD.DP.D.rvc_def_seq == 2 && w.RVCWL.RMD.DP.P.mi_price_number == 1 && w.RVCWL.RMD.DP.D.slu_seq==id && w.RS.LanguageId.Equals(languageId))
                           .Select(s => new GetMenuItems
                           {
                               slu_def_seq_view = s.RVCWL.S.slu_def_seq,
@@ -187,10 +234,53 @@ namespace Quki.Bll
                               rvc_mi_third_name = s.RS.Remark,
                               slu_type_slu_image = s.RVCWL.S.slu_type_slu_image,
                               slu_priority = (int)s.RVCWL.RMD.DP.D.slu_priority,
-                              
                               control_number = s.RVCWL.S.control_number
                           }).OrderBy(o => o.control_number).ThenBy(o => o.slu_priority).ToList();
+                    var menuitemList = repo.TGetList(x=>x.slu_seq==id);
+                   
+                    condimentNonRequired = menuitemList.Join(condimentRelation.TGetList(), MI => MI.condiment_main_group_def_seq, CR => CR.relation_seq, (MI, CR) => new
+                    {
+                        CR = CR,
+                        MI = MI
+                    }).Join(condimentMenuItemRelation.TGetList(), R => R.CR.condiment_sub_group_def_seq, CMR => CMR.condiment_sub_group_def_seq, (R, CMR) => new
+                    {
+                        R = R,
+                        CMR = CMR
+                    }).Join(repo.TGetList(), R => R.CMR.mi_master_def_seq, MI => MI.mi_master_def_seq, (R, MI) => new {
+                        R = R,
+                        MI = MI
+                    }).Join(RvcMenuItemPrice.TGetList(x => x.rvc_mi_price_no == 1), R => R.MI.mi_master_def_seq, RMIP => RMIP.mi_master_def_seq, (R, RMIP) => new
+                    {
+                        R = R,
+                        RMIP = RMIP
+                    }).Join(rvcMenuItemDefWithLanguageRepository.TGetList(x => x.LanguageId == languageId), R => R.RMIP.mi_master_def_seq, MIL => MIL.RvcMenuItemDefSeq, (R, MIL) => new Condiment
+                    {
+                        mi_master_def_name = MIL.Name,
+                        rvc_mi_price = R.RMIP.mi_price
 
+                    }).ToList();
+
+                    condimentRequired= menuitemList.Join(condimentRelation.TGetList(), MI => MI.condiment_profile_def_seq, CR => CR.relation_seq, (MI, CR) => new
+                     {
+                         CR = CR,
+                         MI = MI
+                     }).Join(condimentMenuItemRelation.TGetList(), R => R.CR.condiment_sub_group_def_seq, CMR => CMR.condiment_sub_group_def_seq, (R, CMR) => new
+                     {
+                         R = R,
+                         CMR = CMR
+                     }).Join(repo.TGetList(), R => R.CMR.mi_master_def_seq, MI => MI.mi_master_def_seq, (R, MI) => new                      {
+                         R = R,
+                         MI = MI
+                     }).Join(RvcMenuItemPrice.TGetList(x=>x.rvc_mi_price_no==1),R=>R.MI.mi_master_def_seq,RMIP=>RMIP.mi_master_def_seq,(R,RMIP)=>new
+                     {
+                         R=R,
+                         RMIP=RMIP
+                     }).Join(rvcMenuItemDefWithLanguageRepository.TGetList(x=>x.LanguageId==languageId),R=>R.RMIP.mi_master_def_seq,MIL=>MIL.RvcMenuItemDefSeq,(R,MIL)=>new Condiment
+                     {
+                         mi_master_def_name=MIL.Name,
+                         rvc_mi_price=R.RMIP.mi_price
+
+                     }).ToList();
                     foreach (var item in itemList)
                     {
                         string text = item.slu_def_name;

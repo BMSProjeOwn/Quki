@@ -237,6 +237,8 @@ namespace Quki
             services.AddScoped<ISluDefRepository, SluDefRepository>();
             services.AddScoped<IRvcMenuItemPriceRepository, RvcMenuItemPriceRepository>();
             services.AddScoped<Islu_Rvc_RelationRepository, slu_Rvc_RelationRepository>();
+            services.AddScoped<ICondimentMenuItemRelationRepository, CondimentMenuItemRelationRepository>();
+            services.AddScoped<ICondimentRelationRepository, CondimentRelationRepository>();
 
             #endregion
 

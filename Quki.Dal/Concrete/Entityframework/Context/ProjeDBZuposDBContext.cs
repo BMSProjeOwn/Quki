@@ -35,6 +35,8 @@ namespace Quki.Dal.Concrete.Entityframework.Context
         public DbSet<slu_Rvc_Relation> slu_Rvc_Relation { get; set; }
         public DbSet<SluDefWithLanguage> SluDefWithLanguage { get; set; }
         public DbSet<RvcMenuItemDefWithLanguage> RvcMenuItemDefWithLanguage { get; set; }
+        public DbSet<CondimentMenuItemRelation> CondimentMenuItemRelation { get; set; }
+        public DbSet<CondimentRelation> CondimentRelation { get; set; }
 
         public DbSet<TDepart> TDepart { get; set; }
         public DbSet<AppUser> AppUser { get; set; }
