@@ -1,91 +1,199 @@
-﻿
+﻿@using Quki.Entity.ViewModel;
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutTikutu.cshtml";
 }
 
-@{
-    ViewBag.Title = "Home Page";
-}
-<style>
-    section#Deneme {
-        background-color: #09C;
-        width: 50%;
-        float: left;
-    }
+@await Component.InvokeAsync("HomeSlider")
 
-    section#deneme1 {
-        background-color: #909;
-        width: 50%;
-        float: left;
-    }
 
-</style>
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+@model MenuViewModel
+<section>
+    <div class="section feature-products">
+        <div class="container">
+            <div class="title text-center m-bottom-2">
+                <div class="page-title color">
+                    <h3 class="title-main">Akyol Simit</h3>
+                    <div class="title title-icon">
+                        <h2 class="title-h2">Ürünlerimiz</h2>
+                    </div>
+                </div>
+            </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            <div class="product-tab">
+                <div class="flex-t-center">
+                    <ul class="nav nav-pills text-center justify-content-center" role="tablist">
+
+                        <li class="nav-item active"><a class="name-tab nav-link active show" href="#Tumu" data-toggle="tab">Tümü</a></li>
+                        @foreach (var item in Model.sluDefModels)
+                        {
+
+                            <li class="nav-item">
+                                <a class="name-tab nav-link" data-toggle="pill" href="#@item.slu_def_seq">@item.slu_def_name.ToUpper()</a>
+                            </li>
+                        }
+
+                    </ul>
+                </div>
+
+                <div class="tab-content m-top">
+                    <!-- All -->
+
+                    <div class="tab-pane fade  in active" id="Tumu">
+                        <!-- Menu
+                        ============================================= -->
+                        <div class="menu-simple">
+                            <div class="container">
+                                <div class="row">
+
+                                    @foreach (var itemMenu in Model.getMenuItems)
+                                    {
+
+                                        <div class="col-xs-12 col-sm-12 col-md-6">
+                                            <div class="dish-panel">
+                                                <div class="dish--content">
+                                                    <div class="dish--content-bio">
+                                                        <h3 class="dish--title">@itemMenu.mi_master_def_name.ToUpper()</h3>
+                                                        <div class="dish--price">&nbsp;&nbsp;&nbsp;</div>
+                                                    </div>
+                                                    @if (itemMenu.rvc_mi_third_name != null)
+                                                    {
+
+                                                        <p class="dish--desc">@itemMenu.rvc_mi_third_name</p>
+                                                    }
+                                                </div>
+                                            </div><!-- .dish end -->
+                                        </div>
+
+                                        <!-- .dish-panel end -->
+                                    }
+                                </div> <!-- .row end -->
+                            </div><!-- .container end -->
+                        </div><!-- #menuSimple1 end -->
+                    </div>
+                    <div id="all" class="tab-pane active">
+                        <div class="product">
+                            <div class="row">
+                                @foreach (var item in Model.getMenuItems)
+                                {
+
+                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                        <div class="item item-hover-view-cart">
+                                            <div class="product-thumb">
+                                                <div class="product-container item-img">
+                                                    <div class="product-image-container">
+                                                        <a class="product-img-link" title="">
+                                                            <img class="img-fluid" src="@item.mi_icon_path" alt="img">
+                                                            <img class="img-fluid img-hover" src="@item.mi_icon_path" alt="img">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="product-cart-icon d-flex justify-content-around">
+                                                    <div class="product-actions">
+                                                        <a href="#">
+                                                            <i class="cs-icon icon-cs-cart"></i>
+                                                        </a>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="product-info text-center">
+                                                <h4 class="product-name">
+                                                    <a href="product-detail.html">@item.mi_master_def_name</a>
+                                                </h4>
+                                                <div class="price">
+                                                    <span>@item.mi_price TL</span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    @foreach (var item in Model.sluDefModels)
+                    {
+
+                        <div class="tab-pane fade" id="@item.slu_def_seq">
+                            <div class="product">
+                                <div class="row">
+                                    <!-- Dish #1 -->
+                                    @{
+                                        var sluItem = Model.getMenuItems.Where(x => x.slu_def_seq_view == item.slu_def_seq).ToList();
+                                    }
+                                    @foreach (var itemSlu in sluItem)
+                                    {
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                            <div class="item item-hover-view-cart">
+                                                <div class="product-thumb">
+                                                    <div class="product-container item-img">
+                                                        <div class="product-image-container">
+                                                            <a class="product-img-link" href="#" title="">
+                                                                <img class="img-fluid" src="@itemSlu.mi_icon_path" alt="img">
+                                                                <img class="img-fluid img-hover" src="@itemSlu.mi_icon_path" alt="img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-cart-icon d-flex justify-content-around">
+                                                        <div class="product-actions">
+                                                            <a href="#">
+                                                                <i class="cs-icon icon-cs-cart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="product-actions">
+                                                            <a href="#">
+                                                                <i class="cs-icon icon-search"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="product-actions">
+                                                            <a href="#">
+                                                                <i class="cs-icon icon-heart"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="product-info text-center">
+                                                    <h4 class="product-name">
+                                                        <a href="product-detail.html">@itemSlu.mi_master_def_name</a>
+                                                    </h4>
+                                                    <div class="price">
+                                                        <span>@itemSlu.mi_price TL </span>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- .dish-panel end -->
+                                    }
+                                    <!-- Dish #2 -->
+                                </div> <!-- .row end -->
+                            </div><!-- .container end -->
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
-<div>
-    <script>
-        "use strict";
-        var bilgiler = {
-            adi: "Yusuf",
-            soyAdi: "SEZER",
-            yas: 75,
-            ulke: "Türkiye"
-        };
-
-        $(function () {
-            $.each(bilgiler, function (key, value) {
-                $("body").append("<p>" + key + " : " + value + "<p>");
-            });
-        });
-        alert("Merhaba Dünya!")
-
-        document.getElementById("id_of_element").style.color = "#ffffff";
-        $("id_of_element")
-        document.write($F("id_of_element"))
-
-    </script>
+</section>
 
 
 
-</div>
-<div>
-    <section id="Deneme" > denememe </section>
-
-</div>
-
-<div>
-    <section id="deneme1"  > denememe2 </section>
-
-</div>
-<div>
-    @Html.ActionLink("MenuList ?", "MenuItemList", null, new { @class = "btn btn-priymary" });
 
 
-</div>
+
+
+
+
 

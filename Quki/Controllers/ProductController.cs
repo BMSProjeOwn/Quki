@@ -54,7 +54,7 @@ namespace Quki.Controllers
             int languageId=Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
             try
             {
-                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId);
+                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId,2);
             }
             catch
             {
@@ -95,7 +95,7 @@ namespace Quki.Controllers
             int languageId = Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
             if (id == 0)
             {
-                var getMenuItems = rvcMenuItemDefService.GetMenuItems(languageId);
+                var getMenuItems = rvcMenuItemDefService.GetMenuItems(languageId, Convert.ToInt32(2));
                 ViewBag.ProductItems = getMenuItems;
                 ViewBag.MenuItems = MultiLanguageOmni.ReadResourceKey.GetString("AllMenu", "MultiLanguageOmni.Index");
                 ViewBag.Pic = "/icons/1tumu.png";

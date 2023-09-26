@@ -1,6 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutTikutu.cshtml";
 }
 
 
@@ -11,90 +11,1762 @@
 
 @await Component.InvokeAsync("HomeSlider")
 
-<section id="banner6" class="banner banner-1 text-center pb-90">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-                <div class="heading heading-1 text--center mb-50">
-                    <p class="heading--subtitle">@MultiLanguageOmni.ReadResourceKey.GetString("QukiMeyhaneTitle", "MultiLanguageOmni.Index")</p>
-                    <h2 class="heading--title">@MultiLanguageOmni.ReadResourceKey.GetString("QukiMeyhane", "MultiLanguageOmni.Index").ToUpper()</h2>
-                    <div class="divider--shape-4">@MultiLanguageOmni.ReadResourceKey.GetString("HomeMenuText", "MultiLanguageOmni.Index")</div>
-                    <p class="heading--desc"></p>
+
+<section>
+    <div class="section feature-products">
+        <div class="container">
+            <div class="title text-center m-bottom-2">
+                <div class="page-title color">
+                    <h3 class="title-main">Akyol Simit</h3>
+                    <div class="title title-icon">
+                        <h2 class="title-h2">Ürünlerimiz</h2>
+                    </div>
                 </div>
-                <!-- .heading end -->
             </div>
-            <!-- .col-md-6 end -->
+
+            <div class="product-tab">
+                <div class="flex-t-center">
+                    <ul class="nav nav-pills text-center justify-content-center" role="tablist">
+                        <li class="nav-item">
+                            <a class="name-tab nav-link active show" data-toggle="pill" href="#all">Ekmekler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="name-tab nav-link" data-toggle="pill" href="#smoothie">Börekler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="name-tab nav-link" data-toggle="pill" href="#juices">Atıştırmalıklar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="name-tab nav-link" data-toggle="pill" href="#vegetables">Paket Ürünler</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="tab-content m-top">
+                    <!-- All -->
+                    <div id="all" class="tab-pane active">
+                        <div class="product">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-1.jpg" alt="img">
+                                                        <img class="img-fluid img-hover" src="img/products/product-2.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Ezogelin Çorbası</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>23.00 TL</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-14.jpg" alt="img">
+                                                        <img class="img-fluid img-hover" src="img/products/product-13.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Mercimek Çorbası</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>23.00 TL</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-4.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Tarhana Çorbası</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>20.00 TL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-5.jpg" alt="img">
+                                                        <img class="img-fluid img-hover" src="img/products/product-6.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Beyran Çorbası</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>30.00 TL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-8.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">örnek</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>22.00 TL </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-9.jpg" alt="img">
+                                                        <img class="img-fluid img-hover" src="img/products/product-10.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">örnek</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>21.00 TL </span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-11.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html"> örnek </a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>23.00</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Smoothie -->
+                    <div id="smoothie" class="tab-pane fade">
+                        <div class="product">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-12.jpg" alt="img">
+                                                        <img class="img-fluid img-hover" src="img/products/product-13.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">İçli Köfte</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>23.00 TL </span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-14.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Fındık Lahmacun</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>21.00 TL </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-15.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Çiğ Köfte</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>25.00 TL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-16.jpg" alt="img">
+                                                        <img class="img-fluid img-hover" src="img/products/product-17.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Patates Kızartması</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>16.00 TL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-18.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Purple Cabbage</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$18.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-19.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Aubergine</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$22.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-20.jpg" alt="img">
+                                                        <img class="img-fluid img-hover" src="img/products/product-21.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                            <span class="product-flash sale">Sale</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Banana Blossoms</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$21.00</span>
+                                                <del>$25.00</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-22.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                            <span class="product-flash sale">Sale</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Green Detox Drink</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$23.00</span>
+                                                <del>$25.00</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Juices -->
+                    <div id="juices" class="tab-pane fade">
+                        <div class="product">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-17.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                            <span class="product-flash sale">Sale</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Fresh Tomatoes</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$23.00</span>
+                                                <del>$25.00</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-18.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Fresh Ly Son Garlic</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$21.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-19.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Organic Mushroom</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$41.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-20.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Pomegranate Juice</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$16.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-21.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash sale">Sale</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Purple Cabbage</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$18.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-22.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Aubergine</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$22.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-3.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                            <span class="product-flash sale">Sale</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Banana Blossoms</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$21.00</span>
+                                                <del>$25.00</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-14.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                            <span class="product-flash sale">Sale</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Green Detox Drink</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$23.00</span>
+                                                <del>$25.00</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vegetables -->
+                    <div id="vegetables" class="tab-pane fade">
+                        <div class="product">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-6.jpg" alt="img">
+                                                        <img class="img-fluid img-hover" src="img/products/product-7.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                            <span class="product-flash sale">Sale</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Fresh Tomatoes</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$23.00</span>
+                                                <del>$25.00</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-8.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Fresh Ly Son Garlic</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$21.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-9.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Organic Mushroom</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$41.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-10.jpg" alt="img">
+                                                        <img class="img-fluid img-hover" src="img/products/product-11.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Pomegranate Juice</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$16.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-12.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Purple Cabbage</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$18.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-13.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Aubergine</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$22.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-14.jpg" alt="img">
+                                                        <img class="img-fluid img-hover" src="img/products/product-15.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                            <span class="product-flash sale">Sale</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Banana Blossoms</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$21.00</span>
+                                                <del>$25.00</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-16.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                            <span class="product-flash sale">Sale</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Green Detox Drink</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$23.00</span>
+                                                <del>$25.00</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tea -->
+                    <div id="tea" class="tab-pane fade">
+                        <div class="product">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-17.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                            <span class="product-flash sale">Sale</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Fresh Tomatoes</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$23.00</span>
+                                                <del>$25.00</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-18.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Fresh Ly Son Garlic</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$21.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-19.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Organic Mushroom</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$41.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-20.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Pomegranate Juice</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$16.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-21.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash sale">Sale</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Purple Cabbage</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$18.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-22.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Aubergine</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$22.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-3.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                            <span class="product-flash sale">Sale</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Banana Blossoms</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$21.00</span>
+                                                <del>$25.00</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart m-bottom-0">
+                                        <div class="product-thumb">
+                                            <div class="product-container item-img">
+                                                <div class="product-image-container">
+                                                    <a class="product-img-link" href="product-detail.html" title="">
+                                                        <img class="img-fluid" src="img/products/product-14.jpg" alt="img">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-cart-icon d-flex justify-content-around">
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-cs-cart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-search"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="product-actions">
+                                                    <a href="#">
+                                                        <i class="cs-icon icon-heart"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product-label">
+                                            <span class="product-flash">Hot</span>
+                                            <span class="product-flash sale">Sale</span>
+                                        </div>
+
+                                        <div class="product-info text-center">
+                                            <h4 class="product-name">
+                                                <a href="product-detail.html">Green Detox Drink</a>
+                                            </h4>
+                                            <div class="price">
+                                                <span>$23.00</span>
+                                                <del>$25.00</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- .row end -->
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="banner-panel">
-                    <div class="banner--img">
-                        <img src="~/webQuki/images/banners/1.jpg" alt="banner img" class="img-responsive" loading="lazy">
-                    </div>
-                </div>
-                <!-- .banner-panel end -->
-            </div>
-            <!-- .col-md-4 end -->
-
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="banner-panel">
-                    <div class="banner--img">
-                        <img src="~/webQuki/images/banners/2.jpg" alt="banner img" class="img-responsive" loading="lazy">
-                    </div>
-                </div>
-                <!-- .banner-panel end -->
-            </div>
-            <!-- .col-md-4 end -->
-
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="banner-panel">
-                    <div class="banner--img">
-                        <img src="~/webQuki/images/banners/3.jpg" alt="banner img" class="img-responsive" loading="lazy">
-                    </div>
-                </div>
-                <!-- .banner-panel end -->
-            </div>
-            <!-- .col-md-4 end -->
-
-        </div>
-        <!-- .row end -->
     </div>
-    <!-- .container end -->
 </section>
-<!-- #banner6 end -->
 
 
-@await Component.InvokeAsync("GetVisitorComments")
 
-<section id="menuGrid">
-    <div class="container">
-        <div class="row clearfix">
-            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-                <div class="heading heading-1 mb-50 text--center">
-                    <p class="heading--subtitle">@MultiLanguageOmni.ReadResourceKey.GetString("QukiMeyhaneTitle", "MultiLanguageOmni.Index")</p>
-                    <h2 class="heading--title mb-0">@MultiLanguageOmni.ReadResourceKey.GetString("ExploreOurMenu", "MultiLanguageOmni.Index")</h2>
-                    <div class="divider--shape-4"></div>
-                </div>
-            </div>
-            <!-- .col-md-8 end -->
-        </div>
-        <!-- .row end -->
-    </div>
-    <!-- .container end -->
-    <!-- .container end -->
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <a class="btn btn--primary btn--bordered btn--rounded btn--lg mt-0" asp-controller="Menu" asp-action="Index">@MultiLanguageOmni.ReadResourceKey.GetString("ViewMenu", "MultiLanguageOmni.Index")</a>
-            </div>
-        </div>
-        <!-- .row end -->
-    </div>
-    <!-- .container end -->
-</section>
-@*
-@await Component.InvokeAsync("News")*@
 
 
 

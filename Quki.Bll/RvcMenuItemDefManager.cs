@@ -25,6 +25,7 @@ namespace Quki.Bll
         public readonly IMenuItemBarcodeDefRepository MenuItemBarcodeDef;
         public readonly IRvcMenuItemDefWithLanguageRepository rvcMenuItemDefWithLanguageRepository;
         public readonly ISluDefWithLanguageRepository sluDefWithLanguageRepository;
+        public readonly Islu_Rvc_RelationRepository rvc_RelationRepository;
         
 
         
@@ -37,6 +38,7 @@ namespace Quki.Bll
             MenuItemBarcodeDef = service.GetService<IMenuItemBarcodeDefRepository>();
             rvcMenuItemDefWithLanguageRepository = service.GetService<IRvcMenuItemDefWithLanguageRepository>();
             sluDefWithLanguageRepository = service.GetService<ISluDefWithLanguageRepository>();
+            rvc_RelationRepository = service.GetService<Islu_Rvc_RelationRepository>();
            
 
         }
@@ -50,7 +52,7 @@ namespace Quki.Bll
             return allMenuItems;
         }
 
-        public List<GetMenuItems> GetMenuItems(int languageId)
+        public List<GetMenuItems> GetMenuItems(int languageId,long rvc_def_seq)
         {
             List<GetMenuItems> itemList = new List<GetMenuItems>();
             var isOnline = RvcOptionsRight.TGetList(w => w.rvc_def_seq == 2 && w.rvc_options_def_code == "rvc_opt_code_Online_Order")
@@ -78,20 +80,25 @@ namespace Quki.Bll
                          {
                              RVCWL = RVCWL,
                              RS = RS
-                         }).Where(w => w.RVCWL.RMD.DP.D.mi_is_active == 1 && w.RVCWL.RMD.DP.D.rvc_def_seq == 10 && (w.RVCWL.RMD.DP.D.mi_master_def_type == "menuitem" || w.RVCWL.RMD.DP.D.mi_master_def_type == "condiment") && w.RVCWL.RMD.DP.P.mi_price_number == 1 && w.RVCWL.RMD.DP.P.rvc_def_seq == 10 && w.RS.LanguageId.Equals(languageId))
+                         }).Join(rvc_RelationRepository.TGetList(),R=>R.RVCWL.RMD.DP.D.slu_seq,SRR=>SRR.slu_seq,(R,SRR)=>new
+                         {
+                             R=R,
+                             SRR=SRR
+                         })
+                         .Where(w => w.R.RVCWL.RMD.DP.D.mi_is_active == 1 && w.SRR.rvc_seq==rvc_def_seq && (w.R.RVCWL.RMD.DP.D.mi_master_def_type == "menuitem" || w.R.RVCWL.RMD.DP.D.mi_master_def_type == "condiment") && w.R.RVCWL.RMD.DP.P.mi_price_number == 1 && w.R.RS.LanguageId.Equals(languageId))
                          .Select(s => new GetMenuItems
                          {
-                             slu_def_seq_view = s.RVCWL.S.slu_def_seq,
-                             mi_master_def_seq = (long)s.RVCWL.RMD.DP.D.mi_master_def_seq,
-                             mi_master_def_name = s.RS.Name.ToUpper(),
-                             mi_barcode_id = s.RVCWL.RMD.B.mi_barcode_id,
-                             mi_price = (double)s.RVCWL.RMD.DP.P.mi_price,
+                             slu_def_seq_view = s.R.RVCWL.S.slu_def_seq,
+                             mi_master_def_seq = (long)s.R.RVCWL.RMD.DP.D.mi_master_def_seq,
+                             mi_master_def_name = s.R.RS.Name.ToUpper(),
+                             mi_barcode_id = s.R.RVCWL.RMD.B.mi_barcode_id,
+                             mi_price = (double)s.R.RVCWL.RMD.DP.P.mi_price,
                              slu_def_name = sluDefWithLanguageRepository.TGetList(x=>x.LanguageId==languageId).FirstOrDefault().Name.ToUpper(),
-                             mi_icon_path = s.RVCWL.RMD.DP.D.mi_icon_path,
-                             rvc_mi_second_name = s.RVCWL.RMD.DP.D.rvc_mi_second_name,
-                             rvc_mi_third_name = s.RS.Remark,
-                             slu_priority = s.RVCWL.RMD.DP.D.slu_priority == null ? 0 : s.RVCWL.RMD.DP.D.slu_priority.Value,
-                             control_number = s.RVCWL.S.control_number == null ? 0 : s.RVCWL.S.control_number.Value,
+                             mi_icon_path = s.R.RVCWL.RMD.DP.D.mi_icon_path,
+                             rvc_mi_second_name = s.R.RVCWL.RMD.DP.D.rvc_mi_second_name,
+                             rvc_mi_third_name = s.R.RS.Remark,
+                             slu_priority = s.R.RVCWL.RMD.DP.D.slu_priority == null ? 0 : s.R.RVCWL.RMD.DP.D.slu_priority.Value,
+                             control_number = s.R.RVCWL.S.control_number == null ? 0 : s.R.RVCWL.S.control_number.Value,
                          }).OrderBy(o => o.control_number).ThenBy(o => o.slu_priority).ToList();
 
 

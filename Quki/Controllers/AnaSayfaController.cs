@@ -15,7 +15,7 @@ namespace Quki.Controllers
             this.visitorCommentService = visitorCommentService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string id="")
         {
             return View("Index");
         }

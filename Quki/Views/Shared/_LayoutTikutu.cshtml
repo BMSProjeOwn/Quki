@@ -1,13 +1,12 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@using Quki.Common
-@using Quki.Entity.Models
+@using Quki.Entity.Models;
 <!DOCTYPE html>
 <html lang="en">
-@inject SignInManager<AppUser>  signInManager;
+@inject SignInManager<AppUser> signInManager;
 @*@{
     var culture = Context.Features.Get<Microsoft.AspNetCore.Localization.IRequestCultureFeature>();
     MultiLanguageOmni.ReadResourceKey.cultureName = culture.RequestCulture.UICulture.Name;
-    
+
 
 }*@
 <head>
@@ -17,29 +16,28 @@
     @{
         string keyw = (!string.IsNullOrEmpty(ViewBag.MetaKeywords) ? ViewBag.MetaKeywords : "");
         string desc = (!string.IsNullOrEmpty(ViewBag.MetaDescription) ? ViewBag.MetaDescription : "");
+        string imagePath = (!string.IsNullOrEmpty(ViewBag.ImagePath) ? ViewBag.ImagePath : "");
     }
 
 
 
-    <meta property="og:title" content="@ViewData["Title"] Quki">
-    <meta content="@ViewData["Title"] Quki" name="twitter:title">
+    <meta property="og:title" content="@ViewData["Title"] Tikutu">
+    <meta content="@ViewData["Title"] Tikutu" name="twitter:title">
     <meta property="og:description" content="@desc">
-    <meta content="Quki" property="og:site_name">
+    <meta content="Tikutu" property="og:site_name">
     <meta content="news" property="og:type">
-    <meta name="title" content="@ViewData["Title"] Quki" />
+    <meta name="title" content="@ViewData["Title"] Tikutu" />
     <meta name="twitter:description" content="@desc" />
-    <meta name="searchTitle" content="@ViewData["Title"] Quki" />
+    <meta name="searchTitle" content="@ViewData["Title"] Tikutu" />
     <meta name="keywords" content="@keyw">
     <meta name="description" content="@desc" />
     <meta name="image" content="" />
     <meta content="index, follow" id="meta_robot" name="robots">
-    <meta name="google-site-verification" content="cGmFm7ge4PXGlUzj3EVux-b-F3wFSHo2OBDIONHFct4" />
-
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="/favicon.ico" type="image/png">
     <link rel="canonical" href="@ViewData["canonicalLink"]" />
@@ -60,7 +58,7 @@
     <link rel="stylesheet" href="~/web/libs/boostrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/web/libs/flaticon/css/flaticon.css">
     <link rel="stylesheet" href="~/web/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="~/web/libs/owl.carousel/~/webQuki/owl.carousel.css">
+    <link rel="stylesheet" href="~/web/libs/owl.carousel/assets/owl.carousel.css">
     <link rel="stylesheet" href="~/web/libs/nivo-slider/css/nivo-slider.css">
     <link rel="stylesheet" href="~/web/libs/nivo-slider/css/animate.css">
     <link rel="stylesheet" href="~/web/libs/nivo-slider/css/style.css">
@@ -72,53 +70,111 @@
     <link rel="stylesheet" type="text/css" href="~/web/css/style.css">
     <link rel="stylesheet" type="text/css" href="~/web/css/responsive.css">
     <link href="~/web/css/Custom.css" rel="stylesheet" />
-
-
-<script type="application/ld+json">
-{
-  "@@context": "https://schema.org",
-  "@@type": "Organization",
-  "name": "Quki",
-  "url": "https://Quki.com/",
-  "logo": "https://Quki.com/web/img/Quki_logo.png",
-  "sameAs": [
-    "https://www.facebook.com/Qukicom",
-    "https://twitter.com/Qukicom",
-    "https://www.instagram.com/Qukicom/",
-    "https://www.youtube.com/channel/UCQ1ErM-53hECcgHd6U-tGCw",
-    "https://tr.pinterest.com/Qukicom/"
-  ]
-}
-</script>
+    <link href="~/plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+    <link href="~/plugins/sweetalert2/sweetalert2.css" rel="stylesheet" />
+    <script src="~/web/libs/jquery/jquery-1.11.3.min.js"></script>
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+    <div class="all">
+        <header>
+            <div id="top-header">
+
+                <div class="main-header">
+                    <div class="mg-left-right">
+                        <div class="row">
+                            <div class="col-lg-2 col-3">
+                                <div class="index-logo">
+                                    <a href="/">
+                                        <img src="/web/img/tikutu_logo.png" alt="img">
+
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-7 d-none d-lg-block" style="text-align:center">
+
+                                @await Component.InvokeAsync("UserMenu")
+                            </div>
+                            <div class="hearder-icon home clearfix">
+
+
+
+                                <div class="header-block menu-block d-lg-none popup-over pull-right">
+                                    <div data-toggle="dropdown" class="popup-title">
+                                        <a href="#" title="user">
+                                            <i class="fa fa-bars btn-menu"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
+        </header>
+
+        <main>
+            @RenderBody()
+        </main>
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <div class="footer">
+                <div class="footer-bottom pd-top-bottom">
+                </div>
+
+                <div class="footer-copyright text-center">
+                    <div class="container">
+                        <div class="content">
+                            Copyright © 2023
+                            <span>Akyol Simit.</span> All Rights Reserved. Design by
+                            <span class="tranform-none">BMSPROJE</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
-    @RenderSection("scripts", required: false)
+    <div class="back-to-top">
+        <a href="#">
+            <i class="fa fa-long-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- Page Loader -->
+    <div id="page-preloader">
+        <div class="page-loading">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <!-- Libs JS -->
+
+    <script src="~/web/libs/owl.carousel/owl.carousel.js"></script>
+    <script src="~/web/libs/boostrap/js/bootstrap.min.js"></script>
+    <script src="~/web/libs/boostrap/js/popper.min.js"></script>
+    <script src="~/web/libs/nivo-slider/js/jquery.nivo.slider.js"></script>
+    <script src="~/web/libs/jquery.elevatezoom/jquery.elevatezoom.js"></script>
+    <script src="~/web/libs/slider-range/js/tmpl.js"></script>
+    <script src="~/web/libs/slider-range/js/jquery.dependClass-0.1.js"></script>
+    <script src="~/web/libs/slider-range/js/draggable-0.1.js"></script>
+    <script src="~/web/libs/slider-range/js/jquery.slider.js"></script>
+    <script src="~/web/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="~/web/libs/jquery.countdown/jquery.countdown.js"></script>
+    <script src='~/web/libs/imagesloaded/imagesloaded.pkgd.js'></script>
+    <script src="~/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="~/plugins/sweetalert2/sweetalert2.all.js"></script>
+    <script src="~/plugins/sweetalert2/sweetalert2.min.js"></script>
+    <script src="~/plugins/sweetalert2/sweetalert2.js"></script>
+    <!-- Template JS -->
+    <script src="~/web/js/custom.js"></script>
+    <script src="~/js/site.min.js"></script>
+    <script src="~/js/site.js"></script>
+    @RenderSection("JavaScript", false)
 </body>
 </html>

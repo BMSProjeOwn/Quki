@@ -1,13 +1,26 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using Quki.Entity.DtoModels;
+using Quki.Entity.ViewModel;
+using Quki.Interface;
 using System;
+using System.Collections.Generic;
 
 namespace Quki.Controllers
 {
     public class HomeController : Controller
     {
 
+
+        private readonly IRvcMenuItemDefService rvcMenuItemDefService;
+        private readonly Islu_Rvc_RelationService slu_Rvc_RelationService;
+        public HomeController(IRvcMenuItemDefService rvcMenuItemDefService, Islu_Rvc_RelationService slu_Rvc_RelationService)
+        {
+            this.rvcMenuItemDefService = rvcMenuItemDefService;
+            this.slu_Rvc_RelationService = slu_Rvc_RelationService;
+
+        }
 
         [HttpPost]
         public IActionResult CultureManegmant(string culture)
@@ -31,9 +44,23 @@ namespace Quki.Controllers
             }
 
         }
-        public IActionResult Index()
+        public IActionResult Index(string id="2")
         {
-            return View();
+            List<SluDefModel> sluDefModels = new List<SluDefModel>();
+            int languageId = Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
+            var getMenuItems = rvcMenuItemDefService.GetMenuItems(languageId,Convert.ToInt32(id));
+            try
+            {
+                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId, Convert.ToInt32(id));
+            }
+            catch
+            {
+
+            }
+            MenuViewModel menuViewModel = new MenuViewModel();
+            menuViewModel.getMenuItems = getMenuItems;
+            menuViewModel.sluDefModels = sluDefModels;
+            return View(menuViewModel);
         }
 
     }

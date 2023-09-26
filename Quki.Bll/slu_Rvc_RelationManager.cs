@@ -61,7 +61,7 @@ namespace Quki.Bll
             
             return itemList;
         }
-        public List<SluDefModel> GetAllSluDefRelationWithSlu(int languageID)
+        public List<SluDefModel> GetAllSluDefRelationWithSlu(int languageID, long rvc_def_seq)
         {
             var itemList = sluDef.TGetList()
                           .Join(repo.TGetList(), x => x.slu_def_seq, s => s.slu_seq, (D, P) => new
@@ -74,7 +74,7 @@ namespace Quki.Bll
                               SwR = SwR
                           })
 
-                          .Where(w => w.R.P.rvc_seq == 10 && w.R.D.slu_type == "MI" && w.SwR.LanguageId.Equals(languageID)).OrderBy(x => x.R.D.control_number.Value)
+                          .Where(w => w.R.P.rvc_seq == rvc_def_seq && w.R.D.slu_type == "MI" && w.SwR.LanguageId.Equals(languageID)).OrderBy(x => x.R.D.control_number.Value)
                           .Select(s => new SluDefModel
                           {
                               slu_def_name = s.SwR.Name,
