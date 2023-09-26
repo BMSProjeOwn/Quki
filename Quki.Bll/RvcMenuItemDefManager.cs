@@ -256,7 +256,8 @@ namespace Quki.Bll
                     }).Join(rvcMenuItemDefWithLanguageRepository.TGetList(x => x.LanguageId == languageId), R => R.RMIP.mi_master_def_seq, MIL => MIL.RvcMenuItemDefSeq, (R, MIL) => new Condiment
                     {
                         mi_master_def_name = MIL.Name,
-                        rvc_mi_price = R.RMIP.mi_price
+                        rvc_mi_price = R.RMIP.mi_price,
+                        mi_master_def_seq=R.R.R.R.MI.mi_master_def_seq
 
                     }).ToList();
 
