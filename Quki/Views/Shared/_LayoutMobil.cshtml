@@ -101,6 +101,9 @@
     <script src="~/web/libs/masonry/masonry.pkgd.min.js"></script>
     <script src="~/web/libs/jquery.countdown/jquery.countdown.js"></script>
     <script src='~/web/libs/imagesloaded/imagesloaded.pkgd.js'></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <!-- Template JS -->
    @* <script src="~/web/js/custom.js"></script>
     @RenderSection("JavaScript", false)
@@ -126,6 +129,30 @@
         function callSluMiGroupSeqfunc(val) {
             window.location.href = "nossa-menu-kategori?id=" + val;
         }
+
+        (function () {
+            var elements = document.querySelectorAll('img[data-src]');
+            var index = 0;
+            var lazyLoad = function () {
+                if (index >= elements.length) return;
+                var item = elements[index];
+                if ((this.scrollY + this.innerHeight) > item.offsetTop) {
+                    var src = item.getAttribute("data-src");
+                    item.src = src;
+                    item.addEventListener('load', function () {
+                        item.removeAttribute('data-src');
+                    });
+                    index++;
+                    lazyLoad();
+                }
+            };
+            var init = function () {
+                window.addEventListener('scroll', lazyLoad);
+                lazyLoad();
+            };
+            return init();
+        })();
+
     </script>
     
 </body>

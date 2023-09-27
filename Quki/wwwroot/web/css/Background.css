@@ -12,7 +12,14 @@ body {
     width: 120px;
     height: 100px;
 }
-
+.imagecirculate3 {
+    display: inline-block;
+    width: 170px;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-top: 2%;
+}
 .background-login {
     background-image: url('../../viewimage/nossaicsayfa.png');
     background-position: center;

@@ -113,7 +113,9 @@ namespace Quki.Bll
                     }).Join(rvcMenuItemDefWithLanguageRepository.TGetList(x => x.LanguageId == languageId), R => R.RMIP.mi_master_def_seq, MIL => MIL.RvcMenuItemDefSeq, (R, MIL) => new Condiment
                     {
                         mi_master_def_name = MIL.Name,
-                        rvc_mi_price = R.RMIP.mi_price
+                        mi_price = R.RMIP.mi_price,
+                        mi_master_def_seq = R.R.R.R.MI.mi_master_def_seq,
+                        mi_icon_path = R.R.MI.mi_icon_path
 
                     }).ToList();
 
@@ -135,7 +137,9 @@ namespace Quki.Bll
                     }).Join(rvcMenuItemDefWithLanguageRepository.TGetList(x => x.LanguageId == languageId), R => R.RMIP.mi_master_def_seq, MIL => MIL.RvcMenuItemDefSeq, (R, MIL) => new Condiment
                     {
                         mi_master_def_name = MIL.Name,
-                        rvc_mi_price = R.RMIP.mi_price
+                        mi_price = R.RMIP.mi_price,
+                        mi_master_def_seq = R.R.R.R.MI.mi_master_def_seq,
+                        mi_icon_path = R.R.MI.mi_icon_path
 
                     }).ToList();
 
@@ -249,19 +253,16 @@ namespace Quki.Bll
                     }).Join(repo.TGetList(), R => R.CMR.mi_master_def_seq, MI => MI.mi_master_def_seq, (R, MI) => new {
                         R = R,
                         MI = MI
-                    }).Join(RvcMenuItemPrice.TGetList(x => x.rvc_mi_price_no == 1), R => R.MI.mi_master_def_seq, RMIP => RMIP.mi_master_def_seq, (R, RMIP) => new
-                    {
-                        R = R,
-                        RMIP = RMIP
-                    }).Join(rvcMenuItemDefWithLanguageRepository.TGetList(x => x.LanguageId == languageId), R => R.RMIP.mi_master_def_seq, MIL => MIL.RvcMenuItemDefSeq, (R, MIL) => new Condiment
+                    }).Join(rvcMenuItemDefWithLanguageRepository.TGetList(x => x.LanguageId == languageId), R => R.MI.mi_master_def_seq, MIL => MIL.RvcMenuItemDefSeq, (R, MIL) => new Condiment
                     {
                         mi_master_def_name = MIL.Name,
-                        rvc_mi_price = R.RMIP.mi_price,
-                        mi_master_def_seq=R.R.R.R.MI.mi_master_def_seq
+                        mi_price = RvcMenuItemPrice.TGetList(x => x.mi_master_def_seq == R.MI.mi_master_def_seq && x.rvc_mi_price_no == 1).FirstOrDefault() == null ? 0 : RvcMenuItemPrice.TGetList(x => x.mi_master_def_seq == R.MI.mi_master_def_seq && x.rvc_mi_price_no == 1).FirstOrDefault().rvc_mi_price_seq,
+                        mi_master_def_seq = R.R.R.MI.mi_master_def_seq,
+                        mi_icon_path = R.MI.mi_icon_path
 
                     }).ToList();
 
-                    condimentRequired= menuitemList.Join(condimentRelation.TGetList(), MI => MI.condiment_profile_def_seq, CR => CR.relation_seq, (MI, CR) => new
+                    var condimentRequired2= menuitemList.Join(condimentRelation.TGetList(), MI => MI.condiment_profile_def_seq, CR => CR.relation_seq, (MI, CR) => new
                      {
                          CR = CR,
                          MI = MI
@@ -272,14 +273,12 @@ namespace Quki.Bll
                      }).Join(repo.TGetList(), R => R.CMR.mi_master_def_seq, MI => MI.mi_master_def_seq, (R, MI) => new                      {
                          R = R,
                          MI = MI
-                     }).Join(RvcMenuItemPrice.TGetList(x=>x.rvc_mi_price_no==1),R=>R.MI.mi_master_def_seq,RMIP=>RMIP.mi_master_def_seq,(R,RMIP)=>new
+                     }).Join(rvcMenuItemDefWithLanguageRepository.TGetList(x=>x.LanguageId==languageId),R=>R.MI.mi_master_def_seq,MIL=>MIL.RvcMenuItemDefSeq,(R,MIL)=>new Condiment
                      {
-                         R=R,
-                         RMIP=RMIP
-                     }).Join(rvcMenuItemDefWithLanguageRepository.TGetList(x=>x.LanguageId==languageId),R=>R.RMIP.mi_master_def_seq,MIL=>MIL.RvcMenuItemDefSeq,(R,MIL)=>new Condiment
-                     {
-                         mi_master_def_name=MIL.Name,
-                         rvc_mi_price=R.RMIP.mi_price
+                         mi_master_def_name = MIL.Name,
+                         mi_price = RvcMenuItemPrice.TGetList(x=>x.mi_master_def_seq==R.MI.mi_master_def_seq && x.rvc_mi_price_no==1).FirstOrDefault()==null?0: RvcMenuItemPrice.TGetList(x => x.mi_master_def_seq == R.MI.mi_master_def_seq && x.rvc_mi_price_no == 1).FirstOrDefault().rvc_mi_price_seq,
+                         mi_master_def_seq = R.R.R.MI.mi_master_def_seq,
+                         mi_icon_path = R.MI.mi_icon_path
 
                      }).ToList();
                     foreach (var item in itemList)

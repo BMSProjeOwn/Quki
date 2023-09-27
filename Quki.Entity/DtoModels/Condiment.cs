@@ -13,9 +13,9 @@ namespace Quki.Entity.DtoModels
 
         public string? mi_master_def_name { get; set; }
 
-        public string? rvc_mi_second_name { get; set; }
+        public string? mi_icon_path { get; set; }
 
-        public double? rvc_mi_price{ get; set; }
+        public double? mi_price{ get; set; }
 
     }
 }
