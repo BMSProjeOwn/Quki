@@ -11,7 +11,7 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-<div class="row" style="margin-top:15%;" >
+<div class="row" style="margin-top:15%;">
     <div class="col-1"></div>
     <div class="box3 col-10" onclick="goSluDefController()" style="font-size: 22px; background: #005BC7; font-weight: bold; font-family: arimamadurai">
         <div class="row">
@@ -43,7 +43,7 @@
         </div>
     </div>
 </div> *@
-@foreach (var item in ViewBag.ProductItems )
+@foreach (var item in ViewBag.ProductItems)
 {
     <div class="row">
         <div class="col-1"></div>
@@ -53,10 +53,10 @@
                     <img src="~/icons/@item.mi_icon_path" style="border-radius:10px;" />
                 </div>
                 <div class="padding-text col-6" style="text-align: center; color: #005BC7; font-weight: bold; font-family: arimamadurai">
-                <p class="text-center h5" style="font-size:16px; font-weight:bold" color>@item.mi_master_def_name</p>
+                    <p class="text-center h5" style="font-size:16px; font-weight:bold" color>@item.mi_master_def_name</p>
                     <p class="text-center text-secondary h6" style="font-size:12px; font-weight:bold; font-family:arimamadurai" color>@item.rvc_mi_third_name</p>
-                <p class="text-center text-secondary"> </p>
-                <p class="text-center text-secondary"> </p>
+                    <p class="text-center text-secondary"> </p>
+                    <p class="text-center text-secondary"> </p>
                     <p class="text-center text-secondary h6" style="font-size:16px; font-weight:bold; font-family:arimamadurai" color>@item.mi_price TL</p>
                 </div>
             </div>
@@ -67,19 +67,24 @@
 @foreach (var item in ViewBag.ProductItems)
 {
 
+    var condimentRequiredList = condimentRequired.Where(x => x.mi_master_def_seq == item.mi_master_def_seq).ToList();
+    var condimentNonRequiredList = condimentNonRequired.Where(x => x.mi_master_def_seq == item.mi_master_def_seq).ToList();
+    int condimentCount = condimentRequiredList.Count() + condimentNonRequiredList.Count();
+    string modelSize = "444px";
+    if (condimentCount >= 3)
+    {
+        modelSize = "644px";
+    }
     <div class="modal fade" id="modal_@item.mi_master_def_seq" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" style="margin-top: 63%; margin-left: 4%; margin-right: 5%;">
-            <div class="overflow-auto modal-content" style="height: 446px; border-radius: 50px; border-width: 5px; text-align:center; border-color: #D88825;">
+        <div class="modal-dialog" style="margin-top: 36%;    margin-left: 5%;    margin-right: 5%;">
+            <div class="overflow-auto modal-content" style="height:@modelSize; border-radius: 50px; border-width: 5px; text-align:center; border-color: #005BC7;">
 
                 <div class="modal-body gallery-item">
                     <div class="col-12 imagecirculate">
                         <img src="~/icons/@item.mi_icon_path" style="border-radius:10px;" />
                     </div>
-                    <p class="text-center h5" style="font-size:18px; font-weight:bold" color>@item.mi_master_def_name.Trim()  @item.mi_price TL</p>
-                    @{
+                    <p class="text-center h5" style="font-size:18px; margin-top: 9px;" color>@item.mi_master_def_name.Trim()  @item.mi_price TL</p>
 
-                        var condimentRequiredList = condimentRequired.Where(x => x.mi_master_def_seq == item.mi_master_def_seq).ToList();
-                    }
                     @foreach (var coReqItem in condimentRequired)
                     {
                         <div class="row">
@@ -90,23 +95,19 @@
                                         <img src="~/icons/@coReqItem.mi_icon_path" style="border-radius:10px;" />
                                     </div>
                                     <div class="padding-text col-6" style="text-align: center; color: #005BC7; font-weight: bold; font-family: arimamadurai">
-                                        <p class="text-center h5" style="font-size:16px; font-weight:bold" color>@coReqItem.mi_master_def_name</p>
+                                        <p class="text-center h5" style="font-size:20px; font-weight:bold" color>@coReqItem.mi_master_def_name</p>
                                         <p class="text-center text-secondary"> </p>
                                         <p class="text-center text-secondary"> </p>
-                                        <p class="text-center text-secondary h6" style="font-size:16px; font-weight:bold; font-family:arimamadurai" color>@coReqItem.mi_price TL</p>
+                                        @*  <p class="text-center text-secondary h6" style="font-size:16px; font-weight:bold; font-family:arimamadurai" color>@coReqItem.mi_price TL</p> *@
                                     </div>
                                 </div>
                             </div>
                             <div class="col-1"></div>
                         </div>
                     }
-                    @{
-
-                        var condimentNonRequiredList = condimentNonRequired.Where(x => x.mi_master_def_seq == item.mi_master_def_seq).ToList();
-                    }
                     @foreach (var coReqItem in condimentNonRequiredList)
                     {
-                        <div class="row">
+                        <div class="row" style="margin-bottom: 4px;">
                             <div class="col-1"></div>
                             <div class="box2 col-10" data-bs-toggle="modal" data-bs-target="#modal_@item.mi_master_def_seq">
                                 <div class="row">
@@ -114,10 +115,10 @@
                                         <img src="~/icons/@coReqItem.mi_icon_path" style="border-radius:10px;" />
                                     </div>
                                     <div class="padding-text col-6" style="text-align: center; color: #005BC7; font-weight: bold; font-family: arimamadurai">
-                                        <p class="text-center h5" style="font-size:16px; font-weight:bold" color>@coReqItem.mi_master_def_name</p>
+                                        <p class="text-center h5" style="font-size:20px; font-weight:bold" color>@coReqItem.mi_master_def_name</p>
                                         <p class="text-center text-secondary"> </p>
                                         <p class="text-center text-secondary"> </p>
-                                        <p class="text-center text-secondary h6" style="font-size:16px; font-weight:bold; font-family:arimamadurai" color>@coReqItem.mi_price TL</p>
+                                        @* <p class="text-center text-secondary h6" style="font-size:16px; font-weight:bold; font-family:arimamadurai" color>@coReqItem.mi_price TL</p> *@
                                     </div>
                                 </div>
                             </div>
@@ -126,7 +127,7 @@
                     }
                 </div>
                 <div class="modal-footer" style="justify-content: center; border: 0px;">
-                    <button type="button" class="btn btn-secondary" style=" background-color: #D88825; border: 0px; width: 100px; height: 35px;" data-bs-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-secondary" style=" background-color: #005BC7; border: 0px; width: 100px; height: 35px;" data-bs-dismiss="modal">Kapat</button>
                 </div>
             </div>
         </div>

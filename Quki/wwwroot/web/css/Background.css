@@ -29,10 +29,10 @@ body {
 }
 .imagecirculate img {
     object-fit: cover;
-    margin-top: 0px;
+    margin-top: 1px;
     width: 120px;
     height: 100px;
-    margin-left: -14px;
+    margin-left: -1px;
 }
 .box {
     height: 50px;
