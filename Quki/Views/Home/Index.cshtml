@@ -39,7 +39,7 @@
                 <div class="tab-content m-top">
                     <!-- All -->
 
-                    <div class="tab-pane fade  in active" id="Tumu">
+                    <div class="tab-pane fade in active show" id="Tumu">
                         <!-- Menu
                         ============================================= -->
                         <div class="menu-simple">
@@ -48,77 +48,55 @@
 
                                     @foreach (var itemMenu in Model.getMenuItems)
                                     {
-
-                                        <div class="col-xs-12 col-sm-12 col-md-6">
-                                            <div class="dish-panel">
-                                                <div class="dish--content">
-                                                    <div class="dish--content-bio">
-                                                        <h3 class="dish--title">@itemMenu.mi_master_def_name.ToUpper()</h3>
-                                                        <div class="dish--price">&nbsp;&nbsp;&nbsp;</div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                            <div class="item item-hover-view-cart">
+                                                <div class="product-thumb">
+                                                    <div class="product-container item-img">
+                                                        <div class="product-image-container">
+                                                            <a class="product-img-link" href="#" title="">
+                                                                <img class="img-fluid" src="@itemMenu.mi_icon_path" alt="img">
+                                                                <img class="img-fluid img-hover" src="@itemMenu.mi_icon_path" alt="img">
+                                                            </a>
+                                                        </div>
                                                     </div>
-                                                    @if (itemMenu.rvc_mi_third_name != null)
-                                                    {
-
-                                                        <p class="dish--desc">@itemMenu.rvc_mi_third_name</p>
-                                                    }
+                                                    <div class="product-cart-icon d-flex justify-content-around">
+                                                        <div class="product-actions">
+                                                            <a href="#">
+                                                                <i class="cs-icon icon-cs-cart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="product-actions">
+                                                            <a href="#">
+                                                                <i class="cs-icon icon-search"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="product-actions">
+                                                            <a href="#">
+                                                                <i class="cs-icon icon-heart"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div><!-- .dish end -->
+
+
+
+                                                <div class="product-info text-center">
+                                                    <h4 class="product-name">
+                                                        <a href="#">@itemMenu.mi_master_def_name</a>
+                                                    </h4>
+                                                    <div class="price">
+                                                        <span>@itemMenu.mi_price TL </span>
+
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
 
-                                        <!-- .dish-panel end -->
                                     }
                                 </div> <!-- .row end -->
                             </div><!-- .container end -->
                         </div><!-- #menuSimple1 end -->
                     </div>
-                    <div id="all" class="tab-pane active">
-                        <div class="product">
-                            <div class="row">
-                                @foreach (var item in Model.getMenuItems)
-                                {
-
-                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                        <div class="item item-hover-view-cart">
-                                            <div class="product-thumb">
-                                                <div class="product-container item-img">
-                                                    <div class="product-image-container">
-                                                        <a class="product-img-link" title="">
-                                                            <img class="img-fluid" src="@item.mi_icon_path" alt="img">
-                                                            <img class="img-fluid img-hover" src="@item.mi_icon_path" alt="img">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-cart-icon d-flex justify-content-around">
-                                                    <div class="product-actions">
-                                                        <a href="#">
-                                                            <i class="cs-icon icon-cs-cart"></i>
-                                                        </a>
-                                                    </div>
-
-
-                                                </div>
-                                            </div>
-
-
-
-                                            <div class="product-info text-center">
-                                                <h4 class="product-name">
-                                                    <a href="product-detail.html">@item.mi_master_def_name</a>
-                                                </h4>
-                                                <div class="price">
-                                                    <span>@item.mi_price TL</span>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                }
-
-                            </div>
-                        </div>
-                    </div>
-
-
                     @foreach (var item in Model.sluDefModels)
                     {
 
@@ -165,7 +143,7 @@
 
                                                 <div class="product-info text-center">
                                                     <h4 class="product-name">
-                                                        <a href="product-detail.html">@itemSlu.mi_master_def_name</a>
+                                                        <a href="#">@itemSlu.mi_master_def_name</a>
                                                     </h4>
                                                     <div class="price">
                                                         <span>@itemSlu.mi_price TL </span>
