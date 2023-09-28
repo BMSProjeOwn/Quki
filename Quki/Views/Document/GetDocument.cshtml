@@ -1,78 +1,55 @@
 ﻿@using Quki.Entity.Models;
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutTikutu.cshtml";
 }
 @model Document
-<section id="page-title" class="page-title bg-overlay bg-parallax bg-overlay-gradient">
-    <div class="bg-section">
-        <img src="~/webQuki/images/page-title/2.jpg" alt="Background" />
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="title title-1 text-center">
-                    <div class="title--content">
-                        <div class="title--subtitle">@MultiLanguageOmni.ReadResourceKey.GetString("OurStory", "MultiLanguageOmni.Index")</div>
-                        <div class="title--heading">
-                            <h1>@MultiLanguageOmni.ReadResourceKey.GetString("QukiMeyhane", "MultiLanguageOmni.Index")</h1>
+
+</script>
+@if (Model != null)
+{
+    if (Model.MenuID != 21)
+    {
+        @await Component.InvokeAsync("Banner", new { menuId = 1 })
+
+    }
+
+    if (Model.MenuID == 21)
+    {
+        @await Component.InvokeAsync("Banner", new { menuId = 21 })
+    }
+    <h1 class="Customh1Unvisible">@ViewBag.Header</h1>
+
+
+    <div class="section about">
+        <div class="container">
+            <div class="title text-center">
+                <div class="page-title color">
+                    <div class="title title-icon">
+                        @*<h2 class="title-h2">@Model.Header2</h2>*@
+                        <p class="description">
+
+                            @Html.Raw(@Model.Contents)
+                        </p>
+                        <p class="description">
+                            @if (Model.Contents2 != null)
+                                @Html.Raw(@Model.Contents2)
+
+                            </p>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
-
-                    <div class="divider--shape-1down"></div>
                 </div>
-                <!-- .title end -->
+
             </div>
-            <!-- .col-md-12 end -->
         </div>
-        <!-- .row end -->
-    </div>
-    <!-- .container end -->
-</section>
+}
+else
+{
+     <p class="description">
+        Sayfa bilgidi bulunamadı
+    </p>
+}
 
-<section id="banner7" class="banner banner-1 text-center pb-90">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-                <div class="heading heading-1 text--center mb-50">
-                    <p class="heading--subtitle">@MultiLanguageOmni.ReadResourceKey.GetString("Welcome!", "MultiLanguageOmni.Index")</p>
-                    <h2 class="heading--title">@MultiLanguageOmni.ReadResourceKey.GetString("WeAre!", "MultiLanguageOmni.Index")</h2>
-                    <div class="divider--shape-4"></div>
-                    <p class="heading--desc">
-                        @Html.Raw(Model.Contents)
-                    </p>
-                </div>
-                <!-- .heading end -->
-            </div>
-            <!-- .col-md-6 end -->
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6">
-                <div class="banner-panel">
-                    <div class="banner--img">
-                        <img src="~/webQuki/images/banners/16.jpg" alt="banner img" class="img-responsive">
-                    </div>
-                </div>
-                <!-- .banner-panel end -->
-            </div>
-            <!-- .col-md-4 end -->
-
-            <div class="col-xs-12 col-sm-6 col-md-6">
-                <div class="banner-panel">
-                    <div class="banner--img">
-                        <img src="~/webQuki/images/banners/17.jpg" alt="banner img" class="img-responsive">
-                    </div>
-                </div>
-                <!-- .banner-panel end -->
-            </div>
-            <!-- .col-md-4 end -->
-        </div>
-    </div>
-    <!-- .container end -->
-</section>
-
-@await Component.InvokeAsync("AboutSlider")
 
 
 
