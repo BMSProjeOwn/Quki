@@ -54,7 +54,7 @@ namespace Quki.Controllers
             //https://localhost:44377/product/sludef
             
             List<SluDefModel> sluDefModels = new List<SluDefModel>();
-
+            
             int languageId=Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
             try
             {
@@ -64,6 +64,8 @@ namespace Quki.Controllers
             {
 
             }
+            @ViewBag.ID = id;
+            
             return View(sluDefModels);
         }
 
@@ -117,11 +119,12 @@ namespace Quki.Controllers
                 ViewBag.ProductItems = getMenuItems;
                 try
                 {
-
-                    ViewBag.MenuItems = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId).Where(x => x.slu_def_seq == id).FirstOrDefault().slu_def_name;
+                    var items = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId).Where(x => x.slu_def_seq == id).FirstOrDefault();
+                    ViewBag.MenuItems = items.slu_def_name;
                     ViewBag.condimentRequired = condimentRequired;
                     ViewBag.condimentNonRequired = condimentNonRequired;
                     ViewBag.Pic = getMenuItems[0].slu_type_slu_image;
+                    ViewBag.ID = items.parent_slu_def_no;
                 }
                 catch (Exception)
                 {

@@ -150,8 +150,8 @@ namespace Quki.Bll
                           {
                               slu_def_name = s.SwR.Name.ToUpper(),
                               slu_def_seq = s.R.D.slu_def_seq,
-                              slu_type_slu_image = s.R.D.slu_type_slu_image
-
+                              slu_type_slu_image = s.R.D.slu_type_slu_image,
+                              parent_slu_def_no=s.R.D.parent_slu_def_no
 
                           }).OrderBy(x => x.control_number).ToList();
 

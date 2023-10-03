@@ -32,13 +32,24 @@
 
 </style>
 <div>
+    @if (@ViewBag.ID==0)
+    {
+
+        <div class="row margin-top-menu" style="margin-bottom:20px;     margin-top: 21px; margin-left: -28px">
+            <div class="col-6 h-25 d-inline-block" align="center" valign="center" onclick="goToIndex() ">
+                <img src="~/viewimage/nossalogo.png" style="width:93%; margin-left:119px;" />
+            </div>
+
+        </div>
+    }
+    else{
     <div class="row margin-top-menu" style="margin-bottom:20px;     margin-top: 21px; margin-left: -28px">
-        <div class="col-6 h-25 d-inline-block" align="center" valign="center" onclick="goToIndex() ">
+            <div class="col-6 h-25 d-inline-block" align="center" valign="center" onclick="callSluMiGroupSeqfunc(0) ">
             <img src="~/viewimage/nossalogo.png" style="width:93%; margin-left:119px;" />
         </div>
         
     </div>
-    
+    }
     @foreach (var item in Model)
     {
 
