@@ -2,38 +2,44 @@
 @model List<SluDefModel>
 @{
     ViewData["Title"] = "SluDef";
-     Layout = "~/Views/Shared/_LayoutMobil.cshtml";
+    Layout = "~/Views/Shared/_LayoutMobil.cshtml";
 }
 <style>
-        /*.box {
-            height: 40px;
-            width: 75px;
-            background: #F9FAFA;
-            border-style: solid;
-            border-color: #E3A73D;
-            border-radius: 4px;
-            color:#000000;
-            text-align: center;
-            border-width: 1px;
-            padding: 5px;
-            margin:5px;
+    /*.box {
+                height: 40px;
+                width: 75px;
+                background: #F9FAFA;
+                border-style: solid;
+                border-color: #E3A73D;
+                border-radius: 4px;
+                color:#000000;
+                text-align: center;
+                border-width: 1px;
+                padding: 5px;
+                margin:5px;
+            }*/
+    /*  .section-1{
+            heighth: 20px;
+            width: 20px;
+            background-color: darkorange;
+            background-image: url('../../viewimage/choc_0 – 1.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }*/
-      /*  .section-1{
-        heighth: 20px;
-        width: 20px;
-        background-color: darkorange;
-        background-image: url('../../viewimage/choc_0 – 1.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }*/
 
 
 
 </style>
 <div>
-    @if (@ViewBag.ID==0)
+    @if (@ViewBag.ID == 0)
     {
+        <div class="row margin-top-menu">
+            <div class="col-3 h-25 d-inline-block" align="center" valign="center" onclick="goToIndex()">
+                <img src="~/viewimage/geri_ikonu.png" style="margin-top:11px;" />
+            </div>
+
+        </div>
 
         <div class="row margin-top-menu" style="margin-bottom:20px;     margin-top: 21px; margin-left: -28px">
             <div class="col-6 h-25 d-inline-block" align="center" valign="center" onclick="goToIndex() ">
@@ -42,13 +48,20 @@
 
         </div>
     }
-    else{
-    <div class="row margin-top-menu" style="margin-bottom:20px;     margin-top: 21px; margin-left: -28px">
-            <div class="col-6 h-25 d-inline-block" align="center" valign="center" onclick="callSluMiGroupSeqfunc(0) ">
-            <img src="~/viewimage/nossalogo.png" style="width:93%; margin-left:119px;" />
+    else
+    {
+        <div class="row margin-top-menu">
+            <div class="col-3 h-25 d-inline-block" align="center" valign="center" onclick="callSluMiGroupSeqfunc(0)">
+                <img src="~/viewimage/geri_ikonu.png" style="margin-top:11px;" />
+            </div>
+
         </div>
-        
-    </div>
+        <div class="row margin-top-menu" style="margin-bottom:20px;     margin-top: 21px; margin-left: -28px">
+            <div class="col-6 h-25 d-inline-block" align="center" valign="center" onclick="callSluMiGroupSeqfunc(0)">
+                <img src="~/viewimage/nossalogo.png" style="width:93%; margin-left:119px;" />
+            </div>
+
+        </div>
     }
     @foreach (var item in Model)
     {
@@ -58,14 +71,14 @@
             <div class="row margin-top-menu" style="margin-bottom:10px;">
                 <div class="col-1"></div>
                 <div id="@item.slu_def_seq" class=" col-10 " value="@item.slu_def_seq" onclick="callSluMiGroupSeqfunc(@item.slu_def_seq)" style="font-size:20px; font-weight:bold;">
-                <div class="row" style="font-weight: bold; border: 1px #005BC7 solid; border-radius: 7px; background-color: white; padding: 5px; font-family: arimamadurai ">
-                    <div class="col-5 imagecirculate">
-                        <img src="~/icons/@item.slu_type_slu_image" style="border-radius:10px; margin-left:-13px ;" />
+                    <div class="row" style="font-weight: bold; border: 1px #005BC7 solid; border-radius: 7px; background-color: white; padding: 5px; font-family: arimamadurai ">
+                        <div class="col-5 imagecirculate">
+                            <img src="~/icons/@item.slu_type_slu_image" style="border-radius:10px; margin-left:-13px ;" />
+                        </div>
+                        <div class="col-7" style="text-align: center; padding: 5%; color: #005BC7; font-family: arimamadurai">@item.slu_def_name</div>
                     </div>
-                    <div class="col-7" style="text-align: center; padding: 5%; color: #005BC7; font-family: arimamadurai">@item.slu_def_name</div>
                 </div>
-            </div>
-            <div class="col-1"></div>
+                <div class="col-1"></div>
             </div>
         }
         else
