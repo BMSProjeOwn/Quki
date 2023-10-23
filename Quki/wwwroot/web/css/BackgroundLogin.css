@@ -1,5 +1,5 @@
 ﻿body {
-    background-image: url('../../viewimage/nossaback.png');
+    background-image: url('../../viewimage/gorgululogosuz.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,11 +15,11 @@
 .box {
     height: 50px;
     width: 180px;
-    background: #CCE2F0;
+    background: #F58E4F;
     border-style: solid;
-    border-color: #CCE2F0;
+    border-color: #F58E4F;
     border-radius: 50px;
-    color: #005BC7;
+    color: #FFFFFF;
     text-align: center;
     border-width: 2px;
     padding: 7px;
@@ -58,7 +58,7 @@
 .margin-top-logo {
     margin-top: 15%;
 }.margin-top-login-menu {
-    margin-top: 9%;
+    margin-top: 114%;
 }
 .margin-top-menu {
     margin-top: 5%;

@@ -1,6 +1,6 @@
 ﻿
 body {
-    background-image: url('../../viewimage/nossaicsayfa.png');
+    background-image: url('../../viewimage/gorgulu_icsayfa_bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,6 +12,14 @@ body {
     width: 120px;
     height: 100px;
 }
+.imagecirculate2 {
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-top: 2%;
+}
 .imagecirculate3 {
     display: inline-block;
     width: 170px;
@@ -21,7 +29,7 @@ body {
     margin-top: 2%;
 }
 .background-login {
-    background-image: url('../../viewimage/nossaicsayfa.png');
+    background-image: url('../../viewimage/gorgulu_icsayfa_bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -33,6 +41,10 @@ body {
     width: 120px;
     height: 100px;
     margin-left: -1px;
+}
+.imagecirculate3 img {
+    width: inherit;
+    object-fit: cover;
 }
 .box {
     height: 50px;
@@ -57,9 +69,9 @@ body {
     width: 382px;
     background: #F9FAFA;
     border-style: solid;
-    border-color: #005BC7;
+    border-color: #F36F21;
     border-radius: 10px;
-    color: #005BC7;
+    color: #F36F21;
     text-align: center;
     border-width: 1px;
     padding: 7px;
