@@ -9,13 +9,13 @@ using System.Collections.Generic;
 
 namespace Quki.Controllers
 {
-    public class HomeController : Controller
+    public class AkyolController : Controller
     {
 
 
         private readonly IRvcMenuItemDefService rvcMenuItemDefService;
         private readonly Islu_Rvc_RelationService slu_Rvc_RelationService;
-        public HomeController(IRvcMenuItemDefService rvcMenuItemDefService, Islu_Rvc_RelationService slu_Rvc_RelationService)
+        public AkyolController(IRvcMenuItemDefService rvcMenuItemDefService, Islu_Rvc_RelationService slu_Rvc_RelationService)
         {
             this.rvcMenuItemDefService = rvcMenuItemDefService;
             this.slu_Rvc_RelationService = slu_Rvc_RelationService;
@@ -44,20 +44,15 @@ namespace Quki.Controllers
             }
 
         }
-        [Route("urunler/{name?}/{id?}")]
-        public IActionResult akyol(string name,string id)
+        public IActionResult firin()
         {
-            int id2 = 2;
-            if (id=="fırın")
-            {
-                id2 = 4;
-            }
+            ViewBag.currentMenu = "firin";
             List<SluDefModel> sluDefModels = new List<SluDefModel>();
             int languageId = Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
-            var getMenuItems = rvcMenuItemDefService.GetMenuItems(languageId,Convert.ToInt32(id2));
+            var getMenuItems = rvcMenuItemDefService.GetMenuItems(languageId, 6);
             try
             {
-                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId, Convert.ToInt32(id2));
+                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId, 6);
             }
             catch
             {
@@ -68,20 +63,16 @@ namespace Quki.Controllers
             menuViewModel.sluDefModels = sluDefModels;
             return View(menuViewModel);
         }
-        //[Route("urunler/akyol/{id?}")]
-        public IActionResult Index(string id)
+        public IActionResult simit()
         {
-            int id2 = 2;
-            if (id == "fırın")
-            {
-                id2 = 4;
-            }
+
+            ViewBag.currentMenu = "simit";
             List<SluDefModel> sluDefModels = new List<SluDefModel>();
             int languageId = Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
-            var getMenuItems = rvcMenuItemDefService.GetMenuItems(languageId, Convert.ToInt32(id2));
+            var getMenuItems = rvcMenuItemDefService.GetMenuItems(languageId, 2);
             try
             {
-                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId, Convert.ToInt32(id2));
+                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId, 2);
             }
             catch
             {

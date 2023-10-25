@@ -1,0 +1,140 @@
+﻿@using Quki.Entity.ViewModel;
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutTikutu.cshtml";
+}
+
+@await Component.InvokeAsync("HomeSlider")
+
+
+@model MenuViewModel
+<section>
+    <div class="section feature-products">
+        <div class="container">
+            <div class="title text-center m-bottom-2">
+                <div class="page-title color">
+                    <h3 class="title-main">Akyol Fırın</h3>
+                    <div class="title title-icon">
+                        <h2 class="title-h2">Ürünlerimiz</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-tab">
+                <div class="flex-t-center">
+                    <ul class="nav nav-pills text-center justify-content-center" role="tablist">
+
+                        <li class="nav-item active"><a class="name-tab nav-link active show" href="#Tumu" data-toggle="tab">Tümü</a></li>
+                        @foreach (var item in Model.sluDefModels)
+                        {
+
+                            <li class="nav-item">
+                                <a class="name-tab nav-link" data-toggle="pill" href="#@item.slu_def_seq">@item.slu_def_name.ToUpper()</a>
+                            </li>
+                        }
+
+                    </ul>
+                </div>
+
+                <div class="tab-content m-top">
+                    <!-- All -->
+
+                    <div class="tab-pane fade in active show" id="Tumu">
+                        <!-- Menu
+                        ============================================= -->
+                        <div class="menu-simple">
+                            <div class="container">
+                                <div class="row">
+
+                                    @foreach (var itemMenu in Model.getMenuItems)
+                                    {
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                            <div class="item item-hover-view-cart">
+                                                <div class="product-thumb">
+                                                    <div class="product-container item-img">
+                                                        <div class="product-image-container">
+                                                            <a class="product-img-link" href="#" title="">
+                                                                <img class="img-fluid" src="/icons/@itemMenu.mi_icon_path" alt="img">
+                                                                <img class="img-fluid img-hover" src="/icons/@itemMenu.mi_icon_path" alt="img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="product-info text-center">
+                                                    <h4 class="product-name">
+                                                        <a href="#">@itemMenu.mi_master_def_name</a>
+                                                    </h4>
+                                                    <div class="price">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    }
+                                </div> <!-- .row end -->
+                            </div><!-- .container end -->
+                        </div><!-- #menuSimple1 end -->
+                    </div>
+                    @foreach (var item in Model.sluDefModels)
+                    {
+
+                        <div class="tab-pane fade" id="@item.slu_def_seq">
+                            <div class="product">
+                                <div class="row">
+                                    <!-- Dish #1 -->
+                                    @{
+                                        var sluItem = Model.getMenuItems.Where(x => x.slu_def_seq_view == item.slu_def_seq).ToList();
+                                    }
+                                    @foreach (var itemSlu in sluItem)
+                                    {
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                            <div class="item item-hover-view-cart">
+                                                <div class="product-thumb">
+                                                    <div class="product-container item-img">
+                                                        <div class="product-image-container">
+                                                            <a class="product-img-link" href="#" title="">
+                                                                <img class="img-fluid" src="/icons/@itemSlu.mi_icon_path" alt="img">
+                                                                <img class="img-fluid img-hover" src="/icons/@itemSlu.mi_icon_path" alt="img">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="product-info text-center">
+                                                    <h4 class="product-name">
+                                                        <a href="#">@itemSlu.mi_master_def_name</a>
+                                                    </h4>
+                                                    <div class="price">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- .dish-panel end -->
+                                    }
+                                    <!-- Dish #2 -->
+                                </div> <!-- .row end -->
+                            </div><!-- .container end -->
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+

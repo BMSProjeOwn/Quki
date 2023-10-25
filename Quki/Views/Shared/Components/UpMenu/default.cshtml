@@ -23,12 +23,29 @@
                 <ul class="nav navbar-nav nav-pos-right navbar-left">
                    @if (Model != null && Model.Count > 0)
                     {
-
-                        foreach (var item in Model)
+                    string currentLink = "";
+                    foreach (var item in Model)
+                    {
+                        if (@item.action == ViewBag.currentMenu)
                         {
-                            <li class="has-dropdown">
-                            <a asp-action="@item.action" asp-controller="@item.controller" asp-route-id="@item.MenuID" class="dropdown-toggle  menu-item" data-hover="pages">@item.Name</a>
-                               
+                            currentLink = "currentMenu";
+                        }
+                        else
+                        {
+                            currentLink = "";
+                        }
+                        <li class="has-dropdown">
+                            @if (@item.MenuID==0)
+                            {
+
+                                <a asp-action="@item.action" asp-controller="@item.controller" class="dropdown-toggle  menu-item @currentLink" data-hover="pages">@item.Name</a>
+                            }
+                            else
+                            {
+
+                                <a asp-action="@item.action" asp-controller="@item.controller" asp-route-id="@item.MenuID" class="dropdown-toggle  menu-item @currentLink" data-hover="pages">@item.Name</a>
+                            }
+
                             </li>
                         }
                     }

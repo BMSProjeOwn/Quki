@@ -403,6 +403,7 @@ textarea:hover, textarea:focus {
             color: #27272f;
             padding: 0 15px;
             line-height: 100px; }
+
             #top-header .main-header .main-nav > ul > li > a:hover, #top-header .main-header .main-nav > ul > li > a:focus, #top-header .main-header .main-nav > ul > li > a:active {
               color: #91ad41;
               background-color: #fff; }
@@ -472,6 +473,7 @@ textarea:hover, textarea:focus {
               color: #91ad41; }
               #top-header .main-header .main-nav .dropdown-menu li a:hover .fa {
                 color: #8d8d99; }
+
         #top-header .main-header .main-nav .dropdown-menu .dropdown aligned-fullwidth {
           width: 100%; }
         #top-header .main-header .main-nav .dropdown-menu .blog-fullwidth {
@@ -5755,5 +5757,8 @@ textarea:hover, textarea:focus {
     .page-404 .page-home .button-main:hover {
       background-color: #27272f;
       border-color: #27272f; }
-
+.currentMenu {
+    background-color: #fff;
+    color: #91ad41 !important;
+}
 /*# sourceMappingURL=style.css.map */

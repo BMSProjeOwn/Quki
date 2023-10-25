@@ -8,12 +8,12 @@ using System.Collections.Generic;
 
 namespace Quki.ViewComponents
 {
-    public class HomeSlider : ViewComponent
+    public class HomeSlider2 : ViewComponent
     {
         private readonly ISliderService sliderService;
 
 
-        public HomeSlider(ISliderService sliderService)
+        public HomeSlider2(ISliderService sliderService)
         {
             this.sliderService = sliderService;
 
@@ -23,7 +23,7 @@ namespace Quki.ViewComponents
             var league = Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
             List<SliderModel> s = new List<SliderModel>();
 
-            var model = sliderService.GetSliderHomeListWithLanguage(league,1);
+            var model = sliderService.GetSliderHomeListWithLanguage(league,2);
 
 
             return View(model);

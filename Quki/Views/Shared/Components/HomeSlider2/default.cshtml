@@ -1,0 +1,52 @@
+﻿@using Quki.Entity.DtoModels
+@model List<SliderModel>
+<section>
+    <div class="section tiva-slideshow-wrapper">
+        <div id="tiva-slideshow" class="nivoSlider">
+            @{ int sliderCount = 0;
+                @foreach (var item in Model)
+                {
+                    string captionName = "#caption";
+                    sliderCount++;
+                    captionName += sliderCount.ToString();
+
+                    <a href="#" title="Slideshow image">
+                        <img class="img-fluid" src="@item.ImagePath" title="@captionName" alt="Slideshow image">
+                    </a>
+                }
+            }
+        </div>
+        @{sliderCount = 0;
+            @foreach (var item in Model)
+            {
+                string captionName = "caption";
+                sliderCount++;
+                captionName += sliderCount.ToString();
+
+                <div id="@captionName" + sliderCount.ToString() class="nivo-html-caption hidden-sm hidden-xs d-none col-lg-block">
+                    <div class="tiva-caption m-left">
+
+                        <div class="right-left hidden-xs slow disciver-now">
+
+                            <div class="right-left hidden-xs slow disciver-now">
+                                <span class="font-stre " style=" color:white">@item.Remark</span>
+                            </div>
+                            <h3 style=" color:white">@item.Header</h3>
+                            @*<p>
+                                    Birçok değerli tiyatro sanatçısının sesleriyle zenginleştirdiği öyküleri dinlemek için siz de AkyolBungalov'nun zengin kitaplığına göz atın.
+                                </p>*@
+                        </div>
+
+                        @*<div class="right-left hidden-xs slow disciver-now">
+                                <a class="btn button btn-green button-main" href="#" title="Shop now">learn more</a>
+                            </div>
+                            <div class="right-left hidden-xs slow disciver-now">
+                                <a class="btn button btn-green button-main" style=" background-color: #355374" href="#" title="Shop now">learn more</a>
+                            </div>*@
+
+                    </div>
+                </div>
+            }
+        }
+        </div>
+</section>

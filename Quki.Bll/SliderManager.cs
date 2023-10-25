@@ -32,9 +32,9 @@ namespace Quki.Bll
             var model = ObjectMapper.Mapper.Map<List<SliderModel>>(items);
             return model;
         } 
-        public List<SliderModel> GetSliderHomeListWithLanguage(int langeage)
+        public List<SliderModel> GetSliderHomeListWithLanguage(int langeage,int Group)
         {
-            var items = TGetList(x=>x.LanguageId== langeage && x.GroupId==0 && x.IsActive.Equals(true)).OrderByDescending(u => u.SliderSeqId).ToList();
+            var items = TGetList(x=>x.LanguageId== langeage && x.GroupId==Group && x.IsActive.Equals(true)).OrderByDescending(u => u.SliderSeqId).ToList();
             var model = ObjectMapper.Mapper.Map<List<SliderModel>>(items);
             return model;
         }

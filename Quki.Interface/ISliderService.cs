@@ -16,7 +16,7 @@ namespace Quki.Interface
         public SliderModel GetProductDetailByID(string id);
         public void SliderUpdate(SliderModel sliderModel,int id);
 
-        public List<SliderModel> GetSliderHomeListWithLanguage(int language);
+        public List<SliderModel> GetSliderHomeListWithLanguage(int language,int group);
         public List<SliderModel> GetSliderAboutUsListWithLanguage(int langeage);
 
     }

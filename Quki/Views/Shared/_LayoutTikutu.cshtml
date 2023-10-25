@@ -11,7 +11,7 @@
 }*@
 <head>
 
-    <title>@ViewData["Title"] - TİKUTU</title>
+    <title>@ViewData["Title"] - AKYOL </title>
 
     @{
         string keyw = (!string.IsNullOrEmpty(ViewBag.MetaKeywords) ? ViewBag.MetaKeywords : "");
@@ -21,14 +21,14 @@
 
 
 
-    <meta property="og:title" content="@ViewData["Title"] Tikutu">
-    <meta content="@ViewData["Title"] Tikutu" name="twitter:title">
+    <meta property="og:title" content="@ViewData["Title"] AKYOL">
+    <meta content="@ViewData["Title"] AKYOL" name="twitter:title">
     <meta property="og:description" content="@desc">
-    <meta content="Tikutu" property="og:site_name">
+    <meta content="AKYOL" property="og:site_name">
     <meta content="news" property="og:type">
-    <meta name="title" content="@ViewData["Title"] Tikutu" />
+    <meta name="title" content="@ViewData["Title"] AKYOL" />
     <meta name="twitter:description" content="@desc" />
-    <meta name="searchTitle" content="@ViewData["Title"] Tikutu" />
+    <meta name="searchTitle" content="@ViewData["Title"] AKYOL" />
     <meta name="keywords" content="@keyw">
     <meta name="description" content="@desc" />
     <meta name="image" content="" />
@@ -75,6 +75,48 @@
     <script src="~/web/libs/jquery/jquery-1.11.3.min.js"></script>
 
 </head>
+
+<style>
+    .float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 100;
+        margin-bottom: 40px;
+    }
+
+    .my-float {
+        margin-top: 16px;
+    }
+
+    .float2 {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        left: 40px;
+        background-color: coral;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 100;
+        margin-bottom: 40px;
+    }
+
+    .my-float2 {
+        margin-top: 16px;
+    }
+</style>
 <body>
 
     <div class="all">
@@ -112,6 +154,14 @@
         <main>
             @RenderBody()
         </main>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="https://wa.me/+905441542525" class="float" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="tel:+905441542525" class="float2" target="_blank">
+            <i class="fa fa-phone my-float"></i>
+        </a>
 		<footer>
 			<div class="footer">
 				<div style="background-color:gray;width:1000px; height:2px;margin:auto"> <hr> </div>
@@ -128,7 +178,6 @@
 									</div>
 
 									<div class="content">
-										<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
 										<ul>
 											<li class="d-flex bg-icon">
 												<span>
@@ -140,7 +189,7 @@
 												<span>
 													<i class="fa fa-phone" aria-hidden="true"></i>
 												</span>
-												<span>0123 456 789 - 0123 987 654</span>
+                                                <span>0544 154 25 25</span>
 											</li>
 											<li class="d-flex bg-icon">
 												<span>
@@ -153,6 +202,14 @@
 								</div>
 							</div>
 
+                            <div class="col-lg-8 col-md-6 col-sm-6 mg-bottom-30">
+                                <div class="item contact-us">
+
+                                    <div class="content">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.905999986473!2d30.20537787656936!3d40.69806783846765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cca889a8100001%3A0xc60331ff7cb6da35!2sAkyol%20Simit%20Cafe!5e0!3m2!1str!2str!4v1698145269123!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
 						</div>
 					</div>
 				</div>
