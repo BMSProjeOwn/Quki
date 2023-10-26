@@ -23,14 +23,24 @@
             <div class="product-tab">
                 <div class="flex-t-center">
                     <ul class="nav nav-pills text-center justify-content-center" role="tablist">
-
-                        <li class="nav-item active"><a class="name-tab nav-link active show" href="#Tumu" data-toggle="tab">Tümü</a></li>
+                        @{
+                            int j = 0;
+                            string show2 = "name-tab nav-link";
+                        }
                         @foreach (var item in Model.sluDefModels)
                         {
-
+                            if (j == 0)
+                            {
+                                show2 = "name-tab nav-link active show";
+                            }
+                            else
+                            {
+                                show2 = "name-tab nav-link";
+                            }
                             <li class="nav-item">
-                                <a class="name-tab nav-link" data-toggle="pill" href="#@item.slu_def_seq">@item.slu_def_name.ToUpper()</a>
+                                <a class="@show2" data-toggle="pill" href="#@item.slu_def_seq">@item.slu_def_name.ToUpper()</a>
                             </li>
+                            j++;
                         }
 
                     </ul>
@@ -38,51 +48,22 @@
 
                 <div class="tab-content m-top">
                     <!-- All -->
-
-                    <div class="tab-pane fade in active show" id="Tumu">
-                        <!-- Menu
-                        ============================================= -->
-                        <div class="menu-simple">
-                            <div class="container">
-                                <div class="row">
-
-                                    @foreach (var itemMenu in Model.getMenuItems)
-                                    {
-                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                            <div class="item item-hover-view-cart">
-                                                <div class="product-thumb">
-                                                    <div class="product-container item-img">
-                                                        <div class="product-image-container">
-                                                            <a class="product-img-link" href="#" title="">
-                                                                <img class="img-fluid" src="/icons/@itemMenu.mi_icon_path" alt="img">
-                                                                <img class="img-fluid img-hover" src="/icons/@itemMenu.mi_icon_path" alt="img">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-
-                                                <div class="product-info text-center">
-                                                    <h4 class="product-name">
-                                                        <a href="#">@itemMenu.mi_master_def_name</a>
-                                                    </h4>
-                                                    <div class="price">
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    }
-                                </div> <!-- .row end -->
-                            </div><!-- .container end -->
-                        </div><!-- #menuSimple1 end -->
-                    </div>
+                    @{
+                        int i = 0;
+                        string show = "";
+                    }
                     @foreach (var item in Model.sluDefModels)
                     {
+                        if (i==0)
+                        {
+                            show = "in active show";
+                        }
+                        else
+                        {
 
-                        <div class="tab-pane fade" id="@item.slu_def_seq">
+                            show = "";
+                        }
+                        <div class="tab-pane fade  @show" id="@item.slu_def_seq">
                             <div class="product">
                                 <div class="row">
                                     <!-- Dish #1 -->
@@ -123,6 +104,7 @@
                                 </div> <!-- .row end -->
                             </div><!-- .container end -->
                         </div>
+                        i++;
                     }
                 </div>
             </div>
