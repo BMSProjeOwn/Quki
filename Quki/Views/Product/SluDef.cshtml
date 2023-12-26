@@ -66,7 +66,7 @@
     @foreach (var item in Model)
     {
 
-        @if (item.parent_slu_def_no == 0 || item.parent_slu_def_no is null)
+        @if (item.slu_type=="MIGroup")
         {
             <div class="row margin-top-menu" style="margin-bottom:10px;">
                 <div class="col-1"></div>
