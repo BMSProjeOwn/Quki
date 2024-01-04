@@ -59,7 +59,6 @@
                 </div>
                 <div class="padding-text col-6" style="text-align: center; color: #005BC7; font-weight: bold; font-family: arimamadurai">
                     <p class="text-center h5" style="font-size:16px; font-weight:bold" color>@item.mi_master_def_name</p>
-                    <p class="text-center text-secondary h6" style="font-size:12px; font-weight:bold; font-family:arimamadurai" color>@item.rvc_mi_third_name</p>
                     <p class="text-center text-secondary"> </p>
                     <p class="text-center text-secondary"> </p>
                     <p class="text-center text-secondary h6" style="font-size:16px; font-weight:bold; font-family:arimamadurai" color>@item.mi_price TL</p>
@@ -75,7 +74,7 @@
     var condimentRequiredList = condimentRequired.Where(x => x.mi_master_def_seq == item.mi_master_def_seq).ToList();
     var condimentNonRequiredList = condimentNonRequired.Where(x => x.mi_master_def_seq == item.mi_master_def_seq).ToList();
     int condimentCount = condimentRequiredList.Count() + condimentNonRequiredList.Count();
-    string modelSize = "444px";
+    string modelSize = "376px";
     if (condimentCount >= 3)
     {
         modelSize = "644px";
@@ -90,6 +89,7 @@
                     </div>
                     <p class="text-center h5" style="font-size:18px; margin-top: 9px;" color>@item.mi_master_def_name.Trim()  @item.mi_price TL</p>
 
+                    <p class="text-center text-secondary h6" style="font-size:14px; font-weight:bold; font-family:arimamadurai; margin-top: 19px;" color>@item.rvc_mi_third_name</p>
                     @foreach (var coReqItem in condimentRequired)
                     {
                         <div class="row">
@@ -131,7 +131,7 @@
                         </div>
                     }
                 </div>
-                <div class="modal-footer" style="justify-content: center; border: 0px;">
+                <div class="modal-footer" style="justify-content: center; border: 0px; margin-top: -19px;">
                     <button type="button" class="btn btn-secondary" style=" background-color: #005BC7; border: 0px; width: 100px; height: 35px;" data-bs-dismiss="modal">Kapat</button>
                 </div>
             </div>
