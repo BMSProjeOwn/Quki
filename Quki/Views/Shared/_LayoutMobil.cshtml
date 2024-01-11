@@ -11,7 +11,7 @@
 
 <head>
 
-    <title>Nossa Cafe - QR Menü</title>
+    <title>The Iriss - QR Menü</title>
 
     @{
         string keyw = (!string.IsNullOrEmpty(ViewBag.MetaKeywords) ? ViewBag.MetaKeywords : "");
@@ -20,14 +20,14 @@
 
 
 
-    <meta property="og:title" content="Nossa Cafe">
-    <meta content="Nossa Cafe" name="twitter:title">
+    <meta property="og:title" content="The Iriss">
+    <meta content="The Iriss" name="twitter:title">
     <meta property="og:description" content="@desc">
     <meta content="Quki" property="og:site_name">
     <meta content="news" property="og:type">
-    <meta name="title" content="Nossa Cafe" />
+    <meta name="title" content="The Iriss" />
     <meta name="twitter:description" content="@desc" />
-    <meta name="searchTitle" content="Nossa Cafe" />
+    <meta name="searchTitle" content="The Iriss" />
     <meta name="keywords" content="@keyw">
     <meta name="description" content="@desc" />
     <meta name="image" content="" />
@@ -113,21 +113,21 @@
         function callCampaingTypeSeqfunc(val) {
             document.getElementById(val).style.backgroundColor = "#E3A73D";
             document.getElementById(val).style.color = "#F9FAFA";     
-            window.location.href = "nossa-urun?id=" + val;
+            window.location.href = "iriss-urun?id=" + val;
         } 
         function goSluDefController() {         
-            window.location.href = "nossa-menu-kategori?id=0";
+            window.location.href = "iriss-menu-kategori?id=0";
         }
         function goToIndex() {
-            window.location.href = "nossa-menu";
+            window.location.href = "iriss-menu";
         }
         function goSluDefControllerclick() {
 
-            window.location.href = "nossa-menu-kategori?id=0";
+            window.location.href = "iriss-menu-kategori?id=0";
         }
 
         function callSluMiGroupSeqfunc(val) {
-            window.location.href = "nossa-menu-kategori?id=" + val;
+            window.location.href = "iriss-menu-kategori?id=" + val;
         }
 
         (function () {

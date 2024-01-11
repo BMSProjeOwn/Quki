@@ -78,7 +78,7 @@ namespace Quki.Bll
                                   SwR = SwR
                               })
 
-                              .Where(w => w.R.P.rvc_seq == 2 && w.R.D.slu_type== "MIGroup" && w.SwR.LanguageId.Equals(languageID)).OrderBy(x => x.R.D.control_number.Value)
+                              .Where(w => w.R.P.rvc_seq == 2 && (w.R.D.parent_slu_def_no==0 || w.R.D.parent_slu_def_no is null) && w.SwR.LanguageId.Equals(languageID)).OrderBy(x => x.R.D.control_number.Value)
                               .Select(s => new SluDefModel
                               {
                                   slu_def_name = s.SwR.Name.ToUpper(),
@@ -95,8 +95,11 @@ namespace Quki.Bll
                     item.slu_def_name = parca[0];
                 }
 
+                if (itemListMiGroup.Count()!=0)
+                {
 
-                return itemListMiGroup;
+                    return itemListMiGroup;
+                }
             }
 
             var itemList = sluDef.TGetList()

@@ -35,9 +35,9 @@ namespace Quki.Controllers
 
 
             
-            return RedirectToAction("nossa-menu", "menu");
+            return RedirectToAction("iriss-menu", "menu");
         }
-        [Route("menu/nossa-menu")]
+        [Route("menu/iriss-menu")]
         public IActionResult Index2()
         {
 
@@ -48,7 +48,7 @@ namespace Quki.Controllers
 
 
         [HttpGet]
-        [Route("menu/nossa-menu-kategori")]
+        [Route("menu/iriss-menu-kategori")]
         public IActionResult SluDef(int id=0)
         {
             //https://localhost:44377/product/sludef
@@ -94,7 +94,7 @@ namespace Quki.Controllers
 
         }
         [HttpGet]
-        [Route("menu/nossa-urun/{id?}")]
+        [Route("menu/iriss-urun/{id?}")]
         public IActionResult GetMenuItem(long id)
         {
 

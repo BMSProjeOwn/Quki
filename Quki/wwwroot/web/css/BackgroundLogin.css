@@ -1,25 +1,25 @@
 ﻿body {
-    background-image: url('../../viewimage/nossaback.png');
+    background-image: url('../../viewimage/background.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment:fixed;
+    background-attachment: fixed;
 }
 .background-login {
-    background-image: url('../../viewimage/serraicbackground.png');
+    background-image: url('../../viewimage/background.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment:fixed;
+    background-attachment: fixed;
 }
 .box {
     height: 50px;
     width: 180px;
-    background: #CCE2F0;
+    background: #881749;
     border-style: solid;
-    border-color: #CCE2F0;
+    border-color: #881749;
     border-radius: 50px;
-    color: #005BC7;
+    color: #000000;
     text-align: center;
     border-width: 2px;
     padding: 7px;
