@@ -1,9 +1,7 @@
 ﻿
 body {
     background-image: url('../../viewimage/backgroundicsayfa.png');
-    background-position: center;
     background-repeat: repeat;
-    background-size: cover;
 }
 .imagecirculate {
         object-fit: cover;
@@ -56,9 +54,9 @@ body {
     width: 382px;
     background: #F9FAFA;
     border-style: solid;
-    border-color: #881749;
+    border-color: #221E1F;
     border-radius: 10px;
-    color: #881749;
+    color: #221E1F;
     text-align: center;
     border-width: 1px;
     padding: 7px;

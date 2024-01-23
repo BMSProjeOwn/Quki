@@ -78,13 +78,14 @@ namespace Quki.Bll
                                   SwR = SwR
                               })
 
-                              .Where(w => w.R.P.rvc_seq == 2 && (w.R.D.parent_slu_def_no==0 || w.R.D.parent_slu_def_no is null) && w.SwR.LanguageId.Equals(languageID)).OrderBy(x => x.R.D.control_number.Value)
+                              .Where(w => w.R.P.rvc_seq == 2 && (w.R.D.parent_slu_def_no==0) && w.SwR.LanguageId.Equals(languageID)).OrderBy(x => x.R.D.control_number.Value)
                               .Select(s => new SluDefModel
                               {
                                   slu_def_name = s.SwR.Name.ToUpper(),
                                   slu_def_seq = s.R.D.slu_def_seq,
                                   slu_type_slu_image = s.R.D.slu_type_slu_image,
-                                  parent_slu_def_no=s.R.D.parent_slu_def_no
+                                  parent_slu_def_no=s.R.D.parent_slu_def_no,
+                                  slu_type=s.R.D.slu_type
 
                               }).OrderBy(x => x.control_number).ToList();
 
@@ -148,7 +149,7 @@ namespace Quki.Bll
                               SwR = SwR
                           })
 
-                          .Where(w => w.R.P.rvc_seq == 2 && w.R.D.slu_type == "MI" && w.SwR.LanguageId.Equals(languageId)).OrderBy(x => x.R.D.control_number.Value)
+                          .Where(w => w.R.P.rvc_seq == 2 && w.SwR.LanguageId.Equals(languageId)).OrderBy(x => x.R.D.control_number.Value)
                           .Select(s => new SluDefModel
                           {
                               slu_def_name = s.SwR.Name.ToUpper(),

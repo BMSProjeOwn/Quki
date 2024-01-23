@@ -18,7 +18,7 @@
 </div>
 <div class="row" style="margin-top:12%;">
     <div class="col-1"></div>
-    <div class="box3 col-10" onclick="callSluMiGroupSeqfunc(@ViewBag.ID)" style="font-size: 22px; background: #881749; font-weight: bold; font-family: arimamadurai">
+    <div class="box3 col-10" onclick="callSluMiGroupSeqfunc(@ViewBag.ID)" style="font-size: 22px; background: #221E1F; font-weight: bold; font-family: arimamadurai">
         <div class="row">
             <div class="padding-text  col-12">@ViewBag.MenuItems</div>
         </div>
@@ -57,7 +57,7 @@
                 <div class="col-5 imagecirculate">
                     <img src="~/icons/@item.mi_icon_path" style="border-radius:10px;" />
                 </div>
-                <div class="padding-text col-7" style="text-align: center; color: #881749; font-weight: bold; font-family: arimamadurai">
+                <div class="padding-text col-7" style="text-align: center; color: #221E1F; font-weight: bold; font-family: arimamadurai">
                     <p class="text-center h5" style="font-size:13px; font-weight:bold" color>@item.mi_master_def_name.Trim()</p>
                     <p class="text-center text-secondary h6" style="font-size:14px; font-weight:bold; font-family:arimamadurai" color>@item.mi_price TL</p>
                 </div>
@@ -79,13 +79,13 @@
     }
     <div class="modal fade" id="modal_@item.mi_master_def_seq" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" style="margin-top: 36%;    margin-left: 5%;    margin-right: 5%;">
-            <div class="overflow-auto modal-content" style="height:@modelSize; border-radius: 50px; border-width: 5px; text-align:center; border-color: #881749;">
+            <div class="overflow-auto modal-content" style="height:@modelSize; border-radius: 50px; border-width: 5px; text-align:center; border-color: #221E1F;">
 
                 <div class="modal-body gallery-item">
                     <div class="col-12 imagecirculate">
                         <img src="~/icons/@item.mi_icon_path" style="border-radius:10px;" />
                     </div>
-                    <p class="text-center h5" style="font-size:18px; margin-top: 9px; color:#881749" color>@item.mi_master_def_name.Trim()  </p>
+                    <p class="text-center h5" style="font-size:18px; margin-top: 9px; color:#221E1F" color>@item.mi_master_def_name.Trim()  </p>
                     <p class="text-center h5" style="font-size:16px; margin-top: 9px;" color>@item.mi_price TL </p>
 
                     <p class="text-center text-secondary h6" style="font-size:14px; font-weight:bold; font-family:arimamadurai; margin-top: 19px;" color>@item.rvc_mi_third_name</p>
@@ -131,7 +131,7 @@
                     }
                 </div>
                 <div class="modal-footer" style="justify-content: center; border: 0px; margin-top: -19px;">
-                    <button type="button" class="btn btn-secondary" style=" background-color: #881749; border: 0px; width: 100px; height: 35px;" data-bs-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-secondary" style=" background-color: #221E1F; border: 0px; width: 100px; height: 35px;" data-bs-dismiss="modal">Kapat</button>
                 </div>
             </div>
         </div>

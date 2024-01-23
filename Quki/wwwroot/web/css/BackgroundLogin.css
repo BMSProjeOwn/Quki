@@ -15,15 +15,14 @@
 .box {
     height: 50px;
     width: 180px;
-    background: #881749;
+    background: #707070;
     border-style: solid;
-    border-color: #881749;
+    border-color: #707070;
     border-radius: 50px;
     color: #000000;
     text-align: center;
     border-width: 2px;
     padding: 7px;
-    margin: 5px;
     font-family: "Arima Madurai", sans-serif;
 }
 
@@ -56,9 +55,9 @@
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 .margin-top-logo {
-    margin-top: 15%;
+    margin-top: 47%;
 }.margin-top-login-menu {
-    margin-top: 9%;
+    margin-top: -8%;
 }
 .margin-top-menu {
     margin-top: 5%;

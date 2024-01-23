@@ -35,9 +35,9 @@ namespace Quki.Controllers
 
 
             
-            return RedirectToAction("iriss-menu", "menu");
+            return RedirectToAction("deeplounge-menu", "menu");
         }
-        [Route("menu/iriss-menu")]
+        [Route("menu/deeplounge-menu")]
         public IActionResult Index2()
         {
 
@@ -48,7 +48,7 @@ namespace Quki.Controllers
 
 
         [HttpGet]
-        [Route("menu/iriss-menu-kategori")]
+        [Route("menu/deeplounge-menu-kategori")]
         public IActionResult SluDef(int id=0)
         {
             //https://localhost:44377/product/sludef
@@ -94,7 +94,7 @@ namespace Quki.Controllers
 
         }
         [HttpGet]
-        [Route("menu/iriss-urun/{id?}")]
+        [Route("menu/deeplounge-urun/{id?}")]
         public IActionResult GetMenuItem(long id)
         {
 
@@ -128,7 +128,7 @@ namespace Quki.Controllers
                 }
                 catch (Exception)
                 {
-                    ViewBag.MenuItems = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId).Where(x=>x.slu_def_seq==id).FirstOrDefault().slu_def_name;
+                    ViewBag.MenuItems = "";
                 }
 
             }

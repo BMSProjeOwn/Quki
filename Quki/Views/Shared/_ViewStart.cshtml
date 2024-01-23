@@ -10,7 +10,7 @@
 }
 <head>
 
-    <title>İriss Burger- QR Menü</title>
+    <title>Deep Lounge - QR Menü</title>
 
     @{
         string keyw = (!string.IsNullOrEmpty(ViewBag.MetaKeywords) ? ViewBag.MetaKeywords : "");
@@ -19,14 +19,14 @@
 
 
 
-    <meta property="og:title" content="The Iriss">
-    <meta content="The Iriss" name="twitter:title">
+    <meta property="og:title" content="Deep Lounge">
+    <meta content="Deep Lounge" name="twitter:title">
     <meta property="og:description" content="@desc">
-    <meta content="The Iriss" property="og:site_name">
+    <meta content="Deep Lounge" property="og:site_name">
     <meta content="news" property="og:type">
-    <meta name="title" content="The Iriss" />
+    <meta name="title" content="Deep Lounge" />
     <meta name="twitter:description" content="@desc" />
-    <meta name="searchTitle" content="The Iriss" />
+    <meta name="searchTitle" content="Deep Lounge" />
     <meta name="keywords" content="@keyw">
     <meta name="description" content="@desc" />
     <meta name="image" content="" />
@@ -104,20 +104,19 @@
     <!-- Template JS -->
     <script src="~/web/js/custom.js"></script>
     @RenderSection("JavaScript", false)
-    <script src="https://cdn.efilli.com/efl.js" data-key="rldWWa64M8wnthNG2wGYJmfCRgTWMMDPjX8CZiSY94BPvpg2ri81o0xSrETXxaf"></script>
 
     <script>
         function callCampaingTypeSeqfunc(val) {
-            window.location.href = "iriss-urun?id=" + val;
+            window.location.href = "deeplounge-urun?id=" + val;
         }
         function callSluMiGroupSeqfunc(val) {
-            window.location.href = "iriss-menu-kategori?id=" + val;
+            window.location.href = "deeplounge-menu-kategori?id=" + val;
         }
         function goSluDefController() {
-            window.location.href = "iriss-menu-kategori";
+            window.location.href = "deeplounge-menu-kategori";
         }
         function goSluDefControllerclick() {
-            window.location.href = "iriss-menu-kategori";
+            window.location.href = "deeplounge-menu-kategori";
         }
     </script>
 
