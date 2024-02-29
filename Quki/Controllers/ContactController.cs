@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Quki.Entity.Models;
 using Quki.Interface;
-using System.Web.WebPages;
 
 namespace Quki.Controllers
 {

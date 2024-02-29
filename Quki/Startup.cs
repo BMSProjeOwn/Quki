@@ -355,21 +355,21 @@ namespace Quki
                 SupportedUICultures = supportedCultures
             });
             app.UseRouting();
-            app.Use(async (context, next) =>
-            {
-                if (context.Request.Path.StartsWithSegments("/robots.txt"))
-                {
-                    var robotsTxtPath = Path.Combine(env.ContentRootPath, "robots.txt");
-                    string output = "User-agent: *  \nDisallow: \n\nSitemap: https://www.Quki.com/sitemap.xml";
-                    if (File.Exists(robotsTxtPath))
-                    {
-                        output = await File.ReadAllTextAsync(robotsTxtPath);
-                    }
-                    context.Response.ContentType = "text/plain";
-                    await context.Response.WriteAsync(output);
-                }
-                else await next();
-            });
+            //app.Use(async (context, next) =>
+            //{
+            //    if (context.Request.Path.StartsWithSegments("/robots.txt"))
+            //    {
+            //        var robotsTxtPath = Path.Combine(env.ContentRootPath, "robots.txt");
+            //        string output = "User-agent: *  \nDisallow: \n\nSitemap: https://www.Quki.com/sitemap.xml";
+            //        if (File.Exists(robotsTxtPath))
+            //        {
+            //            output = await File.ReadAllTextAsync(robotsTxtPath);
+            //        }
+            //        context.Response.ContentType = "text/plain";
+            //        await context.Response.WriteAsync(output);
+            //    }
+            //    else await next();
+            //});
 
             app.UseStaticFiles();
             app.UseRouting();
