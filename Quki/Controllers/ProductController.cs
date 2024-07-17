@@ -34,7 +34,7 @@ namespace Quki.Controllers
 
             return View("AnaSayfa");
         }
-        [Route("westchocolate-menu")]
+        [Route("westkanatquki-menu")]
         public IActionResult Index2()
         {
 
@@ -45,7 +45,7 @@ namespace Quki.Controllers
 
 
         [HttpGet]
-        [Route("westchocolate-menu-kategori")]
+        [Route("westkanatquki-menu-kategori")]
         public IActionResult SluDef()
         {
             //https://localhost:44377/product/sludef
@@ -88,7 +88,7 @@ namespace Quki.Controllers
 
         }
         [HttpGet]
-        [Route("westchocolate-urun/{id?}")]
+        [Route("westkanatquki-urun/{id?}")]
         public Task<IActionResult> GetMenuItem(long id)
         {
 

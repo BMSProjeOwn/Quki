@@ -21,7 +21,7 @@ h1 {
 }
 
 .gallery-item {
-    width: 50%;
+    width: 100%;
 }
 
     .gallery-item > img {

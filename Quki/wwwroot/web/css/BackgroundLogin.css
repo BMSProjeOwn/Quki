@@ -13,16 +13,16 @@
     background-attachment: fixed;
 }
 .box {
-    height: 50px;
+    height: 40px;
     width: 75px;
-    background: #062433;
+    background: #ffffff;
     border-style: solid;
-    border-color: #D88825;
+    border-color: #030406;
     border-radius: 40px;
-    color: #D88825;
+    color: #030406;
     text-align: center;
     border-width: 1.5px;
-    padding: 7px;
+    padding: 3px;
     margin: 5px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
