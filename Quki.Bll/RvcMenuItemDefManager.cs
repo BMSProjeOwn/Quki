@@ -164,7 +164,7 @@ namespace Quki.Bll
                               RVCWL = RVCWL,
                               RS = RS
                           })
-                          .Where(w => w.RVCWL.RMD.D.mi_is_active == 1 && w.RVCWL.RMD.D.rvc_def_seq == 10 && (w.RVCWL.RMD.D.mi_master_def_type == "menuitem" || w.RVCWL.RMD.D.mi_master_def_type == "condiment") && w.RVCWL.RMD.P.mi_price_number == 1 && w.RVCWL.RMD.P.rvc_def_seq == 10 && w.RVCWL.RMD.D.slu_seq==id && w.RS.LanguageId.Equals(languageId))
+                          .Where(w => w.RVCWL.RMD.D.mi_is_active == 1 && w.RVCWL.RMD.D.rvc_def_seq == 2 && (w.RVCWL.RMD.D.mi_master_def_type == "menuitem" || w.RVCWL.RMD.D.mi_master_def_type == "condiment") && w.RVCWL.RMD.P.mi_price_number == 1 && w.RVCWL.RMD.P.rvc_def_seq == 2 && w.RVCWL.RMD.D.slu_seq==id && w.RS.LanguageId.Equals(languageId))
                           .Select(s => new GetMenuItems
                           {
                               slu_def_seq_view = s.RVCWL.S.slu_def_seq,

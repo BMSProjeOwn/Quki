@@ -8,7 +8,12 @@
 
 
 
+<div class="row margin-top-menu">
+    <div class="col-3 h-25 d-inline-block" align="center" valign="center" onclick="goSluDefController()">
+        <img src="/viewimage/geri_ikonu.png" style="margin-top:11px;">
+    </div>
 
+</div>
 <div class="row " style="margin-top: 25px; margin-left:1px;">
 
     <div class="box3 col-11" background="#F9FAFA" onclick="goSluDefController()" style="font-size:18px; font-weight:bold;">
@@ -25,13 +30,22 @@
     @foreach (var item in ViewBag.ProductItems)
     {
 
-        <div class="box2 col-5" data-toggle="modal" data-target="#@item.mi_master_def_seq">
-            <div class="imagecirculate2 gallery-item"> <img class="lazyload" data-src="/icons/@item.mi_icon_path" loading="lazy" /> </div>
-            <p class="text-center h5" style="font-size:16px; font-weight:bold" color>@item.mi_master_def_name</p>
-            <p class="text-center text-secondary"> </p>
-            <p class="text-center text-secondary"> </p>
-            <p class="text-center text-secondary h6" style="font-size:15px" color>@item.mi_price TL</p>
+        <div class="box2 col-10" data-toggle="modal" data-target="#@item.mi_master_def_seq">
+            <div class="row">
+                <div class="col-5">
+                    <div class="imagecirculate gallery-item">
+                        <img class="lazyload" data-src="/icons/@item.mi_icon_path" loading="lazy" />
+                    </div>
+                </div>
+                <div class="col-7">
+                    <p class="text-center h5" style="font-size:16px; font-weight:bold" color>@item.mi_master_def_name</p>
+                    <p class="text-center text-secondary"> </p>
+                    <p class="text-center text-secondary"> </p>
+                    <p class="text-center text-secondary h6" style="font-size:15px" color>@item.mi_price TL</p>
+                </div>
+            </div>
         </div>
+
 
     }
 

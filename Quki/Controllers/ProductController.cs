@@ -32,9 +32,9 @@ namespace Quki.Controllers
         {
 
 
-            return View("AnaSayfa");
+            return View("index");
         }
-        [Route("westkanatquki-menu")]
+        [Route("blackmoon-menu")]
         public IActionResult Index2()
         {
 
@@ -45,7 +45,7 @@ namespace Quki.Controllers
 
 
         [HttpGet]
-        [Route("westkanatquki-menu-kategori")]
+        [Route("blackmoon-menu-kategori")]
         public IActionResult SluDef()
         {
             //https://localhost:44377/product/sludef
@@ -88,7 +88,7 @@ namespace Quki.Controllers
 
         }
         [HttpGet]
-        [Route("westkanatquki-urun/{id?}")]
+        [Route("blackmoon-urun/{id?}")]
         public Task<IActionResult> GetMenuItem(long id)
         {
 

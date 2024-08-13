@@ -35,46 +35,49 @@ body {
 
 
 .box2 {
-    height: 240px;
+    height: 140px;
     width: 80px;
-    border-radius: 50px;
+    border-radius: 20px;
     color: #030406;
     text-align: center;
     padding: 7px;
     margin: 15px;
-    font-family: "Arima Madurai";
+    border: 1px black solid;
+    font-family: "Helvetica Neue";
     background-color: #ffffff;
 }
 
+
 .box3 {
     width: 100px;
-    background: #FFFFFF;
+    background: #000000;
     border-style: solid;
     border-color: #FFFFFF;
-    border-radius: 50px;
-    color: #030406;
+    border-radius: 5px;
+    color: #fff;
     text-align: center;
     border-width: 2px;
-    padding: 2px;
-    margin: 5px;
+    height: 61px;
+    padding: 11px;
+    margin-top: 13%;
     font-size: 25px;
     font-weight: 600;
-    font-family: "Arima Madurai";
+    font-family: "Helvetica Neue";
 }
 .box4 {
-    height: 70px;
+    height: 120px;
     width: 100px;
     background: #F9FAFA;
-    border-radius: 50px;
+    border-radius: 16px;
     color: #030406;
     text-align: center;
-    border-width: 2px;
     padding: 7px;
     margin: 5px;
     margin-top: 20px;
     font-size: 15px;
     font-weight: bold;
-    font-family: "Arima Madurai";
+    font-family: "Helvetica Neue";
+    border: 1px black solid;
 }
 .margin-top-logo {
     margin-top: 15%;
@@ -92,18 +95,13 @@ body {
 }
 .imagecirculate {
     display: inline-block;
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    border-radius: 100%;
-    margin-top: -13%;
+    width: 100px;
+    height: 100px;
 }
 
     .imagecirculate img {
         width: inherit;
-        object-fit: cover;
-        margin-top: -40%;
+        border-radius: 10px;
     }
 .imagecirculate2 {
     display: inline-block;
