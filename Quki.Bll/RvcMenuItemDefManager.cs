@@ -60,52 +60,59 @@ namespace Quki.Bll
             if (isOnline != null)
             {
                 if (isOnline.rvc_options_def_status == 1)
-                {
-                    itemList = repo.TGetList()
-                         .Join(RvcMenuItemPrice.TGetList(), RMD => RMD.mi_master_def_seq, RMP => RMP.mi_master_def_seq, (D, P) => new
-                         {
-                             D = D,
-                             P = P
-                         })
-                         .Join(MenuItemBarcodeDef.TGetList(), DP => DP.D.mi_master_def_seq, B => B.mi_master_def_seq, (DP, B) => new
-                         {
-                             DP = DP,
-                             B = B
-                         })
-                         .Join(SluDef.TGetList(), RMD => RMD.DP.D.slu_seq, SL => SL.slu_def_seq, (RMD, S) => new
-                         {
-                             RMD = RMD,
-                             S = S
-                         }).Join(rvcMenuItemDefWithLanguageRepository.TGetList(), RVCWL => RVCWL.RMD.DP.P.mi_master_def_seq, RS => RS.RvcMenuItemDefSeq, (RVCWL, RS) => new
-                         {
-                             RVCWL = RVCWL,
-                             RS = RS
-                         }).Join(rvc_RelationRepository.TGetList(),R=>R.RVCWL.RMD.DP.D.slu_seq,SRR=>SRR.slu_seq,(R,SRR)=>new
-                         {
-                             R=R,
-                             SRR=SRR
-                         })
-                         .Where(w => w.R.RVCWL.RMD.DP.D.mi_is_active == 1 && w.SRR.rvc_seq==rvc_def_seq && (w.R.RVCWL.RMD.DP.D.mi_master_def_type == "menuitem" || w.R.RVCWL.RMD.DP.D.mi_master_def_type == "condiment") && w.R.RVCWL.RMD.DP.P.mi_price_number == 1 && w.R.RS.LanguageId.Equals(languageId))
-                         .Select(s => new GetMenuItems
-                         {
-                             slu_def_seq_view = s.R.RVCWL.S.slu_def_seq,
-                             mi_master_def_seq = (long)s.R.RVCWL.RMD.DP.D.mi_master_def_seq,
-                             mi_master_def_name = s.R.RS.Name.ToUpper(),
-                             mi_barcode_id = s.R.RVCWL.RMD.B.mi_barcode_id,
-                             mi_price = (double)s.R.RVCWL.RMD.DP.P.mi_price,
-                             slu_def_name = sluDefWithLanguageRepository.TGetList(x=>x.LanguageId==languageId).FirstOrDefault().Name.ToUpper(),
-                             mi_icon_path = s.R.RVCWL.RMD.DP.D.mi_icon_path,
-                             rvc_mi_second_name = s.R.RVCWL.RMD.DP.D.rvc_mi_second_name,
-                             rvc_mi_third_name = s.R.RS.Remark,
-                             slu_priority = s.R.RVCWL.RMD.DP.D.slu_priority == null ? 0 : s.R.RVCWL.RMD.DP.D.slu_priority.Value,
-                             control_number = s.R.RVCWL.S.control_number == null ? 0 : s.R.RVCWL.S.control_number.Value,
-                         }).OrderBy(o => o.control_number).ThenBy(o => o.slu_priority).ToList();
+                {// 1️⃣ Önce gerekli listeleri IQueryable olarak al
+                    var menuItems = repo.TGetList();
+                    var prices = RvcMenuItemPrice.TGetList();
+                    var barcodes = MenuItemBarcodeDef.TGetList();
+                    var langDefs = rvcMenuItemDefWithLanguageRepository.TGetList();
+                    var slus = SluDef.TGetList();
+                    var relations = rvc_RelationRepository.TGetList();
 
+                    // 2️⃣ SluDefWithLanguage sadece 1 kere çek
+                    var sluLangName = sluDefWithLanguageRepository
+                                        .TGetList(x => x.LanguageId == languageId)
+                                        .Select(x => x.Name)
+                                        .FirstOrDefault();
 
-
+                    itemList = (
+                        from d in menuItems
+                        join p in prices on d.mi_master_def_seq equals p.mi_master_def_seq
+                        join b in barcodes on d.mi_master_def_seq equals b.mi_master_def_seq
+                        join rs in langDefs on p.mi_master_def_seq equals rs.RvcMenuItemDefSeq
+                        join s in slus on ConvertToLong(rs.Option1) equals s.slu_def_seq
+                        join rel in relations on d.slu_seq equals rel.slu_seq
+                        where rs.Option2 == "1"
+                              && rel.rvc_seq == rvc_def_seq
+                              && (d.mi_master_def_type == "menuitem" || d.mi_master_def_type == "condiment")
+                              && p.mi_price_number == 1
+                              && rs.LanguageId == languageId
+                        orderby s.control_number, rs.Option3
+                        select new GetMenuItems
+                        {
+                            slu_def_seq_view = s.slu_def_seq,
+                            mi_master_def_seq = d.mi_master_def_seq,
+                            mi_master_def_name = rs.Name.ToUpper(),
+                            mi_barcode_id = b.mi_barcode_id,
+                            mi_price = (double)p.mi_price,
+                            slu_def_name = sluLangName != null ? sluLangName.ToUpper() : "",
+                            mi_icon_path = d.mi_icon_path,
+                            rvc_mi_second_name = d.rvc_mi_second_name,
+                            rvc_mi_third_name = rs.Remark,
+                            slu_priority = d.slu_priority ?? 0,
+                            control_number = s.control_number ?? 0
+                        }
+                    ).ToList();
                 }
             }
             return itemList;
+        }
+        public long ConvertToLong(string value)
+        {
+            if (long.TryParse(value, out long result))
+            {
+                return result;
+            }
+            return 0; // veya uygun bir varsayılan değer
         }
         public List<GetMenuItems> GetMenuItems2()
         {

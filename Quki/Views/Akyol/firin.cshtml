@@ -4,154 +4,208 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_LayoutTikutu.cshtml";
 }
-
+@* 
 @await Component.InvokeAsync("HomeSlider")
 
-
+ *@
 @model MenuViewModel
+<style>
+    html, body {
+        overflow-x: hidden;
+    }
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .category-wrapper {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .category-nav {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 10px;
+    }
+
+        .category-nav .nav-item {
+            flex: 0 0 auto;
+        }
+
+        .category-nav .nav-link {
+            white-space: nowrap;
+            margin-bottom: 10px;
+        border: 1px solid #91ad41;
+        border-radius: 5px;
+    }
+        }
+
+    .category-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .menu-title-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 6px;
+        margin-bottom: 6px;
+    }
+
+    .product-name {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .product-price {
+        font-weight: 700;
+        font-size: 18px;
+        white-space: nowrap;
+    }
+
+    .menu-desc {
+        font-size: 14px;
+        color: #666;
+        text-align: left;
+    }
+
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+        color: #fff;
+        background-color: #91ad41;
+    }
+
+    .menu-detail {
+        margin-top: 8px;
+    }
+
+        .menu-detail em {
+            display: block;
+            margin-bottom: 6px;
+            font-style: italic;
+        }
+
+        .menu-detail ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .menu-detail li {
+            margin-bottom: 4px;
+            list-style: outside;
+        }
+</style>
 <section>
     <div class="section feature-products">
-        <div class="container">
-            <div class="title text-center m-bottom-2">
-                <div class="page-title color">
-                    <h3 class="title-main">Akyol Fırın</h3>
-                    <div class="title title-icon">
-                        <h2 class="title-h2">Ürünlerimiz</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-tab">
-                <div class="flex-t-center">
-                    <ul class="nav nav-pills text-center justify-content-center" role="tablist">
-                        @{
-                            int j = 0;
-                            string show2 = "name-tab nav-link";
-                        }
-                        @foreach (var item in Model.sluDefModels)
-                        {
-                            if (j == 0)
-                            {
-                                show2 = "name-tab nav-link active show";
-                            }
-                            else
-                            {
-                                show2 = "name-tab nav-link";
-                            }
-                            <li class="nav-item">
-                                <a class="@show2" data-toggle="pill" href="#@item.slu_def_seq">@item.slu_def_name.ToUpper()</a>
-                            </li>
-                            j++;
-                        }
 
 
-                    </ul>
-                </div>
-
-                <div class="tab-content m-top">
-                    <!-- All -->
-
-                    <div class="tab-pane fade in active show" id="Tumu">
-                        <!-- Menu
-                        ============================================= -->
-                        <div class="menu-simple">
-                            <div class="container">
-                                <div class="row">
-
-                                    @foreach (var itemMenu in Model.getMenuItems)
-                                    {
-                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                            <div class="item item-hover-view-cart">
-                                                <div class="product-thumb">
-                                                    <div class="product-container item-img">
-                                                        <div class="product-image-container">
-                                                            <a class="product-img-link" href="#" title="">
-                                                                <img class="img-fluid" src="/icons/@itemMenu.mi_icon_path" alt="img">
-                                                                <img class="img-fluid img-hover" src="/icons/@itemMenu.mi_icon_path" alt="img">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-
-                                                <div class="product-info text-center">
-                                                    <h4 class="product-name">
-                                                        <a href="#">@itemMenu.mi_master_def_name</a>
-                                                    </h4>
-                                                    <div class="price">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    }
-                                </div> <!-- .row end -->
-                            </div><!-- .container end -->
-                        </div><!-- #menuSimple1 end -->
-                    </div>
+        <div class="category-wrapper">
+            <div class="flex-t-center">
+                <ul class="nav nav-pills category-nav" role="tablist">
                     @{
-                        int i = 0;
-                        string show = "";
+                        int j = 0;
+                        string show2 = "name-tab nav-link";
                     }
-                    @foreach (var item in Model.sluDefModels)
+                    @foreach (var item in Model.sluDefModels.Where(x => (x.parent_slu_def_no  == null || x.parent_slu_def_no==0)))
                     {
-                        if (i == 0)
+                        if (j == 0)
                         {
-                            show = "in active show";
+                            show2 = "name-tab nav-link active show";
                         }
                         else
                         {
-
-                            show = "";
+                            show2 = "name-tab nav-link";
                         }
-                        <div class="tab-pane fade" id="@item.slu_def_seq">
-                            <div class="product">
-                                <div class="row">
-                                    <!-- Dish #1 -->
-                                    @{
-                                        var sluItem = Model.getMenuItems.Where(x => x.slu_def_seq_view == item.slu_def_seq).ToList();
-                                    }
-                                    @foreach (var itemSlu in sluItem)
+                        <li class="nav-item">
+                            <a class="@show2" data-toggle="pill" href="#@item.slu_def_seq">@item.slu_def_name.ToUpper()</a>
+                        </li>
+                        j++;
+                    }
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content m-top">
+            <!-- All -->
+            @{
+                int i = 0;
+                string show = "";
+            }
+            @foreach (var item in Model.sluDefModels.Where(x => (x.parent_slu_def_no == null || x.parent_slu_def_no == 0)))
+            {
+                if (i == 0)
+                {
+                    show = "in active show";
+                }
+                else
+                {
+
+                    show = "";
+                }
+                <div class="tab-pane fade @show" id="@item.slu_def_seq">
+                    <div class="product">
+                        <div class="row">
+                            <!-- Dish #1 -->
+                            @{
+                                var sluItem = Model.getMenuItems.Where(x => x.slu_def_seq_view == item.slu_def_seq).ToList();
+                                int sluItemIndex = 0;
+
+                                if (sluItemIndex == 0)
+                                {
+
+                                    var sluParentValue = Model.sluDefModels.Where(x => x.parent_slu_def_no == item.slu_def_seq).FirstOrDefault();
+                                    if (sluParentValue != null)
                                     {
-                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                            <div class="item item-hover-view-cart">
-                                                <div class="product-thumb">
-                                                    <div class="product-container item-img">
-                                                        <div class="product-image-container">
-                                                            <a class="product-img-link" href="#" title="">
-                                                                <img class="img-fluid" src="/icons/@itemSlu.mi_icon_path" alt="img">
-                                                                <img class="img-fluid img-hover" src="/icons/@itemSlu.mi_icon_path" alt="img">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <h5 style="margin-left:50px">@sluParentValue.slu_def_name</h5>
+                                    }
+                                }
+                        
+    }
+                            @foreach (var itemSlu in sluItem)
+                            {
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item item-hover-view-cart">
 
 
+                                        <div class="product-info text-center">
+                                            <div class="menu-title-row">
+                                                <h4 class="product-name">
+                                                    @itemSlu.mi_master_def_name
+                                                </h4>
 
-                                                <div class="product-info text-center">
-                                                    <h4 class="product-name">
-                                                        <a href="#">@itemSlu.mi_master_def_name</a>
-                                                    </h4>
-                                                    <div class="price">
-                                                    </div>
-                                                </div>
+                                                <span class="product-price">
+                                                    @string.Format(new System.Globalization.CultureInfo("tr-TR"), "{0:C}", itemSlu.mi_price)
+                                                </span>
+                                            </div>
+
+                                            <div class="menu-desc">
+                                                @Html.Raw(itemSlu.rvc_mi_third_name)
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
 
-                                        <!-- .dish-panel end -->
-                                    }
-                                    <!-- Dish #2 -->
-                                </div> <!-- .row end -->
-                            </div><!-- .container end -->
+                                <!-- .dish-panel end -->
+                            }
+                            <!-- Dish #2 -->
                         </div>
-                        i++;
-                    }
+
+                        <!-- .row end -->
+                    </div>
+
+                    <!-- .container end -->
                 </div>
-            </div>
+                i++;
+            }
         </div>
     </div>
 </section>
+
+
 
 
 

@@ -49,10 +49,10 @@ namespace Quki.Controllers
             ViewBag.currentMenu = "firin";
             List<SluDefModel> sluDefModels = new List<SluDefModel>();
             int languageId = Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
-            var getMenuItems = rvcMenuItemDefService.GetMenuItems(languageId, 6);
+            var getMenuItems = rvcMenuItemDefService.GetMenuItems(languageId, 2);
             try
             {
-                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId, 6);
+                sluDefModels = slu_Rvc_RelationService.GetAllSluDefRelationWithSlu(languageId, 2);
             }
             catch
             {

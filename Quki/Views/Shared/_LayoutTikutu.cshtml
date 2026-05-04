@@ -1,4 +1,4 @@
-﻿@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Identity
 @using Quki.Entity.Models;
 <!DOCTYPE html>
 <html lang="en">
@@ -55,23 +55,23 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 
     <!-- Libs CSS -->
-    <link rel="stylesheet" href="~/web/libs/boostrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="~/web/libs/flaticon/css/flaticon.css">
-    <link rel="stylesheet" href="~/web/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="~/web/libs/owl.carousel/assets/owl.carousel.css">
-    <link rel="stylesheet" href="~/web/libs/nivo-slider/css/nivo-slider.css">
-    <link rel="stylesheet" href="~/web/libs/nivo-slider/css/animate.css">
-    <link rel="stylesheet" href="~/web/libs/nivo-slider/css/style.css">
-    <link rel="stylesheet" href="~/web/libs/slider-range/css/jslider.css">
-    <link rel="stylesheet" href="~/web/libs/font-cs/cs.css">
+    <link rel="stylesheet" href="~/web/libs/boostrap/css/bootstrap.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/web/libs/flaticon/css/flaticon.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/web/libs/font-awesome/css/font-awesome.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/web/libs/owl.carousel/assets/owl.carousel.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/web/libs/nivo-slider/css/nivo-slider.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/web/libs/nivo-slider/css/animate.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/web/libs/nivo-slider/css/style.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/web/libs/slider-range/css/jslider.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/web/libs/font-cs/cs.css" asp-append-version="true">
 
 
     <!-- Template CSS -->
-    <link rel="stylesheet" type="text/css" href="~/web/css/style.css">
-    <link rel="stylesheet" type="text/css" href="~/web/css/responsive.css">
-    <link href="~/web/css/Custom.css" rel="stylesheet" />
-    <link href="~/plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
-    <link href="~/plugins/sweetalert2/sweetalert2.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/web/css/style.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/web/css/responsive.css" asp-append-version="true">
+    <link href="~/web/css/Custom.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/plugins/sweetalert2/sweetalert2.css" rel="stylesheet" asp-append-version="true" />
     <script src="~/web/libs/jquery/jquery-1.11.3.min.js"></script>
 
 </head>
@@ -120,7 +120,7 @@
 <body>
 
     <div class="all">
-        <header>
+        @* <header>
             <div id="top-header">
 
                 <div class="main-header">
@@ -150,19 +150,19 @@
                 </div>
             </div>
         </header>
-
+ *@
         <main>
             @RenderBody()
         </main>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        @* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <a href="https://wa.me/+905441542525" class="float" target="_blank">
             <i class="fa fa-whatsapp my-float"></i>
         </a>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <a href="tel:+905441542525" class="float2" target="_blank">
             <i class="fa fa-phone my-float"></i>
-        </a>
-		<footer>
+        </a> *@
+		@* <footer>
 			<div class="footer">
 				<div style="background-color:gray;width:1000px; height:2px;margin:auto"> <hr> </div>
 
@@ -224,7 +224,7 @@
 					</div>
 				</div>
 			</div>
-		</footer>
+		</footer> *@
     </div>
     <div class="back-to-top">
         <a href="#">

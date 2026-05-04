@@ -491,11 +491,6 @@ namespace Quki
             // ----< redirect http to https > ---
 
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(name: "areas", pattern: "{area}/{Controller=Home}/{Action=Index}/{id?}");
-                //endpoints.MapControllerRoute("Default5", "{controller=DocumentPage}/{action=GetDocument}/{name?}/{id?}");
-            });
 
             app.UseEndpoints(endpoints =>
             {
