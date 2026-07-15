@@ -97,6 +97,39 @@
             margin-bottom: 4px;
             list-style: outside;
         }
+
+    .firin-img-wrap {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        border-radius: 14px;
+        overflow: hidden;
+        margin-bottom: 12px;
+    }
+
+    .firin-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        transition: transform 0.35s ease;
+    }
+
+    .firin-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0);
+        transition: background 0.35s ease;
+        border-radius: 14px;
+    }
+
+    .item:hover .firin-img-wrap img {
+        transform: scale(1.05);
+    }
+
+    .item:hover .firin-overlay {
+        background: rgba(0, 0, 0, 0.22);
+    }
 </style>
 <section>
     <div class="section feature-products">
@@ -169,7 +202,10 @@
                             {
                                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                                     <div class="item item-hover-view-cart">
-
+                                        <div class="firin-img-wrap">
+                                            <img src="/icons/@(string.IsNullOrEmpty(itemSlu.mi_icon_path) ? "branchlogo.png" : itemSlu.mi_icon_path)" alt="@itemSlu.mi_master_def_name" onerror="this.onerror=null;this.src='/icons/branchlogo.png'">
+                                            <div class="firin-overlay"></div>
+                                        </div>
 
                                         <div class="product-info text-center">
                                             <div class="menu-title-row">
