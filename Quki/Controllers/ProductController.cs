@@ -96,6 +96,15 @@ namespace Quki.Controllers
         {
 
             int languageId = Common.Functions.setLanguage(Request.Cookies[".AspNetCore.Culture"]);
+
+            // Get or default customer ID - try to get from User identity or cookies
+            string customerDefNo = User?.Identity?.Name ?? "guest";
+            int countryId = 1; // Default country ID
+
+            // Pass customer and country info to ViewBag for JavaScript tracking
+            ViewBag.CustomerDefNo = customerDefNo;
+            ViewBag.CountryId = countryId;
+
             if (id == 0)
             {
                 var getMenuItems = rvcMenuItemDefService.GetMenuItems();
